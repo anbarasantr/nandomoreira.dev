@@ -1,13 +1,10 @@
-@import '../../assets/stylus/index.styl'
+@import '../../stylus/index.styl'
 
 .Header
+  @extend .card
   text-align center
-  width 100%
-  display block
-  background-color #fff
-  border-bottom 1px solid rgba(#000, .125)
-  position relative
   z-index 100
+  border-radius 0
   +above($tablet)
     position fixed
     z-index 1000

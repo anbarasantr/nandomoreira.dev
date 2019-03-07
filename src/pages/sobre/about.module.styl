@@ -1,0 +1,45 @@
+.About
+  width 100%
+  text-align center
+  +above($tablet)
+    display flex
+    align-items center
+    justify-content center
+    text-align left
+  &__inner
+    max-width 62.5rem /* 1000/16 */
+    padding 2.5rem /* 40/16 */ .9375rem /* 15/16 */
+  &__content
+    margin-bottom 1.875rem /* 30/16 */
+    +above($tablet)
+      display flex
+      align-items center
+  &__text
+    h2
+      font-size 2rem /* 32/16 */
+      margin 0 0 .625rem /* 10/16 */
+    ul
+      list-style none
+      padding 0
+      margin 0 0 1.875rem /* 30/16 */
+      li:before
+        content '🖖🏼'
+        display inline-block
+        margin 0 .3125rem /* 5/16 */ 0 0
+    a
+      text-decoration underline
+      &:hover,
+      &:focus
+        text-decoration none
+  &__thumb
+    display block
+    text-align center
+    .Avatar
+      width 290px
+      margin .9375rem /* 15/16 */ auto
+    +above($tablet)
+      padding-right 1.875rem /* 30/16 */
+      display inline-block
+      text-align left
+  &__social
+    margin-bottom 30px

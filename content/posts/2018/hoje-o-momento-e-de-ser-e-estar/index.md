@@ -1,10 +1,10 @@
 ---
 layout: post
-path: "/hoje-o-momento-e-de-ser-e-estar"
+path: "/blog/hoje-o-momento-e-de-ser-e-estar"
 title: Hoje o momento é de SER e ESTAR e não de TER!
 description: Você já parou para pensar o quanto você é manipulado pelos outros? Já parou para pensar em que ponto da sua vida você está nesse momento?
 date: 2018-10-05
-categories:
+category:
 - vida
 tags:
 - vida
@@ -14,8 +14,6 @@ tags:
 - reflexões
 image: ../../images/2018-10-05-hoje-o-momento-e-de-ser-e-estar.jpg
 author: nandomoreira
-class: post-template
-subclass: post
 ---
 
 Música para esse artigo é: **"Deriram" de Natiruts**, [ouça aqui](https://open.spotify.com/track/7tOXrVF1kPuf8lLXCfBywn).

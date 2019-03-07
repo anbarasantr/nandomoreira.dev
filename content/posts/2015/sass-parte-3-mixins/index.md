@@ -1,11 +1,12 @@
 ---
 layout: post
-path: "/sass-parte-3-mixins"
+path: "/blog/sass-parte-3-mixins"
 title: "#3 - Conhecendo o pré processador SASS | Mixins"
 date: 2015-09-05-sass-parte-3-mixins.md.erb
 description: "Mixin foi definitivamente algo novo para mim, você consegue passar valores por parâmetros assim como funções"
 image: ../conhecendo-o-pre-processador-sass-parte-1/conhecendo-o-pre-processador-sass.jpg
-categories: ["sass"]
+category:
+- sass
 tags:
 - sass
 - css

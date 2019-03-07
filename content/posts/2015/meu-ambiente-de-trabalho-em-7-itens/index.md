@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/meu-ambiente-de-trabalho-em-7-itens"
+path: "/blog/meu-ambiente-de-trabalho-em-7-itens"
 title: "Meu ambiente de trabalho em 7 itens"
 date: 2015-08-01
 description: "Aderi ao GNU linux como OS padrão no final de 2014, apesar de usá-lo desde 2009."
 keywords: "trabalho, ambiente, desenvolvimento, dicas"
 image: "./meu-ambiente-de-trabalho-em-7-itens.png"
-categories: ["workspace"]
+category:
+- workspace
 tags: ["workspace", "ambiente", "desenvolvimento"]
 ---
 

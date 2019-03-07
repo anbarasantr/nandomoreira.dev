@@ -1,30 +1,19 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 
-import SEO from '../SEO'
 import Header from '../Header'
 import Footer from '../Footer'
 
 import './base.styl'
-import styles from './layout.module.styl'
+import module from './layout.module.styl'
 
-class Default extends Component {
-  render() {
-    const { children } = this.props
-
-    return (
-      <div className={styles.Default}>
-        <SEO />
-        <Header />
-        <main className={styles.Default__main} role="main">{children}</main>
-        <Footer />
-      </div>
-    )
-  }
+export default ({ children, ...props }) => {
+  return (
+    <div className={module.Default} {...props}>
+      <Header />
+      <main className={module.Default__main} role="main" aria-label="Conteúdo principal">
+        {children}
+      </main>
+      <Footer />
+    </div>
+  )
 }
-
-Default.propTypes = {
-  route: PropTypes.object
-}
-
-export default Default

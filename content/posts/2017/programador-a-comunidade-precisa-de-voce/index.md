@@ -1,11 +1,11 @@
 ---
 layout: post
-path: "/programador-a-comunidade-precisa-de-voce"
+path: "/blog/programador-a-comunidade-precisa-de-voce"
 title: Programador a comunidade precisa de você!
 date: 2017-03-12
 description: Sobre o porquê de alguns desenvolvedores não contribuem com a comunidade open-source.
 image: ../../images/2017/03/programador-a-comunidade-precisa-de-voce.jpeg
-categories:
+category:
 - geral
 tags:
 - geral

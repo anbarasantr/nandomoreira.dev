@@ -1,19 +1,17 @@
 ---
 layout: post
-path: "/como-incluir-videos-do-youtube-no-jekyll"
+path: "/blog/como-incluir-videos-do-youtube-no-jekyll"
 title: "Como incluir vídeos do youtube no seu blog Jekyll de forma fácil"
 date: 2016-01-10 17:03:59
 description: "Hoje vamos usar um plugin bem bacana para incluir vídeos do youtube no seu blog Jekyll sem precisar copiar e colar o iframe do youtube"
 image: ../../images/get-started-with-jekyll.jpg
 keywords: "jekyll, youtube, plugins, plugin, embed"
-categories:
+category:
 - jekyll
 tags:
 - jekyll
 - youtube
 - plugins
-class: post-template
-subclass: post
 ---
 
 Criar plugins para **[Jekyll](http://jekyllrb.com/)** é bem simples e fácil, basta criar seu arquivo `.rb` dentro do diretório `_plugins`.

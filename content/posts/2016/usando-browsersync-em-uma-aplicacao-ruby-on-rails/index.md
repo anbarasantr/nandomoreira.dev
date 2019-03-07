@@ -1,17 +1,16 @@
 ---
 layout: post
-path: "/usando-browsersync-em-uma-aplicacao-ruby-on-rails"
+path: "/blog/usando-browsersync-em-uma-aplicacao-ruby-on-rails"
 title: "Usando Browsersync em uma aplicação Ruby on Rails"
 description: "Hoje vou explicar como integrar e usar o Browsersync.io dentro de uma aplicação Ruby on Rails"
 keywords: "rails, ruby, npm, browsersync, node, frontend, front-end"
 image: ../../images/painel-browsersync-io.png
-categories:
+date: 2016-06-20
+category:
 - rails
 tags:
 - rails
 - npm
-class: post-template
-subclass: post
 ---
 
 ![Usando Browsersync em uma aplicação Ruby on Rails](../../images/painel-browsersync-io.png)

@@ -1,0 +1,51 @@
+@import '../../stylus/index.styl'
+
+.Post
+  padding 0 .9375rem
+  margin-bottom 1.875rem
+  width 100%
+  &__iconRight
+    transition all .2s $timingFunction
+  &__inner
+    @extend .card
+    @extend .card--hover
+    padding 1.25rem 1.875rem
+    margin-bottom 2.5rem
+    color $secondary-color
+    text-decoration none
+    svg, span
+      display inline-block
+      vertical-align middle
+      margin-right 5px
+    &:hover,
+    &:focus
+      .Post__iconRight
+        transform translate3d(5px, 0, 0)
+
+  &__header
+    h1
+      margin 0 0 .625rem
+      font-size 26px
+
+  &__content
+    p
+      margin 0
+      opacity 0.75
+
+  &__footer
+    display flex
+    align-items center
+    justify-content space-between
+    p
+      font-size .875rem
+      margin .9375rem 0 0
+
+  &__tag
+    display inline-block
+    font-size .75rem
+    margin-bottom 5px
+    padding 3px 6px
+    background-color darken(#fff, 6%)
+    border-radius 3px
+    &:not(:last-child)
+      margin-right 5px

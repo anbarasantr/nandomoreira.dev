@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/sass-parte-4-funcoes"
+path: "/blog/sass-parte-4-funcoes"
 title: "#4 - Conhecendo o pré processador SASS | Funções"
 date: 2015-09-05
 description: "Conhecendo o pré-processador SASS-Parte 4"
 keywords: "sass, css, scss, pre-processador, pre-processadores"
 image: ../conhecendo-o-pre-processador-sass-parte-1/conhecendo-o-pre-processador-sass.jpg
-categories: ["sass"]
+category:
+- sass
 tags:
 - sass
 - css

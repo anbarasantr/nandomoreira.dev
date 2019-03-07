@@ -1,19 +1,17 @@
 ---
 layout: post
-path: "/calendario-rapido-direto-no-terminal"
+path: "/blog/calendario-rapido-direto-no-terminal"
 title: "Como ver o Calendário direto pelo terminal"
 date: 2016-09-02
 comments: true
 description: "Essa será uma dica bem curta e rápida, assim como o comando que você vai executar no seu terminal."
 image: ../../images/cal-command.png
-categories:
+category:
 - dicas
 tags:
  - dicas
  - terminal
  - bash
-class: post-template
-subclass: post
 ---
 
 Você tá focado no código, apenas com algumas ferramentas abertas e não quer procurar o caléndário na listagem de programas instalados no seu computador, ou ir até a barra de ferramentas e clicar na data pra poder ver o calendário completo do mês ou do ano?

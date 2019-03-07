@@ -1,11 +1,13 @@
 ---
 layout: post
-path: "/PATH"
+path: "/blog/retro-2016-planing-2017"
 title: Retro 2016 Planing 2017
 date: 2017-01-01
 description: 2016 não foi um ano ruim, tanto na minha vida profissional quando na minha vida pessoal, confesso que tive alguns obstáculos, mas todos foram ultrapassados com sucesso.
-categories:
-- geral
+category:
+- Geral
+tags:
+- Refrexão
 image: ../../images/2017/01/retro-2016-planing-2017.jpg
 ---
 

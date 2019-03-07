@@ -1,18 +1,16 @@
 ---
 layout: post
-path: "/role-aleatorio-com-conversas-aleatorias"
+path: '/blog/role-aleatorio-com-conversas-aleatorias'
 title: Role aleatório com conversas aleatórias gerou pensamentos aleatórios
 description: Domingo, 14 de outubro de 2018, eu passei por um dos meus melhores finais de semana, conheci pessoas novas e troquei muitas ideias aleatórias com essas pessoas.
 date: 2018-10-14
-categories:
-- vida
+category:
+  - vida
 tags:
-- pensamentos
-- aleatorio
-- geral
+  - pensamentos
+  - aleatorio
+  - geral
 image: ../../images/role-aleatorio-ronaldinho.jpeg
-class: post-template
-subclass: 'post'
 ---
 
 ## Música
@@ -32,7 +30,7 @@ Eu só quero amar você
 Eu tô na mão
 ```
 
-![Role aleatorio - Ronaldinho Gaucho](../../images/role-aleatorio-ronaldinho.jpeg "Role aleatorio - Ronaldinho Gaucho")
+![Role aleatorio - Ronaldinho Gaucho](../../images/role-aleatorio-ronaldinho.jpeg 'Role aleatorio - Ronaldinho Gaucho')
 
 ## Introdução aleatória
 
@@ -62,7 +60,7 @@ Você com certeza já julgou hoje.
 
 Julgou a moça do caixa no mercado, quando ela demorou para passar o troco.
 
-Julgou quando uma cara aleatório na rua, te pediu dinheiro na rua *pro* gole dele;
+Julgou quando uma cara aleatório na rua, te pediu dinheiro na rua _pro_ gole dele;
 
 Você juntou as pessoas a sua volta, tentando adivinhar o pensamento delas, a partir do seu ponto de vista.
 
@@ -84,7 +82,7 @@ Você vai descobrir coisas que não via antes e muitas vezes elas nem existiam p
 
 Tente não apenas olhar, mas tente apreciar, tente enxergar com outros olhos, veja o quanto essas coisas são belas.
 
-Olhe para essas coisas sem julgamento, e pense: ***“Nossa como isso é incrível! É lindo, é maravilhoso!”***, Você me promete que vai exercitar isso?
+Olhe para essas coisas sem julgamento, e pense: **_“Nossa como isso é incrível! É lindo, é maravilhoso!”_**, Você me promete que vai exercitar isso?
 
 ## Qual o sentido da vida?
 
@@ -115,4 +113,3 @@ Tudo é perecível, tudo acaba, sua vida, a vida de seus amigos, sua família, a
 **Apenas Viva!**
 
 // Fim.
-

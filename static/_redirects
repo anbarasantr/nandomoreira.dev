@@ -1,5 +1,4 @@
 # Redirects from what the browser requests to what we serve
-#/404                         /                                                               200
 /2015                         /                                                               301
 /2015/*                       /                                                               301
 /2014                         /                                                               301
@@ -40,29 +39,26 @@
 /pizzariadetroit              /portfolio                                                      301
 /open-source                  /portfolio                                                      301
 
-/sobre                        /about                                                          301
-/sobre/*                      /about/:splat                                                   301
-/br/sobre                     /about                                                          301
-/pt_br/sobre                  /about                                                          301
-/en/about                     /about                                                          301
-/styleguide                   /about                                                          301
+/about                        /sobre                                                          301
+/sobre/*                      /sobre                                                          301
+/br/sobre                     /sobre                                                          301
+/pt_br/sobre                  /sobre                                                          301
+/en/about                     /sobre                                                          301
+/styleguide                   /sobre                                                          301
 
 /cv                           /resume                                                         301
 
-/sobre/now                    /about/now                                                      301
-/now                          /about/now                                                      301
+/sobre/now                    /now                                                            301
+/about/now                    /now                                                            301
 
-/contato                      /contact                                                        301
+/contact                      /contato                                                        301
 
-/experiments                  /projetos/experimentos                                          301
-/experiment/*                 /projetos/experimentos                                          301
-/lab                          /projetos/experimentos                                          301
-/lab/*                        /projetos/experimentos                                          301
-/pen-*                        /projetos/experimentos                                          301
+/experiments                  /experimentos                                                   301
+/experiment/*                 /experimentos                                                   301
+/lab                          /experimentos                                                   301
+/lab/*                        /experimentos                                                   301
+/pen-*                        /experimentos                                                   301
 
-/blog/page/*                  https://blog.nandomoreira.me/page/:splat                        301
-/tags/*                       https://blog.nandomoreira.me/tags/:splat                        301
-/tag/*                        https://blog.nandomoreira.me/tags/:splat                        301
 /the-quick-brown-fox-jumps-over-a-lazy-dog /blog                                              301
 
 /comece-com-gulpjs            /comece-com-gulp                                                301

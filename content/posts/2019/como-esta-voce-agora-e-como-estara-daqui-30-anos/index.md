@@ -1,11 +1,11 @@
 ---
 layout: post
-path: "/como-esta-voce-agora-e-como-estara-daqui-30-anos"
+path: "/blog/como-esta-voce-agora-e-como-estara-daqui-30-anos"
 title: Como está você agora e como estará daqui 30 anos?
 description: 'Todo mundo já fez essa pergunta para si próprio: “Afinal, quem sou eu?”, se você ainda não fez, vai por mim, um dia você irá parar e refletir sobre sua essência e sua personalidade.'
 date: 2019-01-07
 image: ./hidethepainharold.jpg
-categories:
+category:
 - Reflexões
 tags:
 - reflexoes

@@ -1,4 +1,4 @@
-@import '../../assets/stylus/index.styl'
+@import '../../stylus/index.styl'
 
 .Brand
   margin 0
@@ -11,5 +11,9 @@
     font-size inherit
   &__link
     color $secondary-color
-    &:hover
+    text-decoration none
+    &:hover,
+    &:focus,
+    &:active
+      outline none
       text-decoration none

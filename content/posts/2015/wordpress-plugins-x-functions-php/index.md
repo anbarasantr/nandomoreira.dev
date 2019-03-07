@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/wordpress-plugins-x-functions-php"
+path: "/blog/wordpress-plugins-x-functions-php"
 title: "Wordpress - plugins x functions.php"
 date: 2015-07-24
 description: "Muitos amigos e colegas de trabalho sempre me perguntam porque eu sou contra o uso de plugins no Wordpress."
 image: "./wordpress-plugins-x-functions-php.jpg"
 keywords: "wordpress, plugins, funcoes, php, dicas"
-categories: ["wordpress"]
+category:
+- wordpress
 tags: ["wordpress", "dicas", "php"]
 ---
 

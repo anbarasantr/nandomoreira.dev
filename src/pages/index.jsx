@@ -1,24 +1,19 @@
 import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
 
-const Home = () => (
+import '../components/Layout/base.styl'
+
+export default () => (
   <Fragment>
-    <SEO />
+    <SEO title="Olá, eu me chamo Fernando Moreira" />
     <Hero />
   </Fragment>
 )
 
-Home.propTypes = {
-  route: PropTypes.object
-}
-
-export default Home
-
-export const pageQuery = graphql`
+export const indexQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {

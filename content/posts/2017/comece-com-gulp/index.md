@@ -1,11 +1,11 @@
 ---
 layout: post
-path: "/comece-com-gulp"
+path: "/blog/comece-com-gulp"
 title: Comece com Gulp!
 date: 2017-01-08
 description: Eu particularmente gosto muito de ganhar tempo com o desenvolvimento dos meus projetos e usar automatizador de tarefas me dá esse poder.
 image: ../../images/comece-com-gulp.png
-categories:
+category:
 - gulp
 tags:
 - gulpjs
@@ -73,7 +73,7 @@ O meu **package.json** ficou mais ou menos assim:
 {
   "name": "comece-com-gulp",
   "version": "1.0.0",
-  "description": "> Repositório do artigo: http://nandomoreira.me/comece-com-gulpjs/",
+  "description": "> Repositório do artigo: http://nandomoreira.me/comece-com-gulp",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1"
@@ -161,4 +161,4 @@ Logo mais vou fazer outro artigo um pouco mais avançado para você ir mais alé
 
 Até breve.
 
-/end
+`/end`

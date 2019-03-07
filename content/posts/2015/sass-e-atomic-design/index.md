@@ -1,11 +1,12 @@
 ---
 layout: post
-path: "/sass-e-atomic-design"
+path: "/blog/sass-e-atomic-design"
 title: "SASS + Atomic design (parte 1)"
 date: 2015-11-16
 description: "SASS é um pré-processador incrível não acha? Mas muitos não sabem como organizar seus projetos com ele"
 image: ../../images/conhecendo-o-pre-processador-sass.jpg
-categories: ["sass"]
+category:
+- sass
 tags:
 - sass
 - css

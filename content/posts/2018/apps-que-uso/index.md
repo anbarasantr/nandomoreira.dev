@@ -1,18 +1,16 @@
 ---
 layout: post
-path: "/apps-que-uso"
+path: "/blog/apps-que-uso"
 title: Aplicativos que uso
 description: Criei essa lista de apps que uso todos os dias, espero que gostem
 date: 2018-09-29
-categories:
+category:
 - dicas
 tags:
 - dicas
 - apps
 image: ../../images/apps-que-uso-google-chrome-canary.png
 author: nandomoreira
-class: post-template
-subclass: post
 ---
 
 ![Criei essa lista de apps que uso todos os dias, espero que gostem](assets/images/posts/apps-que-uso-google-chrome-canary.png)

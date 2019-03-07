@@ -1,13 +1,13 @@
-@import '../../assets/stylus/index.styl'
+@import '../../stylus/index.styl'
 
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset,
-legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6
+html, body
   margin 0
   padding 0
 
 html
   font-size 16px
   font-family sans-serif
+  text-rendering optimizeLegibility
   -webkit-text-size-adjust 100%
   -ms-text-size-adjust 100%
   box-sizing border-box
@@ -35,9 +35,10 @@ body,
 
 body
   background-color $background-color
+  font-family $font-family-base
   color $text-color
-  font-size $font-size
-  font-weight 400
+  font-size 1rem
+  font-weight 500
   word-wrap break-word
   font-kerning normal
   word-spacing 1px
@@ -51,12 +52,58 @@ body
   -webkit-font-feature-settings "kern", "liga", "clig", "calt"
   font-feature-settings "kern", "liga", "clig", "calt"
 
+p
+  font-size 1.25rem
+  color #555
+  font-weight 500
+  line-height 1.5
+  color $text-color
+
+a
+  color $link-color
+  border-bottom $link-color
+  transition .12s color $timingFunction, .12s outline $timingFunction
+  text-decoration none
+  &:hover,
+  &:active,
+  &:focus
+    color $link-hover-color
+    border-color $link-hover-color
+  &:active,
+  &:focus
+    outline-color $link-hover-color
+
+h1
+  font-size 34px
+
+h2
+  font-size 32px
+
+h3
+  font-size 30px
+
+h4
+  font-size 26px
+
+h5
+  font-size 22px
+
+h6
+  font-size 18px
+
 h1, h2, h3, h4, h5, h6
-  font-weight 800
-  font-family inherit
+  font-family $font-family-heading
+  line-height 1.2
   color inherit
 
+h1, h2, h3, h4, h5, h6, strong, b
+  font-weight 800
+
+h1, h2, h3, h4, h5, h6, p
+  margin 30px 0
+
 button, input, select, textarea
+  font-family inherit
   margin 0
 
 img, embed, iframe, object, audio, video
@@ -79,3 +126,10 @@ svg:not(:root)
 
 code, kbd, pre, samp
   font-size 1em
+
+hr
+  display block
+  width 100%
+  margin 1.875rem 0
+  border none
+  border-bottom 1px solid rgba(#000, .1)

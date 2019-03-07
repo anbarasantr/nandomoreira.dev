@@ -1,4 +1,4 @@
-@import '../../assets/stylus/index.styl'
+@import '../../stylus/index.styl'
 
 .Social
   list-style none
@@ -29,10 +29,14 @@
       padding 0
     &:hover,
     &:focus
-      transform scale(1.1) rotate(10deg)
+      transform scale(1.1)
       opacity 1
       background #d20068
       color #fff
       box-shadow 0 0 1px 7px rgba(210, 0, 104, 0.15)
       svg
         fill #fff
+    &:hover,
+    &:focus,
+    &:active
+      outline none

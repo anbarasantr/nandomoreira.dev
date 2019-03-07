@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/fazendo-sistema-de-busca-no-jekyll-com-angularjs"
+path: "/blog/fazendo-sistema-de-busca-no-jekyll-com-angularjs"
 title: "Fazendo um sistema de busca simples no Jekyll usando AngularJS"
 date: 2015-12-27 22:28:33
 description: "Por alguns meses eu usei o plugin Simple Jekyll Search que funcionou muito bem no meu blog"
 image: ../../images/angularjs.png
 keywords: "jekyll, angular, angularjs"
-categories: ["jekyll"]
+category:
+- jekyll
 tags:
 - jekyll
 - angular
@@ -134,7 +135,7 @@ Bem, esse HTML ai em cima dispeça explicações né, se você sabe pelo menos o
 
 Você deve ter notado que o nosso `searchController` e nossa função `pesquisar` retorna todos os objetos do arquivo `search.json` por isso passamos um filtro mágico do AngularJS chamado `filter:` que recebe o model `search` (que é basicamente as letras digitadas no input).
 
-[Demonstração](http://nandomoreira.me/busca-no-jekyll-com-angularjs/) [Download](https://github.com/nandomoreirame/busca-no-jekyll-com-angularjs)
+[Demonstração](https://nando-experiments.github.io/busca-no-jekyll-com-angularjs/) [Download](https://github.com/nando-experiments/busca-no-jekyll-com-angularjs)
 
 Com isso fechamos nosso sisteminha de busca simples no Jekyll usando AngularJS ;)
 

@@ -1,0 +1,55 @@
+@import '../../stylus/index.styl'
+
+.Project
+  margin-bottom 3.75rem
+  width 100%
+  p
+    margin 0 0 .625rem
+
+  .gatsby-image-wrapper
+    transition: .2s all ease-in-out
+
+  &:hover .gatsby-image-wrapper
+    transform scale(1.04, 1.04)
+
+  &__inner
+    @extend .card
+    @extend .card--hover
+    overflow hidden
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content center
+
+  &__header
+    padding 0
+    h1
+      margin 0 0 .625rem
+      font-size 1.75rem
+      a
+        text-decoration none
+
+  &__image
+    display inline-block
+    overflow hidden
+    width 460px
+
+  &__content
+    padding 1.875rem
+    width calc(100% - 460px)
+
+  &__tags
+    list-style none
+    padding 0
+    margin 0
+    li
+      display inline-block
+      font-size .75rem
+      margin-bottom 5px
+      &:not(:last-child)
+        margin-right 5px
+
+  &__tag
+    padding 3px 6px
+    background-color darken(#fff, 6%)
+    border-radius 3px

@@ -1,14 +1,14 @@
 ---
 layout: post
-path: "/como-um-time"
+path: "/blog/como-um-time"
 title: Como um time
 date: 2016-12-27
 description: Trabalhar como um time é elevar o projeto a um nível superior, que nem mesmo você nem seus superiores imaginariam chegar, mas só conseguiram chegar lá porque viram a necessidade de trabalhar em equipe.
-categories:
-- geral
+category:
+- Geral
+tags:
+- Reflexão
 image: ../../images/2016/12/lojaskd-team-it.jpeg
-class: post-template
-subclass: post
 ---
 
 **TRABALHAR COMO UM TIME...**

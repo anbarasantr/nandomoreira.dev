@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/usando-categorias-e-tags-no-jekyll"
+path: "/blog/usando-categorias-e-tags-no-jekyll"
 title: "Usando categorias e tags no Jekyll"
 date: 2015-10-13
 description: "GitHub Pages serviço é simplesmente incrível! E com a integração Jekyll ele fica ainda mais impressionante! Mas existem algumas limitações neste grande sistema automatizado"
 image: ../../images/get-started-with-jekyll.jpg
 keywords: "jekyll, categorias, tags, blog"
-categories: ["jekyll"]
+category:
+- jekyll
 tags:
 - github
 - gh-pages

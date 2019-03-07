@@ -1,18 +1,17 @@
 ---
 layout: post
-path: "/wp-cli-uma-interface-de-linha-de-comando-para-wordpress"
+path: "/blog/wp-cli-uma-interface-de-linha-de-comando-para-wordpress"
 title: "WP-CLI: Uma interface de linha de comando para WordPress"
 description: "Nesse artigo vou mostrar como instalar a WP-CLI, uma interface de linha de comando para WordPress"
 keywords: "wordpress, wp, cli, wp-cli, comando, linha, interface"
 image: ../../images/wp-cli-help.png
-categories:
+date: 2016-01-10
+category:
 - wordpress
 tags:
 - wordpress
 - cli
 - wpcli
-class: post-template
-subclass: post
 ---
 
 Nesse artigo vou mostrar como instalar a [WP-CLI](http://wp-cli.org/), uma interface de linha de comando para WordPress.

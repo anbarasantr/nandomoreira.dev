@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/ei-front-end-voce-conhece-o-panda"
+path: "/blog/ei-front-end-voce-conhece-o-panda"
 title: "Ei front-end! Você conhece o Panda? 🐼"
 date: 2015-12-11
 description: "Essa é uma dica rápida para quem ama e trabalha com desenvolvimento de interfaces para o usuário"
 keywords: "dicas, extensões, criação, web, criativo, inspiração"
 image: ../../images/2015/12/panda-app-chrome-extension.png
-categories: ["dicas"]
+category:
+- dicas
 tags:
 - dicas
 - extensões

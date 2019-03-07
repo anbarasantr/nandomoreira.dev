@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/como-instalar-o-gulp-4"
+path: "/blog/como-instalar-o-gulp-4"
 title: "Como instalar o Gulp 4"
 date: 2015-09-26
 description: "Gulp 4 não foi liberado ainda e se você não pode esperar para colocar suas mãos sobre ele, aqui vai como instalar o Gulp 4."
 keywords: "node, gulp, gulpjs, instalacao"
 image: ../../images/comece-com-gulp.png
-categories: ["sass"]
+category:
+- sass
 tags:
 - node
 - gulp

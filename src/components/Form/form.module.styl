@@ -1,0 +1,26 @@
+@import '../../stylus/index.styl'
+
+.Form
+  &__label
+    display block
+    cursor pointer
+    margin-bottom .125rem
+
+  &__group
+    margin-bottom .625rem
+
+  &__input
+    width 100%
+    padding .375rem .75rem
+    line-height 1rem
+    font-size .875rem
+    background-color #fff
+    border 1px solid rgba(#000, .2)
+    appearance none
+
+  &__button
+    @extend .button
+    @extend .button--secondary
+
+textarea.Form__input
+  height 120px

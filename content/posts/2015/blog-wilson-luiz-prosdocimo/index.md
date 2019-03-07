@@ -1,12 +1,13 @@
 ---
 layout: post
-path: "/blog-wilson-luiz-prosdocimo"
+path: "/blog/blog-wilson-luiz-prosdocimo"
 title: "Blog Wilson Luiz Prosdocimo com Jekyll"
 date: 2015-09-13
 description: "Meu amigo Wilson gostou muito da ideia de poder publicar o blog dele no github usando Jekyll. Pode-se dizer que eu sou um “Evangelista do Jekyll” porque ele é um convertido da minha palavra."
 keywords: "jekyll, projeto, portfolio"
 image: ../../images/2015/09/wprosdocimo.jpg
-categories: ["sass"]
+category:
+- sass
 tags: ["jekyll", "projeto", "portfolio"]
 ---
 

@@ -1,11 +1,12 @@
 ---
 layout: post
-path: "/yeoman-generator-gulp-boilerplate"
+path: "/blog/yeoman-generator-gulp-boilerplate"
 title: "Yeoman Generator Gulp Boilerplate"
 date: 2015-09-27
 description: "Eu criei um repositório no Github onde mantenho atualizado com um boilerplate para Gulp, o repositório era pra ser pessoal mas eu resolvi compartilhar."
 image: ../../images/yeoman.jpg
-categories: ["gulp"]
+category:
+- gulp
 tags:
 - gulp
 - generator

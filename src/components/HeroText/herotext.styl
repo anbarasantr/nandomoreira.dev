@@ -1,0 +1,24 @@
+@import '../../stylus/index.styl'
+
+.HeroText
+  h1, h2, p
+    margin 0 0 .9375rem
+
+  h1
+    font-size 1.375rem
+    +above($tablet)
+      font-size 3.25rem
+
+  .Contact__email
+    +below($tablet)
+      font-size 1.1875rem
+    +below($mobile)
+      font-size .875rem
+
+  .button
+    margin .9375rem .3125rem
+    display inline-block
+    span, svg
+      display inline-block
+      vertical-align middle
+      margin 0 .3125rem

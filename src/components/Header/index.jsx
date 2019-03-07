@@ -4,13 +4,13 @@ import React, { Component } from 'react'
 import Brand from '../Brand'
 import Nav from '../Nav'
 
-import styles from './header.module.styl'
+import module from './header.module.styl'
 
 class Header extends Component {
   render() {
     return (
-      <header className={styles.Header}>
-        <div className={styles.Header__inner}>
+      <header className={module.Header}>
+        <div className={module.Header__inner}>
           <Brand />
           <Nav />
         </div>

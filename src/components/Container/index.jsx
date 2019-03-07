@@ -1,24 +1,11 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 
-import styles from './container.module.styl'
+import module from './container.module.styl'
 
-class Container extends Component {
-  render() {
-    const { children } = this.props
-
-    return (
-      <div className={styles.Container}>
-        <div className={styles.Container__inner}>
-          {children}
-        </div>
-      </div>
-    )
-  }
-}
-
-Container.propTypes = {
-  route: PropTypes.object
-}
-
-export default Container
+export default ({ children, ...props }) => (
+  <div className={module.Container} {...props}>
+    <div className={module.Container__inner}>
+      {children}
+    </div>
+  </div>
+)

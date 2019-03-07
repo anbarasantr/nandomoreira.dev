@@ -1,18 +1,17 @@
 ---
 layout: post
-path: "/criando-a-bandeira-do-brasil-apenas-com-css"
+path: "/blog/criando-a-bandeira-do-brasil-apenas-com-css"
 title: "Criando a bandeira do Brasil 🇧🇷 apenas com CSS"
 description: "Hoje eu vou demonstrar nesse artigo como eu criei a bandeira do Brasil usando apenas com CSS"
 keywords: "css, css3, html, front-end, frontendm flags, bandeira, brasil"
 image: ../../images/bandeira-do-brasil-com-css.png
-categories:
+date: 2016-01-23
+category:
 - css
 tags:
 - css
 - css3
 - html
-class: post-template
-subclass: post
 ---
 
 Olá terráqueo, como vai?

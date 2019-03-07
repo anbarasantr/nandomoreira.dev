@@ -1,0 +1,12 @@
+{
+  "search.exclude": {
+    "public": true,
+    ".cache": true
+  },
+  "files.exclude": {
+    "**/public": true,
+    "**/.cache": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 500
+}

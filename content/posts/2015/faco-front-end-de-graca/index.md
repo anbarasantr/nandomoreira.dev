@@ -1,11 +1,12 @@
 ---
 layout: post
-path: "/faco-front-end-de-graca"
+path: "/blog/faco-front-end-de-graca"
 title: "Faço front-end de graça, saiba como!"
 date: 2015-10-12
 description: "É isso mesmo que você leu, Faço front-end de graça, mas tem alguns requisitos necessários para que isso aconteça, vem comigo que te explico como"
 keywords: "front-end, frontend, html, css, free, freedom, job, projeto, open-source, open, source"
-categories: ["geral"]
+category:
+- geral
 image: ../../images/2015/10/madruga.gif
 tags:
 - front-end

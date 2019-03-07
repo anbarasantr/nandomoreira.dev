@@ -1,7 +1,17 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from 'react' // eslint-disable-line
+import Zooming from 'zooming'
 
-// You can delete this file if you're not using it
+require('prismjs/themes/prism-tomorrow.css')
+require('prismjs/plugins/line-numbers/prism-line-numbers.css')
+
+export const onInitialClientRender = () => {
+  console.log("ReactDOM.render has executed")
+
+  const zooming = new Zooming({
+    bgColor: 'rgb(255, 255, 255)',
+    preloadImage: true,
+    zIndex: 10000
+  })
+
+  zooming.listen('.gatsby-resp-image-link img')
+}

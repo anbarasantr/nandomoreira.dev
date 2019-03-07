@@ -1,16 +1,14 @@
 ---
 layout: post
-path: "/agradeca-mais-e-reclame-menos"
+path: "/blog/agradeca-mais-e-reclame-menos"
 title: "Reflexão: agradeça mais e reclame menos"
 description: "Você já parou pra pensar quantas vezes você reclama por dia, ou quantas vezes você reclamou hoje?"
 date: 2016-08-23
 image: ../../images/2016/08/thanks.gif
-categories:
-- geral
+category:
+- Geral
 tags:
-- reflexao
-class: post-template
-subclass: post
+- Reflexão
 ---
 
 Você já parou pra pensar quantas vezes você reclama por dia, ou quantas vezes você reclamou hoje? Vamos lá, faça um teste! Você vai ficar surpreso em saber que reclamações fazem parte do nosso dia-a-dia e nem percebemos.

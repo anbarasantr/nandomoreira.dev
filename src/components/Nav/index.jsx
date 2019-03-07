@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-// import PropTypes from 'prop-types'
 
-import styles from './nav.module.styl'
+import module from './nav.module.styl'
 
 class Nav extends Component {
   constructor() {
@@ -13,15 +12,25 @@ class Nav extends Component {
       links: [
         {
           name: 'Sobre mim',
-          path: '/about'
-        }, {
+          path: '/sobre',
+        },
+        {
+          name: 'Serviços',
+          path: '/servicos',
+        },
+        {
           name: 'Portfolio',
-          path: '/portfolio'
-        }, {
+          path: '/portfolio',
+        },
+        {
+          name: 'Blog',
+          path: '/blog',
+        },
+        {
           name: 'Contato',
-          path: '/contact'
-        }
-      ]
+          path: '/contato',
+        },
+      ],
     }
 
     this.openNav = this.openNav.bind(this)
@@ -36,13 +45,13 @@ class Nav extends Component {
 
   openNav() {
     this.setState({
-      isOpen: true
+      isOpen: true,
     })
   }
 
   closeNav() {
     this.setState({
-      isOpen: false
+      isOpen: false,
     })
   }
 
@@ -50,35 +59,45 @@ class Nav extends Component {
     return (
       <nav
         className={
-          "Nav " +
-          (styles.Nav) +
-          (this.props.isTop ? " Nav--top" : '') +
-          (this.state.isOpen ? " Nav--open" : '')
+          'Nav ' +
+          module.Nav +
+          (this.props.isTop ? ' Nav--top' : '') +
+          (this.state.isOpen ? ' Nav--open' : '')
         }
+        aria-label="Navigation"
+        itemType="https://schema.org/SiteNavigationElement"
+        itemScope
       >
         {this.props.isTop && (
-          <Link className={styles.Nav__logo} to="/">
+          <Link className={module.Nav__logo} to="/">
             <span>nando</span>moreira
           </Link>
         )}
 
-        <ul className={styles.Nav__list}>
+        <ul className={module.Nav__list}>
           {this.state.links.map(item => {
             return (
-              <li className={"Nav__item " + styles.Nav__item} key={item.path}>
-                <Link className={styles.Nav__link} to={item.path} itemProp="url">{item.name}</Link>
+              <li className={'Nav__item ' + module.Nav__item} key={item.path}>
+                <Link
+                  className={module.Nav__link}
+                  activeClassName={module.Nav__linkActive}
+                  to={item.path}
+                  itemProp="url"
+                >
+                  {item.name}
+                </Link>
               </li>
             )
           })}
         </ul>
 
-        <div className={styles.Nav__close} onClick={this.closeNav}>
+        <div className={module.Nav__close} onClick={this.closeNav}>
           <svg viewBox="0 0 40 40">
             <path d="M 10,10 L 30,30 M 30,10 L 10,30" />
           </svg>
         </div>
 
-        <button className={styles.Nav__toggle} onClick={this.openNav}>
+        <button className={module.Nav__toggle} onClick={this.openNav}>
           Menu
         </button>
       </nav>
@@ -87,7 +106,7 @@ class Nav extends Component {
 }
 
 Nav.defaultProps = {
-  type: 'short'
+  type: 'short',
 }
 
 export default Nav

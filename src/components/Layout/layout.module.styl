@@ -1,7 +1,9 @@
-// @import '../../assets/stylus/index.styl'
+@import '../../stylus/index.styl'
 
 .Default
   position relative
   z-index 5
   &__main
-    padding-top 100px
+    padding 1.875rem 0 0
+    +above($tablet)
+      padding 3.4375rem 0 // 55px
