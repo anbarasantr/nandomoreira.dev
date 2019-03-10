@@ -1,23 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Link from 'gatsby-link'
-// import PropTypes from 'prop-types'
+import styles from './styles'
 
-import module from './brand.module.styl'
-
-class Brand extends Component {
-  render() {
-    return (
-      <h1 className={module.Brand}>
-        <Link className={module.Brand__link} to="/">
-          <span>nando</span>moreira
-        </Link>
-      </h1>
-    )
-  }
-}
-
-Brand.defaultProps = {
-  type: 'short'
-}
-
-export default Brand
+export default () => (
+  <h1 style={styles.brand}>
+    <Link style={styles.brand__link} to="/">
+      <span style={styles.brand__span}>nando</span>moreira
+    </Link>
+  </h1>
+)

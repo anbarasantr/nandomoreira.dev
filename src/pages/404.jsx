@@ -1,38 +1,53 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import HeroText from '../components/HeroText'
 
 import SEO from '../components/SEO'
 import SocialIcons from '../components/SocialIcons'
-import IconArrowRight from '../components/Icons/ArrowRight'
-import IconArrowLeft from '../components/Icons/ArrowLeft'
+import Icon from '../components/Icons'
 
 const title = 'Erro 404'
-const description = 'Infelizmente a página que você está tentando acessar não foi localizada.'
+const description =
+  'Infelizmente a página que você está tentando acessar não foi localizada.'
 
-const PageNotFound = () => (
+const PageNotFound = ({ data }) => (
   <Layout>
-    <SEO
-      title={title}
-      description={description}
-      pathname="/404.html"
-    />
+    <SEO title={title} description={description} pathname="/404.html" />
     <HeroText>
       <h1>Oops! Nada por aqui. {title}</h1>
       <p>{description}</p>
       <Link to="/" className="button button--primary">
-        <IconArrowLeft size="20" />
+        <Icon id="icon-arrow-left" style={{ padding: '5px' }} />
         <span> Página inicial </span>
       </Link>
       <Link to="/contato" className="button button--secondary">
         <span> Entre em contato </span>
-        <IconArrowRight size="20" />
+        <Icon id="icon-arrow-right" style={{ padding: '5px' }} />
       </Link>
-      <SocialIcons />
+      <SocialIcons icons={data.site.siteMetadata.social} />
     </HeroText>
   </Layout>
 )
 
 export default PageNotFound
+
+export const error404Query = graphql`
+  query Error404Query {
+    site {
+      siteMetadata {
+        social {
+          github
+          twitter
+          codepen
+          linkedin
+          dribbble
+          behance
+          npm
+        }
+      }
+    }
+  }
+`

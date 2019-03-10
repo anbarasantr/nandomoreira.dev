@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
 import module from './pagination.module.styl'
-import IconArrowRight from '../Icons/ArrowRight'
-import IconArrowLeft from '../Icons/ArrowLeft'
+import Icon from '../Icons'
 
 export default ({ paginate }) => {
   const { basePath, isFirst, prevPage, numPages, isLast, nextPage } = paginate
@@ -14,9 +12,11 @@ export default ({ paginate }) => {
         <Link
           to={prevPage}
           rel="prev"
-          className={`${module.Pagination__link} ${module.Pagination__linkPrev}`}
+          className={`${module.Pagination__link} ${
+            module.Pagination__linkPrev
+          }`}
         >
-          <IconArrowLeft size="20" />
+          <Icon id="icon-arrow-left" style={{ padding: '5px' }} />
         </Link>
       )}
 
@@ -24,7 +24,9 @@ export default ({ paginate }) => {
         <Link
           key={`pagination-number${i + 1}`}
           to={`${i === 0 ? `${basePath}` : `${basePath}/${i + 1}`}`}
-          className={`${module.Pagination__link} ${module.Pagination__linkNumber}`}
+          className={`${module.Pagination__link} ${
+            module.Pagination__linkNumber
+          }`}
           activeClassName={module.Pagination__linkCurrent}
         >
           {i + 1}
@@ -35,9 +37,11 @@ export default ({ paginate }) => {
         <Link
           to={nextPage}
           rel="next"
-          className={`${module.Pagination__link} ${module.Pagination__linkNext}`}
+          className={`${module.Pagination__link} ${
+            module.Pagination__linkNext
+          }`}
         >
-          <IconArrowRight size="20" />
+          <Icon id="icon-arrow-right" style={{ padding: '5px' }} />
         </Link>
       )}
     </div>

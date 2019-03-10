@@ -4,13 +4,14 @@
   list-style none
   padding 0
   margin .3125rem /* 5/16 */ 0
+
   &__item
     display inline-block
     vertical-align middle
     text-align center
     line-height 40px
-    &:not(:last-child)
-      margin-right .625rem /* 10/16 */
+    margin 0 .625rem
+
   &__link
     opacity .8
     background #fff
@@ -18,13 +19,15 @@
     display flex
     align-items center
     justify-content center
-    height 40px
     position relative
     text-align center
-    width 40px
+    width 36px
+    height 36px
     box-shadow 0 0 1px 7px rgba(#000, 0.01)
+    padding 15px
     &, svg
-      transition .2s transform $timingFunction, .2s opacity $timingFunction
+      transition .2s transform $timingFunction,
+        .2s opacity $timingFunction
       margin 0
       padding 0
     &:hover,

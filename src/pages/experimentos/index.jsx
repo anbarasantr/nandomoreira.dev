@@ -10,11 +10,7 @@ const description = 'Experimentos'
 
 const Experiments = () => (
   <Layout>
-    <SEO
-      title={title}
-      description={description}
-      pathname="/experimentos"
-    />
+    <SEO title={title} description={description} pathname="/experimentos" />
     <Container>
       <PageHeader title={title}>
         <p>{description}</p>

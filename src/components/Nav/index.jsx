@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-
 import module from './nav.module.styl'
 
 class Nav extends Component {

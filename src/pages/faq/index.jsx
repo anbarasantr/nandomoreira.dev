@@ -10,11 +10,7 @@ const description = 'FAQ'
 
 const FAQ = () => (
   <Layout>
-    <SEO
-      title={title}
-      description={description}
-      pathname="/faq"
-    />
+    <SEO title={title} description={description} pathname="/faq" />
     <Container>
       <PageHeader title={title}>
         <p>{description}</p>

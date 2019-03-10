@@ -8,7 +8,8 @@ import PageHeader from '../../components/PageHeader'
 import SocialIcons from '../../components/SocialIcons'
 
 const title = 'Serviços'
-const description = 'Para entrar em contato comigo basta me seguir em qualquer uma das minhas redes sociais e chamar por DM'
+const description =
+  'Para entrar em contato comigo basta me seguir em qualquer uma das minhas redes sociais e chamar por DM'
 
 export default () => (
   <Layout>

@@ -1,18 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import './herotext.styl'
 import module from './herotext.module.styl'
 
-class HeroText extends Component {
-  render() {
-    return (
-      <div className={`HeroText ${module.HeroText}`}>
-        <div className={module.HeroText__inner}>
-          {this.props.children}
-        </div>
-      </div>
-    )
-  }
-}
+const HeroText = ({ children }) => (
+  <div className={`HeroText ${module.HeroText}`}>
+    <div className={module.HeroText__inner}>{children}</div>
+  </div>
+)
 
 export default HeroText

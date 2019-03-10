@@ -1,17 +1,17 @@
 ---
 layout: post
-path: "/blog/criando-a-bandeira-do-brasil-apenas-com-css"
-title: "Criando a bandeira do Brasil 🇧🇷 apenas com CSS"
-description: "Hoje eu vou demonstrar nesse artigo como eu criei a bandeira do Brasil usando apenas com CSS"
-keywords: "css, css3, html, front-end, frontendm flags, bandeira, brasil"
+path: '/blog/criando-a-bandeira-do-brasil-apenas-com-css'
+title: 'Criando a bandeira do Brasil 🇧🇷 apenas com CSS'
+description: 'Hoje eu vou demonstrar nesse artigo como eu criei a bandeira do Brasil usando apenas com CSS'
+keywords: 'css, css3, html, front-end, frontendm flags, bandeira, brasil'
 image: ../../images/bandeira-do-brasil-com-css.png
 date: 2016-01-23
 category:
-- css
+  - css
 tags:
-- css
-- css3
-- html
+  - css
+  - css3
+  - html
 ---
 
 Olá terráqueo, como vai?
@@ -24,6 +24,8 @@ Eu vou demonstrar nesse artigo como eu criei ela usando apenas com <abbr title="
 
 Isso é muito simples. Primeiro criei uma `div` com a classe `.brasil-flag`, por enquanto vazia.
 
+<div class="language-filename">bandeira.html</div>
+
 ```html
 <div class="brasil-flag">
   <!-- empty -->
@@ -32,7 +34,9 @@ Isso é muito simples. Primeiro criei uma `div` com a classe `.brasil-flag`, por
 
 E no CSS eu apliquei o seguinte código:
 
-```scss
+<div class="language-filename">bandeira.css</div>
+
+```css
 .brasil-flag {
   position: relative;
   background-color: #16b83e;
@@ -55,7 +59,7 @@ Logo dentro da div nós criaremos mais uma `div` com a classe `.losangue`, mais 
 
 E no CSS eu apliquei o seguinte código:
 
-```scss
+```css
 .brasil-flag .losangue:before,
 .brasil-flag .losangue:after {
   position: absolute;
@@ -72,7 +76,7 @@ E no CSS eu apliquei o seguinte código:
 
 .brasil-flag .losangue:before,
 .brasil-flag .losangue:after {
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   left: 20px;
@@ -107,7 +111,7 @@ Logo após vamos adicionar mais uma `div` com a classe `.circle`, mais ou menos 
 </div>
 ```
 
-```scss
+```css
 .brasil-flag .circle {
   overflow: hidden;
   z-index: 2;
@@ -133,7 +137,7 @@ Isso já nos trás o **círculo azul** da bandeira.
 
 Ainda utilizando a classe `.circle` vamos criar a faixa branca da bandeira.
 
-```scss
+```css
 .brasil-flag .circle,
 .brasil-flag .circle:before,
 .brasil-flag .circle:after {

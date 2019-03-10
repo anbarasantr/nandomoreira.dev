@@ -7,12 +7,14 @@ import SEO from '../components/SEO'
 import Image from '../components/Image'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
-import IconTags from '../components/Icons/Tags'
 import Comments from '../components/Comments'
+import Icon from '../components/Icons'
 
 export default function Template({ data }) {
   const post = data.markdownRemark
-  const { disqusShortname } = data.site.siteMetadata
+  if (!post) return null
+
+  const { disqusShortname, isProduction } = data.site.siteMetadata
   const disqusConfig = {
     identifier: `${post.frontmatter.path}/`,
     title: post.frontmatter.title,
@@ -23,7 +25,7 @@ export default function Template({ data }) {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image={post.frontmatter.image.src}
+        image={post.frontmatter.image.publicURL}
         pathname={post.frontmatter.path}
         article={true}
       />
@@ -58,7 +60,7 @@ export default function Template({ data }) {
         </div>
 
         <p>
-          <IconTags />
+          <Icon id="icon-tags" />
           {post.frontmatter.tags.map((tag, index) => {
             return (
               <span key={index} className="Project__tag">
@@ -67,7 +69,9 @@ export default function Template({ data }) {
             )
           })}
         </p>
-        <Comments shortname={disqusShortname} config={disqusConfig} />
+        {isProduction && (
+          <Comments shortname={disqusShortname} config={disqusConfig} />
+        )}
       </Container>
     </Layout>
   )
@@ -78,6 +82,7 @@ export const projectQuery = graphql`
     site {
       siteMetadata {
         disqusShortname
+        isProduction
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {

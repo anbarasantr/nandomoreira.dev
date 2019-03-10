@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "n/a",
   "keywords": [
-    "WordPress",
+    "wordpress",
     "desenvolvedor",
     "web",
     "wp",
@@ -17,6 +17,7 @@
     "front-end",
     "frontend",
     "ux",
+    "uxdesigner",
     "designer",
     "design",
     "programmer"
@@ -30,9 +31,14 @@
     "email": "hi@nandomoreira.dev",
     "bio": "30 anos, minimalista, front-end, especialista em WordPress e aprendiz de Vegano. Sempre em busca de um código bem escrito e de um bom café.",
     "phone": "5541984401163",
+    "github": "nandomoreirame",
     "twitter": "oseunando",
+    "codepen": "oseunando",
     "linkedin": "nandomoreirame",
-    "github": "nandomoreirame"
+    "behance": "umdevux",
+    "dribbble": "umdevux",
+    "npm": "~nandomoreira.me",
+    "disqus": "fernandomoreira"
   },
   "bugs": {
     "url": "https://github.com/nandomoreirame/nandomoreira.dev/issues"
@@ -77,6 +83,7 @@
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
+    "react-snakke": "^1.1.0",
     "rupture": "^0.7.1",
     "slash": "^2.0.0",
     "slugify": "^1.3.4",

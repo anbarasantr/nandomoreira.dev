@@ -17,7 +17,18 @@ export default () => (
     />
     <Container>
       <PageHeader title={title}>
-        <p>Uma página tirada da idéia de <strong>Derek Sivers</strong> em <a href="https://nownownow.com/" rel="nofollow noopener noreferrer" target="_blank"><em>Nownownow.com</em></a>, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo.</p>
+        <p>
+          Uma página tirada da idéia de <strong>Derek Sivers</strong> em{' '}
+          <a
+            href="https://nownownow.com/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            <em>Nownownow.com</em>
+          </a>
+          , onde blogueiros e proprietários de sites do mundo compartilham o que
+          eles estão fazendo.
+        </p>
       </PageHeader>
     </Container>
   </Layout>

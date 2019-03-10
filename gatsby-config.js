@@ -3,11 +3,14 @@ const {
   join
 } = require('path')
 const {
-  name,
-  version,
   author,
+  bugs,
   description,
-  homepage
+  homepage,
+  keywords,
+  name,
+  repository,
+  version,
 } = require('./package.json')
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -24,15 +27,22 @@ module.exports = {
     description,
     image: '/share.jpg',
     author,
-    disqusShortname: 'fernandomoreira',
+    disqusShortname: author.disqus,
     twitterUsername: `@${author.twitter}`,
     facebookAppID: '',
+    keywords,
+    repo: {
+      ...bugs,
+      ...repository,
+    },
     social: {
-      twitter: `https://twitter.com/${author.twitter}`,
-      linkedin: `https://linkedin.com/in/${author.linkedin}`,
       github: `https://github.com/${author.github}`,
-      dribbble: `https://dribbble.com/umdevux`,
-      behance: `https://www.behance.net/umdevux`,
+      twitter: `https://twitter.com/${author.twitter}`,
+      codepen: `https://codepen.io/${author.codepen}`,
+      npm: `https://www.npmjs.com//${author.npm}`,
+      linkedin: `https://linkedin.com/in/${author.linkedin}`,
+      dribbble: `https://dribbble.com/${author.dribbble}`,
+      behance: `https://www.behance.net/${author.behance}`,
     }
   },
   plugins: [{
@@ -134,7 +144,7 @@ module.exports = {
           },
           {
             family: `Lato`,
-            variants: [`300`, `400`, `500`, `700`]
+            variants: [`300`, `400`, `500`, `800`]
           },
         ],
       },

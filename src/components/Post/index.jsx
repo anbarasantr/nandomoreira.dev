@@ -1,10 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
-import IconTags from '../Icons/Tags'
-import IconArrowRight from '../Icons/ArrowRight'
-
 import module from './post.module.styl'
+import Icon from '../Icons'
 
 export default ({ post }) => {
   const tags = post.tags || []
@@ -32,7 +29,7 @@ export default ({ post }) => {
         </div>
         <div className={module.Post__footer}>
           <p className={module.Post__tags} itemProp="keywords">
-            <IconTags />
+            <Icon id="icon-tags" fill="#435b71" style={{ padding: '4px' }} />
             {tags.map((tag, index) => {
               return (
                 <span key={index} className={module.Post__tag}>
@@ -41,7 +38,11 @@ export default ({ post }) => {
               )
             })}
           </p>
-          <IconArrowRight className={module.Post__iconRight} />
+          <Icon
+            id="icon-arrow-right"
+            fill="#435b71"
+            className={module.Post__iconRight}
+          />
         </div>
       </Link>
     </article>

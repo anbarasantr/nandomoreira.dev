@@ -6,6 +6,24 @@
     padding-bottom: 7.5rem /* 120/16 */
     margin-bottom: 3.75rem /* 60/16 */
     background-color: $secondary-color
+    background-size cover
+    background-position 50% 0%
+    transition .12s background $timingFunction
+    overflow hidden
+    position relative
+    &:before
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      width 100%
+      height 100%
+      z-index 1
+      content ''
+      display block
+      background-color $secondary-color
+      opacity 0.8
     > div
       position: relative
       z-index: 2
@@ -71,3 +89,9 @@
         border: none
       img
         width: 6.25rem /* 100/16 */
+  &__content
+    p > img
+      display block
+      width 100%
+      height auto
+      @extend .card
