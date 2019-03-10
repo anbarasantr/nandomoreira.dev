@@ -1,11 +1,8 @@
 import React from 'react'
-
-import module from './container.module.styl'
+import styles from './styles'
 
 export default ({ children, ...props }) => (
-  <div className={module.Container} {...props}>
-    <div className={module.Container__inner}>
-      {children}
-    </div>
+  <div style={styles.container} {...props}>
+    <div style={styles.container__inner}>{children}</div>
   </div>
 )

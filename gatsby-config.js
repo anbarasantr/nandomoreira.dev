@@ -15,17 +15,22 @@ const {
 
 const isProduction = process.env.NODE_ENV === 'production'
 const siteUrl = isProduction ? homepage : 'http://localhost:8000'
+const subTitle = `· Desenvolvedor front-end e WordPress em Curitiba/PR`
+const title = `${author.name} ${subTitle}`
 
 module.exports = {
   siteMetadata: {
     isProduction,
     name,
     version,
-    title: `${author.name} · Desenvolvedor front-end e WordPress em Curitiba/PR`,
-    titleTemplate: `%s · Desenvolvedor front-end e WordPress em Curitiba/PR`,
+    title,
+    defaultTitle: title,
+    titleTemplate: `%s ${subTitle}`,
     siteUrl,
     description,
+    defaultDescription: description,
     image: '/share.jpg',
+    defaultImage: '/share.jpg',
     author,
     disqusShortname: author.disqus,
     twitterUsername: `@${author.twitter}`,
@@ -43,7 +48,28 @@ module.exports = {
       linkedin: `https://linkedin.com/in/${author.linkedin}`,
       dribbble: `https://dribbble.com/${author.dribbble}`,
       behance: `https://www.behance.net/${author.behance}`,
-    }
+    },
+    navLinks: [{
+        name: 'Sobre mim',
+        path: '/sobre',
+      },
+      {
+        name: 'Serviços',
+        path: '/servicos',
+      },
+      {
+        name: 'Portfolio',
+        path: '/portfolio',
+      },
+      {
+        name: 'Blog',
+        path: '/blog',
+      },
+      {
+        name: 'Contato',
+        path: '/contato',
+      },
+    ],
   },
   plugins: [{
       resolve: `gatsby-plugin-stylus`,

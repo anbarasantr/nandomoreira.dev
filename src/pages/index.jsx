@@ -9,7 +9,10 @@ const Home = ({ data }) => (
   <Fragment>
     <Icons />
     <SEO title="Olá, eu me chamo Fernando Moreira" />
-    <Hero socialIcons={data.site.siteMetadata.social} />
+    <Hero
+      navLinks={data.site.siteMetadata.navLinks}
+      socialIcons={data.site.siteMetadata.social}
+    />
   </Fragment>
 )
 
@@ -19,6 +22,10 @@ export const homeQuery = graphql`
   query HomeQuery {
     site {
       siteMetadata {
+        navLinks {
+          name
+          path
+        }
         social {
           github
           twitter

@@ -5,7 +5,7 @@ import SocialIcons from '../SocialIcons'
 import module from './hero.module.styl'
 import './hero.styl'
 
-const Hero = ({ socialIcons }) => (
+const Hero = ({ navLinks, socialIcons }) => (
   <main className={'Hero ' + module.Hero}>
     <div
       className={module.Hero__inner}
@@ -46,7 +46,7 @@ const Hero = ({ socialIcons }) => (
         </a>
         .
       </p>
-      <Nav />
+      <Nav navLinks={navLinks} />
       <SocialIcons icons={socialIcons} />
     </div>
   </main>
