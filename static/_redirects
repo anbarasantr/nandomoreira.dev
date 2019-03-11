@@ -1,69 +1,33 @@
 # Redirects from what the browser requests to what we serve
-/2015                         /                                                               301
-/2015/*                       /                                                               301
-/2014                         /                                                               301
-/2014/*                       /                                                               301
-/2013                         /                                                               301
-/2013/*                       /                                                               301
-/2012                         /                                                               301
-/2012/*                       /                                                               301
-/wp/v2/*                      /                                                               301
-/blog                         /                                                               301
+# ============================================================================================= #
+#      Redirects netlify pages
+# ============================================================================================= #
 
-/projetos                     /portfolio                                                      301
-/projetos/open-source         /portfolio                                                      301
-/projetos/experimentos        /portfolio                                                      301
+https://nandomoreira.netlify.com      https://nandomoreira.me/?ref=netlify.com                301
+https://nandomoreira.netlify.com/*    https://nandomoreira.me/:splat?ref=netlify.com          301
 
-/retinapro-com-br             /portfolio                                                      301
-/grgit                        /portfolio                                                      301
-/ferramentas-digital          /portfolio                                                      301
-/projects/*                   /portfolio                                                      301
-/project/*                    /portfolio                                                      301
-/icthus-odonto                /portfolio                                                      301
-/onedev-studio                /portfolio                                                      301
-/projects                     /portfolio                                                      301
-/projects/remerterapias       /portfolio                                                      301
-/remerterapias                /portfolio                                                      301
-/projects/nandomoreira        /portfolio                                                      301
-/nandomoreira                 /portfolio                                                      301
-/abracce                      /portfolio                                                      301
-/projects/wprosdocimo         /portfolio                                                      301
-/ferramentas-digital          /portfolio                                                      301
-/projects/ferramentas-digital /portfolio                                                      301
-/projects/oggdigital          /portfolio                                                      301
-/oggdigital                   /portfolio                                                      301
-/projects/divinus-paes        /portfolio                                                      301
-/divinus-paes                 /portfolio                                                      301
-/projects/hidrautest          /portfolio                                                      301
-/hidrautest                   /portfolio                                                      301
-/pizzariadetroit              /portfolio                                                      301
-/open-source                  /portfolio                                                      301
+# =========================== #
+#       Redirects pages
+# =========================== #
+/about        /sobre        301
+/sobre/*      /sobre        301
+/br/sobre     /sobre        301
+/pt_br/sobre  /sobre        301
+/en/about     /sobre        301
+/styleguide   /sobre        301
+/cv           /resume       301
+/sobre/now    /now          301
+/about/now    /now          301
+/contact      /contato      301
+/experiments  /experimentos 301
+/experiment/* /experimentos 301
+/lab          /experimentos 301
+/lab/*        /experimentos 301
+/pen-*        /experimentos 301
 
-/about                        /sobre                                                          301
-/sobre/*                      /sobre                                                          301
-/br/sobre                     /sobre                                                          301
-/pt_br/sobre                  /sobre                                                          301
-/en/about                     /sobre                                                          301
-/styleguide                   /sobre                                                          301
-
-/cv                           /resume                                                         301
-
-/sobre/now                    /now                                                            301
-/about/now                    /now                                                            301
-
-/contact                      /contato                                                        301
-
-/experiments                  /experimentos                                                   301
-/experiment/*                 /experimentos                                                   301
-/lab                          /experimentos                                                   301
-/lab/*                        /experimentos                                                   301
-/pen-*                        /experimentos                                                   301
-
-/the-quick-brown-fox-jumps-over-a-lazy-dog /blog                                              301
-
-/comece-com-gulpjs            /comece-com-gulp                                                301
-/sass-atomic-design           /sass-e-atomic-design                                           301
-
+# ============================================================================================= #
+#                       Redirects pages to nandomoreirame.github.io
+# ============================================================================================= #
 /lora                         https://nandomoreirame.github.io/lora/                          301
 /lora/*                       https://nandomoreirame.github.io/lora/:splat                    301
 /zetsu                        https://nandomoreirame.github.io/zetsu/                         301
@@ -77,54 +41,103 @@
 /nandomoreira-jekyll-theme/*  https://nandomoreirame.github.io/nandomoreira-jekyll-theme/     301
 /end2end                      https://nandomoreirame.github.io/end2end                        301
 /end2end/*                    https://nandomoreirame.github.io/end2end/:splat                 301
-/dotX                         https://nandomoreirame.github.io/dotX                           301
+/dotX                         https://nandomoreirame.github.io/dotX/                          301
 /dotX/*                       https://nandomoreirame.github.io/dotX/:splat                    301
-/dotx-jekyll-theme            https://nandomoreirame.github.io/dotX                           301
+/dotx-jekyll-theme            https://nandomoreirame.github.io/dotX/                          301
 /lorem-gemidao-do-zap-ipsum   https://nandomoreirame.github.io/lorem-gemidao-do-zap-ipsum     301
 /open-source-guide            https://nandomoreirame.github.io/open-source-guide              301
 /open-source-guide/*          https://nandomoreirame.github.io/open-source-guide/:splat       301
 /middleman-blog               https://nandomoreirame.github.io/middleman-blog                 301
 /middleman-blog/*             https://nandomoreirame.github.io/middleman-blog/:splat          301
-/chucknorris-jokes            https://nandomoreirame.github.io/chucknorris-jokes              301
-/chucknorris-jokes/*          https://nandomoreirame.github.io/chucknorris-jokes/:splat       301
+/chucknorris-jokes            https://chucknorris-jokes.nandomoreira.me                       301
+/chucknorris-jokes/*          https://chucknorris-jokes.nandomoreira.me/:splat                301
 
-https://nandomoreira.netlify.com      https://nandomoreira.me/?ref=netlify.com                    301
-https://nandomoreira.netlify.com/*    https://nandomoreira.me/:splat?ref=netlify.com              301
-https://controla.la                   https://nandomoreira.me/?ref=controla.la                    301
-https://controla.la/*                 https://nandomoreira.me/:splat?ref=controla.la              301
-https://criarsite.curitiba.br         https://nandomoreira.me/?ref=criarsite.curitiba.br          301
-https://criarsite.curitiba.br/*       https://nandomoreira.me/:splat?ref=criarsite.curitiba.br    301
-https://criarsites.curitiba.br        https://nandomoreira.me/?ref=criarsites.curitiba.br         301
-https://criarsites.curitiba.br/*      https://nandomoreira.me/:splat?ref=criarsites.curitiba.br   301
+# ====================================================================== #
+#                     Redirects projects posts
+# ====================================================================== #
 
-/como-testar-erros-na-funcao-wp-mail-no-wordpress-usando-hooks https://blog.nandomoreira.me/como-testar-erros-na-funcao-wp_mail-no-wordpress-usando-hooks 301
-/criando-formulario-de-contato-para-wordpress-com-odin-framework https://blog.nandomoreira.me/criando-formulario-de-contato-para-wordpress-com-odin-framework 301
-/wordpress-plugins-x-functions-php https://blog.nandomoreira.me/wordpress-plugins-x-functions-php 301
-/meu-ambiente-de-trabalho-em-7-itens https://blog.nandomoreira.me/meu-ambiente-de-trabalho-em-7-itens 301
-/conhecendo-o-pre-processador-sass-parte-1 https://blog.nandomoreira.me/conhecendo-o-pre-processador-sass-parte-1 301
-/sass-variaveis-parte-2 https://blog.nandomoreira.me/sass-variaveis-parte-2 301
-/sass-parte-3-mixins https://blog.nandomoreira.me/sass-parte-3-mixins 301
-/sass-parte-4-funcoes https://blog.nandomoreira.me/sass-parte-4-funcoes 301
-/como-instalar-o-gulp-4 https://blog.nandomoreira.me/como-instalar-o-gulp-4 301
-/sass-parte-5-placeholder https://blog.nandomoreira.me/sass-parte-5-placeholder 301
-/yeoman-generator-gulp-boilerplate https://blog.nandomoreira.me/yeoman-generator-gulp-boilerplate 301
-/usando-categorias-e-tags-no-jekyll https://blog.nandomoreira.me/usando-categorias-e-tags-no-jekyll 301
-/sass-e-atomic-design https://blog.nandomoreira.me/sass-e-atomic-design 301
-/fazendo-sistema-de-busca-no-jekyll-com-angularjs https://blog.nandomoreira.me/fazendo-sistema-de-busca-no-jekyll-com-angularjs 301
-/yo-wordpress-iniciando-projetos-para-wordpress-em-segundos https://blog.nandomoreira.me/yo-wordpress-iniciando-projetos-para-wordpress-em-segundos 301
-/como-incluir-videos-do-youtube-no-jekyll https://blog.nandomoreira.me/como-incluir-videos-do-youtube-no-jekyll 301
-/wp-cli-uma-interface-de-linha-de-comando-para-wordpress https://blog.nandomoreira.me/wp-cli-uma-interface-de-linha-de-comando-para-wordpress 301
-/criando-a-bandeira-do-brasil-apenas-com-css https://blog.nandomoreira.me/criando-a-bandeira-do-brasil-apenas-com-css 301
-/usando-browsersync-em-uma-aplicacao-ruby-on-rails https://blog.nandomoreira.me/usando-browsersync-em-uma-aplicacao-ruby-on-rails 301
-/como-converter-todos-arquivos-scss-de-um-diretorio-para-extensao-sass https://blog.nandomoreira.me/como-converter-todos-arquivos-scss-de-um-diretorio-para-extensao-sass 301
-/calendario-rapido-direto-no-terminal https://blog.nandomoreira.me/calendario-rapido-direto-no-terminal 301
-/usando-o-selector-target-para-criar-modal-apenas-com-css https://blog.nandomoreira.me/usando-o-selector-target-para-criar-modal-apenas-com-css 301
-/ativando-o-tema-dark-nativo-do-chrome-dev-tools https://blog.nandomoreira.me/ativando-o-tema-dark-nativo-do-chrome-dev-tools 301
-/comece-com-gulp https://blog.nandomoreira.me/comece-com-gulp 301
-/criando-um-blog-com-vuejs-o-nuxtjs https://blog.nandomoreira.me/criando-um-blog-com-vuejs-o-nuxtjs 301
-/como-testar-erros-na-funcao-wp_mail-no-wordpress-usando-hooks https://blog.nandomoreira.me/como-testar-erros-na-funcao-wp_mail-no-wordpress-usando-hooks 301
+/projetos                     /portfolio                                301
+/retinapro-com-br             /portfolio                                301
+/project/*                    /projeto/:splat                           301
+/projetos/*                   /projeto/:splat                           301
+/grgit                        /projeto/site-grgit.com.br                301
+/ferramentas-digital          /projeto/ferramentas.digital-jekyll-theme 301
+/projects/ferramentas-digital /projeto/ferramentas.digital-jekyll-theme 301
+/icthus-odonto                /projeto/site-icthus-odonto               301
+/onedev-studio                /projeto/onedev.studio                    301
+/projects/remerterapias       /projeto/site-remerterapias.com.br        301
+/remerterapias                /projeto/site-remerterapias.com.br        301
+/projects/nandomoreira        /projeto/nandomoreira.me                  301
+/nandomoreira                 /projeto/nandomoreira.me                  301
+/abracce                      /projeto/abracce.org.br                   301
+/projects/wprosdocimo         /projeto/blog-wprosdocimo.com.br          301
+/projects/oggdigital          /projeto/site-oggdigital.com.br           301
+/oggdigital                   /projeto/site-oggdigital.com.br           301
+/projects/divinus-paes        /projeto/site-divinus-paes                301
+/divinus-paes                 /projeto/site-divinus-paes                301
+/projects/hidrautest          /projeto/site-hidrautest.com.br           301
+/hidrautest                   /projeto/site-hidrautest.com.br           301
+/pizzariadetroit              /projeto/site-pizzariadetroit.com.br      301
 
-/como-um-time/ https://blog.nandomoreira.me/como-um-time/ 301
-/como-um-time https://blog.nandomoreira.me/como-um-time/ 301
-/ei-front-end-voce-conhece-o-panda/ https://blog.nandomoreira.me/ei-front-end-voce-conhece-o-panda/ 301
-/ei-front-end-voce-conhece-o-panda https://blog.nandomoreira.me/ei-front-end-voce-conhece-o-panda/ 301
+# =========================================== #
+#           Redirects blog posts
+# =========================================== #
+
+/comece-com-gulpjs /blog/comece-com-gulp 301
+/sass-atomic-design /blog/sass-e-atomic-design 301
+/como-testar-erros-na-funcao-wp-mail-no-wordpress-usando-hooks /blog/como-testar-erros-na-funcao-wp_mail-no-wordpress-usando-hooks 301
+/wordpress-plugins-x-functions-php /blog/wordpress-plugins-x-functions-php 301
+/meu-ambiente-de-trabalho-em-7-itens /blog/meu-ambiente-de-trabalho-em-7-itens 301
+/sass-variaveis-parte-2 /blog/sass-variaveis-parte-2 301
+/sass-parte-3-mixins /blog/sass-parte-3-mixins 301
+/sass-parte-4-funcoes /blog/sass-parte-4-funcoes 301
+/como-instalar-o-gulp-4 /blog/como-instalar-o-gulp-4 301
+/sass-parte-5-placeholder /blog/sass-parte-5-placeholder 301
+/usando-categorias-e-tags-no-jekyll /blog/usando-categorias-e-tags-no-jekyll 301
+/sass-e-atomic-design /blog/sass-e-atomic-design 301
+/fazendo-sistema-de-busca-no-jekyll-com-angularjs /blog/fazendo-sistema-de-busca-no-jekyll-com-angularjs 301
+/criando-a-bandeira-do-brasil-apenas-com-css /blog/criando-a-bandeira-do-brasil-apenas-com-css 301
+/usando-browsersync-em-uma-aplicacao-ruby-on-rails /blog/usando-browsersync-em-uma-aplicacao-ruby-on-rails 301
+/como-converter-todos-arquivos-scss-de-um-diretorio-para-extensao-sass /blog/como-converter-todos-arquivos-scss-de-um-diretorio-para-extensao-sass 301
+/calendario-rapido-direto-no-terminal /blog/calendario-rapido-direto-no-terminal 301
+/usando-o-selector-target-para-criar-modal-apenas-com-css /blog/usando-o-selector-target-para-criar-modal-apenas-com-css 301
+/ativando-o-tema-dark-nativo-do-chrome-dev-tools /blog/ativando-o-tema-dark-nativo-do-chrome-dev-tools 301
+/comece-com-gulp /blog/comece-com-gulp 301
+/como-testar-erros-na-funcao-wp_mail-no-wordpress-usando-hooks /blog/como-testar-erros-na-funcao-wp_mail-no-wordpress-usando-hooks 301
+/como-um-time/ /blog/como-um-time/ 301
+/como-um-time /blog/como-um-time/ 301
+/ei-front-end-voce-conhece-o-panda/ /blog/ei-front-end-voce-conhece-o-panda/ 301
+/ei-front-end-voce-conhece-o-panda /blog/ei-front-end-voce-conhece-o-panda/ 301
+/8-meses-de-malapronta-e-o-fim /blog/8-meses-de-malapronta-e-o-fim 301
+/agradeca-mais-e-reclame-menos /blog/agradeca-mais-e-reclame-menos 301
+/apps-que-uso /blog/apps-que-uso 301
+/blog-wilson-luiz-prosdocimo /blog/blog-wilson-luiz-prosdocimo 301
+/como-esta-voce-agora-e-como-estara-daqui-30-anos /blog/como-esta-voce-agora-e-como-estara-daqui-30-anos 301
+/como-incluir-videos-do-youtube-no-jekyll /blog/como-incluir-videos-do-youtube-no-jekyll 301
+/conhecendo-o-pre-processador-sass-parte-1 /blog/conhecendo-o-pre-processador-sass-parte-1 301
+/criando-formulario-de-contato-para-wordpress-com-odin-framework /blog/criando-formulario-de-contato-para-wordpress-com-odin-framework 301
+/criando-um-blog-com-vuejs-o-nuxtjs /blog/criando-um-blog-com-vuejs-o-nuxtjs 301
+/faco-front-end-de-graca /blog/faco-front-end-de-graca 301
+/hoje-o-momento-e-de-ser-e-estar /blog/hoje-o-momento-e-de-ser-e-estar 301
+/nao-seja-apenas-um-recortador-de-psd /blog/nao-seja-apenas-um-recortador-de-psd 301
+/programador-a-comunidade-precisa-de-voce /blog/programador-a-comunidade-precisa-de-voce 301
+/retro-2016-planing-2017 /blog/retro-2016-planing-2017 301
+/role-aleatorio-com-conversas-aleatorias /blog/role-aleatorio-com-conversas-aleatorias 301
+/wp-cli-uma-interface-de-linha-de-comando-para-wordpress /blog/wp-cli-uma-interface-de-linha-de-comando-para-wordpress 301
+/yeoman-generator-gulp-boilerplate /blog/yeoman-generator-gulp-boilerplate 301
+/yo-wordpress-iniciando-projetos-para-wordpress-em-segundos /blog/yo-wordpress-iniciando-projetos-para-wordpress-em-segundos
+
+# ========================= #
+#   Redirects 404 pages
+# ========================= #
+/404     /404.html  301
+/2015    /          301
+/2015/*  /          301
+/2014    /          301
+/2014/*  /          301
+/2013    /          301
+/2013/*  /          301
+/2012    /          301
+/2012/*  /          301
+/wp/v2/* /          301
+/blog    /          301
