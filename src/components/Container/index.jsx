@@ -1,9 +1,11 @@
 import React from 'react'
-import { Container, ContainerInner } from './styled'
-import './container.styl'
+import container from './container.module.styl'
 
-export default ({ children, ...props }) => (
-  <Container {...props}>
-    <ContainerInner>{children}</ContainerInner>
-  </Container>
+export default ({ children, className, ...props }) => (
+  <div
+    className={`${className ? `${className} ` : ''} ${container.Container}`}
+    {...props}
+  >
+    <div className={container.Inner}>{children}</div>
+  </div>
 )

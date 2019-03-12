@@ -63,28 +63,29 @@ const ProjectSinple = ({ data }) => {
             Links do projeto
           </h4>
           <p className={module.ProjectSinple__sectionText}>
-            {post.frontmatter.url === '#' && (
-              <span>
-                <Icon
-                  id="icon-close"
-                  fill="#898989"
-                  style={{
-                    padding: '5px',
-                    display: 'inline-block',
-                    verticalAlign: 'middle',
-                  }}
-                />
-                <small
-                  style={{
-                    display: 'inline-block',
-                    color: '#898989',
-                    verticalAlign: 'middle',
-                  }}
-                >
-                  Projeto offline, parado ou descontinuado pelo cliente
-                </small>
-              </span>
-            )}
+            {post.frontmatter.url === '#' &&
+              post.frontmatter.category[0] !== 'Download' && (
+                <span>
+                  <Icon
+                    id="icon-close"
+                    fill="#898989"
+                    style={{
+                      padding: '5px',
+                      display: 'inline-block',
+                      verticalAlign: 'middle',
+                    }}
+                  />
+                  <small
+                    style={{
+                      display: 'inline-block',
+                      color: '#898989',
+                      verticalAlign: 'middle',
+                    }}
+                  >
+                    Projeto offline, parado ou descontinuado pelo cliente
+                  </small>
+                </span>
+              )}
             {post.frontmatter.url && post.frontmatter.url !== '#' && (
               <span style={{ display: 'block' }}>
                 Site:{' '}
@@ -101,7 +102,9 @@ const ProjectSinple = ({ data }) => {
             )}
             {post.frontmatter.repo && post.frontmatter.repo !== '#' && (
               <span style={{ display: 'block' }}>
-                Repositódio:{' '}
+                {post.frontmatter.category[0] !== 'Download' && `Repositódio: `}
+                {post.frontmatter.category[0] === 'Download' &&
+                  `Link para download: `}
                 <a
                   href={`${post.frontmatter.repo}?ref=${siteUrl}${
                     post.frontmatter.path
