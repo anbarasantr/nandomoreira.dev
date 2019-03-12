@@ -3,8 +3,10 @@
 #      Redirects netlify pages
 # ============================================================================================= #
 
-https://nandomoreira.netlify.com      https://nandomoreira.me/?ref=netlify.com                301
-https://nandomoreira.netlify.com/*    https://nandomoreira.me/:splat?ref=netlify.com          301
+http://nandomoreiradev.netlify.com       https://nandomoreira.dev/?ref=netlify.com            301
+http://nandomoreiradev.netlify.com/*     https://nandomoreira.dev/:splat?ref=netlify.com      301
+https://nandomoreiradev.netlify.com      https://nandomoreira.dev/?ref=netlify.com            301
+https://nandomoreiradev.netlify.com/*    https://nandomoreira.dev/:splat?ref=netlify.com      301
 
 # =========================== #
 #       Redirects pages
