@@ -1,19 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Container from '../Container'
 import module from './pageheader.module.styl'
 
 const defaultProps = {
-  title: 'Hello World!',
+  smallTitle: '',
+  title: '',
 }
 
-const PageHeader = ({ children, title }) => (
+const PageHeader = ({ smallTitle, title, children }) => (
   <header className={module.PageHeader}>
-    <h1 className={module.PageHeader__title}>{title}</h1>
-    <div className={module.PageHeader__description}>{children}</div>
+    <Container>
+      {smallTitle && (
+        <h4
+          className={module.PageHeader__smalltitle}
+          dangerouslySetInnerHTML={{ __html: smallTitle }}
+        />
+      )}
+      {title && (
+        <h1
+          className={module.PageHeader__title}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+      )}
+      {children && (
+        <div className={module.PageHeader__description}>{children}</div>
+      )}
+    </Container>
   </header>
 )
 
 const propTypes = {
+  smallTitle: PropTypes.string,
   title: PropTypes.string,
 }
 

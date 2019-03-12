@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import module from './post.module.styl'
 import Icon from '../Icons'
+import PostTags from '../PostTags'
 
 export default ({ post }) => {
   const tags = post.tags || []
@@ -28,16 +29,7 @@ export default ({ post }) => {
           <span className={module.Post__category}>{post.category}</span>
         </div>
         <div className={module.Post__footer}>
-          <p className={module.Post__tags} itemProp="keywords">
-            <Icon id="icon-tags" fill="#435b71" style={{ padding: '4px' }} />
-            {tags.map((tag, index) => {
-              return (
-                <span key={index} className={module.Post__tag}>
-                  {tag}
-                </span>
-              )
-            })}
-          </p>
+          <PostTags tags={tags} />
           <Icon
             id="icon-arrow-right"
             fill="#435b71"

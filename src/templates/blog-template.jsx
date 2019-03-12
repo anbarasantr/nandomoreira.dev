@@ -40,7 +40,7 @@ export default ({ data, pageContext }) => {
     ? `${title} de Fernando Moreira`
     : `${title} de Fernando Moreira - Página ${(currentPage - 1).toString()}`
   const description =
-    'Artigos que já escrevi sobre Tecnologia, Programação, Design, Produtividade, Vida e muito mais'
+    'Artigos sobre Tecnologia, Programação, Design, Produtividade, Vida e muito mais'
 
   const styles = {
     posts: {
@@ -52,11 +52,8 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={SEOtitle} description={description} pathname={currentPath} />
-      <Container>
-        <PageHeader title={title}>
-          <p>{description}</p>
-        </PageHeader>
-
+      <PageHeader smallTitle={title} title={description} />
+      <Container className="blog-container">
         <section style={styles.posts}>
           {postsData.map((post, i) => (
             <Post post={post.node.frontmatter} key={i} />

@@ -1,17 +1,17 @@
 ---
 layout: post
-path: "/blog/sass-parte-4-funcoes"
-title: "#4 - Conhecendo o pré processador SASS | Funções"
+path: '/blog/sass-parte-4-funcoes'
+title: '#4 - Conhecendo o pré processador SASS | Funções'
 date: 2015-09-05
-description: "Conhecendo o pré-processador SASS-Parte 4"
-keywords: "sass, css, scss, pre-processador, pre-processadores"
+description: 'Conhecendo o pré-processador SASS-Parte 4'
+keywords: 'sass, css, scss, pre-processador, pre-processadores'
 image: ../conhecendo-o-pre-processador-sass-parte-1/conhecendo-o-pre-processador-sass.jpg
 category:
-- sass
+  - sass
 tags:
-- sass
-- css
-- pre-processador
+  - sass
+  - css
+  - pre-processador
 ---
 
 Esse artigo será bem rápido, vou falar sobre o recurso que deixa o **SASS** ainda mais com cara de linguagem de programação, são as **funções**.
@@ -20,7 +20,9 @@ Eu comentei no [artigo anterior](/sass-parte-3-mixins) que _"Mixins são como fu
 
 Vamos fazer um exemplo clássico, somar `a + b`.
 
-```sass
+<div class="language-filename">style.scss</div>
+
+```scss
 @function soma($a, $b: 0) {
   $c: $a + $b;
   @return $c;
@@ -35,7 +37,9 @@ O exemplo acima vai me retornar o valor da soma do primeiro parâmetro com a do 
 
 E o que aconteceria se eu aplicasse somente o primeiro parâmetro?
 
-```sass
+<div class="language-filename">style.scss</div>
+
+```scss
 .card {
   width: soma(500px);
 }
@@ -49,7 +53,9 @@ Se você precisar resolver alguma conta ou converter algum número, provavelment
 
 Eu particularmente não uso muitas funções, tenho apenas algumas em meu arcenal, posso até listar elas aqui para vocês.
 
-```sass
+<div class="language-filename">style.scss</div>
+
+```scss
 // Converte numeros para inteiro
 //
 @function parseInt($n) {
@@ -88,7 +94,7 @@ $font-size-base: 16px;
 
 Abraço!
 
-***
+---
 
 1. [Conhecendo o pré-processador SASS - Instalação](/conhecendo-o-pre-processador-sass-parte-1)
 2. [Conhecendo o pré-processador SASS - Variáveis](/sass-variaveis-parte-2)

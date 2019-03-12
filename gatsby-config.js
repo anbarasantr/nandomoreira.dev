@@ -44,8 +44,9 @@ module.exports = {
       github: `https://github.com/${author.github}`,
       twitter: `https://twitter.com/${author.twitter}`,
       codepen: `https://codepen.io/${author.codepen}`,
-      npm: `https://www.npmjs.com//${author.npm}`,
+      npm: `https://www.npmjs.com/${author.npm}`,
       linkedin: `https://linkedin.com/in/${author.linkedin}`,
+      instagram: `https://instagram.com/${author.instagram}`,
       dribbble: `https://dribbble.com/${author.dribbble}`,
       behance: `https://www.behance.net/${author.behance}`,
     },
@@ -53,10 +54,10 @@ module.exports = {
         name: 'Sobre mim',
         path: '/sobre',
       },
-      {
-        name: 'Serviços',
-        path: '/servicos',
-      },
+      // {
+      //   name: 'Serviços',
+      //   path: '/servicos',
+      // },
       {
         name: 'Portfolio',
         path: '/portfolio',
@@ -142,7 +143,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
-              linkImagesToOriginal: true,
+              linkImagesToOriginal: false,
               sizeByPixelDensity: true,
               showCaptions: true,
             },
@@ -154,9 +155,18 @@ module.exports = {
               classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
-              showLineNumbersGlobal: true,
+              showLineNumbers: false,
               noInlineHighlight: true,
             },
+          },
+          {
+            resolve: `@raae/gatsby-remark-oembed`,
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
         ],
       },
@@ -166,7 +176,7 @@ module.exports = {
       options: {
         fonts: [{
             family: `Nunito`,
-            variants: [`200`, `800`]
+            variants: [`200`, `400`, `800`]
           },
           {
             family: `Lato`,

@@ -1,21 +1,21 @@
 ---
 layout: post
-path: "/blog/8-meses-de-malapronta-e-o-fim"
-title: "8 meses de MalaPronta e o fim."
+path: '/blog/8-meses-de-malapronta-e-o-fim'
+title: '8 meses de MalaPronta e o fim.'
 date: 2015-09-30
-description: "Eu queria poder dizer que to feliz com tudo isso, mas não to. Eu amava trabalhar lá, apesar de muitas intrigas e desavenças, eu amava meu emprego."
+description: 'Eu queria poder dizer que to feliz com tudo isso, mas não to. Eu amava trabalhar lá, apesar de muitas intrigas e desavenças, eu amava meu emprego.'
 image: ../../images/2015/09/galera-do-porao-malapronta.jpg
 categories:
-- geral
+  - geral
 tags:
-- geral
+  - geral
 ---
 
-Esse post não poderia começar melhor, com um "*I love U*" para MalaPronta.com, um ambiente descontraído com piadas ruins (mas que são boas) e uma sala que não é nem quente nem fria e nem escura ou clara(entendedores entenderão).
+Esse post não poderia começar melhor, com um "_I love U_" para MalaPronta.com, um ambiente descontraído com piadas ruins (mas que são boas) e uma sala que não é nem quente nem fria e nem escura ou clara(entendedores entenderão).
 
 Eu queria poder dizer que to feliz com tudo isso, mas não to. Eu amava trabalhar lá, apesar de muitas intrigas e desavenças, eu amava meu emprego.
 
-Eu vou compartilhar com vocês meus **8 meses** de experiência em uma *startup* com 10 anos de vida, posso dizer que não vi o começo de tudo, mas vi o fim do começo, vi o fim de sonhos e planos, amizades e desavenças, tudo se acabar dentro de uma sala de reuniões de um hotel, tudo se acabou com algumas palavas ditas em dois idiomas, porque um só já não bastava.
+Eu vou compartilhar com vocês meus **8 meses** de experiência em uma _startup_ com 10 anos de vida, posso dizer que não vi o começo de tudo, mas vi o fim do começo, vi o fim de sonhos e planos, amizades e desavenças, tudo se acabar dentro de uma sala de reuniões de um hotel, tudo se acabou com algumas palavas ditas em dois idiomas, porque um só já não bastava.
 
 ## Meu começo na MalaPronta
 
@@ -27,7 +27,7 @@ No começo tudo parecia muito confuso, muitos arquivos de configs, era configs p
 
 O primeiro desafio, que me foi solicitado, foi _**Ajudar a melhorar a performance do projeto**_. Todos estavam envolvido nesse novo desafio, DBA, Integrações, Back-end e Front-end, confesso que tava com receio de não conseguir ajudar em quase nada mas eu aceitei o desafio.
 
-Primeira coisa que configurei no projeto foi o **Gulp**, com ele eu consegui *minificar* quase 4 mil arquivos CSS e JS, e comprimir as mais de 3 mil imagens em questões de minutos, depois fizemos uma "*marotagem*" com *regex* para *minificar* o HTML processado pelo **PHP**, com isso reduziriamos relativamente o tamanho dos arquivos de download do site, foi um bom ganho.
+Primeira coisa que configurei no projeto foi o **Gulp**, com ele eu consegui _minificar_ quase 4 mil arquivos CSS e JS, e comprimir as mais de 3 mil imagens em questões de minutos, depois fizemos uma "_marotagem_" com _regex_ para _minificar_ o HTML processado pelo **PHP**, com isso reduziriamos relativamente o tamanho dos arquivos de download do site, foi um bom ganho.
 
 Resultado, conseguimos baixar a média do site de 14s pra 8s, quase a metade não? Claro que isso não se deve só a mim, a galera trabalhou duro para isso acontecer, equipe massa (faltou o churrasco pra comemorar hein!).
 
@@ -51,7 +51,7 @@ Eu tinha uma equipe massa quando eu entrei, atenciosos, focados e determinados a
 
 ## A segunda equipe
 
-Então foi realocado um programador de outro time para o nosso e ficamos em 3 na equipe. Essa nova formação trabalhou duro para entregar as demandas do Reserva Imediata e desenvolver novas *features* para o novo projeto e muito mais, até que..
+Então foi realocado um programador de outro time para o nosso e ficamos em 3 na equipe. Essa nova formação trabalhou duro para entregar as demandas do Reserva Imediata e desenvolver novas _features_ para o novo projeto e muito mais, até que..
 
 ## O documento de "ajustes"
 

@@ -19,7 +19,7 @@ tags:
     'ecmascript6',
     'staticgen',
     'stylus',
-    'opensource',
+    'open-source',
     'netlify',
   ]
 ---

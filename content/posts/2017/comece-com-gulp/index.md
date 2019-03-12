@@ -1,17 +1,17 @@
 ---
 layout: post
-path: "/blog/comece-com-gulp"
+path: '/blog/comece-com-gulp'
 title: Comece com Gulp!
 date: 2017-01-08
 description: Eu particularmente gosto muito de ganhar tempo com o desenvolvimento dos meus projetos e usar automatizador de tarefas me dá esse poder.
-image: ../../images/comece-com-gulp.png
+image: ./comece-com-gulp.png
 category:
-- gulp
+  - gulp
 tags:
-- gulpjs
-- javascript
-- tasks
-- taskrunners
+  - gulp
+  - javascript
+  - tasks
+  - taskrunners
 ---
 
 Automatizadores de tarefas ou como são conhecidos pelo termo em inglês [Task Runners](https://goo.gl/Zugcvt), tem a capacidade de fazer muita coisa, facilitam muito não só no desenvolvimento dos projetos mas também nos builds e deploys, cara é simplesmente lindo.
@@ -26,13 +26,13 @@ Abaixo eu vou listar algumas, se não te fizer brilhar os olhos você talvez nã
 
 Com apenas um comando você consegue:
 
-* Fazer a compressão de centenas de imagens de um projeto antigo (eu precisei fazer isso);
-* Deploy para qualquer servidor sftp, ssh ou até mesmo para amazon S3;
-* Fazer Watch de pré-processadores e template engines;
-* Subir servidores locais de qualquer linguagem;
-* Executar os testes do seu projeto;
-* Executar tarefas complexas em segundos;
-* … e ter mais tempo para tomar um café.
+- Fazer a compressão de centenas de imagens de um projeto antigo (eu precisei fazer isso);
+- Deploy para qualquer servidor sftp, ssh ou até mesmo para amazon S3;
+- Fazer Watch de pré-processadores e template engines;
+- Subir servidores locais de qualquer linguagem;
+- Executar os testes do seu projeto;
+- Executar tarefas complexas em segundos;
+- … e ter mais tempo para tomar um café.
 
 E ai gostou? Ainda tem mais vantagens que não foram listadas acima, essas são as que eu mais gosto de citar quando me perguntam quais as vantagens de um Task Runner.
 
@@ -42,10 +42,10 @@ Eu sempre gosto de dizer: “Ele me faz ter mais tempo para o meu café”.
 
 O Gulp te dá todas as vantagens que citei no bloco anterior, além de:
 
-* Ser super-rápido. Performance com certeza é uma vantagem grande do Gulpjs;
-* Simples e fácil de implementar. Ele é simples e direto, com certeza você vai gostar;
-* Quantidade enorme de plugins em seu repositório. O que você imaginar o Gulp tem um componente para isso.
-* … e muito mais.
+- Ser super-rápido. Performance com certeza é uma vantagem grande do Gulpjs;
+- Simples e fácil de implementar. Ele é simples e direto, com certeza você vai gostar;
+- Quantidade enorme de plugins em seu repositório. O que você imaginar o Gulp tem um componente para isso.
+- … e muito mais.
 
 > “gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something."
 
@@ -63,11 +63,13 @@ Instale o Gulp global com o comando: `npm install -g gulp-cli`.
 
 Inicie o projeto npm com o comando: `npm init`.
 
-![Comece com Gulp - npm init](../../images/comece-com-gulp-npm-init.png)
+![Comece com Gulp - npm init](./comece-com-gulp-npm-init.png)
 
 Esse comando irá criar um arquivo chamado **package.json**, com ele você gerencia todos os pacotes e dependências do seu projeto.
 
 O meu **package.json** ficou mais ou menos assim:
+
+<div class="language-filename">package.json</div>
 
 ```json
 {
@@ -99,6 +101,8 @@ Instale o Gulp local com o comando: `npm install --save-dev gulp` ou `yarn add -
 
 Você vai notar que na linha onde tinha `"devDependencies": {}`, foi adicionado o gulp.
 
+<div class="language-filename">package.json</div>
+
 ```json
 "devDependencies": {
   "gulp": "^3.9.1"
@@ -119,39 +123,43 @@ $ touch gulpfile.js
 
 Nesse arquivo vamos requerir o Gulp usando [CommomJS](https://pt.wikipedia.org/wiki/CommonJS): `require('gulp');`.
 
-```javascript
-'use strict';
+<div class="language-filename">gulpfile.js</div>
 
-var gulp = require('gulp');
+```javascript
+'use strict'
+
+var gulp = require('gulp')
 ```
 
 Na primeira linha temos o `'use strict';`, se você não sabe para que serve o `‘use strict’;` eu indico assistir a palestra de [Javascript Secrets](https://youtu.be/7Ur9zN2vMcs?t=1m7s) do Fernando Daciuk, muito legal. Já na segunda linha criamos uma variável chamada **gulp**, a qual iremos usar muito por todo nosso código.
 
 Vamos ao Hello World.
 
-```javascript
-'use strict';
+<div class="language-filename">gulpfile.js</div>
 
-var gulp = require('gulp');
+```javascript
+'use strict'
+
+var gulp = require('gulp')
 
 gulp.task('hello', function() {
-  console.log('Hello World.');
-});
+  console.log('Hello World.')
+})
 ```
 
 Basta rodar o comando `gulp hello` no seu terminal que a mágica vai acontecer.
 
-![Imagem com o comando gulp hello](../../images/comece-com-gulp-hello.png)
+![Imagem com o comando gulp hello](./comece-com-gulp-hello.png)
 
 ## Comandos
 
 Você pode obter a lista de comandos do Gulp apenas digitando o commando `gulp --help` no seu terminal.
 
-![Imagem com o comando gulp --help](../../images/comece-com-gulp-comando-gulp-help.png)
+![Imagem com o comando gulp --help](./comece-com-gulp-comando-gulp-help.png)
 
 Um comando bem interessante é o que lista todas as tasks do projeto `gulp --tasks`.
 
-![Imagem com o comando gulp --tasks](../../images/comece-com-gulp-comando-gulp-tasks.png)
+![Imagem com o comando gulp --tasks](./comece-com-gulp-comando-gulp-tasks.png)
 
 ## Concluindo..
 

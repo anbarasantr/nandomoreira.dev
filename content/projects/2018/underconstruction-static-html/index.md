@@ -20,7 +20,7 @@ tags:
     'es6',
     'staticgen',
     'stylus',
-    'opensource',
+    'open-source',
     'netlify',
   ]
 ---

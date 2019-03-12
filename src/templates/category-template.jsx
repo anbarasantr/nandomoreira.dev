@@ -3,6 +3,10 @@ import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
+import SEO from '../components/SEO'
+import Layout from '../components/Layout'
+import Container from '../components/Container'
+import PageHeader from '../components/PageHeader'
 import Image from '../components/Image'
 
 const TagPage = ({ data, pageContext }) => {
@@ -10,32 +14,30 @@ const TagPage = ({ data, pageContext }) => {
   const tagHeader = `${category}`
 
   return (
-    <div className="Container Padding-S">
-      <section className="Top-S">
-        <h1 className="Tax-Title">{tagHeader} </h1>
+    <Layout>
+      <SEO
+        title={`Categoria: ${tagHeader}`}
+        // description={post.frontmatter.description}
+        // image={post.frontmatter.image.publicURL}
+        // pathname={post.frontmatter.path}
+      />
+      <PageHeader title={tagHeader} smallTitle="Categoria" />
+      <Container>
         {data.allMarkdownRemark.edges.map(post => (
-          <div key={post.node.id}>
-            <div className="Grid50">
-              <Image
-                node={post.node.frontmatter.image}
-                alt={post.node.frontmatter.title}
-              />
-              <div>
-                <Link to={post.node.frontmatter.path}>
-                  <h2>
-                    <span className="highlight">
-                      {post.node.frontmatter.title}
-                    </span>
-                  </h2>
-                </Link>
-                <p>{post.node.excerpt}</p>
-                <small>Published on {post.node.frontmatter.date} </small>
-              </div>
-            </div>
+          <div className="card" key={post.node.id}>
+            <Image
+              node={post.node.frontmatter.image}
+              alt={post.node.frontmatter.title}
+            />
+            <Link to={post.node.frontmatter.path}>
+              <h2>{post.node.frontmatter.title}</h2>
+            </Link>
+            <p>{post.node.excerpt}</p>
+            <small>Published on {post.node.frontmatter.date} </small>
           </div>
         ))}
-      </section>
-    </div>
+      </Container>
+    </Layout>
   )
 }
 

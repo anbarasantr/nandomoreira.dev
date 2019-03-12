@@ -1,13 +1,13 @@
 ---
 layout: post
-path: "/blog/conhecendo-o-pre-processador-sass-parte-1"
-title: "#1 - Conhecendo o pré-processador SASS | Instalação"
+path: '/blog/conhecendo-o-pre-processador-sass-parte-1'
+title: '#1 - Conhecendo o pré-processador SASS | Instalação'
 date: 2015-09-01
-description: "Todo desenvolvedor web deveria conhecer algum pré-processador CSS, seja ele Less, SASS, Stylus ou qualquer outro"
-image: "./conhecendo-o-pre-processador-sass.jpg"
+description: 'Todo desenvolvedor web deveria conhecer algum pré-processador CSS, seja ele Less, SASS, Stylus ou qualquer outro'
+image: './conhecendo-o-pre-processador-sass.jpg'
 category:
-- SASS
-tags: ["sass", "css", "pre-processador"]
+  - SASS
+tags: ['sass', 'css', 'pre-processador']
 ---
 
 Na minha opinião todo desenvolvedor web deveria conhecer algum pré-processador CSS, seja ele `Less`, `SASS`, `Stylus` ou qualquer outro.
@@ -17,7 +17,7 @@ Hoje vou começar uma série de artigos com algumas dicas sobre o pré-processad
 ## O que é um pré-processador?
 
 > Um pré-processador é um programa que recebe texto e efectua conversões léxicas nele. As conversões podem incluir substituição de macros, inclusão condicional e inclusão de outros ficheiros.
-  > <small>Google.com (<a href="https://goo.gl/OeWJWB">https://goo.gl/OeWJWB</a>)</small>
+> <small>Google.com (<a href="https://goo.gl/OeWJWB">https://goo.gl/OeWJWB</a>)</small>
 
 Pense num pré-processador como uma nova linguagem para escrever CSS.
 
@@ -26,17 +26,17 @@ Chame de tradutor de linguagem, ou de compilador.. não tem problema, tudo vira 
 ## Mas o que é esse tal de SASS?
 
 > Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-  > <small>sass-lang.com</small>
+> <small>sass-lang.com</small>
 
 Resumidamente, **SASS** é um pré-processador de CSS. Com ele você tem vários recursos que não existem nativamente no CSS, como:
 
-* *variáveis*
-* *funções*
-* *includes*
-* *mixins*
-* *condicionais* <small>(if, else)</small>
-* *repetições* <small>(for)</small>
-* *entre outras coisas legais...*
+- _variáveis_
+- _funções_
+- _includes_
+- _mixins_
+- _condicionais_ <small>(if, else)</small>
+- _repetições_ <small>(for)</small>
+- _entre outras coisas legais..._
 
 Com ele você consegue organizar o seu CSS de forma modular, deixar cada componente em arquivos separados e usando `@import` importar todos em apenas um arquivo.
 
@@ -61,6 +61,8 @@ Se nada falhar você já tem o SASS instalado em sua máquina, rode `sass -v` do
 Vamos criar um arquivo SASS para teste.
 
 Abra o seu editor favorito, crie um novo arquivo com o seguinte código:
+
+<div class="language-filename">style.scss</div>
 
 ```sass
 $cor: #006699;
@@ -94,6 +96,8 @@ No código acima nós executamos o SASS passando o parâmetro `--watch` para que
 
 O código processado ficou assim:
 
+<div class="language-filename">style.scss</div>
+
 ```sass
 .box {
   background-color: #f1f1f1;
@@ -120,10 +124,10 @@ Esse é só o começo de uma longa jornada com o **Pré-processador SASS**, logo
 
 Aguardem..
 
-***
+---
 
 1. Conhecendo o pré-processador SASS - Instalação
-2. [Conhecendo o pré-processador SASS - Variáveis](/sass-variaveis-parte-2)
-3. [Conhecendo o pré processador SASS - Mixins](/sass-parte-3-mixins)
-4. [Conhecendo o pré processador SASS - Funções](/sass-parte-4-funcoes)
-5. [Conhecendo o pré-processador SASS - Placeholder](/sass-parte-5-placeholder)
+2. [Conhecendo o pré-processador SASS - Variáveis](/blog/sass-variaveis-parte-2)
+3. [Conhecendo o pré processador SASS - Mixins](/blog/sass-parte-3-mixins)
+4. [Conhecendo o pré processador SASS - Funções](/blog/sass-parte-4-funcoes)
+5. [Conhecendo o pré-processador SASS - Placeholder](/blog/sass-parte-5-placeholder)

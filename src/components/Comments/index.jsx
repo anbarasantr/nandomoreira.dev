@@ -6,7 +6,9 @@ import module from './comments.module.styl'
 const Comments = ({ shortname, config }) => (
   <aside className={module.Comments}>
     <div className={module.Comments__inner}>
-      <h3>Gostou? Então deixe seu comentário!</h3>
+      <div className={module.Comments__header}>
+        <h3>Gostou? Então deixe seu comentário!</h3>
+      </div>
       <DiscussionEmbed shortname={shortname} config={config} />
     </div>
   </aside>

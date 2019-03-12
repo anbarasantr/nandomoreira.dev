@@ -45,14 +45,11 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={SEOtitle} description={description} pathname={currentPath} />
+      <PageHeader
+        smallTitle={title}
+        title="Abaixo estão listados alguns dos meus melhores trabalhos"
+      />
       <Container>
-        <PageHeader title={title}>
-          <p>
-            {description} Abaixo estão listados alguns dos meus melhores
-            trabalhos.
-          </p>
-          {/* <p>Você também pode ver meus trabalhos no meu <a href={social.github} target="_blank" rel="noopener noreferrer">perfil do Github</a></p> */}
-        </PageHeader>
         <ProjectList projects={projects} />
         <Pagination paginate={paginate} />
       </Container>

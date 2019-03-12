@@ -1,17 +1,17 @@
 ---
 layout: post
-path: "/blog/calendario-rapido-direto-no-terminal"
-title: "Como ver o Calendário direto pelo terminal"
+path: '/blog/calendario-rapido-direto-no-terminal'
+title: 'Como ver o Calendário direto pelo terminal'
 date: 2016-09-02
 comments: true
-description: "Essa será uma dica bem curta e rápida, assim como o comando que você vai executar no seu terminal."
+description: 'Essa será uma dica bem curta e rápida, assim como o comando que você vai executar no seu terminal.'
 image: ../../images/cal-command.png
 category:
-- dicas
+  - dicas
 tags:
- - dicas
- - terminal
- - bash
+  - dicas
+  - terminal
+  - bash
 ---
 
 Você tá focado no código, apenas com algumas ferramentas abertas e não quer procurar o caléndário na listagem de programas instalados no seu computador, ou ir até a barra de ferramentas e clicar na data pra poder ver o calendário completo do mês ou do ano?
@@ -46,7 +46,7 @@ $ cal 2018
 
 ![Comando cal year 2018](../../images/cal-year-2018.png)
 
-That’s it! [Aqui está um link para uma simples doc](http://ss64.com/bash/cal.html "Aqui está um link para uma simples doc")
+That’s it! [Aqui está um link para uma simples doc](http://ss64.com/bash/cal.html 'Aqui está um link para uma simples doc')
 
 Espero que use e abuse! 😀
 

@@ -1,14 +1,15 @@
 ---
 layout: post
-path: "/blog/programador-a-comunidade-precisa-de-voce"
+path: '/blog/programador-a-comunidade-precisa-de-voce'
 title: Programador a comunidade precisa de você!
 date: 2017-03-12
 description: Sobre o porquê de alguns desenvolvedores não contribuem com a comunidade open-source.
 image: ../../images/2017/03/programador-a-comunidade-precisa-de-voce.jpeg
 category:
-- geral
+  - geral
 tags:
-- geral
+  - geral
+  - comunidade
 ---
 
 ## </ Prólogo >
@@ -27,12 +28,12 @@ Nós achávamos que seria rápido (ou até mesmo fácil) encontrar o profissiona
 
 Começamos a receber algumas respostas. Algumas nos deixaram tristes, recebemos frases e desculpas do tipo:
 
-* "Não tem muita coisa lá, pois não uso muito meu GitHub"
-* "Meus projetos estão todos privados no Bitbucket"
+- "Não tem muita coisa lá, pois não uso muito meu GitHub"
+- "Meus projetos estão todos privados no Bitbucket"
 
 Ou pior ainda.
 
-* "O que é Github?"
+- "O que é Github?"
 
 ---
 
@@ -50,10 +51,10 @@ Ai você me questiona: _"Ué! Mas o **[Linkedin](https://www.linkedin.com/)** n�
 
 O que eu imagino como um bom perfil de um desenvolvedor:
 
-* Linkedin: com projetos e empresas onde já trabalhou;
-* Site e/ou Portfolio: telas e textos detalhados de cada projeto;
-* GitHub: com seus códigos, discussões, e PR`s com suas contribuições;
-* E um Currículo bem diagramado.
+- Linkedin: com projetos e empresas onde já trabalhou;
+- Site e/ou Portfolio: telas e textos detalhados de cada projeto;
+- GitHub: com seus códigos, discussões, e PR`s com suas contribuições;
+- E um Currículo bem diagramado.
 
 Claro que um não elimina o outro, mas ambos se completam e assim, além de ser visto você terá um perfil "phoda" online.
 
@@ -70,8 +71,8 @@ Nessa busca árdua por um front-ender para preencher meu lugar, estávamos com m
 Opções:
 
 1. Ou não estávamos procurando direito;
-3. Ou  não tem muitos desenvolvedores em Curitiba;
-4. Ou temos muitos devs em Curitiba sim! Mas os que tem não se mostram online, deixam para procurar quando precisam, preenchem o currículo e atualizam o Linkedin quando querem arrumar um emprego.
+2. Ou não tem muitos desenvolvedores em Curitiba;
+3. Ou temos muitos devs em Curitiba sim! Mas os que tem não se mostram online, deixam para procurar quando precisam, preenchem o currículo e atualizam o Linkedin quando querem arrumar um emprego.
 
 Eu voto na opção 3.
 
@@ -81,14 +82,14 @@ Nós somos profissionais que estamos conectados, tecnologia corre em nossas veia
 
 Eu sempre me faço essas perguntas, todos os dias, desde do dia que me mudei para Curitiba e comecei a trabalhar com desenvolvimento web.
 
-* Onde estão os desenvolvedores de Curitiba?
-* Por que não temos comunidades ativas de desenvolvimento?
-* Por que não temos meetups, eventos e encontros ativos?
-* Será que é tão difícil para um dev Curitibano compartilhar seus conhecimentos?
-* Por que não contribuem com a comunidade open-source?
-* Por que é tão difícil de encontrar um dev front-end que tenha seu portfólio no GitHub?
-* Onde então a grande massa dos desenvolvedores de Curitiba?
-* Onde estão aqueles desenvolvedores que usam códigos open-source como Linux, PHP, Node, Ruby, WordPress, e outros?
+- Onde estão os desenvolvedores de Curitiba?
+- Por que não temos comunidades ativas de desenvolvimento?
+- Por que não temos meetups, eventos e encontros ativos?
+- Será que é tão difícil para um dev Curitibano compartilhar seus conhecimentos?
+- Por que não contribuem com a comunidade open-source?
+- Por que é tão difícil de encontrar um dev front-end que tenha seu portfólio no GitHub?
+- Onde então a grande massa dos desenvolvedores de Curitiba?
+- Onde estão aqueles desenvolvedores que usam códigos open-source como Linux, PHP, Node, Ruby, WordPress, e outros?
 
 Já que querem ser tão egoístas, por que não contribuem pelo menos com a linguagem ou tecnologia que usam, mesmo que para agradecer por terem criado algo open-source que está ajudando-o a colocar comida na mesa.
 

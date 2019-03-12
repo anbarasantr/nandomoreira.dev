@@ -1,10 +1,8 @@
 import React from 'react'
 import Icon from '../Icons'
-import styles from './styles'
+import module from './styles.module.styl'
 
 class ScrollToTop extends React.Component {
-  _isMounted = false
-
   constructor() {
     super()
 
@@ -17,16 +15,17 @@ class ScrollToTop extends React.Component {
   listenScrollEvent = e => {
     if (window.scrollY > 100) {
       this.setState({ showButton: true })
-      this._isMounted = true
     } else {
       this.setState({ showButton: false })
-      this._isMounted = false
     }
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
-    this._isMounted = true
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenScrollEvent)
   }
 
   scrollStep() {
@@ -40,38 +39,38 @@ class ScrollToTop extends React.Component {
   scrollToTop() {
     let intervalId = setInterval(
       this.scrollStep.bind(this),
-      this.props.delayInMs,
+      this.props.delayInMs
     )
     this.setState({ intervalId: intervalId })
   }
 
   render() {
     return (
-      <span>
-        <button
-          title="Back to top"
-          aria-label="Back to top"
-          style={{
-            ...styles.scrollToTop,
-            ...{ opacity: this.state.showButton ? 1 : 0 },
-            ...{ visibility: this.state.showButton ? 'visible' : 'hidden' },
-            ...{
-              transform: `translate3d(0, ${
-                this.state.showButton ? '0' : '60px'
-              }, 0)`,
-            },
-          }}
-          onClick={() => {
-            this.scrollToTop()
-          }}
-        >
-          <Icon
-            id="icon-chevron-square-up-f"
-            fill="#435b71"
-            stype={{ padding: '0' }}
-          />
-        </button>
-      </span>
+      <button
+        title="Ir para o topo"
+        aria-label="Ir para o topo"
+        className={module.scrollToTop}
+        style={{
+          ...{ opacity: this.state.showButton ? 1 : 0 },
+          ...{ visibility: this.state.showButton ? 'visible' : 'hidden' },
+          ...{
+            transform: `translate3d(0, ${
+              this.state.showButton ? '0' : '60px'
+            }, 0)`,
+          },
+        }}
+        onClick={() => {
+          this.scrollToTop()
+        }}
+      >
+        <Icon
+          id="icon-chevron-square-up-f"
+          className={module.scrollToTop__arrow}
+          size="40px"
+          fill="#435b71"
+          style={{ padding: '0' }}
+        />
+      </button>
     )
   }
 }

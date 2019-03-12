@@ -51,6 +51,8 @@ Com isso nós temos o **retângulo verde** da bandeira.
 
 Logo dentro da div nós criaremos mais uma `div` com a classe `.losangue`, mais ou menos assim:
 
+<div class="language-filename">bandeira.html</div>
+
 ```html
 <div class="brasil-flag">
   <div class="losangue"></div>
@@ -58,6 +60,8 @@ Logo dentro da div nós criaremos mais uma `div` com a classe `.losangue`, mais 
 ```
 
 E no CSS eu apliquei o seguinte código:
+
+<div class="language-filename">bandeira.css</div>
 
 ```css
 .brasil-flag .losangue:before,
@@ -104,12 +108,16 @@ Já conseguimos ver o **losango amarelo** da bandeira.
 
 Logo após vamos adicionar mais uma `div` com a classe `.circle`, mais ou menos assim:
 
+<div class="language-filename">bandeira.html</div>
+
 ```html
 <div class="brasil-flag">
   <div class="losangue"></div>
   <div class="circle"></div>
 </div>
 ```
+
+<div class="language-filename">bandeira.css</div>
 
 ```css
 .brasil-flag .circle {
@@ -136,6 +144,8 @@ Isso já nos trás o **círculo azul** da bandeira.
 ## A faixa branca
 
 Ainda utilizando a classe `.circle` vamos criar a faixa branca da bandeira.
+
+<div class="language-filename">bandeira.css</div>
 
 ```css
 .brasil-flag .circle,

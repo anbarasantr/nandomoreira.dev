@@ -1,16 +1,16 @@
 ---
 layout: post
-path: "/blog/como-converter-todos-arquivos-scss-de-um-diretorio-para-extensao-sass"
+path: '/blog/como-converter-todos-arquivos-scss-de-um-diretorio-para-extensao-sass'
 title: Como converter todos arquivos .scss de um diretório para extensão .sass
 description: Iremos usar o comando sass-convert do próprio SASS para realizar a conversão dos arquivos, mas já sabemos que ele converte apenas um único arquivo
 image: ../../images/conhecendo-o-pre-processador-sass.jpg
-keywords: "scss, sass, dica"
+keywords: 'scss, sass, dica'
 date: 2016-07-05
 category:
-- dica
+  - dica
 tags:
-- scss
-- sass
+  - scss
+  - sass
 ---
 
 Iremos usar o comando `sass-convert` do próprio SASS para realizar a conversão dos arquivos, mas já sabemos que ele converte apenas um único arquivo, então vamos usar o terminal e com um simples loop iremos converter todos os arquivos de um diretório (ou vários diretórios) de uma só vez.

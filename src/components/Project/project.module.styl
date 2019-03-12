@@ -2,24 +2,19 @@
 
 .Project
   margin-bottom 3.75rem
+  position relative
   width 100%
+
   p
     margin 0 0 .625rem
 
-  .gatsby-image-wrapper
-    transition: .2s all ease-in-out
-
-  &:hover .gatsby-image-wrapper
-    transform scale(1.04, 1.04)
-
   &__inner
-    @extend .card
-    @extend .card--hover
-    overflow hidden
-    display flex
-    flex-direction row
-    flex-wrap wrap
-    justify-content center
+    &:hover,
+    &:focus,
+    &:active
+      box-shadow none
+    +above($tablet)
+      display block
 
   &__header
     padding 0
@@ -30,26 +25,46 @@
         text-decoration none
 
   &__image
-    display inline-block
-    overflow hidden
-    width 460px
+    display block
+    +above($tablet)
+      display inline-block
+      width 700px
 
   &__content
     padding 1.875rem
-    width calc(100% - 460px)
+    width 100%
+    @extend .card
+    @extend .card--hover
+    +above($tablet)
+      width calc(100% - 560px)
+      display flex
+      align-items center
+      z-index 3
+      position absolute
+      bottom 3.75rem
+      right 0
+    +below($tablet)
+      border-radius 0
 
-  &__tags
-    list-style none
-    padding 0
-    margin 0
-    li
+  &__description
+    color rgba($text-color, .75)
+    font-size 1rem
+
+  &__view
+    display flex
+    align-items center
+    color $primary-color
+    svg
+      padding 5px
       display inline-block
-      font-size .75rem
-      margin-bottom 5px
-      &:not(:last-child)
-        margin-right 5px
+      fill $primary-color
+      position relative
+      animation slide1 1s ease-in-out infinite
+      transform translate3d(0, 2px, 0)
 
-  &__tag
-    padding 3px 6px
-    background-color darken(#fff, 6%)
-    border-radius 3px
+@keyframes slide1
+  0%,
+  100%
+    transform translate3d(0, 2px, 0)
+  50%
+    transform translate3d(10px, 2px, 0)

@@ -18,10 +18,8 @@ export default () => (
       description={description}
       pathname="/servicos"
     />
+    <PageHeader smallTitle={title} title="O que eu posso fazer por você?" />
     <Container>
-      <PageHeader title={title}>
-        <p>{description}</p>
-      </PageHeader>
       <SocialIcons />
     </Container>
   </Layout>

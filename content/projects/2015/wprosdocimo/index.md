@@ -10,7 +10,7 @@ repo: 'https://github.com/Wprosdocimo/wprosdocimo.github.io'
 image: './wprosdocimo.png'
 url: 'http://wprosdocimo.com.br'
 description: 'Desenvolvimento do blog do Wilson Luiz Prosdocimo utilizando a plataforma Jekyll e hospedando no Github pages.'
-tags: ['jekyll', 'blogging', 'blog', 'githubpages', 'opensource']
+tags: ['jekyll', 'blogging', 'blog', 'githubpages', 'open-source']
 ---
 
 Desenvolvimento do blog do Wilson Luiz Prosdocimo utilizando a plataforma Jekyll e hospedando no Github pages.

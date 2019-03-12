@@ -1,23 +1,22 @@
 ---
 layout: post
-path: "/blog/sass-variaveis-parte-2"
-title: "#2 - Conhecendo o pré-processador SASS | Variáveis"
+path: '/blog/sass-variaveis-parte-2'
+title: '#2 - Conhecendo o pré-processador SASS | Variáveis'
 date: 2015-09-02
-description: "Se você está começando agora no mundo do desenvolvimento você precisa ter uma base de como funciona variáveis."
-keywords: "sass, css, scss, pre-processador, pre-processadores, variáveis"
+description: 'Se você está começando agora no mundo do desenvolvimento você precisa ter uma base de como funciona variáveis.'
+keywords: 'sass, css, scss, pre-processador, pre-processadores, variáveis'
 image: ../conhecendo-o-pre-processador-sass-parte-1/conhecendo-o-pre-processador-sass.jpg
 category:
-- sass
+  - sass
 tags:
-- sass
-- css
-- pre-processador
+  - sass
+  - css
+  - pre-processador
 ---
 
 Vamos continuar nossa série **"Conhecendo o pré-processador SASS"**, mas agora falando de **Variáveis**.
 
 > Se você quer saber o que é o SASS e como instalar, por favor leia a parte 1 desse artigo <a href="/conhecendo-o-pre-processador-sass-parte-1/">aqui</a>
-
 
 ## O que são Variáveis?
 
@@ -28,15 +27,17 @@ O conceito de variáveis no SASS é bem parecido com este na programação em ge
 De acordo com o Google:
 
 > Variável é a característica de interesse que é medida em cada elemento da amostra ou população. Como o nome diz, seus valores variam de elemento para elemento. As variáveis podem ter valores numéricos ou não numéricos.
-  > <small>Google.com (<a href="https://goo.gl/dlslou">https://goo.gl/dlslou</a>)</small>
+> <small>Google.com (<a href="https://goo.gl/dlslou">https://goo.gl/dlslou</a>)</small>
 
 Basicamente você cria um espaço na memória, da um nome pra ele e armazena um valor para ser usado em algum lugar ou ser manipulado de alguma forma.. é isso.
 
-***
+---
 
 Vamos testar o seguinte código:
 
-```sass
+<div class="language-filename">style.scss</div>
+
+```scss
 $cor: #f00;
 
 body {
@@ -46,11 +47,11 @@ body {
 
 Se você rodar `sass --watch style.scss:style.css` e visualizar seu HTML no navegador, você verá o fundo vermelho.
 
-Isso aconteceu porque o a cor que estáva armazenada na *variável* `$cor` passou a ser o fundo da nossa tag `<body>`
+Isso aconteceu porque o a cor que estáva armazenada na _variável_ `$cor` passou a ser o fundo da nossa tag `<body>`
 
 Fácil não?!
 
-***
+---
 
 ## Tipos de variáveis no SASS
 
@@ -62,7 +63,9 @@ Uma variável pode ser do tipo inteiro e no meio do caminho se tornar uma string
 
 Mas no SASS a coisa é um pouco diferente. Temos tipos próprios de CSS, que não precisam de "aspas" como string.
 
-```sass
+<div class="language-filename">style.scss</div>
+
+```scss
 $mutable-var: '->'; // variavel do tipo string
 $mutable-var: 200; // variavel do tipo inteiro
 $mutable-var: 2.2; // variavel do tipo double
@@ -78,7 +81,9 @@ body {
 
 Se você processar o código acima verá que o valor de `width` é de `100%`, o SASS pegou automaticamente o valor setado na ultima linha.
 
-```sass
+<div class="language-filename">style.css</div>
+
+```css
 body {
   width: 100%;
 }
@@ -86,7 +91,7 @@ body {
 
 **Pra falar a verdade o SASS aceita qualquer valor que não vai gerar erro nenhum** 😊
 
-***
+---
 
 ## Conclusão
 
@@ -98,7 +103,7 @@ Se você for usar um determinado valor em vários lugares e/ou arquivos não exi
 
 Abraço!
 
-***
+---
 
 1. [Conhecendo o pré-processador SASS - Instalação](/conhecendo-o-pre-processador-sass-parte-1)
 2. Conhecendo o pré-processador SASS - Variáveis

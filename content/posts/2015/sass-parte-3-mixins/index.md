@@ -1,16 +1,16 @@
 ---
 layout: post
-path: "/blog/sass-parte-3-mixins"
-title: "#3 - Conhecendo o pré processador SASS | Mixins"
+path: '/blog/sass-parte-3-mixins'
+title: '#3 - Conhecendo o pré processador SASS | Mixins'
 date: 2015-09-05-sass-parte-3-mixins.md.erb
-description: "Mixin foi definitivamente algo novo para mim, você consegue passar valores por parâmetros assim como funções"
+description: 'Mixin foi definitivamente algo novo para mim, você consegue passar valores por parâmetros assim como funções'
 image: ../conhecendo-o-pre-processador-sass-parte-1/conhecendo-o-pre-processador-sass.jpg
 category:
-- sass
+  - sass
 tags:
-- sass
-- css
-- pre-processador
+  - sass
+  - css
+  - pre-processador
 ---
 
 **Mixin** foi definitivamente algo novo para mim, você consegue passar valores por parâmetros assim como funções, a diferença é que uma função retorna apenas 1 único valor e mixin retorna um bloco inteiro de CSS.
@@ -18,18 +18,20 @@ tags:
 O principal objetivo do Mixin é você poder reutilizar um determinado bloco de código por todo seu projeto.
 
 > Um mixin permite fazer grupos de declarações CSS que você deseja reutilizar em todo o site. Você pode até mesmo passar valores para fazer a sua mixin mais flexível.
-  ><small> Traduzido de: [sass-lang.com](http://sass-lang.com)</small>
+> <small> Traduzido de: [sass-lang.com](http://sass-lang.com)</small>
 
 ## Legal e por onde eu começo?
 
 Vamos fazer um exemplo simples, o mesmo usado na documentação do SASS ([sass-lang.com/guide](http://sass-lang.com/guide)).
 
-```sass
+<div class="language-filename">style.scss</div>
+
+```scss
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
 .card {
@@ -38,6 +40,8 @@ Vamos fazer um exemplo simples, o mesmo usado na documentação do SASS ([sass-l
 ```
 
 Esse bloco acima vai nos gerar o seguinte trecho de CSS:
+
+<div class="language-filename">style.css</div>
 
 ```css
 .card {
@@ -56,7 +60,7 @@ Pense em Mixin como uma função que irá retornar um bloco inteiro de CSS ao in
 
 Por enquanto é isso, obrigado.
 
-***
+---
 
 1. [Conhecendo o pré-processador SASS - Instalação](/conhecendo-o-pre-processador-sass-parte-1)
 2. [Conhecendo o pré-processador SASS - Variáveis](/sass-variaveis-parte-2)

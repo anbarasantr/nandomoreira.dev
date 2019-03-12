@@ -1,17 +1,17 @@
 ---
 layout: post
-path: "/blog/wp-cli-uma-interface-de-linha-de-comando-para-wordpress"
-title: "WP-CLI: Uma interface de linha de comando para WordPress"
-description: "Nesse artigo vou mostrar como instalar a WP-CLI, uma interface de linha de comando para WordPress"
-keywords: "wordpress, wp, cli, wp-cli, comando, linha, interface"
+path: '/blog/wp-cli-uma-interface-de-linha-de-comando-para-wordpress'
+title: 'WP-CLI: Uma interface de linha de comando para WordPress'
+description: 'Nesse artigo vou mostrar como instalar a WP-CLI, uma interface de linha de comando para WordPress'
+keywords: 'wordpress, wp, cli, wp-cli, comando, linha, interface'
 image: ../../images/wp-cli-help.png
 date: 2016-01-10
 category:
-- wordpress
+  - wordpress
 tags:
-- wordpress
-- cli
-- wpcli
+  - wordpress
+  - cli
+  - wpcli
 ---
 
 Nesse artigo vou mostrar como instalar a [WP-CLI](http://wp-cli.org/), uma interface de linha de comando para WordPress.
@@ -73,7 +73,7 @@ Fácil não?
 
 Tem um vídeo muito bom de uma palestra do **[Rodrigo Primo](https://github.com/rodrigoprimo)** no WordCamp Belo Horizonte em 2014.
 
-{% youtube "https://www.youtube.com/watch?v=Gy6uQ_2Gceg" %}
+https://www.youtube.com/watch?v=Gy6uQ_2Gceg
 
 Os slides da palestra está nesse link: [rodrigoprimo.github.io/wp-cli-wordcamp-bh-2014](http://rodrigoprimo.github.io/wp-cli-wordcamp-bh-2014/)
 

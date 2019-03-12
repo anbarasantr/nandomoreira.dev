@@ -9,5 +9,5 @@ online: true
 repo: 'https://github.com/nandomoreirame/motivaai'
 image: './motivaai.png'
 url: 'https://nandomoreirame.github.io/motivaai/'
-tags: ['es6', 'ecmascript6', 'opensource', 'frontend', 'netlify']
+tags: ['es6', 'ecmascript6', 'open-source', 'frontend', 'netlify']
 ---

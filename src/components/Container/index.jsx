@@ -1,8 +1,9 @@
 import React from 'react'
-import styles from './styles'
+import { Container, ContainerInner } from './styled'
+import './container.styl'
 
 export default ({ children, ...props }) => (
-  <div style={styles.container} {...props}>
-    <div style={styles.container__inner}>{children}</div>
-  </div>
+  <Container {...props}>
+    <ContainerInner>{children}</ContainerInner>
+  </Container>
 )

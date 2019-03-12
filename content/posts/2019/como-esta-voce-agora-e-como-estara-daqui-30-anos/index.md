@@ -1,18 +1,18 @@
 ---
 layout: post
-path: "/blog/como-esta-voce-agora-e-como-estara-daqui-30-anos"
+path: '/blog/como-esta-voce-agora-e-como-estara-daqui-30-anos'
 title: Como está você agora e como estará daqui 30 anos?
 description: 'Todo mundo já fez essa pergunta para si próprio: “Afinal, quem sou eu?”, se você ainda não fez, vai por mim, um dia você irá parar e refletir sobre sua essência e sua personalidade.'
 date: 2019-01-07
 image: ./hidethepainharold.jpg
 category:
-- Reflexões
+  - Reflexões
 tags:
-- reflexoes
-- vida
+  - reflexoes
+  - vida
 ---
 
-## Intro
+## Introdução
 
 Todo mundo já fez essa pergunta para si próprio: “Afinal, quem sou eu?”, se você ainda não fez, vai por mim, um dia você irá parar e refletir sobre sua essência e sua personalidade.
 
@@ -59,8 +59,6 @@ Eu me considerava um viciado em carne, eu repetia a frase _“bacon é vida!”_
 Eu era um _“roqueirinho”_ que vestia preto o tempo todo, agora gosto de músicas em geral e me visto diferente de antes.
 
 Eu estava em um momento diferente, cercado de pessoas diferentes que fizeram eu “ser” uma pessoa diferente.
-
-![Hide the pain harold!](./hidethepainharold2.jpg)
 
 ## Como estarei daqui 30 anos?
 

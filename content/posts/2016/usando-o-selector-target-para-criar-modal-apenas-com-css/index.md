@@ -1,16 +1,16 @@
 ---
 layout: post
-path: "/blog/usando-o-selector-target-para-criar-modal-apenas-com-css"
-title: "Usando o pseudo selector :target para criar modal apenas com CSS"
+path: '/blog/usando-o-selector-target-para-criar-modal-apenas-com-css'
+title: 'Usando o pseudo selector :target para criar modal apenas com CSS'
 date: 2016-09-23 23:31:58
 comments: true
-description: "Um pseudo selector das CSS3 muito útil é o :target, ele fornece recursos de estilo para um elemento cujo o ID está visivel na url"
+description: 'Um pseudo selector das CSS3 muito útil é o :target, ele fornece recursos de estilo para um elemento cujo o ID está visivel na url'
 image: ../../images/css3.jpg
 category:
-- css
+  - css
 tags:
- - dicas
- - css
+  - dicas
+  - css
 ---
 
 ![Usando o pseudo selector :target para criar modal apenas com CSS](../../images/usando-o-selector-target-para-criar-modal-apenas-com-css.png)
@@ -21,9 +21,11 @@ Um pseudo selector das CSS3 muito útil é o `:target`, ele fornece recursos de 
 
 É bem simples de entender, vamos ver uma demonstração nesse <a href="http://codepen.io/nandomoreirame/details/WGpjaY/" target="_blank">Pen</a>
 
-[![Modal usando CSS3 :target](https://codepen.io/oknoblich/pen/WGpjaY/image/large.png)](https://codepen.io/nandomoreirame/pen/WGpjaY)
+https://codepen.io/oseunando/pen/WGpjaY
 
 O pseudo selector `:target` pode ser aplicado em qualqer tag, classe ou ID em seu CSS, mais ou menos assim:
+
+<div class="language-filename">style.css</div>
 
 ```css
 /* Aplica em todos os elementos que tenha o target ativo na URL */
@@ -43,9 +45,11 @@ h2:target {
 
 Sendo assim, então podemos aplicar o `display: block` em nosso modal, certo? Isso mesmo.
 
+<div class="language-filename">style.css</div>
+
 ```css
 #modal:target {
-  display: block
+  display: block;
 }
 ```
 

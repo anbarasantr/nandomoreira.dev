@@ -1,28 +1,29 @@
 @import '../../stylus/index.styl'
 
 .Pagination
-  justify-content: center
-  display: flex
-  padding-left: 0
-  list-style: none
-  margin: 3.75rem /* 60/16 */ 0 1.875rem /* 30/16 */
+  justify-content center
+  display flex
+  padding-left 0
+  list-style none
+  margin 3.75rem /* 60/16 */ 0 1.875rem /* 30/16 */
   @extend .clearfix
   &__link
-    width: 2.5rem
-    height: 2.5rem
-    line-height: 2.5rem
-    border-radius: 50%
+    width 2.5rem
+    height 2.5rem
+    line-height 2.5rem
+    border-radius 50%
     box-shadow 0 0 1px 0 rgba($primary-color, .1), 0 4px 14px rgba($primary-color, .1)
     margin 0 .3125rem
-    background-color: transparent
-    border: none
-    transition: all .2s $timingFunction
-    text-align: center
-    color: #555
-    padding: 0
+    background-color transparent
+    border none
+    transition background-color .2s $timingFunction, box-shadow .2s $timingFunction
+    text-align center
+    color #555
+    padding 0
     display flex
     align-items center
     justify-content center
   &__link:hover,
   &__linkCurrent
-    background: #fff
+    background-color #fff
+    box-shadow 0 0 0 2px $primary-color

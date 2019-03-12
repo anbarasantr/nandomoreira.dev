@@ -6,9 +6,12 @@ import SEO from '../../components/SEO'
 import Layout from '../../components/Layout'
 import Container from '../../components/Container'
 import SocialIcons from '../../components/SocialIcons'
+import PageHeader from '../../components/PageHeader'
+import InstagramFeed from '../../components/InstagramFeed'
 import Image from '../../components/Image'
 
 import module from './about.module.styl'
+import './about.styl'
 
 const _date = new Date()
 const _year = _date.getFullYear()
@@ -22,53 +25,69 @@ export default ({ data }) => (
       image={data.file.childImageSharp.fixed.src}
       pathname="/sobre"
     />
+    <PageHeader
+      smallTitle="Sobre mim"
+      title={`Um programador não por formação mas por vocação.`}
+    />
     <Container>
-      <div className={module.About}>
-        <div className={module.About__inner}>
-          <section className={module.About__content}>
-            <div className={module.About__thumb}>
-              <Image
-                node={data.file}
-                className="About__avatar"
-                title="Foto de Fernando Moreira Costa"
-                alt="Foto de Fernando Moreira Costa"
-              />
-            </div>
+      <div className={`About ${module.About}`}>
+        <div className={module.About__left}>
+          <div className={module.About__inner}>
+            <Image
+              node={data.file}
+              className={module.About__image}
+              title="Foto de Fernando Moreira Costa"
+              alt="Foto de Fernando Moreira Costa"
+            />
+            <SocialIcons icons={data.site.siteMetadata.social} />
+            <InstagramFeed
+              show={data.site.siteMetadata.isProduction}
+              options={{
+                total: 8,
+                accessToken:
+                  '304341723.1677ed0.4f4681f740ed4a9daadc777de9fe2716',
+                clientId: '4503fb5f1ba64fcbb61b7994dd792cee',
+                get: 'user', // popular, user
+                userId: 304341723,
+                user: `${data.site.siteMetadata.author.instagram}`,
+              }}
+            />
+          </div>
+        </div>
+        <div className={module.About__right}>
+          <div className={module.About__inner}>
             <div className={module.About__text}>
-              <h2>Quem sou eu?</h2>
+              <h2>Eu sou o Fernando, prazer em conhece-lo</h2>
               <p>
-                Meu nome é <strong>Fernando Moreira Costa</strong> (muito
-                prazer). Tenho <span>{_age}</span> anos, nasci e cresci em uma
+                Meu nome completo é <strong>Fernando Moreira Costa</strong>,
+                tenho <span>{_age}</span> anos, nasci e cresci em uma
                 cidadezinha do interior de <strong>Rondônia</strong> chamada{' '}
                 <strong>Ariquemes</strong> , sai de lá com 18 anos para me
-                aventurar em <strong>Curitiba/PR</strong> onde moro atualmente{' '}
+                aventurar em <strong>Curitiba/PR</strong> onde moro atualmente.
               </p>
               <p>
-                Sou programador não por formação mas por vocação{' '}
                 <span role="img" aria-label="emoji de um notebook">
                   💻
                 </span>{' '}
-                , vegetariano{' '}
+                Sou programador não por formação mas por vocação,{' '}
                 <span role="img" aria-label="emoji de um abacate">
                   🥑
                 </span>{' '}
-                , violinista{' '}
+                vegetariano,
                 <span role="img" aria-label="emoji de um violino">
                   🎻
                 </span>{' '}
-                , piadista{' '}
+                violinista,
                 <span role="img" aria-label="emoji de uma carinha pensando">
                   🤔
                 </span>{' '}
-                e fã de beterraba{' '}
+                piadista{' '}
                 <span role="img" aria-label="emoji de um coração">
                   ❤️
                 </span>
-                .
+                e fã de beterraba.
               </p>
             </div>
-          </section>
-          <section className={module.About__content}>
             <div className={module.About__text}>
               <h2>Histórico profissional</h2>
               <p>
@@ -138,8 +157,6 @@ export default ({ data }) => (
                 .
               </p>
             </div>
-          </section>
-          <section className={module.About__content}>
             <div className={module.About__text}>
               <h2>O que estou fazendo agora?</h2>
               <p>
@@ -163,8 +180,6 @@ export default ({ data }) => (
                 <Link to="/now">O que estou fazendo agora</Link>
               </p>
             </div>
-          </section>
-          <section className={module.About__content}>
             <div className={module.About__text}>
               <h2>E o que faço hoje?</h2>
               <p>
@@ -214,8 +229,6 @@ export default ({ data }) => (
                 .
               </p>
             </div>
-          </section>
-          <section className={module.About__content}>
             <div className={module.About__text}>
               <h2>Sobre esse site</h2>
               <p>
@@ -324,8 +337,6 @@ export default ({ data }) => (
                 , fique à vontade para contribuir também :).
               </p>
             </div>
-          </section>
-          <section className={module.About__content}>
             <div className={module.About__text}>
               <h2>Quer mais?</h2>
               <p>
@@ -385,16 +396,13 @@ export default ({ data }) => (
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    hi[arroba]nandomoreira.dev
+                    hi@nandomoreira.dev
                   </a>{' '}
                   que é sucesso!
                 </li>
               </ul>
             </div>
-          </section>
-          <section className={module.About__social}>
-            <SocialIcons icons={data.site.siteMetadata.social} />
-          </section>
+          </div>
         </div>
       </div>
     </Container>
@@ -403,9 +411,9 @@ export default ({ data }) => (
 
 export const aboutQuery = graphql`
   query AboutQuery {
-    file(relativePath: { eq: "sobre/avatar.png" }) {
+    file(relativePath: { eq: "sobre/avatar.jpg" }) {
       childImageSharp {
-        fixed(width: 220, height: 220, quality: 75) {
+        fixed(width: 300, height: 300, quality: 75) {
           src
           srcSet
           base64
@@ -416,8 +424,13 @@ export const aboutQuery = graphql`
     }
     site {
       siteMetadata {
+        isProduction
+        author {
+          instagram
+        }
         social {
           github
+          instagram
           twitter
           codepen
           linkedin

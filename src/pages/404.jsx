@@ -1,10 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import HeroText from '../components/HeroText'
-
 import SEO from '../components/SEO'
 import SocialIcons from '../components/SocialIcons'
 import Icon from '../components/Icons'
@@ -13,7 +11,7 @@ const title = 'Erro 404'
 const description =
   'Infelizmente a página que você está tentando acessar não foi localizada.'
 
-const PageNotFound = ({ data }) => (
+export default ({ data }) => (
   <Layout>
     <SEO title={title} description={description} pathname="/404.html" />
     <HeroText>
@@ -32,14 +30,13 @@ const PageNotFound = ({ data }) => (
   </Layout>
 )
 
-export default PageNotFound
-
 export const error404Query = graphql`
   query Error404Query {
     site {
       siteMetadata {
         social {
           github
+          instagram
           twitter
           codepen
           linkedin

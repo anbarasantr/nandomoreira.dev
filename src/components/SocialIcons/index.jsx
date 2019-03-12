@@ -7,8 +7,8 @@ const defaultProps = {
   icons: {},
 }
 
-const SocialIcons = ({ icons }) => (
-  <ul className={`SocialIcons ${module.Social}`}>
+const SocialIcons = ({ icons, ...props }) => (
+  <ul className={`SocialIcons ${module.Social}`} {...props}>
     {Object.keys(icons).map((item, i) => {
       const link = icons[item]
       if (!link) return null

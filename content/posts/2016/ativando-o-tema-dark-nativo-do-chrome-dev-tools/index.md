@@ -1,18 +1,18 @@
 ---
 layout: post
-path: "/blog/ativando-o-tema-dark-nativo-do-chrome-dev-tools"
-title: "Ativando o tema Dark nativo do Chrome DevTools e indo para o lado negro da força"
+path: '/blog/ativando-o-tema-dark-nativo-do-chrome-dev-tools'
+title: 'Ativando o tema Dark nativo do Chrome DevTools e indo para o lado negro da força'
 date: 2016-09-24 04:25:39
 comments: true
-description: "O Google Chrome em uma de suas atualizações implementou o tema “Dark” para o Chrome DevTools."
+description: 'O Google Chrome em uma de suas atualizações implementou o tema “Dark” para o Chrome DevTools.'
 image: ../../images/chrome-devtools-dark.png
 category:
-- dicas
+  - dicas
 tags:
- - dicas
- - google
- - chrome
- - devtools
+  - dicas
+  - google
+  - chrome
+  - devtools
 ---
 
 O [Google Chrome](https://www.google.com/chrome/) em uma de suas atualizações implementou o tema _"Dark"_ para o _Chrome DevTools_. Isso já faz uns 7 a 8 meses mais ou menos (eu acho), mas estou escrevendo esse pequeno artigo pra avisar os que ainda estão desavisados.

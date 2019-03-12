@@ -11,10 +11,11 @@ const description = 'FAQ'
 const FAQ = () => (
   <Layout>
     <SEO title={title} description={description} pathname="/faq" />
+    <PageHeader title={title}>
+      <p>{description}</p>
+    </PageHeader>
     <Container>
-      <PageHeader title={title}>
-        <p>{description}</p>
-      </PageHeader>
+      <p>{title}</p>
     </Container>
   </Layout>
 )

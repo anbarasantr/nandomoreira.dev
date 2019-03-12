@@ -2,24 +2,44 @@
 
 .About
   width 100%
-  text-align center
   +above($tablet)
     display flex
-    align-items center
     justify-content center
-    text-align left
+  &__left,
+  &__right
+    text-align center
+    +above($tablet)
+      text-align left
+      display flex
+      flex-direction column
+      flex-basis 100%
+  &__left
+    width 100%
+    +above($tablet)
+      padding-right 15px
+      flex 1 25%
+  &__right
+    +above($tablet)
+      padding-left 15px
+      flex 1 75%
   &__inner
-    max-width 62.5rem /* 1000/16 */
-    padding 2.5rem /* 40/16 */ .9375rem /* 15/16 */
+    @extend .card
+    padding 1.25rem
+  &__image
+    width 100%
+    +below($tablet)
+      margin 0 auto !important
+      display block !important
   &__content
     margin-bottom 1.875rem /* 30/16 */
     +above($tablet)
       display flex
       align-items center
   &__text
+    margin-bottom 2.5rem
     h2
       font-size 2rem /* 32/16 */
-      margin 0 0 .625rem /* 10/16 */
+      margin 0 0 1.875rem
     ul
       list-style none
       padding 0
@@ -33,15 +53,5 @@
       &:hover,
       &:focus
         text-decoration none
-  &__thumb
-    display block
-    text-align center
-    .Avatar
-      width 290px
-      margin .9375rem /* 15/16 */ auto
-    +above($tablet)
-      padding-right 1.875rem /* 30/16 */
-      display inline-block
-      text-align left
   &__social
     margin-bottom 30px

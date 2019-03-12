@@ -1,22 +1,22 @@
 ---
 layout: post
-path: "/blog/wordpress-plugins-x-functions-php"
-title: "Wordpress - plugins x functions.php"
+path: '/blog/wordpress-plugins-x-functions-php'
+title: 'Wordpress - plugins x functions.php'
 date: 2015-07-24
-description: "Muitos amigos e colegas de trabalho sempre me perguntam porque eu sou contra o uso de plugins no Wordpress."
-image: "./wordpress-plugins-x-functions-php.jpg"
-keywords: "wordpress, plugins, funcoes, php, dicas"
+description: 'Muitos amigos e colegas de trabalho sempre me perguntam porque eu sou contra o uso de plugins no Wordpress.'
+image: './wordpress-plugins-x-functions-php.jpg'
+keywords: 'wordpress, plugins, funcoes, php, dicas'
 category:
-- wordpress
-tags: ["wordpress", "dicas", "php"]
+  - wordpress
+tags: ['wordpress', 'dicas', 'php']
 ---
 
 Muitos amigos e colegas de trabalho sempre me perguntam porque eu sou contra o uso de plugins no Wordpress.
 
 A resposta é simples, não tem porque pegar um elefante e tentar colocar dentro de um fusca, algum dia algum deles vai reclamar, ou o elefante com dores no corpo ou o fusca vai quebrar em algum ponto do trajeto.
 
- - **O Elefante**: o plugin de galeria.
- - **O Fusca**: Uma página simples de galeria.
+- **O Elefante**: o plugin de galeria.
+- **O Fusca**: Uma página simples de galeria.
 
 Vou explicar melhor, vem comigo.
 
@@ -32,16 +32,17 @@ Por isso que a frase: “Tentar colocar um elefante dentro de um fusca” se enc
 
 Outro ponto importante, se o cliente querer algo que não tem no plugin o que você vai fazer?
 
-  - (   ) - Implementar essa funcionalidade dentro do plugin (Se o cliente resolver atualizar o plugin qualquer alteração que você fez irá pelo ralo)
-  - (   ) - Remover o plugin e fazer na mão
-  - ( x ) - Sentar e chorar, porque qualquer das opções acima te dará uma tremenda dor de cabeça e muito retrabalho.
+- ( ) - Implementar essa funcionalidade dentro do plugin (Se o cliente resolver atualizar o plugin qualquer alteração que você fez irá pelo ralo)
+- ( ) - Remover o plugin e fazer na mão
+- ( x ) - Sentar e chorar, porque qualquer das opções acima te dará uma tremenda dor de cabeça e muito retrabalho.
 
 #### DICA:
+
 O que você deve fazer em cada projeto é:
 
- - Analisar todos os módulos e páginas que seu cliente pediu,
- - Verificar as possibilidades de usar ou não um plugin,
- - Se você decidir usar, analisar cada um antes de adicionar ao projeto.
+- Analisar todos os módulos e páginas que seu cliente pediu,
+- Verificar as possibilidades de usar ou não um plugin,
+- Se você decidir usar, analisar cada um antes de adicionar ao projeto.
 
 Não vou dizer para você que eu não uso plugins em meus projetos, mas claro que uso, mas para funcionalidades bem específicas que provavelmente não poderei desenvolver dentro do projeto.
 O importante é quanto menos plugins o seu projeto tiver melhor, por favor não passe de 5, e eu ainda acho muito.
@@ -62,12 +63,13 @@ Existe um tema boilerplate criado pela cominidade [WP Brasil](https://github.com
 
 Depois que eu comecei a usar o Odin eu não uso mais plugins para:
 
- - [Criar formulários de contato](/criando-formulario-de-contato-para-wordpress-com-odin-framework),
- - [Galeria de fotos](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Metabox#image_plupload),
- - [Criar Custom Post types](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Post_Type),
- - [Criar Taxonomias](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Taxonomy) (tags e categorias),
- - [Criar Meta Boxes](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Metabox),
- - [Opções do meu tema](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Theme_Options).
+- [Criar formulários de contato](/criando-formulario-de-contato-para-wordpress-com-odin-framework),
+- [Galeria de fotos](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Metabox#image_plupload),
+- [Criar Custom Post types](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Post_Type),
+- [Criar Taxonomias](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Taxonomy) (tags e categorias),
+- [Criar Meta Boxes](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Metabox),
+- [Opções do meu tema](https://github.com/wpbrasil/odin/wiki/Classe-Odin_Theme_Options).
+
 #### Conclusão
 
 Seja cuidadoso com cada projeto que você for criar, tudo isso agregará valor à você mesmo. Use apenas o necessário, comprima os assets, adicione apenas o necessário em seu projeto e não abuse na instalação de plugins.

@@ -1,13 +1,13 @@
 ---
 layout: post
-path: "/blog/como-um-time"
+path: '/blog/como-um-time'
 title: Como um time
 date: 2016-12-27
 description: Trabalhar como um time é elevar o projeto a um nível superior, que nem mesmo você nem seus superiores imaginariam chegar, mas só conseguiram chegar lá porque viram a necessidade de trabalhar em equipe.
 category:
-- Geral
+  - geral
 tags:
-- Reflexão
+  - reflexão
 image: ../../images/2016/12/lojaskd-team-it.jpeg
 ---
 
@@ -61,6 +61,6 @@ Em especial ao time de TI da [LojasKD](https://www.lojaskd.com.br/) por me acolh
 
 E como Bônus, para você refletir um pouco mais sobre o trabalho em equipe, vou deixar esse video do **Bernard De Luna** sobre **Perseverança e time**.
 
-{% youtube "https://www.youtube.com/watch?v=EJzhit_HAIA" %}
+https://www.youtube.com/watch?v=EJzhit_HAIA
 
 **UM FELIZ 2017 TIME!**

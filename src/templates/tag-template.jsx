@@ -2,28 +2,41 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import SEO from '../components/SEO'
+import Layout from '../components/Layout'
+import Container from '../components/Container'
+import PageHeader from '../components/PageHeader'
+
 const Tags = ({ data, pageContext }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`
+  } marcados como #${tag}`
 
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { path, title } = node.frontmatter
-          return (
-            <li key={path}>
-              <Link to={path}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      <Link to="/tags">All tags</Link>
-    </div>
+    <Layout>
+      <SEO
+        title={`Tag: #${tag}`}
+        // description={post.frontmatter.description}
+        // image={post.frontmatter.image.publicURL}
+        // pathname={post.frontmatter.path}
+      />
+      <PageHeader title={tagHeader} smallTitle="Tag" />
+      <Container>
+        <ul>
+          {edges.map(({ node }) => {
+            const { path, title } = node.frontmatter
+            return (
+              <li key={path}>
+                <Link to={path}>{title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+        {/* <Link to="/tags">All tags</Link> */}
+      </Container>
+    </Layout>
   )
 }
 

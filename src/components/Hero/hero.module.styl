@@ -10,44 +10,44 @@
     justify-content center
 
   &__inner
-    padding 15px
+    padding .9375rem
     z-index 1
     position relative
     +above($tablet)
-      max-width 1200px
+      max-width 73.125rem
       margin 0 auto
 
   &__title
-    font-size 48px
-    line-height 2.6rem
-    margin-bottom 30px
+    font-size 3rem
+    line-height 2.4rem
+    margin-bottom 2.5rem
+    +above($tablet)
+      line-height 5rem
+      font-size 6.25rem
     a
       font-weight 900
       text-decoration none
-      color rgba(#000, .8)
-    +above($tablet)
-      line-height 5.6rem
-      font-size 100px
+      color darken($text-color, 40%)
+      &:hover,
+      &:focus,
+      &:active
+        box-shadow none
     span
       font-weight 200
       font-size inherit
       letter-spacing 0
+      font-size 80%
 
   &__presentation
-    font-size 18px
+    font-size 1.125rem
     font-weight 200
-    color rgba(#000, .75)
+    color rgba($text-color, .8)
     line-height 1.6rem
-    margin-bottom 30px
+    margin-bottom 2.5rem
     +above($tablet)
-      line-height 2rem
-      font-size 24px
+      line-height 2.2rem
+      font-size 1.75rem
     span, a
       font-weight 500
-
-  .Nav
-    margin-bottom 30px
-
-  .Nav__item
-    font-size 20px
-    text-transform uppercase
+    a
+      border-bottom 2px solid $link-color

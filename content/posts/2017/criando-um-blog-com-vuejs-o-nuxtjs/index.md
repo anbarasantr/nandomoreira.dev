@@ -1,15 +1,15 @@
 ---
 layout: post
-path: "/blog/criando-um-blog-com-vuejs-o-nuxtjs"
+path: '/blog/criando-um-blog-com-vuejs-o-nuxtjs'
 date: 2017-11-05
-title: "Criando um blog com Vue.js - Parte 1: O Nuxt.js"
-description: "Essa é a parte 1 de uma série onde iremos usar a tecnologia SSR (Server Side Rendering) para criar um blog e no final hospeda-lo no GitHub pages e no Netlify."
+title: 'Criando um blog com Vue.js e Nuxt.js'
+description: 'Essa é a parte 1 de uma série onde iremos usar a tecnologia SSR (Server Side Rendering) para criar um blog e no final hospeda-lo no GitHub pages e no Netlify.'
 image: ../../images/criando-um-blog-com-javascript-vuejs.jpg
 category:
-- vue
+  - vue
 tags:
-- vue
-- javascript
+  - vue
+  - javascript
 ---
 
 ## Introdução
@@ -54,15 +54,15 @@ Para instalar o Nuxt.js você precisa dos seguintes pré-requisitos:
 Vamos seguir a mesma instalação feita no site do Nux.js em [nuxtjs.org/guide/installation](https://nuxtjs.org/guide/installation).
 
 ```bash
-$ vue init nuxt-community/starter-template blog-with-vuejs
-$ cd blog-with-vuejs/
-$ yarn # ou npm install
+vue init nuxt-community/starter-template blog-with-vuejs
+cd blog-with-vuejs/
+yarn # ou npm install
 ```
 
 Os comandos acima foram executados no terminal, você pode executar todos de uma só vez concatenando com `&&` cada um deles.
 
 ```bash
-$ vue init nuxt-community/starter-template blog-with-vuejs \
+vue init nuxt-community/starter-template blog-with-vuejs \
   && cd blog-with-vuejs/ \
   && yarn
 ```
@@ -79,17 +79,56 @@ $ vue init nuxt-community/starter-template blog-with-vuejs \
 
 A estrutura padrão de um aplicativo **Nuxt.js** destina-se a fornecer um ótimo ponto de partida para pequenas e grandes aplicações. Claro, você é livre para organizar seu aplicativo, como quiser.
 
-{:.table.table-bordered.table-striped}
-| **Diretório `assets`** | Esse diretório contém seus recursos não compilados, como Less, SASS, Stylus ou JavaScript. |
-| **Diretório `component`** | Esse diretório contém seus componentes Vue. O Nuxt.js não carrega automaticamente esses componentes. |
-| **Diretório `layouts`** | Esse diretório contém os layouts da sua aplicação. <br/>_Este diretório não pode ser renomeado._ |
-| **Diretório `middleware`** | Esse diretório contém o Middleware de sua aplicação. O Middleware permite que você defina funções personalizadas que podem ser executadas antes de renderizar uma página ou um grupo de páginas (layouts). |
-| **Diretório `pages`** | Esse diretório contém as views e rotas da sua aplicação. O framework lê todos os arquivos `.vue` dentro desse diretório e cria o router da aplicação. <br/>_Este diretório não pode ser renomeado._ |
-| **Diretório `plugins`** | Esse diretório contém os plugins JavaScript que deseja executar antes de instanciar o aplicativo Vue.js da raiz. |
-| **Diretório `static`** | Esse diretório contém seus arquivos estáticos. Cada arquivo dentro deste diretório é mapeado para a raiz do seu site `/`. Exemplo: `/static/robots.txt` é mapeado como `http://seusite.com/robots.txt` <br/>_Este diretório não pode ser renomeado._ |
-| **Diretório `store`** | Esse diretório contém seus arquivos do **Vuex Store**. A opção Vuex Store é implementada na estrutura do Nuxt.js. A criação de um arquivo `index.js` neste diretório habilita essa opção automaticamente. <br/>_Este diretório não pode ser renomeado._ |
-| **Arquivo `nuxt.config.js`** | Esse arquivo contém a configuração personalizada do **Nuxt.js**. <br/>_Este arquivo não pode ser renomeado._ |
-| **Arquivo `package.json`** | Esse arquivo contém suas dependências e scripts da sua aplicação. <br/>_Este arquivo não pode ser renomeado._ |
+<table class="table table-bordered table-striped">
+  <tbody>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">assets</code></strong></td>
+      <td>Esse diretório contém seus recursos não compilados, como Less, SASS, Stylus ou JavaScript.</td>
+    </tr>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">component</code></strong></td>
+      <td>Esse diretório contém seus componentes Vue. O Nuxt.js não carrega automaticamente esses componentes.</td>
+    </tr>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">layouts</code></strong></td>
+      <td>Esse diretório contém os layouts da sua aplicação. <br><em>Este diretório não pode ser renomeado.</em></td>
+    </tr>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">middleware</code></strong></td>
+      <td>Esse diretório contém o Middleware de sua aplicação. O Middleware permite que você defina funções personalizadas que podem ser executadas antes de
+        renderizar uma página ou um grupo de páginas (layouts).</td>
+    </tr>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">pages</code></strong></td>
+      <td>Esse diretório contém as views e rotas da sua aplicação. O framework lê todos os arquivos <code class="highlighter-rouge">.vue</code> dentro desse
+        diretório e cria o router da aplicação. <br><em>Este diretório não pode ser renomeado.</em></td>
+    </tr>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">plugins</code></strong></td>
+      <td>Esse diretório contém os plugins JavaScript que deseja executar antes de instanciar o aplicativo Vue.js da raiz.</td>
+    </tr>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">static</code></strong></td>
+      <td>Esse diretório contém seus arquivos estáticos. Cada arquivo dentro deste diretório é mapeado para a raiz do seu site <code class="highlighter-rouge">/</code>.
+        Exemplo: <code class="highlighter-rouge">/static/robots.txt</code> é mapeado como <code class="highlighter-rouge">http://seusite.com/robots.txt</code>
+        <br><em>Este diretório não pode ser renomeado.</em></td>
+    </tr>
+    <tr>
+      <td><strong>Diretório <code class="highlighter-rouge">store</code></strong></td>
+      <td>Esse diretório contém seus arquivos do <strong>Vuex Store</strong>. A opção Vuex Store é implementada na estrutura do Nuxt.js. A criação de um
+        arquivo <code class="highlighter-rouge">index.js</code> neste diretório habilita essa opção automaticamente. <br><em>Este diretório não pode ser
+          renomeado.</em></td>
+    </tr>
+    <tr>
+      <td><strong>Arquivo <code class="highlighter-rouge">nuxt.config.js</code></strong></td>
+      <td>Esse arquivo contém a configuração personalizada do <strong>Nuxt.js</strong>. <br><em>Este arquivo não pode ser renomeado.</em></td>
+    </tr>
+    <tr>
+      <td><strong>Arquivo <code class="highlighter-rouge">package.json</code></strong></td>
+      <td>Esse arquivo contém suas dependências e scripts da sua aplicação. <br><em>Este arquivo não pode ser renomeado.</em></td>
+    </tr>
+  </tbody>
+</table>
 
 > Veja na [documentação do Nuxt.js](https://nuxtjs.org/guide/directory-structure) para saber mais informações sobre esses diretórios e arquivos que eu citei acima.
 
@@ -112,7 +151,10 @@ Se você visualizar o código fonte você verá todo o HTML renderizado pelo Nux
 ```html
 <body data-n-head="">
   <div id="__nuxt" data-server-rendered="true">
-    <div class="nuxt-progress" style="width:0%;height:2px;background-color:#3B8070;opacity:0;"></div>
+    <div
+      class="nuxt-progress"
+      style="width:0%;height:2px;background-color:#3B8070;opacity:0;"
+    ></div>
     <div>
       <section class="container">
         <div>
@@ -125,8 +167,15 @@ Se você visualizar o código fonte você verá todo o HTML renderizado pelo Nux
           <h1 class="title">blog-with-vuejs</h1>
           <h2 class="subtitle">Nuxt.js project</h2>
           <div class="links">
-            <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-            <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
+            <a href="https://nuxtjs.org/" target="_blank" class="button--green"
+              >Documentation</a
+            >
+            <a
+              href="https://github.com/nuxt/nuxt.js"
+              target="_blank"
+              class="button--grey"
+              >GitHub</a
+            >
           </div>
         </div>
       </section>
@@ -134,12 +183,12 @@ Se você visualizar o código fonte você verá todo o HTML renderizado pelo Nux
   </div>
   <script type="text/javascript">
     window.__NUXT__ = {
-      "layout": "default",
-      "data": [{}],
-      "error": null,
-      "state": {},
-      "serverRendered": true
-    };
+      layout: 'default',
+      data: [{}],
+      error: null,
+      state: {},
+      serverRendered: true,
+    }
   </script>
   <script src="/_nuxt/manifest.6577d27b1c69002c3e9a.js" defer></script>
   <script src="/_nuxt/common.65aa6f5764a5ec5e7c56.js" defer></script>
@@ -150,10 +199,6 @@ Se você visualizar o código fonte você verá todo o HTML renderizado pelo Nux
 Note que dentro da tag `<body>` não tem apenas o famoso div `<div id="app"></div>` como estamos acostumados a ver em SPA`s feitas com Vue e esse é o maior ponto positivo de um app que usa **SSR**.
 
 ---
-
-## Conclusão
-
-Essa é a parte 1 de uma série onde iremos falar sobre **Vue.js**, **Nuxt.js**, **SSR**, **GitHub Pages** e **[Netlify](https://www.netlify.com/)**, então aguardem mais artigos como esse.
 
 See you ✌️
 

@@ -2,14 +2,18 @@
 
 .Footer
   @extend .card
-  padding 15px
+  background-color transparent
+  border-top 1px solid rgba(#000, .05)
+  padding 3.75rem .9375rem
   text-align center
   margin-top 1.875rem
   border-radius 0
   strong, address, a
     font-weight 800
+    opacity 0.5
   address
     display inline
+    font-style normal
   span
     font-size .75rem
     opacity 0.75
@@ -17,4 +21,4 @@
     +above($tablet)
       font-size .875rem
   a
-    text-decoration underline
+    border-bottom 1px solid $link-color

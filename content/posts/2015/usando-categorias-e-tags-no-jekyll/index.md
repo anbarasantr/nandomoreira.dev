@@ -1,31 +1,31 @@
 ---
 layout: post
-path: "/blog/usando-categorias-e-tags-no-jekyll"
-title: "Usando categorias e tags no Jekyll"
+path: '/blog/usando-categorias-e-tags-no-jekyll'
+title: 'Usando categorias e tags no Jekyll'
 date: 2015-10-13
-description: "GitHub Pages serviço é simplesmente incrível! E com a integração Jekyll ele fica ainda mais impressionante! Mas existem algumas limitações neste grande sistema automatizado"
+description: 'GitHub Pages serviço é simplesmente incrível! E com a integração Jekyll ele fica ainda mais impressionante! Mas existem algumas limitações neste grande sistema automatizado'
 image: ../../images/get-started-with-jekyll.jpg
-keywords: "jekyll, categorias, tags, blog"
+keywords: 'jekyll, categorias, tags, blog'
 category:
-- jekyll
+  - jekyll
 tags:
-- github
-- gh-pages
-- jekyll
+  - github
+  - gh-pages
+  - jekyll
 ---
 
 > Esse artigo foi traduzido de: [How to use tags and categories on github pages without plugins](http://www.minddust.com/post/tags-and-categories-on-github-pages/)
 
 ---
 
-[GitHub Pages](http://pages.github.com/) serviço é simplesmente incrível, e com a integração  Jekyll ele fica ainda mais impressionante! Mas existem algumas limitações neste grande sistema automatizado:
+[GitHub Pages](http://pages.github.com/) serviço é simplesmente incrível, e com a integração Jekyll ele fica ainda mais impressionante! Mas existem algumas limitações neste grande sistema automatizado:
 
-* não há próprios plugins
-* [plugins disponíveis limitados](https://pages.github.com/versions/)
+- não há próprios plugins
+- [plugins disponíveis limitados](https://pages.github.com/versions/)
 
 Como você já deve saber:
 
-* não há plugins de tag/categoria disponível (atualmente).
+- não há plugins de tag/categoria disponível (atualmente).
 
 Triste... Mas isso era algo que eu realmente queria ter!
 
@@ -35,7 +35,9 @@ Você pode ver uma demonstração ao vivo nesta página.
 
 Aqui está um pequeno guia de como implementá-lo:
 
-#### 1. Adicione um pouco de lógica no template do seu layout _post.html_
+#### 1. Adicione um pouco de lógica no template do seu layout post.html
+
+<div class="language-filename">_layouts/post.html</div>
 
 ```twig
 {% assign post = page %}
@@ -57,13 +59,17 @@ Aqui está um pequeno guia de como implementá-lo:
 {% endif %}
 ```
 
-#### 2. Coloque o conteúdo da variavel *tags_content* onde quiser dentro do seu layout _post.html_
+#### 2. Coloque o conteúdo da variavel `tags_content` onde quiser dentro do seu layout `post.html`
+
+<div class="language-filename">_layouts/post.html</div>
 
 ```html
 <p id="post__meta">{{ tags_content }}</p>
 ```
 
-#### 3. Crie um layout chamado *blog_by_tag.html*
+#### 3. Crie um layout chamado tag.html
+
+<div class="language-filename">_layouts/tag.html</div>
 
 ```twig
 <h1>Articles by tag :{{ page.tag }}</h1>
@@ -78,7 +84,9 @@ Aqui está um pequeno guia de como implementá-lo:
 </div>
 ```
 
-#### 4. Adicione em seu _post entry_ o front-matter, como de costume.
+#### 4. Adicione em seu `post entry` o front-matter, como de costume.
+
+<div class="language-filename">_posts/how-to-use-tags-and-categories-on-github-pages-without-plugins.md</div>
 
 ```yaml
 ---
@@ -87,9 +95,12 @@ title: How To Use Tags And Categories On GitHub Pages Without Plugins
 category: programming
 tags: [github, github-pages, jekyll]
 ---
+
 ```
 
-#### 5. Para cada tag usada você tem que adicionar uma entrada dentro do arquivo *_data/tags.yml*
+#### 5. Para cada tag usada você tem que adicionar uma entrada dentro do arquivo `_data/tags.yml`
+
+<div class="language-filename">_data/tags.yml</div>
 
 ```yaml
 - slug: github-pages
@@ -98,12 +109,15 @@ tags: [github, github-pages, jekyll]
 
 #### 6. Para cada tag usada você tem que adicionar um template vazio. Ex.: _blog/tag/github-pages.md_
 
+<div class="language-filename">blog/tag/github-pages.md</div>
+
 ```yaml
 ---
 layout: blog_by_tag
 tag: github-pages
-# permalink: /blog/tag/github-pages/
+permalink: /blog/tag/github-pages/
 ---
+
 ```
 
 > Para uma implementação mais complexa de categorias e tags veja nesse repositório: [github.com/nandomoreirame/nandomoreira-jekyll-theme](https://github.com/nandomoreirame/nandomoreira-jekyll-theme/tree/master/source/_data)
