@@ -17,16 +17,27 @@
     svg, span
       display inline-block
       vertical-align middle
-      margin-right 5px
+      margin-right .3125rem
     &:hover,
     &:focus
       .Post__iconRight
-        transform translate3d(10px, 0, 0)
+        transform translate3d(.625rem, 0, 0)
+
+  &__date,
+  &__category
+    display inline-block
+    vertical-align middle
+    font-size .875rem
 
   &__header
     h1
       margin 0 0 .625rem
-      font-size 26px
+      font-size 1.625rem
+    small
+      display flex
+      align-items center
+      justify-content space-between
+      padding-bottom .625rem
 
   &__content
     p

@@ -25,9 +25,10 @@
     display block
     background-color $secondary-color
     opacity 0.85
-  &__Inner
-    position: relative
-    z-index: 2
+
+.__Inner
+  position: relative
+  z-index: 2
   p, small
     opacity 0.75
     color: #fff
@@ -36,14 +37,29 @@
     color: rgba(#fff, .75)
     font-weight: 700
     border-bottom-color: rgba(#fff, .75)
-  &__Title
-    margin: 0
+
+.__Title
+  margin: 0
+  color: #fff
+  font-size: 1.875rem /* 30/16 */
+  line-height: 2.5rem /* 40/16 */
+  @media (min-width: 769px)
+    font-size: 2.625rem /* 42/16 */
+    line-height: 3.25rem /* 52/16 */
+
+.__category
+  opacity 0.75
+  font-size 1rem
+  text-transform uppercase
+  font-weight 400
+  margin 0 0 .625rem
+  line-height 1
+  &, &:hover, &:focus
     color: #fff
-    font-size: 1.875rem /* 30/16 */
-    line-height: 2.5rem /* 40/16 */
-    @media (min-width: 769px)
-      font-size: 2.625rem /* 42/16 */
-      line-height: 3.25rem /* 52/16 */
+  a
+    border-bottom 1px solid #fff
+  +above($tablet)
+    font-size 1.25rem
 
 .Content
   @extend .card
@@ -57,6 +73,6 @@
     figure
       margin 0
     iframe
-      min-height 250px
+      min-height 15.625rem
       @media (min-width: 769px)
-        min-height 500px
+        min-height 31.25rem

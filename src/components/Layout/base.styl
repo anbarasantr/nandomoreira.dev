@@ -27,11 +27,10 @@ body,
 
 #___gatsby
   background-color $background-color
-  border-top 4px solid $primary-color
+  border-top .25rem solid $primary-color
   > div
     display flex
     flex-direction column
-    min-height calc(100vh - 4px)
     position relative
     z-index 2
 
@@ -93,7 +92,7 @@ a
   &:focus
     color $link-hover-color
     border-color $link-hover-color
-    box-shadow inset 0 -12px 0 rgba($link-hover-color, .15)
+    box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
   &:active,
   &:focus
     outline-color $link-hover-color
@@ -157,8 +156,8 @@ blockquote
     font italic 18.75rem Arial, Serif, Georgia, serif
     color rgba(#000, 0.045)
     position absolute
-    top -60px
-    left -30px
+    top -3.75rem
+    left -1.875rem
     z-index 0
 
   small

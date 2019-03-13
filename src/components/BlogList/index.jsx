@@ -8,9 +8,9 @@ import Post from '../Post'
 import Pagination from '../Pagination'
 import module from './bloglist.module.styl'
 
-const basePath = `/blog`
-
 const BlogList = ({ data, pageContext }) => {
+  const postsData = data.postsThree.edges
+  const basePath = `/blog`
   const { currentPage, numPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
@@ -22,8 +22,6 @@ const BlogList = ({ data, pageContext }) => {
   const currentPath = isFirst
     ? basePath
     : `${basePath}/${currentPage.toString()}`
-
-  const postsData = data.postsThree.edges
 
   const paginate = {
     basePath,

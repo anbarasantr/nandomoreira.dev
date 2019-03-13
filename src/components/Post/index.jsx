@@ -17,25 +17,35 @@ export default ({ post }) => {
       <Link className={module.Post__inner} to={post.path}>
         <header className={module.Post__header}>
           <small>
-            <time dateTime={post.date} itemProp="datePublished">
-              {post.date}
-            </time>
-            <meta itemProp="dateModified" content={post.date} />
+            <span className={module.Post__category}>
+              Categoria: <strong>{post.category[0]}</strong>
+            </span>
+            {post.date && (
+              <time
+                className={module.Post__date}
+                dateTime={post.date}
+                itemProp="datePublished"
+              >
+                {post.date}
+                <meta itemProp="dateModified" content={post.date} />
+              </time>
+            )}
           </small>
           <h1 itemProp="name headline">{post.title}</h1>
         </header>
         <div className={module.Post__content} itemProp="description">
           <p>{post.description}</p>
-          <span className={module.Post__category}>{post.category}</span>
         </div>
-        <div className={module.Post__footer}>
-          <PostTags tags={tags} showLinks={false} />
-          <Icon
-            id="icon-arrow-right"
-            fill="#435b71"
-            className={module.Post__iconRight}
-          />
-        </div>
+        {post.layout !== 'snippets' && (
+          <div className={module.Post__footer}>
+            <PostTags tags={tags} showLinks={false} />
+            <Icon
+              id="icon-arrow-right"
+              fill="#435b71"
+              className={module.Post__iconRight}
+            />
+          </div>
+        )}
       </Link>
     </article>
   )

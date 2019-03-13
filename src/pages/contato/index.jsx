@@ -17,14 +17,13 @@ const Contact = ({ data }) => (
     <SEO title={title} description={description} pathname="/contato" />
     <PageHeader smallTitle="E aí, vamos conversar?" title={description} />
     <Container>
-      <p>{description}, envie um email para...</p>
-      <h2>
+      <p>
+        <span>Envie um email para: </span>
         <a className="Contact__email" href="mailto:hi@nandomoreira.dev">
           hi@nandomoreira.dev
-        </a>
-      </h2>
-      {/* <p>... ou preencha o formulário abaixo!</p> */}
-      <p>... ou chame em alguma de minhas redes sociais que é sucesso!</p>
+        </a>{' '}
+        ... ou chame em alguma de minhas redes sociais que é sucesso!
+      </p>
       {/* <ContactForm /> */}
       <SocialIcons icons={data.site.siteMetadata.social} />
     </Container>
