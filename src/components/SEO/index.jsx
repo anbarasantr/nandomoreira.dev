@@ -55,7 +55,6 @@ const MetaTags = ({
 
       return (
         <Helmet title={data.title} titleTemplate={titleTemplate}>
-          <title>{data.title}</title>
           <meta name="description" content={data.description} />
           <meta name="image" content={data.image} />
           <meta name="robots" content="index,follow,noodp" />
