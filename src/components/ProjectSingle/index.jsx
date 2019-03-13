@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import kebabCase from 'lodash/kebabCase'
+import moment from 'moment'
+import 'moment/locale/pt-br'
 
 import SEO from '../SEO'
 import Image from '../Image'
@@ -22,6 +24,8 @@ const ProjectSinple = ({ data }) => {
     title: post.frontmatter.title,
   }
 
+  const dateFormated = moment(post.frontmatter.date).format('MMM/YYYY')
+
   return (
     <Layout className={module.ProjectSinple}>
       <SEO
@@ -39,9 +43,7 @@ const ProjectSinple = ({ data }) => {
           </header>
 
           <h4 className={module.ProjectSinple__sectionTitle}>Data</h4>
-          <p className={module.ProjectSinple__sectionText}>
-            {post.frontmatter.date}
-          </p>
+          <p className={module.ProjectSinple__sectionText}>{dateFormated}</p>
 
           <h4 className={module.ProjectSinple__sectionTitle}>Categoria</h4>
           <p className={module.ProjectSinple__sectionText}>
