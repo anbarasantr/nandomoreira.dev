@@ -4,7 +4,7 @@ path: '/blog/agradeca-mais-e-reclame-menos'
 title: 'Reflexão: agradeça mais e reclame menos'
 description: 'Você já parou pra pensar quantas vezes você reclama por dia, ou quantas vezes você reclamou hoje?'
 date: 2016-08-23
-image: ../../images/2016/08/thanks.gif
+image: ./thanks.gif
 category:
   - geral
 tags:
@@ -15,7 +15,7 @@ Você já parou pra pensar quantas vezes você reclama por dia, ou quantas vezes
 
 E se a gente substituir nossas reclamações diárias por agradecimentos?
 
-![Gif Thanks](../../images/2016/08/thanks.gif)
+![Gif Thanks](./thanks.gif)
 
 E se pararmos de reclamar que está chovendo no horário de ir pro trabalho apenas agradecer por ter um trabalho?
 
@@ -25,7 +25,7 @@ E se apenas agradecermos por ter agasalhos para nos aquecer todos dias ao invés
 
 Parar de reclamar que está muito quente e simplesmente agradecer pela água ou refrigerante (com limão e gelo) que tomamos, apenas porque podemos.
 
-![Gif nooo](../../images/2016/08/nooo.gif)
+![Gif nooo](./nooo.gif)
 
 Ao invés de reclamar que as coisas não estão dando certo, porque não agradecer que você quase conseguiu? agradeca que você teve forças e quase chegou perto.
 
@@ -41,7 +41,7 @@ Semana passada eu perdi meu emprego, um trabalho que eu amava apesar de tudo, um
 
 Eu poderia tá puto agora, irritado e xingando tudo e todos ao meu redor, mas não estou, muito pelo contrário estou muito feliz! Dai você pensa: **_"mas quem diabos fica feliz por perder o emprego?”_**
 
-![Gif angry](../../images/2016/08/angry.gif)
+![Gif angry](./angry.gif)
 
 Calma jovem.
 

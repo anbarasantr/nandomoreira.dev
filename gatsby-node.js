@@ -136,11 +136,6 @@ exports.createPages = ({
             filter: { frontmatter: { layout: { eq: "post" } } },
           ) {
             edges {
-              next {
-                frontmatter {
-                  path
-                }
-              }
               node {
                 excerpt(pruneLength: 250)
                 frontmatter {
@@ -159,11 +154,6 @@ exports.createPages = ({
             filter: { frontmatter: { layout: { eq: "project" } } },
           ) {
             edges {
-              next {
-                frontmatter {
-                  path
-                }
-              }
               node {
                 excerpt(pruneLength: 250)
                 frontmatter {
@@ -173,6 +163,21 @@ exports.createPages = ({
                   date
                   category
                   tags
+                }
+              }
+            }
+          }
+          snippetsQuery: allMarkdownRemark(
+            filter: { frontmatter: { layout: { eq: "snippets" } } },
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 250)
+                frontmatter {
+                  layout
+                  path
+                  title
+                  category
                 }
               }
             }
@@ -199,6 +204,7 @@ exports.createPages = ({
         const {
           postsQuery,
           projectsQuery,
+          snippetsQuery,
           allMarkdownRemark
         } = result.data
 
@@ -210,8 +216,9 @@ exports.createPages = ({
           createSinglePages(createPage, node.frontmatter)
         })
 
-        contentPaginate(createPage, postsQuery, '/blog', 'blog', 12)
+        contentPaginate(createPage, postsQuery, '/blog', 'blog')
         contentPaginate(createPage, projectsQuery, '/portfolio', 'projects', 16)
+        contentPaginate(createPage, snippetsQuery, '/snippets', 'snippets')
       })
     )
   })

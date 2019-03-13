@@ -1,3 +1,5 @@
+@import '../../stylus/index.styl'
+
 .gatsby-highlight
   border-radius 0.3em
   margin 0 0 1.875rem
@@ -15,6 +17,10 @@
     padding-left 0.75em
     border-left 0.25em solid #f99
 
+  pre[class*="language-"],
+  code[class*="language-"]
+    padding 0
+
   pre[class*="language-"]
     overflow initial
     float left
@@ -24,7 +30,7 @@
 
     code[class*="language-"]
       font-size .875rem
-      font-family Menlo, Roboto Mono, Courier New, monospace
+      font-family $font-family-monospace
       color #b3b9c5
       direction ltr
       text-align left
@@ -32,6 +38,7 @@
       word-spacing normal
       word-break normal
       line-height 1.6rem
+      font-size 1rem
       font-weight 400
       -moz-tab-size 2
       -o-tab-size 2

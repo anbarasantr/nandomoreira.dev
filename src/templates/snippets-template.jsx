@@ -1,0 +1,38 @@
+import React from 'react'
+import { graphql } from 'gatsby'
+// import Link from 'gatsby-link'
+import Layout from '../components/Layout'
+import Container from '../components/Container'
+
+export default function Template({ data }) {
+  if (!data.markdownRemark) return null
+  const post = data.markdownRemark
+  return (
+    <Layout>
+      <Container isSmall={true}>
+        <h1>{post.frontmatter.title}</h1>
+        {post.html && (
+          <div
+            itemProp="articleBody"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        )}
+      </Container>
+    </Layout>
+  )
+}
+
+export const snippetQuery = graphql`
+  query SnippetByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      excerpt(pruneLength: 250)
+      frontmatter {
+        layout
+        path
+        title
+        category
+      }
+    }
+  }
+`

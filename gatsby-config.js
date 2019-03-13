@@ -99,13 +99,6 @@ module.exports = {
         exclude: [`/tags`, `/tag/*`, `/categoria`, `/categoria/*`, `/404`, `/404.html`],
       }
     },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `#40b883`,
-        showSpinner: false,
-      },
-    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -131,13 +124,10 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-component',
-            options: {
-              components: ['zoom-image', 'hidden', 'countup']
-            }
+            resolve: 'gatsby-remark-autolink-headers'
           },
           {
-            resolve: 'gatsby-remark-autolink-headers'
+            resolve: 'gatsby-remark-copy-linked-files'
           },
           {
             resolve: `gatsby-remark-images`,
@@ -148,7 +138,6 @@ module.exports = {
               showCaptions: true,
             },
           },
-          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

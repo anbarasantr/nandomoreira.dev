@@ -131,7 +131,13 @@ svg:not(:root)
   overflow hidden
 
 code, kbd, pre, samp
-  font-size 1em
+  font-family $font-family-monospace
+  font-size 1rem
+  color #efefef
+  border-radius .1875rem
+  font-size .875rem
+  padding .1875rem .375rem
+  background-color #2d2d2d
 
 hr
   display block
@@ -169,3 +175,11 @@ blockquote
     font-size 1.25rem
     z-index 1
     pointer-events all
+
+ul
+  padding-left 1.25rem
+  li
+    p
+      margin 0
+    ul
+      margin-bottom 1.875rem

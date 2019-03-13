@@ -19,7 +19,9 @@ Ele pode ter sido um ano ruim para Brasil e para mundo, grandes desastres, fiasc
 
 ### Aprendizado...
 
-`$('2016').remove();`
+```javascript
+$('2016').remove()
+```
 
 Esse ano foi um ano de aprendizado, tanto para minha vida profissional quanto para vida pessoal.
 

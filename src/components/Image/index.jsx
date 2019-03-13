@@ -2,6 +2,8 @@ import React from 'react'
 import GatsbyImage from 'gatsby-image'
 
 export default ({ node, ...props }) => {
+  if (!node) return null
+
   if (node.childImageSharp && node.childImageSharp.fluid) {
     return <GatsbyImage fluid={node.childImageSharp.fluid} {...props} />
   }
