@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import BlogList from '../components/BlogList'
+import BlogList from 'components/BlogList'
 
 export default ({ data, pageContext }) => (
   <BlogList data={data} pageContext={pageContext} />

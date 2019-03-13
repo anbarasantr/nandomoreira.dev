@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../../components/Layout'
-import SEO from '../../components/SEO'
-import Container from '../../components/Container'
-import SocialIcons from '../../components/SocialIcons'
-import PageHeader from '../../components/PageHeader'
-// import ContactForm from '../../components/Form'
+import Layout from 'components/Layout'
+import SEO from 'components/SEO'
+import Container from 'components/Container'
+import SocialIcons from 'components/SocialIcons'
+import PageHeader from 'components/PageHeader'
+// import ContactForm from 'components/Form'
 
 const title = 'Contato'
 const description =

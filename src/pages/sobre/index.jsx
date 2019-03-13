@@ -1,15 +1,13 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
-
-// import SEO from '../../components/SEO'
-import Layout from '../../components/Layout'
-import Container from '../../components/Container'
-import SocialIcons from '../../components/SocialIcons'
-import PageHeader from '../../components/PageHeader'
-import InstagramFeed from '../../components/InstagramFeed'
-import Image from '../../components/Image'
+import SEO from 'components/SEO'
+import Layout from 'components/Layout'
+import Container from 'components/Container'
+import SocialIcons from 'components/SocialIcons'
+import PageHeader from 'components/PageHeader'
+import InstagramFeed from 'components/InstagramFeed'
+import Image from 'components/Image'
 
 import module from './about.module.styl'
 import './about.styl'
@@ -20,24 +18,12 @@ const _age = _year - 1989
 
 export default ({ data }) => (
   <Layout>
-    <Helmet title="Quem sou eu?">
-      <title>"Quem sou eu?"</title>
-      <meta
-        name="description"
-        content={`Meu nome é Fernando Moreira Costa (muito prazer). Tenho ${_age} anos, nasci e cresci em uma cidadezinha do interior de Rondônia chamada Ariquemes, sai de lá com 18 anos para me aventurar em Curitiba/PR onde moro atualmente.`}
-      />
-      <meta name="image" content={data.file.childImageSharp.fixed.src} />
-      <meta name="robots" content="index,follow,noodp" />
-      <meta name="country" content="Brazil" />
-      <meta name="revisit-after" content="7 days" />
-      <meta property="og:locale" content="pt_BR" />
-    </Helmet>
-    {/* <SEO
+    <SEO
       title="Quem sou eu?"
       description={`Meu nome é Fernando Moreira Costa (muito prazer). Tenho ${_age} anos, nasci e cresci em uma cidadezinha do interior de Rondônia chamada Ariquemes, sai de lá com 18 anos para me aventurar em Curitiba/PR onde moro atualmente.`}
       image={data.file.childImageSharp.fixed.src}
       pathname="/sobre"
-    /> */}
+    />
     <PageHeader
       smallTitle="Sobre mim"
       title={`Um programador não por formação mas por vocação.`}

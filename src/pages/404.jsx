@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import HeroText from '../components/HeroText'
-import SEO from '../components/SEO'
-import SocialIcons from '../components/SocialIcons'
-import Icon from '../components/Icons'
+import Layout from 'components/Layout'
+import HeroText from 'components/HeroText'
+import SEO from 'components/SEO'
+import SocialIcons from 'components/SocialIcons'
+import Icon from 'components/Icons'
 
 const title = 'Erro 404'
 const description =

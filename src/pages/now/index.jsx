@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import SEO from '../../components/SEO'
-import Layout from '../../components/Layout'
-import Container from '../../components/Container'
-import PageHeader from '../../components/PageHeader'
+import SEO from 'components/SEO'
+import Layout from 'components/Layout'
+import Container from 'components/Container'
+import PageHeader from 'components/PageHeader'
 
 const title = 'O que estou fazendo agora?'
 

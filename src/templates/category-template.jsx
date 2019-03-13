@@ -3,11 +3,11 @@ import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import SEO from '../components/SEO'
-import Layout from '../components/Layout'
-import Container from '../components/Container'
-import PageHeader from '../components/PageHeader'
-import Image from '../components/Image'
+import SEO from 'components/SEO'
+import Layout from 'components/Layout'
+import Container from 'components/Container'
+import PageHeader from 'components/PageHeader'
+import Image from 'components/Image'
 
 const TagPage = ({ data, pageContext }) => {
   const { category } = pageContext
