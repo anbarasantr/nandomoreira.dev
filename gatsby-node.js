@@ -1,5 +1,6 @@
 const {
   join,
+  resolve,
   parse
 } = require('path')
 const _ = require('lodash')
@@ -236,20 +237,20 @@ exports.onCreateWebpackConfig = ({
   stage,
   actions
 }) => {
-  switch (stage) {
-    case `build-javascript`:
-      actions.setWebpackConfig({
-        plugins: [webpackLodashPlugin]
-      })
-  }
-
-  // If production JavaScript and CSS build
-  if (stage === 'build-javascript') {
-    // Turn off source maps
+  if (stage === `build-javascript`) {
     actions.setWebpackConfig({
       devtool: false,
+      plugins: [webpackLodashPlugin]
     })
   }
+
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [
+        resolve(__dirname, 'src'), 'node_modules'
+      ],
+    },
+  })
 }
 
 function createTagPages(createPage, tags) {
