@@ -29,7 +29,7 @@ export default ({ post }) => {
           <span className={module.Post__category}>{post.category}</span>
         </div>
         <div className={module.Post__footer}>
-          <PostTags tags={tags} />
+          <PostTags tags={tags} showLinks={false} />
           <Icon
             id="icon-arrow-right"
             fill="#435b71"

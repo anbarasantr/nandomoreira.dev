@@ -8,7 +8,7 @@ const MetaTags = ({
   description = null,
   image = null,
   pathname = null,
-  article = false,
+  article = {},
 }) => (
   <StaticQuery
     query={graphql`
@@ -48,7 +48,7 @@ const MetaTags = ({
         description: description || defaultDescription,
         image: `${siteUrl}${image || defaultImage}`,
         url: `${siteUrl}${pathname || '/'}`,
-        fbType: article ? `article` : `website`,
+        fbType: article.title ? `article` : `website`,
         card: `summary_large_image`,
         appId: facebookAppID,
       }
@@ -61,16 +61,34 @@ const MetaTags = ({
           <meta name="robots" content="index,follow,noodp" />
           <meta name="country" content="Brazil" />
           <meta name="revisit-after" content="7 days" />
-          <meta property="og:locale" content="pt_BR" />
           <meta property="og:url" content={data.url} />}
           <meta property="og:title" content={data.title} />
           <meta property="og:description" content={data.description} />
           <meta property="og:image" content={data.image} />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="600" />
+          <meta property="og:image:height" content="315" />
+          <meta property="og:locale" content="pt_BR" />
           <meta property="og:type" content={data.fbType} />
-          {article && <meta property="article:author" content={author.name} />}
-          {/* <meta property="article:section" content="Tutoriais" /> */}
-          {/* <meta property="article:tag" content="Facebook, tags, og, open graph" /> */}
-          {/* <meta property="article:published_time" content="date_time" /> */}
+          <meta
+            property="og:site_name"
+            content={`Site Portfolio e Blog de ${author.name}`}
+          />
+          {article.title && (
+            <meta property="article:author" content={author.name} />
+          )}
+          {article.category && (
+            <meta
+              property="article:section"
+              content={article.category.join(',')}
+            />
+          )}
+          {article.tags && (
+            <meta property="article:tag" content={article.tags.join(',')} />
+          )}
+          {article.date && (
+            <meta property="article:published_time" content={article.date} />
+          )}
           {data.appId && <meta property="fb:app_id" content={data.appId} />}
           <meta name="twitter:card" content={data.card} />
           <meta name="twitter:creator" content={twitterUsername} />
@@ -92,7 +110,7 @@ MetaTags.propTypes = {
   description: PropTypes.string,
   image: PropTypes.string,
   pathname: PropTypes.string,
-  article: PropTypes.bool,
+  article: PropTypes.object,
 }
 
 export default MetaTags

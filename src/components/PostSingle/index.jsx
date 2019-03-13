@@ -38,7 +38,7 @@ const PostSinple = ({ data, pageContext }) => {
         description={post.frontmatter.description}
         image={post.frontmatter.image.publicURL}
         pathname={post.frontmatter.path}
-        article={true}
+        article={post.frontmatter}
       />
       <PostProgress />
       <PostSingleHeader frontmatter={post.frontmatter} />

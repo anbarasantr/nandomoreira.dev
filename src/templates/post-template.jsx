@@ -47,7 +47,7 @@ export const postQuery = graphql`
       frontmatter {
         path
         title
-        date(formatString: "LL", locale: "pt-BR")
+        date
         description
         category
         tags

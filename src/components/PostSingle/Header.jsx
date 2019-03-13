@@ -1,4 +1,6 @@
 import React from 'react'
+import moment from 'moment'
+import 'moment/locale/pt-br'
 import Container from '../Container'
 import module from './postSingle.module.styl'
 
@@ -13,12 +15,14 @@ const PostSingleHeader = ({ frontmatter }) => {
     }
   }
 
+  const dateFormated = moment(date).format('LL')
+
   return (
     <header className={module.Header} style={styles}>
       {title && (
         <Container className={module.Header__Inner}>
           <h1 className={module.Header__Title}>{title}</h1>
-          {date && <small>{date}</small>}
+          <small>{dateFormated}</small>
           {description && <p>{description}</p>}
         </Container>
       )}
