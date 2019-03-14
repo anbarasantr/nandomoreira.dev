@@ -8,14 +8,13 @@ class Nav extends React.Component {
     super()
 
     this.state = {
-      isOpen: true,
+      isOpen: false,
     }
 
     this.handleNavToggle = this.handleNavToggle.bind(this)
   }
 
   handleNavToggle(e) {
-    console.log(e.target.checked)
     this.setState({
       isOpen: e.target.checked,
     })
@@ -25,7 +24,9 @@ class Nav extends React.Component {
     this.setState({ isOpen: false })
   }
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    this.setState({ isOpen: false })
+  }
 
   render() {
     return (
