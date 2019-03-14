@@ -20,14 +20,19 @@ class Form extends React.Component {
 
   handleSubmitForm(event) {
     event.preventDefault()
-    const data = new FormData(event.target)
+    const form = event.target
+    const data = new FormData(form)
 
     this.setState({
       isLoading: true,
     })
 
+    console.log(form)
+    console.log(data)
+
     fetch(`/contato`, {
       method: `POST`,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: data,
     })
       .then(res => {
@@ -53,10 +58,7 @@ class Form extends React.Component {
 
   render() {
     const { error, isLoading, wasSent, message } = this.state
-
-    if (error) {
-      console.error(error)
-    }
+    if (error) console.error(error)
 
     return (
       <form
@@ -64,9 +66,11 @@ class Form extends React.Component {
         className={module.form}
         method="POST"
         data-netlify-recaptcha="true"
+        data-netlify-honeypot="bot-field"
         data-netlify="true"
         onSubmit={this.handleSubmitForm}
       >
+        <input type="hidden" name="bot-field" />
         <legend>
           Ou preencha seus dados abaixo e aguarde que entro em contato.
         </legend>
