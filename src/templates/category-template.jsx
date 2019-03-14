@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
@@ -7,47 +6,37 @@ import SEO from 'components/SEO'
 import Layout from 'components/Layout'
 import Container from 'components/Container'
 import PageHeader from 'components/PageHeader'
-import Image from 'components/Image'
+import Post from 'components/Post'
 
-const TagPage = ({ data, pageContext }) => {
+const CategoryPage = ({ data, pageContext }) => {
   const { category } = pageContext
-  const tagHeader = `${category}`
+  const categoryHeader = `${category}`
 
   return (
     <Layout>
       <SEO
-        title={`Categoria: ${tagHeader}`}
+        title={`Categoria: ${categoryHeader}`}
         // description={post.frontmatter.description}
         // image={post.frontmatter.image.publicURL}
         // pathname={post.frontmatter.path}
       />
-      <PageHeader title={tagHeader} smallTitle="Categoria" />
+      <PageHeader title={categoryHeader} smallTitle="Categoria" />
       <Container>
-        {data.allMarkdownRemark.edges.map(post => (
-          <div className="card" key={post.node.id}>
-            <Image
-              node={post.node.frontmatter.image}
-              alt={post.node.frontmatter.title}
-            />
-            <Link to={post.node.frontmatter.path}>
-              <h2>{post.node.frontmatter.title}</h2>
-            </Link>
-            <p>{post.node.excerpt}</p>
-            <small>Published on {post.node.frontmatter.date} </small>
-          </div>
+        {data.allMarkdownRemark.edges.map((post, i) => (
+          <Post post={post.node.frontmatter} key={i} />
         ))}
       </Container>
     </Layout>
   )
 }
 
-TagPage.propTypes = {
+CategoryPage.propTypes = {
   pageContext: PropTypes.shape({
     category: PropTypes.string.isRequired,
   }),
 }
 
-export default TagPage
+export default CategoryPage
 
 export const pageQuery = graphql`
   query PostByCategory($category: String!) {
@@ -63,6 +52,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMM/YYYY", locale: "pt-BR")
+            category
             tags
             path
             image {

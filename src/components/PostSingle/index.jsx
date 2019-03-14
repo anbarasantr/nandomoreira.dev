@@ -44,7 +44,7 @@ const PostSinple = ({ data, pageContext }) => {
       />
       <PostProgress />
       <PostSingleHeader frontmatter={post.frontmatter} />
-      <Container className={module.Content__inner}>
+      <Container className={module.small}>
         <meta itemProp="mainEntityOfPage" content={post.frontmatter.path} />
         <PostSingleContent html={post.html}>
           <PostNavigate prev={prev} next={next} />

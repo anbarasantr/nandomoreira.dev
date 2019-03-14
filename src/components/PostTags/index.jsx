@@ -6,7 +6,7 @@ import module from './postTags.module.styl'
 
 const PostTags = ({ tags, showLinks = true, ...props }) => {
   return (
-    <aside className={`PostTags ${module.Tags}`} {...props}>
+    <aside className={`PostTags ${module.list}`} {...props}>
       <span>
         <Icon id="icon-tags" fill="#435b71" />
       </span>
@@ -16,7 +16,7 @@ const PostTags = ({ tags, showLinks = true, ...props }) => {
             return (
               <Link
                 key={index}
-                className={module.Tags__tag}
+                className={module.tag}
                 to={`/tag/${kebabCase(tag)}`}
               >
                 #{tag}
@@ -24,7 +24,7 @@ const PostTags = ({ tags, showLinks = true, ...props }) => {
             )
           }
           return (
-            <span key={index} className={module.Tags__tag}>
+            <span key={index} className={module.tag}>
               #{tag}
             </span>
           )

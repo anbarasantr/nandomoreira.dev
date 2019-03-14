@@ -12,8 +12,6 @@ export const projectQuery = graphql`
     site {
       siteMetadata {
         siteUrl
-        disqusShortname
-        isProduction
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {

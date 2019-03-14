@@ -15,7 +15,7 @@ const WhatsApp = ({ phone, text }) => (
       rel="noopener noreferrer"
     >
       <span className={module.message}>
-        Olá! Seja bem-vindo. <br />
+        <span>Olá! Seja bem-vindo. </span>
         Vamos bater um papo?
       </span>
       <Icon className={module.icon} id="icon-whatsapp" />

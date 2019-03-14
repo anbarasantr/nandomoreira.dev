@@ -1,6 +1,6 @@
 import React from 'react'
 import Icon from '../Icons'
-import module from './styles.module.styl'
+import module from './scrolltotop.module.styl'
 
 class ScrollToTop extends React.Component {
   constructor() {

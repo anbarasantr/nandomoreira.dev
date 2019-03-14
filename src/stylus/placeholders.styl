@@ -5,31 +5,17 @@
     clear both
 
 .button
-  display inline-block
-  position relative
-  font-size 1rem /* 16/16 */
-  text-align center
-  text-decoration none
+  border none
+  background $secondary-color
+  font-size 1rem
+  border-radius .25em
+  padding 1rem 1.25rem
+  color #fff
+  font-weight 800
   cursor pointer
-  vertical-align bottom
-  appearance none
-  text-rendering auto
-  user-select none
-  box-sizing border-box
-  font-family $font-family-base
-  transition color .12s $timingFunction,
-    background-color .12s $timingFunction
-  padding .625rem /* 10/16 */ 1.875rem /* 30/16 */
-  letter-spacing 0
-  font-weight 700
-  border-radius 1.6875rem /* 27/16 */
-  border .125rem /* 2/16 */ solid transparent
-  text-transform uppercase
-  font-style normal
-  text-rendering optimizeLegibility
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  -moz-font-feature-settings "liga" on
+  appearance none
   svg
     fill inherit
   &:hover,

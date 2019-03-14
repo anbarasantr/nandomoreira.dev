@@ -1,5 +1,14 @@
 @import '../../stylus/index.styl'
 
 .projectSingle
-  .Header:not(.isFixed)
-    background-color $primary-color
+  .gatsby-image-wrapper
+    @extend .card
+    animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
+
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1

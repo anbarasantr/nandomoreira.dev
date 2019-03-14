@@ -6,11 +6,10 @@
   width 100%
   background-color $primary-color
   +above($tablet)
-    padding 3.75rem 0 0
+    padding 0 0 3.75rem
     height 40vh
     display flex
     align-items center
-    padding 3.75rem 0 1.875rem
   &__smalltitle,
   &__smalltitle a,
   &__title,
@@ -27,12 +26,14 @@
     font-weight 400
     margin 0 0 .625rem
     line-height 1
+    animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 50ms both
     +above($tablet)
       font-size 1.25rem
   &__title
     font-size 1.75rem
     margin 0
     line-height 1.2
+    animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
     +above($tablet)
       font-size 2.875rem
       line-height 1
@@ -47,3 +48,9 @@
       font-size 2.375rem
       a
         text-decoration none
+
+@keyframes fadeIn
+  0%
+    opacity 0
+  100%
+    opacity 1

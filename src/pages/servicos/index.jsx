@@ -6,6 +6,7 @@ import SEO from 'components/SEO'
 import Container from 'components/Container'
 import PageHeader from 'components/PageHeader'
 import SocialIcons from 'components/SocialIcons'
+import services from 'data/services'
 
 const title = 'Serviços'
 const description =
@@ -20,6 +21,12 @@ export default () => (
     />
     <PageHeader smallTitle={title} title="O que eu posso fazer por você?" />
     <Container>
+      {services.map((service, i) => (
+        <div key={i}>
+          <h2>{service.title}</h2>
+          <p>{service.description}</p>
+        </div>
+      ))}
       <SocialIcons />
     </Container>
   </Layout>

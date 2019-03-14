@@ -9,7 +9,6 @@ import Image from '../Image'
 import Layout from '../Layout'
 import Container from '../Container'
 import PostProgress from '../PostProgress'
-import Comments from '../Comments'
 import Icon from '../Icons'
 import PostTags from '../PostTags'
 import SocialShare from '../SocialShare'
@@ -18,14 +17,7 @@ import './projectSingle.styl'
 
 const ProjectSingle = ({ data }) => {
   const post = data.markdownRemark
-
-  const { siteUrl, disqusShortname, isProduction } = data.site.siteMetadata
-
-  const disqusConfig = {
-    identifier: `${post.frontmatter.path}/`,
-    title: post.frontmatter.title,
-  }
-
+  const { siteUrl } = data.site.siteMetadata
   const dateFormated = moment(post.frontmatter.date).format('MMM/YYYY')
 
   return (
@@ -146,10 +138,6 @@ const ProjectSingle = ({ data }) => {
           link={`${siteUrl}${post.frontmatter.path}`}
           message={post.frontmatter.title}
         />
-
-        {isProduction && (
-          <Comments shortname={disqusShortname} config={disqusConfig} />
-        )}
       </Container>
     </Layout>
   )

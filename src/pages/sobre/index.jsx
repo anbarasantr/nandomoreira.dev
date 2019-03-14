@@ -36,12 +36,12 @@ export default ({ data }) => {
         title={`Um programador não por formação mas por vocação.`}
       />
       <Container>
-        <div className={`About ${module.About}`}>
-          <div className={module.About__left}>
-            <div className={module.About__inner}>
+        <div className={`about ${module.about}`}>
+          <div className={module.left}>
+            <div className={module.inner}>
               <Image
                 node={data.file}
-                className={module.About__image}
+                className={module.image}
                 title="Foto de Fernando Moreira Costa"
                 alt="Foto de Fernando Moreira Costa"
               />
@@ -60,9 +60,9 @@ export default ({ data }) => {
               />
             </div>
           </div>
-          <div className={module.About__right}>
-            <div className={module.About__inner}>
-              <div className={module.About__text}>
+          <div className={module.right}>
+            <div className={module.inner}>
+              <div className={module.text}>
                 <h2>Eu sou o Fernando, prazer em conhece-lo</h2>
                 <p>
                   Meu nome completo é <strong>Fernando Moreira Costa</strong>,
@@ -95,7 +95,7 @@ export default ({ data }) => {
                   e fã de beterraba.
                 </p>
               </div>
-              <div className={module.About__text}>
+              <div className={module.text}>
                 <h2>Histórico profissional</h2>
                 <p>
                   Eu comecei a <em>"brincar"</em> com códigos em meados de 2009
@@ -164,7 +164,7 @@ export default ({ data }) => {
                   .
                 </p>
               </div>
-              <div className={module.About__text}>
+              <div className={module.text}>
                 <h2>O que estou fazendo agora?</h2>
                 <p>
                   {' '}
@@ -187,7 +187,7 @@ export default ({ data }) => {
                   <Link to="/now">O que estou fazendo agora</Link>
                 </p>
               </div>
-              <div className={module.About__text}>
+              <div className={module.text}>
                 <h2>E o que faço hoje?</h2>
                 <p>
                   {' '}
@@ -236,7 +236,7 @@ export default ({ data }) => {
                   .
                 </p>
               </div>
-              <div className={module.About__text}>
+              <div className={module.text}>
                 <h2>Sobre esse site</h2>
                 <p>
                   {' '}
@@ -344,7 +344,7 @@ export default ({ data }) => {
                   , fique à vontade para contribuir também :).
                 </p>
               </div>
-              <div className={module.About__text}>
+              <div className={module.text}>
                 <h2>Quer mais?</h2>
                 <p>
                   Se você quiser atualizações aleatórias e regulares sobre o que

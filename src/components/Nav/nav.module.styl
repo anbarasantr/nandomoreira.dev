@@ -1,16 +1,96 @@
 @import '../../stylus/index.styl'
 
 .nav
-  position relative
-  padding .9375rem 0 0
+  padding 0
+  input
+    display none
+  +above($tablet)
+    position relative
+  +below($tablet)
+    position absolute
+    z-index 1000
+  &.isOpen
+    +below($tablet)
+      .list
+        display flex
+      .iconMenu
+        display none
+      .iconClose
+        display block
+      .item
+        animation fadeInTop 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both
+        &:nth-child(1)
+          animation-delay 200ms
+        &:nth-child(2)
+          animation-delay 400ms
+        &:nth-child(3)
+          animation-delay 600ms
+        &:nth-child(4)
+          animation-delay 800ms
+        &:nth-child(5)
+          animation-delay 1000ms
+
+.list
+  transition all .05s $timingFunction
+  padding 5rem 0
+  margin 0
   +above($tablet)
     padding 0
+    position relative
+    flex-direction column
+    flex-direction row
+  +below($tablet)
+    position fixed
+    align-items center
+    justify-content center
+    text-align center
+    flex-wrap wrap
+    background-color $primary-color
+    display none
+    top 0
+    right 0
+    bottom 0
+    left 0
+    width 100%
+    height 100vh
+
+.button
+  display none
+  +below($tablet)
+    position fixed
+    z-index 10000
+    top 30px
+    right 20px
+    width auto
+    border none
+    padding 0
+    margin 0
+    display flex
+    align-items center
+    justify-content center
+    @extend .card
+    @extend .card--hover
+    svg
+      fill $secondary-color
+      padding 0
+      width 50px
+      height 50px
+
+.iconClose
+  display none
 
 .item
   margin 0
-  text-transform lowercase
-  &:not(:last-child)
-    margin-right 1.25rem
+  text-transform uppercase
+  display block
+  width 100%
+  margin 0
+  +above($tablet)
+    text-transform lowercase
+    width auto
+    display inline-block
+    &:not(:last-child)
+      margin-right 1.25rem
 
 .item,
 .link
@@ -20,19 +100,31 @@
   padding 0
   text-decoration none
   position relative
+  color #fff
+  font-size 1.5rem
+  letter-spacing .0625rem
+  +above($tablet)
+    color $primary-color
+    font-size 1rem
   &:hover,
   &:focus,
   &:active,
   &-active
     outline none
+    color #fff
+    box-shadow inset 0 -0.75rem 0 rgba(#fff, .15)
+    +above($tablet)
+      box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
+      color $secondary-color
+
+  span
+    color $secondary-color
     box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
 
-.list
-  transition all .05s $timingFunction
-  padding 0
-  margin 0
-  +above($tablet)
-    display flex
-    flex-direction column
-    flex-direction row
-    align-items center
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1

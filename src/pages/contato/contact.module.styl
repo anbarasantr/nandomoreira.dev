@@ -1,0 +1,38 @@
+@import '../../stylus/index.styl'
+
+.contact
+  padding 0
+  +above($tablet)
+    display flex
+    justify-content center
+
+.left,
+.right
+  +above($tablet)
+    display flex
+    flex-direction column
+    flex-basis 100%
+
+.left
+  text-align center
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 650ms both
+  +above($tablet)
+    flex 1 40%
+  p
+    @extend .card
+    padding 25px
+
+.right
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
+  +above($tablet)
+    flex 1 60%
+    position relative
+    margin-top -120px
+
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1

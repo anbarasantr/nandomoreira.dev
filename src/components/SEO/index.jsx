@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import kebabCase from 'lodash/kebabCase'
 
 const MetaTags = ({
   title = null,
@@ -53,6 +54,8 @@ const MetaTags = ({
         appId: facebookAppID,
       }
 
+      const bodyClass = pathname ? kebabCase(pathname) : 'home'
+
       return (
         <Helmet title={data.title} titleTemplate={titleTemplate}>
           <meta name="description" content={data.description} />
@@ -98,6 +101,7 @@ const MetaTags = ({
           <link rel="author" href={`${siteUrl}/humans.txt`} />
           <link rel="index" href={`${siteUrl}/`} />
           <html lang="pt-br" />
+          <body className={`page-${bodyClass}`} />
         </Helmet>
       )
     }}

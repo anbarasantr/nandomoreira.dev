@@ -20,10 +20,10 @@ const PostSingleHeader = ({ frontmatter }) => {
   const dateFormated = moment(date).format('LL')
 
   return (
-    <header className={module.Header} style={styles}>
+    <header className={module.header} style={styles}>
       {title && (
-        <Container className={module.__Inner}>
-          <h4 className={module.__category}>
+        <Container className={module.inner}>
+          <h4 className={module.category}>
             Categoria:{' '}
             <strong>
               <Link to={`/categoria/${kebabCase(category[0])}`}>
@@ -31,7 +31,7 @@ const PostSingleHeader = ({ frontmatter }) => {
               </Link>
             </strong>
           </h4>
-          <h1 className={module.__Title}>{title}</h1>
+          <h1 className={module.title}>{title}</h1>
           <small>{dateFormated}</small>
           {description && <p>{description}</p>}
         </Container>

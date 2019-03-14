@@ -4,7 +4,7 @@ import { StaticQuery } from 'gatsby'
 import Header from '../Header'
 import Footer from '../Footer'
 import WhatsApp from '../WhatsApp'
-import ScrollToTop from '../ScrollToTop'
+// import ScrollToTop from '../ScrollToTop'
 import module from './layout.module.styl'
 
 import './base.styl'
@@ -29,12 +29,12 @@ export default ({ children, ...props }) => (
     `}
     render={data => (
       <Fragment>
-        <div className={module.Default} {...props}>
+        <div className={module.default} {...props}>
           <Header navLinks={data.site.siteMetadata.navLinks} />
           <main
             role="main"
             aria-label="Conteúdo principal"
-            className={module.Default__main}
+            className={module.main}
           >
             {children}
           </main>
@@ -44,7 +44,7 @@ export default ({ children, ...props }) => (
           phone={data.site.siteMetadata.author.phone}
           text="Olá Fernando! Eu vi o seu site, e gostaria de conversar."
         />
-        <ScrollToTop scrollStepInPx="50" delayInMs="16.66" />
+        {/* <ScrollToTop scrollStepInPx="50" delayInMs="16.66" /> */}
       </Fragment>
     )}
   />

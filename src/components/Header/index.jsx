@@ -11,41 +11,10 @@ class Header extends React.Component {
 
     this.state = {
       fixed: false,
-      distanceFromTop: 0,
-      lastDistanceFromTop: 0,
-      scrollingUp: true,
-      scrollingDown: false,
-      classes: {
-        fixed: ` isFixed`,
-        up: ` toUp`,
-        down: ` toDown`,
-      },
     }
   }
 
-  onScrolling = () => {
-    // this.setState({ fixed: false })
-    this.setState({ distanceFromTop: window.scrollY })
-
-    if (this.state.distanceFromTop > this.state.lastDistanceFromTop) {
-      this.setState({ scrollingDown: true })
-      this.setState({ scrollingUp: false })
-    } else {
-      this.setState({ scrollingUp: true })
-      this.setState({ scrollingDown: false })
-    }
-  }
-
-  listenScrollEvent = event => {
-    this.onScrolling()
-
-    this.setState({ fixed: false })
-    if (this.state.distanceFromTop > 50) {
-      this.setState({ fixed: true })
-    }
-
-    this.setState({ lastDistanceFromTop: this.state.distanceFromTop })
-  }
+  listenScrollEvent = event => {}
 
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent)
@@ -56,14 +25,9 @@ class Header extends React.Component {
   }
 
   render() {
-    const { fixed, scrollingUp, scrollingDown, classes } = this.state
     return (
-      <header
-        className={`Header ${module.Header} ${fixed ? `${classes.fixed}` : ''}${
-          scrollingUp ? `${classes.up}` : ''
-        }${scrollingDown ? `${classes.down}` : ''}`}
-      >
-        <div className={module.Inner}>
+      <header className={`header ${module.header}`}>
+        <div className={module.inner}>
           <Brand />
           <Nav navLinks={this.props.navLinks} />
         </div>

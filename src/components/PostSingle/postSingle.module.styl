@@ -1,6 +1,6 @@
 @import '../../stylus/index.styl'
 
-.Header
+.header
   padding: 0
   height 60vh
   display flex
@@ -26,34 +26,38 @@
     background-color $secondary-color
     opacity 0.85
 
-.__Inner
-  position: relative
-  z-index: 2
-  p, small
-    opacity 0.75
-    color: #fff
-    margin .9375rem 0 0
-  a
-    color: rgba(#fff, .75)
-    font-weight: 700
-    border-bottom-color: rgba(#fff, .75)
+  .inner
+    position: relative
+    z-index: 2
+    p, small
+      opacity 0.75
+      color: #fff
+      margin .9375rem 0 0
+      animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 750ms both
+      display block
+    a
+      color: rgba(#fff, .75)
+      font-weight: 700
+      border-bottom-color: rgba(#fff, .75)
 
-.__Title
+.title
   margin: 0
   color: #fff
   font-size: 1.875rem /* 30/16 */
   line-height: 2.5rem /* 40/16 */
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
   @media (min-width: 769px)
     font-size: 2.625rem /* 42/16 */
     line-height: 3.25rem /* 52/16 */
 
-.__category
+.category
   opacity 0.75
   font-size 1rem
   text-transform uppercase
   font-weight 400
   margin 0 0 .625rem
   line-height 1
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
   &, &:hover, &:focus
     color: #fff
   a
@@ -61,11 +65,13 @@
   +above($tablet)
     font-size 1.25rem
 
-.Content
+.small
+  max-width $container-small-size
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1000ms both
+
+.content
   @extend .card
   padding 1.875rem
-  &__inner
-    max-width $container-small-size
   &__body
     img
       display block
@@ -76,3 +82,11 @@
       min-height 15.625rem
       @media (min-width: 769px)
         min-height 31.25rem
+
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1

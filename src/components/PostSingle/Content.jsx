@@ -2,10 +2,10 @@ import React from 'react'
 import module from './postSingle.module.styl'
 
 const PostSingleContent = ({ html, children }) => (
-  <div className={module.Content}>
+  <div className={module.content}>
     {html && (
       <article
-        className={module.Content__body}
+        className={module.content__body}
         itemProp="articleBody"
         dangerouslySetInnerHTML={{ __html: html }}
       />

@@ -26,6 +26,7 @@
 
 .image
   display block
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
   +above($tablet)
     display inline-block
     width 43.75rem
@@ -33,9 +34,11 @@
 .content
   padding 1.875rem
   width 100%
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
   @extend .card
   @extend .card--hover
   +above($tablet)
+    animation fadeInBottomContent 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
     width calc(100% - 560px)
     display flex
     align-items center
@@ -43,10 +46,6 @@
     position absolute
     top 50%
     right 0
-    transform translate3d(0, -50%, 0)
-    &:hover,
-    &:focus
-      transform translate3d(0, -60%, 0)
   +below($tablet)
     border-radius 0
 
@@ -63,15 +62,8 @@
     display inline-block
     fill $primary-color
     position relative
-    animation animate-arrow 1s ease-in-out infinite
+    animation animateArrow 1s ease-in-out infinite
     transform translate3d(0, .125rem, 0)
-
-@keyframes animate-arrow
-  0%,
-  100%
-    transform translate3d(0, .125rem, 0)
-  50%
-    transform translate3d(.625rem, .125rem, 0)
 
 .left
   +above($tablet)
@@ -86,3 +78,26 @@
       justify-content flex-end
     .content
       left 0
+
+@keyframes animateArrow
+  0%,
+  100%
+    transform translate3d(0, .125rem, 0)
+  50%
+    transform translate3d(.625rem, .125rem, 0)
+
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1
+
+@keyframes fadeInBottomContent
+  0%
+    transform translateY(0)
+    opacity 0
+  100%
+    transform translateY(-50%)
+    opacity 1

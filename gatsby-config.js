@@ -55,7 +55,7 @@ module.exports = {
         path: '/sobre',
       },
       // {
-      //   name: 'Serviços',
+      //   name: 'O que eu faço',
       //   path: '/servicos',
       // },
       {
@@ -175,7 +175,7 @@ module.exports = {
             variants: [`200`, `400`, `800`]
           },
           {
-            family: `Lato`,
+            family: `Open Sans`,
             variants: [`300`, `400`, `500`, `800`]
           },
         ],

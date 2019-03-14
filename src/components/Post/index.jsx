@@ -8,21 +8,21 @@ export default ({ post }) => {
   const tags = post.tags || []
   return (
     <article
-      className={module.Post}
+      className={module.item}
       itemProp="blogPost"
       itemScope
       itemType="https://schema.org/BlogPosting"
     >
       <meta itemProp="mainEntityOfPage" content={post.path} />
-      <Link className={module.Post__inner} to={post.path}>
-        <header className={module.Post__header}>
+      <Link className={module.inner} to={post.path}>
+        <header className={module.header}>
           <small>
-            <span className={module.Post__category}>
+            <span className={module.category}>
               Categoria: <strong>{post.category[0]}</strong>
             </span>
             {post.date && (
               <time
-                className={module.Post__date}
+                className={module.date}
                 dateTime={post.date}
                 itemProp="datePublished"
               >
@@ -33,16 +33,16 @@ export default ({ post }) => {
           </small>
           <h1 itemProp="name headline">{post.title}</h1>
         </header>
-        <div className={module.Post__content} itemProp="description">
+        <div className={module.content} itemProp="description">
           <p>{post.description}</p>
         </div>
         {post.layout !== 'snippets' && (
-          <div className={module.Post__footer}>
+          <div className={module.footer}>
             <PostTags tags={tags} showLinks={false} />
             <Icon
               id="icon-arrow-right"
               fill="#435b71"
-              className={module.Post__iconRight}
+              className={module.iconRight}
             />
           </div>
         )}

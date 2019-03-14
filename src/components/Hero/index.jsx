@@ -6,23 +6,18 @@ import module from './hero.module.styl'
 import './hero.styl'
 
 const Hero = ({ navLinks, socialIcons }) => (
-  <main className={'Hero ' + module.Hero}>
-    <div
-      className={module.Hero__inner}
-      itemScope
-      itemType="http://schema.org/Person"
-    >
-      <h1 className={module.Hero__title}>
-        <span>Olá, eu me chamo </span> <br />{' '}
+  <main className={'hero ' + module.hero}>
+    <div className={module.inner} itemScope itemType="http://schema.org/Person">
+      <h1 className={module.title}>
+        <span>Olá, eu me chamo</span>
         <Link to="/sobre" rel="author" itemProp="url">
-          <strong itemProp="name">Fernando Moreira</strong>
+          <strong itemProp="name">Fernando Moreira</strong>.
         </Link>
-        .
         <meta itemProp="jobTitle" content="Desenvolvedor front-end" />
         <meta itemProp="worksFor" content="Onedev.studio" />
       </h1>
       <p
-        className={module.Hero__presentation}
+        className={module.presentation}
         role="presentation"
         itemProp="description"
       >
