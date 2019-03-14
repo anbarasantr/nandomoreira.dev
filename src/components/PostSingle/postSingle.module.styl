@@ -1,13 +1,9 @@
 @import '../../stylus/index.styl'
 
 .header
-  padding: 0
-  height 60vh
-  display flex
-  align-items center
-  justify-content flex-start
-  margin-bottom: 3.75rem /* 60/16 */
-  background-color: $secondary-color
+  padding 3.75rem 0
+  margin-bottom 1.875rem
+  background-color $secondary-color
   background-size cover
   background-position 50% 0%
   overflow hidden
@@ -25,30 +21,37 @@
     display block
     background-color $secondary-color
     opacity 0.85
+  +above($tablet)
+    padding 0
+    margin-bottom 3.75rem /* 60/16 */
+    height 60vh
+    display flex
+    align-items center
+    justify-content flex-start
 
   .inner
-    position: relative
-    z-index: 2
+    position relative
+    z-index 2
     p, small
       opacity 0.75
-      color: #fff
+      color #fff
       margin .9375rem 0 0
       animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 750ms both
       display block
     a
-      color: rgba(#fff, .75)
-      font-weight: 700
-      border-bottom-color: rgba(#fff, .75)
+      color rgba(#fff, .75)
+      font-weight 700
+      border-bottom-color rgba(#fff, .75)
 
 .title
-  margin: 0
-  color: #fff
-  font-size: 1.875rem /* 30/16 */
-  line-height: 2.5rem /* 40/16 */
+  margin 0
+  color #fff
+  font-size 1.875rem /* 30/16 */
+  line-height 2.5rem /* 40/16 */
   animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
-  @media (min-width: 769px)
-    font-size: 2.625rem /* 42/16 */
-    line-height: 3.25rem /* 52/16 */
+  @media (min-width 769px)
+    font-size 2.625rem /* 42/16 */
+    line-height 3.25rem /* 52/16 */
 
 .category
   opacity 0.75
@@ -59,7 +62,7 @@
   line-height 1
   animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
   &, &:hover, &:focus
-    color: #fff
+    color #fff
   a
     border-bottom 1px solid #fff
   +above($tablet)
@@ -80,7 +83,7 @@
       margin 0
     iframe
       min-height 15.625rem
-      @media (min-width: 769px)
+      @media (min-width 769px)
         min-height 31.25rem
 
 @keyframes fadeInBottom

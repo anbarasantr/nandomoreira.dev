@@ -58,7 +58,19 @@
   margin-top .9375rem
   border-top 1px solid rgba(#000, .1)
   display flex
-  justify-content space-between
-  align-items center
+  flex-direction column-reverse
+  flex-wrap wrap
+  +above($tablet)
+    justify-content space-between
+    align-items center
+    flex-direction row
+    flex-wrap no-wrap
   small
     opacity 0.6
+    display block
+    text-align center
+    margin-top .9375rem
+    +above($tablet)
+      display inline-block
+      text-align left
+      margin-top 0

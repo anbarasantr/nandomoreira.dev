@@ -26,10 +26,13 @@ body,
   min-height 100vh
 
 #___gatsby
+  padding 0 0 4.375rem
   border-top .25rem solid $primary-color
   background-color $background-color
   position relative
   z-index 2
+  +above($tablet)
+    padding-bottom 0
   > div
     display flex
     flex-direction column

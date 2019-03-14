@@ -18,11 +18,12 @@
   justify-content center
   align-items center
   text-align center
-  border-radius .25rem
+  border-radius 0
   width 100%
   +above($tablet)
     text-align left
     width 3.125rem
+    border-radius .25rem
     height 3.125rem
     padding 0
 
@@ -48,10 +49,12 @@
     width auto
     min-width 13.75rem
     border-radius .25rem
-    animation attention 1s ease-in-out infinite
-    transform translate3d(0, .125rem, 0)
+    animation attention 1.5s ease-in-out infinite
+    transform translate3d(0, 0.3125rem, 0)
     span
       display block
+    &:hover
+      animation none
     &:after,
     &:before
       top 100%
@@ -76,9 +79,11 @@
 @keyframes attention
   0%,
   100%
-    transform translate3d(0, 0, 0)
+    transform translate3d(0, 0.3125rem, 0)
+    box-shadow 0 0 1.25rem rgba($secondary-color, .1)
   50%
-    transform translate3d(0, -0.625rem, 0)
+    transform translate3d(0, 0, 0)
+    box-shadow 0 0 0 0 rgba($secondary-color, .75)
 
 .icon
   fill #fff

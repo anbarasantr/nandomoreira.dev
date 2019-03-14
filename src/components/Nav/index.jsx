@@ -40,8 +40,12 @@ class Nav extends React.Component {
       >
         <input type="checkbox" id="toggleNav" onChange={this.handleNavToggle} />
         <label htmlFor="toggleNav" type="button" className={module.button}>
-          <Icon id="icon-menu" fill="#50c290" className={module.iconMenu} />
-          <Icon id="icon-close" fill="#50c290" className={module.iconClose} />
+          {!this.state.isOpen && (
+            <Icon id="icon-menu" className={module.iconMenu} />
+          )}
+          {this.state.isOpen && (
+            <Icon id="icon-close" className={module.iconClose} />
+          )}
         </label>
 
         <ul className={`nav__list ${module.list}`}>
