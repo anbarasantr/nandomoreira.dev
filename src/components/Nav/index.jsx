@@ -4,18 +4,18 @@ import module from './nav.module.styl'
 
 const Nav = ({ navLinks }) => (
   <nav
-    className={`Nav ${module.Nav}`}
+    className={`Nav ${module.nav}`}
     aria-label="Navigation"
     itemType="https://schema.org/SiteNavigationElement"
     itemScope
   >
-    <ul className={module.Nav__list}>
+    <ul className={`nav__list ${module.list}`}>
       {navLinks.map(item => {
         return (
-          <li className={'Nav__item ' + module.Nav__item} key={item.path}>
+          <li className={`nav__item ${module.item}`} key={item.path}>
             <Link
-              className={module.Nav__link}
-              activeClassName={module.Nav__linkActive}
+              className={`nav__link ${module.link}`}
+              activeClassName={`nav__link--active ${module.linkActive}`}
               to={item.path}
               itemProp="url"
             >

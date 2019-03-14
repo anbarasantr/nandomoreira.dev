@@ -6,7 +6,7 @@ const ProjectList = ({ projects }) => (
   <section className={module.Projects}>
     <div className={module.Projects__inner}>
       {projects.map((project, i) => (
-        <Project project={project.node.frontmatter} key={i} />
+        <Project project={project.node.frontmatter} mod={i % 2} key={i} />
       ))}
     </div>
   </section>

@@ -2,17 +2,19 @@
 
 .brand
   margin 0
-  color $primary-color
+  color #fff
   display inline-block
   font-size 1.75rem
   line-height 1
-
-  &__span
-    color $primary-color
+  span
     font-weight 500
     font-size inherit
-
   &__link
     font-weight 800
-    color $secondary-color
     text-decoration none
+  &__link
+    &,
+    &:hover,
+    &:focus,
+    span
+      color #fff

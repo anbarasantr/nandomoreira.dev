@@ -13,8 +13,9 @@ import Comments from '../Comments'
 import Icon from '../Icons'
 import PostTags from '../PostTags'
 import module from './projectSingle.module.styl'
+import './projectSingle.styl'
 
-const ProjectSinple = ({ data }) => {
+const ProjectSingle = ({ data }) => {
   const post = data.markdownRemark
 
   const { siteUrl, disqusShortname, isProduction } = data.site.siteMetadata
@@ -27,7 +28,7 @@ const ProjectSinple = ({ data }) => {
   const dateFormated = moment(post.frontmatter.date).format('MMM/YYYY')
 
   return (
-    <Layout className={module.ProjectSinple}>
+    <Layout className={`projectSingle ${module.projectSingle}`}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
@@ -37,16 +38,16 @@ const ProjectSinple = ({ data }) => {
       />
       <PostProgress />
       <Container>
-        <div className={module.ProjectSinple__container}>
-          <header>
+        <div className={module.container}>
+          <header className={module.header}>
             <h1>{post.frontmatter.title}</h1>
           </header>
 
-          <h4 className={module.ProjectSinple__sectionTitle}>Data</h4>
-          <p className={module.ProjectSinple__sectionText}>{dateFormated}</p>
+          <h4 className={module.sectionTitle}>Data</h4>
+          <p className={module.sectionText}>{dateFormated}</p>
 
-          <h4 className={module.ProjectSinple__sectionTitle}>Categoria</h4>
-          <p className={module.ProjectSinple__sectionText}>
+          <h4 className={module.sectionTitle}>Categoria</h4>
+          <p className={module.sectionText}>
             {post.frontmatter.category.map((category, index) => {
               return (
                 <Link key={index} to={`/categoria/${kebabCase(category)}`}>
@@ -56,15 +57,11 @@ const ProjectSinple = ({ data }) => {
             })}
           </p>
 
-          <h4 className={module.ProjectSinple__sectionTitle}>Descrição</h4>
-          <p className={module.ProjectSinple__sectionText}>
-            {post.frontmatter.description}
-          </p>
+          <h4 className={module.sectionTitle}>Descrição</h4>
+          <p className={module.sectionText}>{post.frontmatter.description}</p>
 
-          <h4 className={module.ProjectSinple__sectionTitle}>
-            Links do projeto
-          </h4>
-          <p className={module.ProjectSinple__sectionText}>
+          <h4 className={module.sectionTitle}>Links do projeto</h4>
+          <p className={module.sectionText}>
             {post.frontmatter.url === '#' &&
               post.frontmatter.category[0] !== 'Download' && (
                 <span>
@@ -126,7 +123,7 @@ const ProjectSinple = ({ data }) => {
           alt={data.markdownRemark.frontmatter.title}
         />
 
-        <div className={module.ProjectSinple__container}>
+        <div className={module.container}>
           {post.html && (
             <div
               itemProp="articleBody"
@@ -152,4 +149,4 @@ const ProjectSinple = ({ data }) => {
   )
 }
 
-export default ProjectSinple
+export default ProjectSingle

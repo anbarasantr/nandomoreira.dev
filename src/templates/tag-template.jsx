@@ -8,8 +8,9 @@ import Container from 'components/Container'
 import PageHeader from 'components/PageHeader'
 
 const Tags = ({ data, pageContext }) => {
+  if (!data.postsTagsThree) return null
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMarkdownRemark
+  const { edges, totalCount } = data.postsTagsThree
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
   } marcados como #${tag}`
@@ -65,7 +66,7 @@ export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {
-    allMarkdownRemark(
+    postsTagsThree: allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
@@ -74,8 +75,10 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            title
+            layout
             path
+            title
+            category
           }
         }
       }

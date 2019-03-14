@@ -5,22 +5,26 @@ import Icon from '../Icons'
 import module from './project.module.styl'
 import './project.styl'
 
-const Project = ({ project }) => (
-  <article className={`Project ${module.Project}`}>
-    <Link to={project.path} className={`${module.Project__inner}`}>
-      <div className={module.Project__content}>
+const Project = ({ project, mod }) => (
+  <article
+    className={`Project ${module.project} ${
+      mod === 0 ? module.left : module.right
+    }`}
+  >
+    <Link to={project.path} className={`${module.inner}`}>
+      <div className={module.content}>
         <div>
-          <header className={module.Project__header}>
+          <header className={module.header}>
             <h1>{project.title}</h1>
           </header>
-          <p className={module.Project__description}>{project.description}</p>
-          <div className={`Project__view ${module.Project__view}`}>
+          <p className={module.description}>{project.description}</p>
+          <div className={`Project__view ${module.view}`}>
             <span>Ver projeto </span>
             <Icon id="icon-arrow-right" />
           </div>
         </div>
       </div>
-      <div className={module.Project__image}>
+      <div className={module.image}>
         <Image node={project.image} />
       </div>
     </Link>

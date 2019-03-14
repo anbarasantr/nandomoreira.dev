@@ -1,21 +1,22 @@
 @import '../../stylus/index.styl'
 
 .Header
-  @extend .card
   text-align center
   z-index 100
   border-radius 0
   border-top .25rem solid $primary-color
   +above($tablet)
-    position fixed
+    position absolute
+    width 100%
     z-index 1000
     top 0
     left 0
     margin 0
-  &__inner
-    padding 1.875rem .9375rem
-    +above($tablet)
-      padding .9375rem 1.875rem
-      display flex
-      align-items center
-      justify-content space-between
+
+.Inner
+  padding 1.875rem .9375rem
+  +above($tablet)
+    padding .9375rem 1.875rem 1.25rem
+    display flex
+    align-items center
+    justify-content space-between

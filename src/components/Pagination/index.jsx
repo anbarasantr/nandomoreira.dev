@@ -7,14 +7,12 @@ export default ({ paginate }) => {
   const { basePath, isFirst, prevPage, numPages, isLast, nextPage } = paginate
 
   return (
-    <div className={module.Pagination}>
+    <div className={module.pagination}>
       {!isFirst && (
         <Link
           to={prevPage}
           rel="prev"
-          className={`${module.Pagination__link} ${
-            module.Pagination__linkPrev
-          }`}
+          className={`${module.link} ${module.linkPrev}`}
         >
           <Icon id="icon-arrow-left" style={{ padding: '5px' }} />
         </Link>
@@ -24,10 +22,8 @@ export default ({ paginate }) => {
         <Link
           key={`pagination-number${i + 1}`}
           to={`${i === 0 ? `${basePath}` : `${basePath}/${i + 1}`}`}
-          className={`${module.Pagination__link} ${
-            module.Pagination__linkNumber
-          }`}
-          activeClassName={module.Pagination__linkCurrent}
+          className={`${module.link} ${module.linkNumber}`}
+          activeClassName={module.linkCurrent}
         >
           {i + 1}
         </Link>
@@ -37,9 +33,7 @@ export default ({ paginate }) => {
         <Link
           to={nextPage}
           rel="next"
-          className={`${module.Pagination__link} ${
-            module.Pagination__linkNext
-          }`}
+          className={`${module.link} ${module.linkNext}`}
         >
           <Icon id="icon-arrow-right" style={{ padding: '5px' }} />
         </Link>

@@ -1,70 +1,88 @@
 @import '../../stylus/index.styl'
 
-.Project
+.project
+  padding-bottom 3.75rem
   margin-bottom 3.75rem
   position relative
   width 100%
-
   p
     margin 0 0 .625rem
 
-  &__inner
-    &:hover,
-    &:focus,
-    &:active
-      box-shadow none
-    +above($tablet)
-      display block
+.inner
+  &:hover,
+  &:focus,
+  &:active
+    box-shadow none
+  +above($tablet)
+    display flex
 
-  &__header
-    padding 0
-    h1
-      margin 0 0 .625rem
-      font-size 1.75rem
-      a
-        text-decoration none
+.header
+  padding 0
+  h1
+    margin 0 0 .625rem
+    font-size 1.75rem
+    a
+      text-decoration none
 
-  &__image
-    display block
-    +above($tablet)
-      display inline-block
-      width 43.75rem
+.image
+  display block
+  +above($tablet)
+    display inline-block
+    width 43.75rem
 
-  &__content
-    padding 1.875rem
-    width 100%
-    @extend .card
-    @extend .card--hover
-    +above($tablet)
-      width calc(100% - 560px)
-      display flex
-      align-items center
-      z-index 3
-      position absolute
-      bottom 3.75rem
-      right 0
-    +below($tablet)
-      border-radius 0
-
-  &__description
-    color rgba($text-color, .75)
-    font-size 1rem
-
-  &__view
+.content
+  padding 1.875rem
+  width 100%
+  @extend .card
+  @extend .card--hover
+  +above($tablet)
+    width calc(100% - 560px)
     display flex
     align-items center
-    color $primary-color
-    svg
-      padding .3125rem
-      display inline-block
-      fill $primary-color
-      position relative
-      animation slide1 1s ease-in-out infinite
-      transform translate3d(0, .125rem, 0)
+    z-index 3
+    position absolute
+    top 50%
+    right 0
+    transform translate3d(0, -50%, 0)
+    &:hover,
+    &:focus
+      transform translate3d(0, -60%, 0)
+  +below($tablet)
+    border-radius 0
 
-@keyframes slide1
+.description
+  color rgba($text-color, .75)
+  font-size 1rem
+
+.view
+  display flex
+  align-items center
+  color $primary-color
+  svg
+    padding .3125rem
+    display inline-block
+    fill $primary-color
+    position relative
+    animation animate-arrow 1s ease-in-out infinite
+    transform translate3d(0, .125rem, 0)
+
+@keyframes animate-arrow
   0%,
   100%
     transform translate3d(0, .125rem, 0)
   50%
     transform translate3d(.625rem, .125rem, 0)
+
+.left
+  +above($tablet)
+    .inner
+      justify-content flex-start
+    .content
+      right 0
+
+.right
+  +above($tablet)
+    .inner
+      justify-content flex-end
+    .content
+      left 0

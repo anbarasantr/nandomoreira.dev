@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import module from './brand.module.styl'
+import './brand.styl'
 
 export default () => (
-  <h1 className={module.brand}>
-    <Link className={module.brand__link} to="/">
-      <span className={module.brand__span}>nando</span>moreira
+  <h1 className="brand">
+    <Link className="brand__link" to="/">
+      <span>nando</span>moreira
     </Link>
   </h1>
 )

@@ -1,54 +1,38 @@
 @import '../../stylus/index.styl'
 
-.Nav
+.nav
   position relative
   padding .9375rem 0 0
   +above($tablet)
     padding 0
 
-  &--top
+.item
+  margin 0
+  text-transform lowercase
+  &:not(:last-child)
+    margin-right 1.25rem
+
+.item,
+.link
+  display inline-block
+
+.link
+  padding 0
+  text-decoration none
+  position relative
+  &:hover,
+  &:focus,
+  &:active,
+  &-active
+    outline none
+    box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
+
+.list
+  transition all .05s $timingFunction
+  padding 0
+  margin 0
+  +above($tablet)
     display flex
-    justify-content space-between
+    flex-direction column
+    flex-direction row
     align-items center
-    margin 0 auto 2rem
-    padding 3rem
-    &:after
-      content ''
-      display block
-      position absolute
-      bottom 0
-      height .0625rem
-      width calc(100% - 3rem)
-      left 1.5rem
-      border-radius .1875rem
-
-  &__item
-    margin 0
-    text-transform lowercase
-    &:not(:last-child)
-      margin-right 1.25rem
-
-  &__item,
-  &__link
-    display inline-block
-
-  &__link
-    padding 0
-    text-decoration none
-    position relative
-    &:hover,
-    &:focus,
-    &:active,
-    &-active
-      outline none
-      box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
-
-  &__list
-    transition all .05s $timingFunction
-    padding 0
-    margin 0
-    +above($tablet)
-      display flex
-      flex-direction column
-      flex-direction row
-      align-items center
