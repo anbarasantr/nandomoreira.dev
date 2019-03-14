@@ -1,0 +1,68 @@
+@import '../../stylus/index.styl'
+
+.whatsapp
+  position fixed
+  bottom 1.25rem
+  left 1.25rem
+  z-index 1000
+  +below($tablet)
+    animation attention 1s ease-in-out infinite
+    transform translate3d(0, .125rem, 0)
+
+.link
+  display flex
+  align-items center
+  justify-content center
+  width 3.125rem
+  height 3.125rem
+  cursor pointer
+  box-shadow none
+  background-color #2bcc45
+
+.message
+  display none
+  +above($tablet)
+    display block
+    position absolute
+    background #fff
+    border 1px solid #ccc
+    padding .9375rem 1.25rem
+    bottom 140%
+    left 0
+    min-width 13.75rem
+    border-radius .25rem
+    animation attention 1s ease-in-out infinite
+    transform translate3d(0, .125rem, 0)
+    &:after,
+    &:before
+      top 100%
+      border solid transparent
+      content " "
+      height 0
+      width 0
+      position absolute
+      pointer-events none
+    &:after
+      border-color rgba(255, 255, 255, 0)
+      border-top-color #fff
+      border-width 10px
+      margin-left -10px
+      left 25px
+    &:before
+      border-color rgba(204, 204, 204, 0)
+      border-top-color #ccc
+      border-width 11px
+      left 14px
+
+@keyframes attention
+  0%,
+  100%
+    transform translate3d(0, 0, 0)
+  50%
+    transform translate3d(0, -0.625rem, 0)
+
+.icon
+  fill #fff
+  width 2.5rem
+  height 2.5rem
+  padding .25rem

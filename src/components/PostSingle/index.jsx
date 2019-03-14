@@ -7,6 +7,7 @@ import Comments from '../Comments'
 import PostProgress from '../PostProgress'
 import PostSingleHeader from '../PostSingle/Header'
 import PostSingleContent from '../PostSingle/Content'
+import SocialShare from '../SocialShare'
 import PostTags from '../PostTags'
 import PostNavigate from '../PostSingle/PostNavigate'
 import module from './postSingle.module.styl'
@@ -15,6 +16,7 @@ const PostSinple = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const avatar = data.file
   const {
+    siteUrl,
     isProduction,
     author,
     disqusShortname,
@@ -46,6 +48,7 @@ const PostSinple = ({ data, pageContext }) => {
         <meta itemProp="mainEntityOfPage" content={post.frontmatter.path} />
         <PostSingleContent html={post.html}>
           <PostNavigate prev={prev} next={next} />
+
           <PostTags
             tags={post.frontmatter.tags}
             style={{
@@ -55,10 +58,17 @@ const PostSinple = ({ data, pageContext }) => {
             }}
           />
         </PostSingleContent>
+
         <AuthorBox
           author={Object.assign({}, author, { avatar })}
           socialIcons={social}
         />
+
+        <SocialShare
+          link={`${siteUrl}${post.frontmatter.path}`}
+          message={post.frontmatter.title}
+        />
+
         {isProduction && (
           <Comments shortname={disqusShortname} config={disqusConfig} />
         )}

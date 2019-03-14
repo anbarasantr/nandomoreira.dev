@@ -12,6 +12,7 @@ import PostProgress from '../PostProgress'
 import Comments from '../Comments'
 import Icon from '../Icons'
 import PostTags from '../PostTags'
+import SocialShare from '../SocialShare'
 import module from './projectSingle.module.styl'
 import './projectSingle.styl'
 
@@ -140,6 +141,11 @@ const ProjectSingle = ({ data }) => {
             }}
           />
         </div>
+
+        <SocialShare
+          link={`${siteUrl}${post.frontmatter.path}`}
+          message={post.frontmatter.title}
+        />
 
         {isProduction && (
           <Comments shortname={disqusShortname} config={disqusConfig} />
