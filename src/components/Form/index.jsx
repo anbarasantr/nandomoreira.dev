@@ -52,7 +52,7 @@ const Form = () => (
       </label>
       <select
         id="formService"
-        name="role[]"
+        name="service[]"
         className={`${module.input} ${module.select}`}
         required
       >
@@ -71,7 +71,7 @@ const Form = () => (
       </label>
       <select
         id="formBudget"
-        name="role[]"
+        name="budget[]"
         className={`${module.input} ${module.select}`}
         required
       >
