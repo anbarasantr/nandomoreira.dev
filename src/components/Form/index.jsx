@@ -8,6 +8,14 @@ class Form extends React.Component {
     super()
 
     this.state = {
+      formData: {
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        budget: '',
+        message: '',
+      },
       error: null,
       isLoading: false,
       wasSent: false,
@@ -15,45 +23,63 @@ class Form extends React.Component {
         Aguarde, que em breve retornarei com uma respota para o seu pedido.`,
     }
 
+    this.handleChangeField = this.handleChangeField.bind(this)
     this.handleSubmitForm = this.handleSubmitForm.bind(this)
+    this.handleSuccess = this.handleSuccess.bind(this)
+  }
+
+  handleChangeField = event => {
+    const formData = {
+      ...this.state.formData,
+      ...{
+        [event.target.name]: event.target.value,
+      },
+    }
+
+    this.setState({ formData })
+  }
+
+  encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
+  handleSuccess = res => {
+    this.setState({
+      res,
+      isLoading: false,
+      wasSent: true,
+      formData: {
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        budget: '',
+        message: '',
+      },
+    })
   }
 
   handleSubmitForm(event) {
-    event.preventDefault()
-    const form = event.target
-    const data = new FormData(form)
-
     this.setState({
       isLoading: true,
     })
 
-    console.log(form)
-    console.log(data)
-
     fetch(`/contato`, {
       method: `POST`,
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: data,
+      body: this.encode({ 'form-name': 'contact', ...this.state.formData }),
     })
-      .then(res => {
-        if (res.ok) {
-          this.setState({
-            wasSent: true,
-          })
-          return res
-        }
-      })
+      .then(res => this.handleSuccess(res))
       .catch(error => {
         this.setState({
           wasSent: false,
           error,
         })
       })
-      .finally(() => {
-        this.setState({
-          isLoading: false,
-        })
-      })
+
+    event.preventDefault()
   }
 
   render() {
@@ -63,14 +89,21 @@ class Form extends React.Component {
     return (
       <form
         name="contact"
+        action="/success"
         className={module.form}
         method="POST"
-        data-netlify-recaptcha="true"
+        onSubmit={this.handleSubmitForm}
         data-netlify-honeypot="bot-field"
         data-netlify="true"
-        onSubmit={this.handleSubmitForm}
       >
-        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>
+            Don’t fill this out:{' '}
+            <input name="bot-field" onChange={this.handleChangeField} />
+          </label>
+        </p>
+
         <legend>
           Ou preencha seus dados abaixo e aguarde que entro em contato.
         </legend>
@@ -87,7 +120,9 @@ class Form extends React.Component {
             id="formName"
             type="text"
             name="name"
+            value={this.state.formData.name}
             className={module.input}
+            onChange={this.handleChangeField}
             required
           />
         </div>
@@ -100,7 +135,9 @@ class Form extends React.Component {
             id="formEmail"
             type="email"
             name="email"
+            value={this.state.formData.email}
             className={module.input}
+            onChange={this.handleChangeField}
             required
           />
         </div>
@@ -113,7 +150,9 @@ class Form extends React.Component {
             id="formPhone"
             type="number"
             name="phone"
+            value={this.state.formData.phone}
             className={module.input}
+            onChange={this.handleChangeField}
             required
           />
         </div>
@@ -124,8 +163,10 @@ class Form extends React.Component {
           </label>
           <select
             id="formService"
-            name="service[]"
+            name="service"
+            value={this.state.formData.service}
             className={`${module.input} ${module.select}`}
+            onChange={this.handleChangeField}
             required
           >
             <option value="">Selecione o serviço</option>
@@ -143,8 +184,10 @@ class Form extends React.Component {
           </label>
           <select
             id="formBudget"
-            name="budget[]"
+            name="budget"
+            value={this.state.formData.budget}
             className={`${module.input} ${module.select}`}
+            onChange={this.handleChangeField}
             required
           >
             <option value="">Selecione o orçamento</option>
@@ -156,16 +199,14 @@ class Form extends React.Component {
         </div>
 
         <div className={module.group}>
-          <div data-netlify-recaptcha="true" />
-        </div>
-
-        <div className={module.group}>
           <label htmlFor="formMessage" className={module.label}>
             Sua mensagem
           </label>
           <textarea
             id="formMessage"
+            value={this.state.formData.message}
             className={`${module.input} ${module.textarea}`}
+            onChange={this.handleChangeField}
             name="message"
             required
           />
