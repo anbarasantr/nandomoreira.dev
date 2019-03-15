@@ -1,6 +1,6 @@
 # [nandomoreira.dev](http://nandomoreira.dev/)
 
-> 🏃 My superfast personal SPA blog/site using Reactjs with Gatsby :D
+> 🏃 My superfast personal site running on Gatsby, React, and Node.js
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c67e668-bd6a-433c-8abf-1725ed7504d3/deploy-status)](https://app.netlify.com/sites/nandomoreiradev/deploys)
 
