@@ -3,10 +3,7 @@ import { Skill, Icon } from 'Components/Common'
 import classes from './footer.module.styl'
 
 export const Footer = () => (
-  <footer className={classes.Footer}>
-    {/* <button role="button" type="button">
-      <Icon id="moon" />
-    </button> */}
+  <footer className={`footer ${ classes.Footer }`}>
     <span>
       Desenvolvido em{' '}
       <address itemScope itemType="https://schema.org/PostalAddress">

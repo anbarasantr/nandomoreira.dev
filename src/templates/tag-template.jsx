@@ -1,20 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
-import { SEO, Layout, Container, PageHeader } from 'Components/Common'
+import { graphql } from 'gatsby'
+import Link from 'gatsby-link'
+import { Main, Container } from 'Components/Layout'
+import { SEO, PageHeader } from 'Components/Common'
 
 const Tags = ({ data, pageContext }) => {
   if (!data.postsTagsThree) return null
   const { tag } = pageContext
   const { edges, totalCount } = data.postsTagsThree
-  const tagHeader = `${totalCount} post${
+  const tagHeader = `${ totalCount } post${
     totalCount === 1 ? '' : 's'
-  } marcados como #${tag}`
+  } marcados como #${ tag }`
 
   return (
-    <Layout>
+    <Main>
       <SEO
-        title={`Tag: #${tag}`}
+        title={`Tag: #${ tag }`}
         // description={post.frontmatter.description}
         // image={post.frontmatter.image.publicURL}
         // pathname={post.frontmatter.path}
@@ -33,13 +35,13 @@ const Tags = ({ data, pageContext }) => {
         </ul>
         {/* <Link to="/tags">All tags</Link> */}
       </Container>
-    </Layout>
+    </Main>
   )
 }
 
 Tags.propTypes = {
   pageContext: PropTypes.shape({
-    tag: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired
   }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
@@ -49,13 +51,13 @@ Tags.propTypes = {
           node: PropTypes.shape({
             frontmatter: PropTypes.shape({
               path: PropTypes.string.isRequired,
-              title: PropTypes.string.isRequired,
-            }),
-          }),
+              title: PropTypes.string.isRequired
+            })
+          })
         }).isRequired
-      ),
-    }),
-  }),
+      )
+    })
+  })
 }
 
 export default Tags

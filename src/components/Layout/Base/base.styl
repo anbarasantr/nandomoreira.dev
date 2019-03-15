@@ -26,11 +26,8 @@ body,
   min-height 100vh
 
 #___gatsby
-  padding 0 0 4.375rem
-  border-top .25rem solid $primary-color
-  background-color $background-color
-  position relative
   z-index 2
+  position relative
   +above($tablet)
     padding-bottom 0
   > div
@@ -38,7 +35,6 @@ body,
     flex-direction column
 
 body
-  background-color $primary-color
   font-family $font-family-base
   color $text-color
   font-size 1rem
@@ -131,6 +127,7 @@ td, th
 
 svg:not(:root)
   overflow hidden
+  transition fill .12s $timingFunction
 
 code, kbd, pre, samp
   font-family $font-family-monospace

@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, Container } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 
-export default function Template({ data }) {
+export default function Template ({ data }) {
   if (!data.markdownRemark) return null
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Main>
       <Container isSmall={true}>
         <h1>{post.frontmatter.title}</h1>
         {post.html && (
@@ -16,7 +16,7 @@ export default function Template({ data }) {
           />
         )}
       </Container>
-    </Layout>
+    </Main>
   )
 }
 

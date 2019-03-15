@@ -2,29 +2,29 @@ import React from 'react'
 import classes from './alert.module.styl'
 
 export const Alert = ({ message, type = 'default' }) => {
-  let alertClass = `${classes.alert}`
+  let alertClass = `${ classes.alert }`
 
   switch (type) {
-    case 'success':
-      alertClass += ` ${classes.success}`
-      break
+  case 'success':
+    alertClass += ` ${ classes.success }`
+    break
 
-    case 'danger':
-    case 'error':
-      alertClass += ` ${classes.danger}`
-      break
+  case 'danger':
+  case 'error':
+    alertClass += ` ${ classes.danger }`
+    break
 
-    case 'info':
-      alertClass += ` ${classes.info}`
-      break
+  case 'info':
+    alertClass += ` ${ classes.info }`
+    break
 
-    case 'warning':
-      alertClass += ` ${classes.warning}`
-      break
+  case 'warning':
+    alertClass += ` ${ classes.warning }`
+    break
 
-    default:
-      alertClass += ` ${classes.default}`
-      break
+  default:
+    alertClass += ` ${ classes.default }`
+    break
   }
 
   return (

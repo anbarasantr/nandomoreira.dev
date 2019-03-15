@@ -1,22 +1,17 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import {
-  SEO,
-  Layout,
-  Container,
-  PageHeader,
-  SocialIcons,
-} from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
+import { SEO, PageHeader, SocialIcons } from 'Components/Common'
 
 const title = 'Serviços'
 const description =
   'Para entrar em contato comigo basta me seguir em qualquer uma das minhas redes sociais e chamar por DM'
 
-export default ({ data }) => (
-  <Layout>
+export default () => (
+  <Main>
     <SEO
-      title={`${title}: O que eu posso fazer por você?`}
+      title={`${ title }: O que eu posso fazer por você?`}
       description={description}
       pathname="/servicos"
     />
@@ -30,7 +25,7 @@ export default ({ data }) => (
       ))} */}
       <SocialIcons />
     </Container>
-  </Layout>
+  </Main>
 )
 
 export const servicesQuery = graphql`

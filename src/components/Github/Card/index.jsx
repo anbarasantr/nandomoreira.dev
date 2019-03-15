@@ -12,7 +12,7 @@ export const GithubCard = ({ repo }) => (
     target="_blank"
     rel="noopener noreferrer"
   >
-    <div className={classes.card}>
+    <div className={`card ${ classes.card }`}>
       <h4 className={classes.name}>{repo.name}</h4>
       <p className={classes.description}>{repo.description}</p>
       <div className={classes.footer}>

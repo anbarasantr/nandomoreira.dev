@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container } from 'Components/Common'
+import { Container } from 'Components/Layout'
 import classes from './pageheader.module.styl'
 
 export const PageHeader = ({ smallTitle, title, children }) => (
-  <header className={classes.PageHeader}>
+  <header className={`pageHeader ${ classes.PageHeader }`}>
     <Container>
       {smallTitle && (
         <h4

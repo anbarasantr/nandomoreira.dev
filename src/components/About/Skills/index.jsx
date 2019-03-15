@@ -11,24 +11,24 @@ const shuffleSkills = arr =>
 export const Skills = ({ skills, size = 'default' }) => {
   if (!skills) return null
 
-  let skillsClass = `${classes.skills}`
+  let skillsClass = `${ classes.skills }`
   let svgSize
 
   switch (size) {
-    case 'small':
-      skillsClass += ` ${classes.small}`
-      svgSize = `32`
-      break
+  case 'small':
+    skillsClass += ` ${ classes.small }`
+    svgSize = `32`
+    break
 
-    case 'large':
-      skillsClass += ` ${classes.large}`
-      svgSize = `80`
-      break
+  case 'large':
+    skillsClass += ` ${ classes.large }`
+    svgSize = `80`
+    break
 
-    default:
-      skillsClass += ` ${classes.default}`
-      svgSize = `50`
-      break
+  default:
+    skillsClass += ` ${ classes.default }`
+    svgSize = `50`
+    break
   }
 
   return (
@@ -37,7 +37,7 @@ export const Skills = ({ skills, size = 'default' }) => {
       <div className={classes.list}>
         {shuffleSkills(skills).map((skill, i) => (
           <div className={classes.item} key={i} data-tooltip={skill}>
-            <div className={classes.inner}>
+            <div className={`card card--hover ${ classes.inner }`}>
               <Skill id={skill} size={svgSize} />
             </div>
           </div>

@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { Layout, SEO, Container, PageHeader } from 'Components/Common'
+import { SEO, PageHeader } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 
 const title = 'FAQ'
 const description = 'FAQ'
 
 const FAQ = () => (
-  <Layout>
+  <Main>
     <SEO title={title} description={description} pathname="/faq" />
     <PageHeader title={title}>
       <p>{description}</p>
@@ -14,7 +15,7 @@ const FAQ = () => (
     <Container>
       <p>{title}</p>
     </Container>
-  </Layout>
+  </Main>
 )
 
 export default FAQ

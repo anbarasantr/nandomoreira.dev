@@ -1,15 +1,8 @@
 import React from 'react'
 
-import {
-  SEO,
-  Layout,
-  Container,
-  SocialShare,
-  ListTags,
-  ScrollProgress,
-} from 'Components/Common'
-
+import { SEO, SocialShare, ListTags, ScrollProgress } from 'Components/Common'
 import { Header, Content, Comments, AuthorBox } from 'Components/Blog'
+import { Main, Container } from 'Components/Layout'
 
 import classes from './postSingle.module.styl'
 
@@ -21,15 +14,15 @@ export const Single = ({ data, pageContext }) => {
     isProduction,
     author,
     disqusShortname,
-    social,
+    social
   } = data.site.siteMetadata
   const disqusConfig = {
-    identifier: `${post.frontmatter.path}/`.replace(`/blog`, ``),
-    title: post.frontmatter.title,
+    identifier: `${ post.frontmatter.path }/`.replace(`/blog`, ``),
+    title: post.frontmatter.title
   }
 
   return (
-    <Layout
+    <Main
       className={classes.single}
       itemProp="blogPost"
       itemScope
@@ -52,7 +45,7 @@ export const Single = ({ data, pageContext }) => {
             style={{
               marginTop: '1.875rem',
               paddingTop: '1.875rem',
-              borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+              borderTop: '1px solid rgba(0, 0, 0, 0.1)'
             }}
           />
         </Content>
@@ -63,7 +56,7 @@ export const Single = ({ data, pageContext }) => {
         />
 
         <SocialShare
-          link={`${siteUrl}${post.frontmatter.path}`}
+          link={`${ siteUrl }${ post.frontmatter.path }`}
           message={post.frontmatter.title}
         />
 
@@ -71,6 +64,6 @@ export const Single = ({ data, pageContext }) => {
           <Comments shortname={disqusShortname} config={disqusConfig} />
         )}
       </Container>
-    </Layout>
+    </Main>
   )
 }

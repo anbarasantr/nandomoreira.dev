@@ -1,13 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import {
-  Layout,
-  Container,
-  SEO,
-  PageHeader,
-  SocialIcons,
-} from 'Components/Common'
+import { SEO, PageHeader, SocialIcons } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 import { ContactForm } from 'Components/Contact'
 import classes from './contact.module.styl'
 
@@ -16,13 +11,13 @@ const description =
   'Você tem um projeto em mente ou está simplesmente interessado em bater um papo, entre em contato!'
 
 const Contact = ({ data }) => (
-  <Layout>
+  <Main>
     <SEO title={title} description={description} pathname="/contato" />
     <PageHeader smallTitle="E aí, vamos conversar?" title={description} />
     <Container>
       <div className={classes.contact}>
         <div className={classes.left}>
-          <p>
+          <p class="card">
             <span>Envie um email para: </span>
             <a className="Contact__email" href="mailto:hi@nandomoreira.dev">
               hi@nandomoreira.dev
@@ -32,7 +27,7 @@ const Contact = ({ data }) => (
             style={{
               textAlign: 'center',
               display: 'block',
-              marginBottom: '15px',
+              marginBottom: '15px'
             }}
           >
             ... ou chame em alguma de minhas redes sociais que é sucesso!
@@ -47,7 +42,7 @@ const Contact = ({ data }) => (
         </div>
       </div>
     </Container>
-  </Layout>
+  </Main>
 )
 
 export default Contact

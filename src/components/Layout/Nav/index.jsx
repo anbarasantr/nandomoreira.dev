@@ -4,34 +4,34 @@ import { Icon } from 'Components/Common'
 import classes from './nav.module.styl'
 
 export class Nav extends React.Component {
-  constructor() {
+  constructor () {
     super()
 
     this.state = {
-      isOpen: false,
+      isOpen: false
     }
 
     this.handleNavToggle = this.handleNavToggle.bind(this)
   }
 
-  handleNavToggle(event) {
+  handleNavToggle (event) {
     this.setState({
-      isOpen: event.target.checked,
+      isOpen: event.target.checked
     })
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setState({ isOpen: false })
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     this.setState({ isOpen: false })
   }
 
-  render() {
+  render () {
     return (
       <nav
-        className={`nav ${classes.nav} ${
+        className={`nav ${ classes.nav } ${
           this.state.isOpen ? classes.isOpen : ''
         }`}
         aria-label="Navigation"
@@ -39,7 +39,7 @@ export class Nav extends React.Component {
         itemScope
       >
         <input type="checkbox" id="toggleNav" onChange={this.handleNavToggle} />
-        <label htmlFor="toggleNav" type="button" className={classes.button}>
+        <label htmlFor="toggleNav" type="button" role="button" className={`toggle-button ${ classes.button }`}>
           {!this.state.isOpen && (
             <Icon id="menu" className={classes.iconMenu} />
           )}
@@ -48,13 +48,13 @@ export class Nav extends React.Component {
           )}
         </label>
 
-        <ul className={`nav__list ${classes.list}`}>
+        <ul className={`nav__list ${ classes.list }`}>
           {this.props.navLinks.map(item => {
             return (
-              <li className={`nav__item ${classes.item}`} key={item.path}>
+              <li className={`nav__item ${ classes.item }`} key={item.path}>
                 <Link
-                  className={`nav__link ${classes.link}`}
-                  activeClassName={`nav__link--active ${classes.linkActive}`}
+                  className={`nav__link ${ classes.link }`}
+                  activeClassName={`nav__link--active ${ classes.linkActive }`}
                   to={item.path}
                   itemProp="url"
                 >

@@ -6,7 +6,7 @@ const {
   keywords,
   name,
   repository,
-  version,
+  version
 } = require('../package.json')
 
 const services = require('./services')
@@ -16,56 +16,56 @@ const isProduction = process.env.NODE_ENV === 'production'
 const siteUrl = isProduction ? homepage : 'http://localhost:8000'
 
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${ process.env.NODE_ENV }`
 })
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || 'foo-bar'
 
 const defaultImage = '/share.jpg'
 const subTitle = `· Desenvolvedor front-end e WordPress em Curitiba/PR`
-const title = `${author.name} ${subTitle}`
+const title = `${ author.name } ${ subTitle }`
 
 const repo = {
   ...bugs,
-  ...repository,
+  ...repository
 }
 
 const social = {
-  paypal: `https://www.paypal.me/${author.paypal}/5`,
-  github: `https://github.com/${author.github}`,
-  twitter: `https://twitter.com/${author.twitter}`,
-  codepen: `https://codepen.io/${author.codepen}`,
-  npm: `https://www.npmjs.com/${author.npm}`,
-  linkedin: `https://linkedin.com/in/${author.linkedin}`,
-  instagram: `https://instagram.com/${author.instagram}`,
-  dribbble: `https://dribbble.com/${author.dribbble}`,
-  behance: `https://www.behance.net/${author.behance}`,
+  paypal: `https://www.paypal.me/${ author.paypal }/5`,
+  github: `https://github.com/${ author.github }`,
+  twitter: `https://twitter.com/${ author.twitter }`,
+  codepen: `https://codepen.io/${ author.codepen }`,
+  npm: `https://www.npmjs.com/${ author.npm }`,
+  linkedin: `https://linkedin.com/in/${ author.linkedin }`,
+  instagram: `https://instagram.com/${ author.instagram }`,
+  dribbble: `https://dribbble.com/${ author.dribbble }`,
+  behance: `https://www.behance.net/${ author.behance }`
 }
 
 const navLinks = [{
-    name: 'Sobre mim',
-    path: '/sobre',
-  },
-  // {
-  //   name: 'O que eu faço',
-  //   path: '/servicos',
-  // },
-  {
-    name: 'Portfolio',
-    path: '/portfolio',
-  },
-  {
-    name: 'Open-source',
-    path: '/open-source',
-  },
-  {
-    name: 'Blog',
-    path: '/blog',
-  },
-  {
-    name: 'Contato',
-    path: '/contato',
-  },
+  name: 'Sobre mim',
+  path: '/sobre'
+},
+// {
+//   name: 'O que eu faço',
+//   path: '/servicos',
+// },
+{
+  name: 'Portfolio',
+  path: '/portfolio'
+},
+{
+  name: 'Open-source',
+  path: '/open-source'
+},
+{
+  name: 'Blog',
+  path: '/blog'
+},
+{
+  name: 'Contato',
+  path: '/contato'
+}
 ]
 
 const siteMetadata = {
@@ -74,7 +74,7 @@ const siteMetadata = {
   version,
   title,
   defaultTitle: title,
-  titleTemplate: `%s ${subTitle}`,
+  titleTemplate: `%s ${ subTitle }`,
   siteUrl,
   description,
   defaultDescription: description,
@@ -82,25 +82,25 @@ const siteMetadata = {
   defaultImage,
   author,
   disqusShortname: author.disqus,
-  twitterUsername: `@${author.twitter}`,
+  twitterUsername: `@${ author.twitter }`,
   facebookAppID: '',
   keywords,
   repo,
   social,
   navLinks,
   services,
-  skills,
+  skills
 }
 
 const pluginFonts = {
   fonts: [{
-      family: `Nunito`,
-      variants: [`200`, `400`, `800`]
-    },
-    {
-      family: `Open Sans`,
-      variants: [`300`, `400`, `500`, `800`]
-    }
+    family: `Nunito`,
+    variants: [`200`, `400`, `800`]
+  },
+  {
+    family: `Open Sans`,
+    variants: [`300`, `400`, `500`, `800`]
+  }
   ]
 }
 
@@ -129,7 +129,7 @@ const remarkImages = {
   maxWidth: 1200,
   linkImagesToOriginal: false,
   sizeByPixelDensity: true,
-  showCaptions: true,
+  showCaptions: true
 }
 
 const remarkPrismjs = {
@@ -137,22 +137,29 @@ const remarkPrismjs = {
   inlineCodeMarker: null,
   aliases: {},
   showLineNumbers: false,
-  noInlineHighlight: true,
+  noInlineHighlight: true
 }
 
 const pluginSitemap = {
   output: `/sitemap.xml`,
-  exclude: [`/tags`, `/tag/*`, `/categoria`, `/categoria/*`, `/404`, `/404.html`],
+  exclude: [
+    `/tags`,
+    `/tag/*`,
+    `/categoria`,
+    `/categoria/*`,
+    `/404`,
+    `/404.html`
+  ]
 }
 
 const pluginManifest = {
-  name: `${author.name}`,
-  short_name: `${name}`,
+  name: `${ author.name }`,
+  short_name: `${ name }`,
   start_url: '/',
   background_color: '#ffffff',
   theme_color: '#25ced1',
   display: 'minimal-ui',
-  icon: 'static/icon.png',
+  icon: 'static/icon.png'
 }
 
 const pluginGraphql = {
@@ -160,9 +167,9 @@ const pluginGraphql = {
   fieldName: 'github',
   url: 'https://api.github.com/graphql',
   headers: {
-    Authorization: `bearer ${GITHUB_TOKEN}`,
+    Authorization: `bearer ${ GITHUB_TOKEN }`
   },
-  fetchOptions: {},
+  fetchOptions: {}
 }
 
 module.exports = {
@@ -174,5 +181,5 @@ module.exports = {
   remarkPrismjs,
   pluginSitemap,
   pluginManifest,
-  pluginGraphql,
+  pluginGraphql
 }

@@ -1,19 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import kebabCase from 'lodash/kebabCase'
+import kebabCase from 'lodash.kebabcase'
 import moment from 'moment'
 import 'moment/locale/pt-br'
 
-import {
-  Layout,
-  Container,
-  SEO,
-  Icon,
-  Image,
-  SocialShare,
-  ListTags,
-  ScrollProgress,
-} from 'Components/Common'
+import { SEO, Icon, Image, SocialShare, ListTags, ScrollProgress } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
+
 import classes from './projectSingle.module.styl'
 import './projectSingle.styl'
 
@@ -23,7 +16,7 @@ export const ProjectSingle = ({ data }) => {
   const dateFormated = moment(post.frontmatter.date).format('MMM/YYYY')
 
   return (
-    <Layout className={`projectSingle ${classes.projectSingle}`}>
+    <Main className={`projectSingle ${ classes.projectSingle }`}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
@@ -45,7 +38,7 @@ export const ProjectSingle = ({ data }) => {
           <p className={classes.sectionText}>
             {post.frontmatter.category.map((category, index) => {
               return (
-                <Link key={index} to={`/categoria/${kebabCase(category)}`}>
+                <Link key={index} to={`/categoria/${ kebabCase(category) }`}>
                   {category}
                 </Link>
               )
@@ -59,32 +52,32 @@ export const ProjectSingle = ({ data }) => {
           <p className={classes.sectionText}>
             {post.frontmatter.url === '#' &&
               post.frontmatter.category[0] !== 'Download' && (
-                <span>
-                  <Icon
-                    id="close"
-                    fill="#898989"
-                    style={{
-                      padding: '5px',
-                      display: 'inline-block',
-                      verticalAlign: 'middle',
-                    }}
-                  />
-                  <small
-                    style={{
-                      display: 'inline-block',
-                      color: '#898989',
-                      verticalAlign: 'middle',
-                    }}
-                  >
+              <span>
+                <Icon
+                  id="close"
+                  fill="#898989"
+                  style={{
+                    padding: '5px',
+                    display: 'inline-block',
+                    verticalAlign: 'middle'
+                  }}
+                />
+                <small
+                  style={{
+                    display: 'inline-block',
+                    color: '#898989',
+                    verticalAlign: 'middle'
+                  }}
+                >
                     Projeto offline, parado ou descontinuado pelo cliente
-                  </small>
-                </span>
-              )}
+                </small>
+              </span>
+            )}
             {post.frontmatter.url && post.frontmatter.url !== '#' && (
               <span style={{ display: 'block' }}>
                 Site:{' '}
                 <a
-                  href={`${post.frontmatter.url}?ref=${siteUrl}${
+                  href={`${ post.frontmatter.url }?ref=${ siteUrl }${
                     post.frontmatter.path
                   }`}
                   target="_blank"
@@ -100,7 +93,7 @@ export const ProjectSingle = ({ data }) => {
                 {post.frontmatter.category[0] === 'Download' &&
                   `Link para download: `}
                 <a
-                  href={`${post.frontmatter.repo}?ref=${siteUrl}${
+                  href={`${ post.frontmatter.repo }?ref=${ siteUrl }${
                     post.frontmatter.path
                   }`}
                   target="_blank"
@@ -131,16 +124,16 @@ export const ProjectSingle = ({ data }) => {
             style={{
               marginTop: '1.875rem',
               paddingTop: '1.875rem',
-              borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+              borderTop: '1px solid rgba(0, 0, 0, 0.1)'
             }}
           />
         </div>
 
         <SocialShare
-          link={`${siteUrl}${post.frontmatter.path}`}
+          link={`${ siteUrl }${ post.frontmatter.path }`}
           message={post.frontmatter.title}
         />
       </Container>
-    </Layout>
+    </Main>
   )
 }

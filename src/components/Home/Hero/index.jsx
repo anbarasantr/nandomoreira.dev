@@ -1,21 +1,19 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { SocialIcons, Nav } from 'Components/Common'
+import { SocialIcons } from 'Components/Common'
+import { Nav } from 'Components/Layout'
 import classes from './hero.module.styl'
 import './hero.styl'
 
 export const Hero = ({ navLinks, socialIcons }) => (
-  <main className={'hero ' + classes.hero}>
+  <div className={'hero ' + classes.hero}>
     <div
       className={classes.inner}
       itemScope
       itemType="http://schema.org/Person"
     >
       <h1 className={classes.title}>
-        <span>Olá, eu me chamo</span>
-        <Link to="/sobre" rel="author" itemProp="url">
-          <strong itemProp="name">Fernando Moreira</strong>.
-        </Link>
+        <span>Olá, eu me chamo</span> <strong itemProp="name">Fernando Moreira</strong>.
         <meta itemProp="jobTitle" content="Desenvolvedor front-end" />
         <meta itemProp="worksFor" content="Onedev.studio" />
       </h1>
@@ -29,23 +27,11 @@ export const Hero = ({ navLinks, socialIcons }) => (
           href="http://agencia.nossacausa.com/"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Ajudo ONGs
-        </a>{' '}
-        e pequenas empresas a criar projetos web personalizados de alta
-        qualidade. No meu tempo livre eu{' '}
-        <Link to="/blog">escrevo em meu blog</Link> e contribuo com projetos{' '}
-        <a
-          href="https://github.com/nandomoreirame"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          open source
-        </a>
-        .
+        >Ajudo ONGs</a> e pequenas empresas a criar projetos web personalizados de alta
+        qualidade. No meu tempo livre eu <Link to="/blog">escrevo em meu blog</Link> e contribuo com projetos <Link to="/open-source">open source</Link>.
       </p>
       <Nav navLinks={navLinks} />
       <SocialIcons icons={socialIcons} />
     </div>
-  </main>
+  </div>
 )

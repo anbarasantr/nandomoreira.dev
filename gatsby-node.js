@@ -3,7 +3,7 @@ const {
   resolve,
   parse
 } = require('path')
-const _ = require('lodash')
+const kebabCase = require('lodash.kebabcase')
 const webpackLodashPlugin = require('lodash-webpack-plugin')
 const slugify = require('slugify')
 
@@ -17,8 +17,10 @@ const slugifySettings = {
 
 let postNodes = []
 
-function addSiblingNodes(createNodeField) {
-  postNodes = postNodes.filter(post => (post.id.indexOf('/posts/') > 0) ? post : null)
+function addSiblingNodes (createNodeField) {
+  postNodes = postNodes.filter(post => {
+    return (post.id.indexOf('/posts/') > 0) ? post : null
+  })
 
   postNodes.sort(
     ({
@@ -30,7 +32,7 @@ function addSiblingNodes(createNodeField) {
         date: date2
       }
     }) =>
-    new Date(date1) - new Date(date2)
+      new Date(date1) - new Date(date2)
   )
 
   for (let i = 0; i < postNodes.length; i += 1) {
@@ -84,20 +86,20 @@ exports.onCreateNode = ({
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`
+      slug = `/${ kebabCase(node.frontmatter.title) }`
     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
-      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`
+      slug = `/${ parsedFilePath.dir }/${ parsedFilePath.name }/`
     } else if (parsedFilePath.dir === '') {
-      slug = `/${parsedFilePath.name}/`
+      slug = `/${ parsedFilePath.name }/`
     } else {
-      slug = `/${parsedFilePath.dir}/`
+      slug = `/${ parsedFilePath.dir }/`
     }
 
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'path')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.path)}`
+      slug = `/${ kebabCase(node.frontmatter.path) }`
     }
 
     createNodeField({
@@ -253,13 +255,13 @@ exports.onCreateWebpackConfig = ({
         'node_modules'
       ],
       alias: {
-        stylus: resolve(__dirname, 'src', 'stylus'),
-      },
-    },
+        stylus: resolve(__dirname, 'src', 'stylus')
+      }
+    }
   })
 }
 
-function createTagPages(createPage, tags) {
+function createTagPages (createPage, tags) {
   const tagSet = new Set()
   const basePath = '/tag'
 
@@ -268,7 +270,7 @@ function createTagPages(createPage, tags) {
 
     Array.from(tagSet).forEach(tag => {
       createPage({
-        path: `${basePath}/${_.kebabCase(tag)}/`,
+        path: `${ basePath }/${ kebabCase(tag) }/`,
         component: join(templatePath, `tag-template.jsx`),
         context: {
           tag
@@ -278,7 +280,7 @@ function createTagPages(createPage, tags) {
   }
 }
 
-function createCategoryPages(createPage, category) {
+function createCategoryPages (createPage, category) {
   const categorySet = new Set()
   const basePath = '/categoria'
 
@@ -287,7 +289,7 @@ function createCategoryPages(createPage, category) {
 
     Array.from(categorySet).forEach(category => {
       createPage({
-        path: `${basePath}/${_.kebabCase(category)}/`,
+        path: `${ basePath }/${ kebabCase(category) }/`,
         component: join(templatePath, `category-template.jsx`),
         context: {
           category
@@ -297,39 +299,45 @@ function createCategoryPages(createPage, category) {
   }
 }
 
-function createSinglePages(createPage, frontmatter) {
+function createSinglePages (createPage, frontmatter) {
   const _layout = frontmatter.layout ? String(frontmatter.layout) : `project`
   const _slug = slugify(frontmatter.title, slugifySettings)
-  let _path = `/${_slug}`
+  let _path = `/${ _slug }`
 
   if (_layout === 'post') {
-    let _path = `/blog/${_slug}`
+    _path = `/blog/${ _slug }`
   }
 
   if (_layout === 'project') {
-    _path = `/projeto${_path}`
+    _path = `/projeto${ _path }`
   }
 
   if (frontmatter.path) {
-    _path = slugify(`${frontmatter.path}`, slugifySettings)
+    _path = slugify(`${ frontmatter.path }`, slugifySettings)
   }
 
   createPage({
     path: _path,
-    component: join(templatePath, `${_layout}-template.jsx`),
+    component: join(templatePath, `${ _layout }-template.jsx`),
     context: {}
   })
 }
 
-function contentPaginate(createPage, posts, path = '/blog', template = 'blog', totalPerPage = 12) {
+function contentPaginate (
+  createPage,
+  posts,
+  path = '/blog',
+  template = 'blog',
+  totalPerPage = 12
+) {
   const totalPages = Math.ceil(posts.edges.length / totalPerPage)
 
   Array.from({
     length: totalPages
   }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `${path}` : `${path}/${i + 1}`,
-      component: join(templatePath, `${template}-template.jsx`),
+      path: i === 0 ? `${ path }` : `${ path }/${ i + 1 }`,
+      component: join(templatePath, `${ template }-template.jsx`),
       context: {
         limit: totalPerPage,
         skip: i * totalPerPage,
@@ -340,6 +348,8 @@ function contentPaginate(createPage, posts, path = '/blog', template = 'blog', t
   })
 }
 
-function paginate(array, page_size, page_number) {
-  return array.slice(0).slice((page_number - 1) * page_size, page_number * page_size);
-}
+// function paginate (array, pageSize, pageNumber) {
+//   return array
+//     .slice(0)
+//     .slice((pageNumber - 1) * pageSize, pageNumber * pageSize)
+// }

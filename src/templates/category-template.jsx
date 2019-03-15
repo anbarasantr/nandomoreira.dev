@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { SEO, Layout, Container, PageHeader } from 'Components/Common'
+import { SEO, PageHeader } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 import { Post } from 'Components/Blog'
 
 const CategoryPage = ({ data, pageContext }) => {
   const { category } = pageContext
-  const categoryHeader = `${category}`
+  const categoryHeader = `${ category }`
 
   return (
-    <Layout>
+    <Main>
       <SEO
-        title={`Categoria: ${categoryHeader}`}
+        title={`Categoria: ${ categoryHeader }`}
         // description={post.frontmatter.description}
         // image={post.frontmatter.image.publicURL}
         // pathname={post.frontmatter.path}
@@ -22,14 +23,14 @@ const CategoryPage = ({ data, pageContext }) => {
           <Post post={post.node.frontmatter} key={i} />
         ))}
       </Container>
-    </Layout>
+    </Main>
   )
 }
 
 CategoryPage.propTypes = {
   pageContext: PropTypes.shape({
-    category: PropTypes.string.isRequired,
-  }),
+    category: PropTypes.string.isRequired
+  })
 }
 
 export default CategoryPage

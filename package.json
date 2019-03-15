@@ -7,17 +7,15 @@
   "license": "MIT",
   "main": "n/a",
   "keywords": [
-    "wordpress",
+    "articles",
+    "blog",
+    "development",
     "desenvolvedor",
-    "web",
-    "wp",
     "programador",
     "curitiba",
     "freelancer",
     "front-end",
     "frontend",
-    "ux",
-    "uxdesigner",
     "designer",
     "design",
     "programmer"
@@ -45,11 +43,17 @@
   "bugs": {
     "url": "https://github.com/nandomoreirame/nandomoreira.dev/issues"
   },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ],
   "scripts": {
     "dev": "npm run clean && gatsby develop",
     "dev:q": "NODE_ENV=development DEBUG=gatsby:query-watcher npm run dev",
     "build": "npm run clean && gatsby build",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "eslint": "eslint \"./**/*.{js,jsx}\"",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "serve": "npm run clean && gatsby serve",
     "watch": "npm run dev",
     "start": "npm run dev",
@@ -63,6 +67,7 @@
     "gatsby-image": "^2.0.33",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-favicon": "^3.1.5",
+    "gatsby-plugin-feed": "^2.0.15",
     "gatsby-plugin-google-analytics": "^2.0.17",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
@@ -81,10 +86,12 @@
     "gatsby-remark-responsive-iframe": "^2.0.10",
     "gatsby-source-filesystem": "^2.0.24",
     "gatsby-source-graphql": "^2.0.14",
+    "gatsby-source-mailchimp": "^0.7.0",
     "gatsby-transformer-remark": "^2.3.2",
     "gatsby-transformer-sharp": "^2.1.17",
     "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.5",
+    "lodash.kebabcase": "^4.1.1",
     "prismjs": "^1.15.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -98,5 +105,16 @@
     "slugify": "^1.3.4",
     "whatsapp-url": "^0.0.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0"
+  }
 }

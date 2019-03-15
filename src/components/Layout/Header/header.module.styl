@@ -1,0 +1,84 @@
+@import '~stylus/index.styl'
+
+.header
+  @extend .card
+  text-align left
+  z-index 1000
+  min-height 90px
+  border-radius 0
+  border-top .25rem solid $primary-color
+  animation fadeInTop 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 450ms both
+  border-radius 0
+  position fixed
+  width 100%
+  z-index 1000
+  top 0
+  left 0
+  margin 0
+  +above($desktop)
+    min-height 80px
+
+.inner
+  padding 1.875rem 0
+  +above($desktop)
+    padding .9375rem 0 1.25rem
+    display flex
+    align-items center
+    justify-content space-between
+
+.navRight,
+.navRight__button
+  display flex
+  align-items center
+  // justify-content center
+
+.navRight__button
+  padding 0 .625rem
+  line-height 2.5rem
+
+.darkSwitcher
+  background none transparent
+  border none
+  padding .3125rem .9375rem
+  margin 0 .3125rem 0 0
+  cursor pointer
+  +below($desktop-lg)
+    position fixed
+    top 25px
+    right 90px
+    z-index 1000
+  +below(330px)
+    top 95px
+    right 20px
+
+.donateLink
+  @extend .button
+  border 2px solid $primary-color
+  color $text-color
+  background-color transparent
+  +below($desktop-lg)
+    background-color $background-color
+  span, svg
+    display inline-block
+  svg
+    width 20px
+    height 20px
+    fill $primary-color
+  &:hover,
+  &:active,
+  &:focus
+    svg
+      fill $text-color
+  +above($desktop-lg)
+    position relative
+  +below($desktop-lg)
+    z-index 1000
+    position fixed
+    bottom 13px
+    right 13px
+
+@keyframes fadeIn
+  0%
+    opacity 0
+  100%
+    opacity 1

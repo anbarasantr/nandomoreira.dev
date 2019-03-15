@@ -9,8 +9,8 @@ export const AuthorBox = ({ author, socialIcons }) => (
       <Link to="/sobre" className={classes.AuthorBox__image}>
         <Image
           node={author.avatar}
-          title={`Foto do autor ${author.name}`}
-          alt={`Foto do autor ${author.name}`}
+          title={`Foto do autor ${ author.name }`}
+          alt={`Foto do autor ${ author.name }`}
         />
       </Link>
       <div className={classes.AuthorBox__body}>

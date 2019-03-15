@@ -1,13 +1,7 @@
 import React from 'react'
 
-import {
-  SEO,
-  Layout,
-  Container,
-  PageHeader,
-  Pagination,
-} from 'Components/Common'
-
+import { SEO, PageHeader, Pagination } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 import { Post } from 'Components/Blog'
 import classes from './bloglist.module.styl'
 
@@ -20,11 +14,11 @@ export const List = ({ data, pageContext }) => {
   const prevPage =
     currentPage - 1 === 1
       ? basePath
-      : `${basePath}/${(currentPage - 1).toString()}`
-  const nextPage = `${basePath}/${(currentPage + 1).toString()}`
+      : `${ basePath }/${ (currentPage - 1).toString() }`
+  const nextPage = `${ basePath }/${ (currentPage + 1).toString() }`
   const currentPath = isFirst
     ? basePath
-    : `${basePath}/${currentPage.toString()}`
+    : `${ basePath }/${ currentPage.toString() }`
 
   const paginate = {
     basePath,
@@ -33,18 +27,21 @@ export const List = ({ data, pageContext }) => {
     isFirst,
     isLast,
     prevPage,
-    nextPage,
+    nextPage
   }
 
   const title = 'Blog'
   const SEOtitle = isFirst
-    ? `${title} de Fernando Moreira`
-    : `${title} de Fernando Moreira - Página ${(currentPage - 1).toString()}`
+    ? `${ title } de Fernando Moreira`
+    : `${ title } de Fernando Moreira -
+        Página ${ (currentPage - 1).toString() }`
+
   const description =
-    'Artigos sobre Tecnologia, Programação, Design, Produtividade, Vida e muito mais'
+    `Artigos sobre Tecnologia, Programação, Design,
+      Produtividade, Vida e muito mais`
 
   return (
-    <Layout>
+    <Main>
       <SEO title={SEOtitle} description={description} pathname={currentPath} />
       <PageHeader smallTitle={title} title={description} />
       <Container className={classes.BlogList}>
@@ -56,6 +53,6 @@ export const List = ({ data, pageContext }) => {
           <Pagination paginate={paginate} />
         </section>
       </Container>
-    </Layout>
+    </Main>
   )
 }

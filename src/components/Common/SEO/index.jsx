@@ -1,14 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import kebabCase from 'lodash/kebabCase'
 
 export const SEO = ({
   title = null,
   description = null,
   image = null,
   pathname = null,
-  article = {},
+  article = {}
 }) => (
   <StaticQuery
     query={graphql`
@@ -39,21 +38,19 @@ export const SEO = ({
           defaultImage,
           twitterUsername,
           facebookAppID,
-          author,
-        },
-      },
+          author
+        }
+      }
     }) => {
       const data = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: `${siteUrl}${image || defaultImage}`,
-        url: `${siteUrl}${pathname || '/'}`,
+        image: `${ siteUrl }${ image || defaultImage }`,
+        url: `${ siteUrl }${ pathname || '/' }`,
         fbType: article.title ? `article` : `website`,
         card: `summary_large_image`,
-        appId: facebookAppID,
+        appId: facebookAppID
       }
-
-      const bodyClass = pathname ? kebabCase(pathname) : 'home'
 
       return (
         <Helmet title={data.title} titleTemplate={titleTemplate}>
@@ -73,7 +70,7 @@ export const SEO = ({
           <meta property="og:type" content={data.fbType} />
           <meta
             property="og:site_name"
-            content={`Site Portfolio e Blog de ${author.name}`}
+            content={`Site Portfolio e Blog de ${ author.name }`}
           />
           {article.title && (
             <meta property="article:author" content={author.name} />
@@ -97,10 +94,9 @@ export const SEO = ({
           <meta name="twitter:description" content={data.description} />
           <meta name="twitter:image" content={data.image} />
           <link rel="canonical" href={data.url} />
-          <link rel="author" href={`${siteUrl}/humans.txt`} />
-          <link rel="index" href={`${siteUrl}/`} />
+          <link rel="author" href={`${ siteUrl }/humans.txt`} />
+          <link rel="index" href={`${ siteUrl }/`} />
           <html lang="pt-br" />
-          <body className={`page-${bodyClass}`} />
         </Helmet>
       )
     }}

@@ -4,17 +4,17 @@ import { Icon } from 'Components/Common'
 import classes from './whatsapp.module.styl'
 
 export const WhatsApp = ({ phone, text }) => (
-  <span className={classes.whatsapp}>
+  <span className={`whatsApp ${ classes.whatsapp }`}>
     <a
       href={whatsAppUrl({
         phone,
-        text,
+        text
       })}
-      className={classes.link}
+      className={`whatsApp__link ${ classes.link }`}
       target="_blank"
       rel="noopener noreferrer"
     >
-      <span className={classes.message}>
+      <span className={`whatsApp__message ${ classes.message }`}>
         <span>Olá! Seja bem-vindo. </span>
         Vamos bater um papo?
       </span>

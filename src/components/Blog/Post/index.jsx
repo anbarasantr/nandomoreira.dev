@@ -13,7 +13,7 @@ export const Post = ({ post }) => {
       itemType="https://schema.org/BlogPosting"
     >
       <meta itemProp="mainEntityOfPage" content={post.path} />
-      <Link className={classes.inner} to={post.path}>
+      <Link className={`card ${ classes.inner }`} to={post.path}>
         <header className={classes.header}>
           <small>
             <span className={classes.category}>

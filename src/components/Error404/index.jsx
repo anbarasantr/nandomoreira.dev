@@ -12,19 +12,19 @@ const description =
 export const Error404 = ({ data }) => (
   <Fragment>
     <SEO title={title} description={description} pathname="/404.html" />
-    <div className={`error404 ${classes.error404}`}>
+    <div className={`error404 ${ classes.error404 }`}>
       <div className={classes.inner}>
         <h1>Oops! Nada por aqui. {title}</h1>
         <p>{description}</p>
 
         <div className={classes.buttons}>
-          <Link to="/" className={classes.button + ' ' + classes.buttonPrimary}>
+          <Link to="/" className={`button button--primary ${ classes.button }`}>
             <Icon id="arrow-left" style={{ padding: '5px' }} />
             <span> Página inicial </span>
           </Link>
           <Link
             to="/contato"
-            className={classes.button + ' ' + classes.buttonSecondary}
+            className={`button button--secondary ${ classes.button }`}
           >
             <span> Entre em contato </span>
             <Icon id="arrow-right" style={{ padding: '5px' }} />

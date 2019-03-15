@@ -4,7 +4,7 @@ import WhatsAppUrl from 'whatsapp-url'
 export const More = ({ data, classes }) => {
   const whatsAppLink = WhatsAppUrl({
     phone: data.site.siteMetadata.author.phone,
-    text: `Olá Fernando! Eu vi o seu site, e gostaria de conversar.`,
+    text: `Olá Fernando! Eu vi o seu site, e gostaria de conversar.`
   })
 
   return (

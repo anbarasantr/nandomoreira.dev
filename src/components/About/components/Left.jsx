@@ -5,7 +5,7 @@ import { Skills } from 'Components/About/Skills'
 
 export const Left = ({ data, classes }) => (
   <div className={classes.left}>
-    <div className={classes.inner}>
+    <div className={`card ${ classes.inner }`}>
       <Image
         node={data.file}
         className={classes.image}
@@ -21,7 +21,7 @@ export const Left = ({ data, classes }) => (
           clientId: '4503fb5f1ba64fcbb61b7994dd792cee',
           get: 'user', // popular, user
           userId: 304341723,
-          user: `${data.site.siteMetadata.author.instagram}`,
+          user: `${ data.site.siteMetadata.author.instagram }`
         }}
       />
 

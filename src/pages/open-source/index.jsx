@@ -1,7 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { SEO, Layout, Container, PageHeader, Icon } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
+import { SEO, PageHeader, Icon } from 'Components/Common'
 import { Skills } from 'Components/About/Skills'
 import { GithubList } from 'Components/Github'
 
@@ -55,21 +56,21 @@ const OpenSource = () => (
     render={({
       github: {
         repositoryOwner: {
-          repositories: { edges },
-        },
+          repositories: { edges }
+        }
       },
       site: {
-        siteMetadata: { skills, social },
-      },
+        siteMetadata: { skills, social }
+      }
     }) => (
-      <Layout>
+      <Main>
         <SEO title={title} description={description} pathname="/open-source" />
         <PageHeader smallTitle={title} title={description} />
         <Container>
           <GithubList repositories={edges} />
           <a
-            className="button buttonPrimary buttonFlex"
-            href={`${social.github}?tab=repositories`}
+            className="button button--primary buttonFlex"
+            href={`${ social.github }?tab=repositories`}
             target="_blank"
             rel="noopener noreferrer"
             style={{ margin: '30px 0' }}
@@ -79,7 +80,7 @@ const OpenSource = () => (
           </a>
           <Skills skills={skills} />
         </Container>
-      </Layout>
+      </Main>
     )}
   />
 )

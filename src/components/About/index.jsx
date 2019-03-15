@@ -1,5 +1,6 @@
 import React from 'react'
-import { SEO, Layout, Container, PageHeader } from 'Components/Common'
+import { SEO, PageHeader } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 import {
   Left,
   Right,
@@ -8,7 +9,7 @@ import {
   Now,
   Today,
   ThisProject,
-  More,
+  More
 } from 'Components/About/components'
 
 import classes from 'Components/About/about.module.styl'
@@ -20,10 +21,10 @@ const _age = _year - 1989
 
 const About = ({ data }) => {
   return (
-    <Layout>
+    <Main>
       <SEO
         title="Quem sou eu?"
-        description={`Meu nome é Fernando Moreira Costa (muito prazer). Tenho ${_age} anos, nasci e cresci em uma cidadezinha do interior de Rondônia chamada Ariquemes, sai de lá com 18 anos para me aventurar em Curitiba/PR onde moro atualmente.`}
+        description={`Meu nome é Fernando Moreira Costa (muito prazer). Tenho ${ _age } anos, nasci e cresci em uma cidadezinha do interior de Rondônia chamada Ariquemes, sai de lá com 18 anos para me aventurar em Curitiba/PR onde moro atualmente.`}
         image={data.file.childImageSharp.fixed.src}
         pathname="/sobre"
       />
@@ -32,7 +33,7 @@ const About = ({ data }) => {
         title={`Um programador não por formação mas por vocação.`}
       />
       <Container>
-        <div className={`about ${classes.about}`}>
+        <div className={`about ${ classes.about }`}>
           <Left data={data} classes={classes} />
           <Right data={data} classes={classes}>
             <Me age={_age} classes={classes} />
@@ -44,7 +45,7 @@ const About = ({ data }) => {
           </Right>
         </div>
       </Container>
-    </Layout>
+    </Main>
   )
 }
 

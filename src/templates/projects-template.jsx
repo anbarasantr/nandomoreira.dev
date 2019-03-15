@@ -1,14 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
-import {
-  SEO,
-  Layout,
-  Container,
-  PageHeader,
-  Pagination,
-} from 'Components/Common'
-
+import { SEO, PageHeader, Pagination } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 import { ProjectList } from 'Components/Projects'
 
 const basePath = `/portfolio`
@@ -20,11 +13,11 @@ export default ({ data, pageContext }) => {
   const prevPage =
     currentPage - 1 === 1
       ? basePath
-      : `${basePath}/${(currentPage - 1).toString()}`
-  const nextPage = `${basePath}/${(currentPage + 1).toString()}`
+      : `${ basePath }/${ (currentPage - 1).toString() }`
+  const nextPage = `${ basePath }/${ (currentPage + 1).toString() }`
   const currentPath = isFirst
     ? basePath
-    : `${basePath}/${currentPage.toString()}`
+    : `${ basePath }/${ currentPage.toString() }`
 
   const projects = data.portfolioThree.edges
 
@@ -35,18 +28,18 @@ export default ({ data, pageContext }) => {
     isFirst,
     isLast,
     prevPage,
-    nextPage,
+    nextPage
   }
 
   const title = 'Portfolio'
   const SEOtitle = isFirst
-    ? `${title} de Fernando Moreira`
-    : `${title} de Fernando Moreira - Página ${(currentPage - 1).toString()}`
+    ? `${ title } de Fernando Moreira`
+    : `${ title } de Fernando Moreira - Página ${ (currentPage - 1).toString() }`
   const description =
     'Gosto de criar ferramentas e aplicativos web de alta performance, também gosto de tornar o mundo para outras pessoas um pouco mais fácil, na maioria das vezes usando WordPress e/ou JavaScript.'
 
   return (
-    <Layout>
+    <Main>
       <SEO title={SEOtitle} description={description} pathname={currentPath} />
       <PageHeader
         smallTitle={title}
@@ -56,7 +49,7 @@ export default ({ data, pageContext }) => {
         <ProjectList projects={projects} />
         <Pagination paginate={paginate} />
       </Container>
-    </Layout>
+    </Main>
   )
 }
 

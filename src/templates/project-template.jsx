@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { ProjectSingle } from 'Components/Projects'
 
-export default function Template({ data }) {
+export default function Template ({ data }) {
   if (!data.markdownRemark) return null
   return <ProjectSingle data={data} />
 }

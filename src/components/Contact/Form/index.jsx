@@ -3,7 +3,7 @@ import { Alert } from 'Components/Common'
 import classes from './form.module.styl'
 
 export class ContactForm extends React.Component {
-  constructor() {
+  constructor () {
     super()
 
     this.state = {
@@ -13,13 +13,13 @@ export class ContactForm extends React.Component {
         phone: '',
         service: '',
         budget: '',
-        message: '',
+        message: ''
       },
       error: null,
       isLoading: false,
       wasSent: false,
       message: `Seu email foi enviado com sucesso.
-        Aguarde, que em breve retornarei com uma respota para o seu pedido.`,
+        Aguarde, que em breve retornarei com uma respota para o seu pedido.`
     }
 
     this.handleChangeField = this.handleChangeField.bind(this)
@@ -31,14 +31,14 @@ export class ContactForm extends React.Component {
     const formData = {
       ...this.state.formData,
       ...{
-        [event.target.name]: event.target.value,
-      },
+        [event.target.name]: event.target.value
+      }
     }
 
     this.setState({ formData })
   }
 
-  encode(data) {
+  encode (data) {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
@@ -55,33 +55,33 @@ export class ContactForm extends React.Component {
         phone: '',
         service: '',
         budget: '',
-        message: '',
-      },
+        message: ''
+      }
     })
   }
 
-  handleSubmitForm(event) {
+  handleSubmitForm (event) {
     this.setState({
-      isLoading: true,
+      isLoading: true
     })
 
     fetch(`/contato`, {
       method: `POST`,
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: this.encode({ 'form-name': 'contact', ...this.state.formData }),
+      body: this.encode({ 'form-name': 'contact', ...this.state.formData })
     })
       .then(res => this.handleSuccess(res))
       .catch(error => {
         this.setState({
           wasSent: false,
-          error,
+          error
         })
       })
 
     event.preventDefault()
   }
 
-  render() {
+  render () {
     const { services } = this.props
     const { error, isLoading, wasSent, message } = this.state
 
@@ -91,7 +91,7 @@ export class ContactForm extends React.Component {
       <form
         name="contact"
         action="/success"
-        className={classes.form}
+        className={`card form ${ classes.form }`}
         method="POST"
         onSubmit={this.handleSubmitForm}
         data-netlify-honeypot="bot-field"
@@ -166,7 +166,7 @@ export class ContactForm extends React.Component {
             id="formService"
             name="service"
             value={this.state.formData.service}
-            className={`${classes.input} ${classes.select}`}
+            className={`${ classes.input } ${ classes.select }`}
             onChange={this.handleChangeField}
             required
           >
@@ -187,7 +187,7 @@ export class ContactForm extends React.Component {
             id="formBudget"
             name="budget"
             value={this.state.formData.budget}
-            className={`${classes.input} ${classes.select}`}
+            className={`${ classes.input } ${ classes.select }`}
             onChange={this.handleChangeField}
             required
           >
@@ -206,16 +206,16 @@ export class ContactForm extends React.Component {
           <textarea
             id="formMessage"
             value={this.state.formData.message}
-            className={`${classes.input} ${classes.textarea}`}
+            className={`${ classes.input } ${ classes.textarea }`}
             onChange={this.handleChangeField}
             name="message"
             required
           />
         </div>
 
-        <div className={`${classes.group} ${classes.footer}`}>
+        <div className={`${ classes.group } ${ classes.footer }`}>
           <small>*Todos os campos são obrigatórios</small>
-          <button type="submit" className={`button ${classes.button}`}>
+          <button type="submit" className={`button button--primary ${ classes.button }`}>
             Ok, enviar
           </button>
         </div>

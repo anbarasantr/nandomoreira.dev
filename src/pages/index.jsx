@@ -2,8 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Home } from 'Components/Home'
 
-import 'Components/Common/Layout/base.styl'
-
 const Index = ({ data }) => (
   <Home
     title="Olá, eu me chamo Fernando Moreira"

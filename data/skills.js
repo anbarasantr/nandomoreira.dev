@@ -63,7 +63,7 @@ const skills = [
   'wordpress',
   'yarn',
   'yeoman',
-  'zend',
-];
+  'zend'
+]
 
 module.exports = skills

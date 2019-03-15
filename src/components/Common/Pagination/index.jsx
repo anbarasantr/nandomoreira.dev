@@ -7,12 +7,12 @@ export const Pagination = ({ paginate }) => {
   const { basePath, isFirst, prevPage, numPages, isLast, nextPage } = paginate
 
   return (
-    <div className={classes.pagination}>
+    <div className={`pagination ${ classes.pagination }`}>
       {!isFirst && (
         <Link
           to={prevPage}
           rel="prev"
-          className={`${classes.link} ${classes.linkPrev}`}
+          className={`pagination__link ${ classes.link } ${ classes.linkPrev }`}
         >
           <Icon id="arrow-left" style={{ padding: '5px' }} />
         </Link>
@@ -20,9 +20,9 @@ export const Pagination = ({ paginate }) => {
 
       {Array.from({ length: numPages }, (_, i) => (
         <Link
-          key={`pagination-number${i + 1}`}
-          to={`${i === 0 ? `${basePath}` : `${basePath}/${i + 1}`}`}
-          className={`${classes.link} ${classes.linkNumber}`}
+          key={`pagination-number${ i + 1 }`}
+          to={`${ i === 0 ? `${ basePath }` : `${ basePath }/${ i + 1 }` }`}
+          className={`pagination__link ${ classes.link } ${ classes.linkNumber }`}
           activeClassName={classes.linkCurrent}
         >
           {i + 1}
@@ -33,7 +33,7 @@ export const Pagination = ({ paginate }) => {
         <Link
           to={nextPage}
           rel="next"
-          className={`${classes.link} ${classes.linkNext}`}
+          className={`pagination__link ${ classes.link } ${ classes.linkNext }`}
         >
           <Icon id="arrow-right" style={{ padding: '5px' }} />
         </Link>

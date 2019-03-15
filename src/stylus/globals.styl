@@ -31,7 +31,7 @@
     outline none
     box-shadow none
 
-.buttonPrimary
+.button--primary
   color #fff
   background-color $primary-color
   border-color $primary-color
@@ -43,7 +43,7 @@
     background darken($primary-color, 20%)
     border-color darken($primary-color, 20%)
 
-.buttonSecondary
+.button--secondary
   color #fff
   background-color $secondary-color
   border-color $secondary-color
@@ -74,19 +74,15 @@
   justify-content center
 
 .card
-  width 100%
+  @extend .clearfix
   background-color #fff
   position relative
-  display block
   border-radius .625rem
   border 0 solid rgba(#000, .125)
   box-shadow 0 0 1.25rem rgba($secondary-color, .1)
   transition box-shadow .2s $timingFunction,
     transform .2s $timingFunction
-  @extend .clearfix
-
-.cardHover
   &:hover,
+  &:active,
   &:focus
-    box-shadow 0 0 0 .25rem $primary-color
-    transform translate3d(0, -0.3125rem, 0)
+    box-shadow none

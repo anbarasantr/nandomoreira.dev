@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Single } from 'Components/Blog'
 
-export default function Template({ data, pageContext }) {
+export default function Template ({ data, pageContext }) {
   if (!data.markdownRemark) return null
   return <Single data={data} pageContext={pageContext} />
 }

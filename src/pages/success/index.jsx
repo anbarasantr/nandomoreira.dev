@@ -1,13 +1,13 @@
 import React from 'react'
-import { Layout, Container } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 
 const styles = {
   padding: '120px 0 40px',
-  textAlign: 'center',
+  textAlign: 'center'
 }
 
 const SuccessPage = () => (
-  <Layout>
+  <Main>
     <Container>
       <div style={styles}>
         <h1>Seu email foi enviado com sucesso.</h1>
@@ -16,7 +16,7 @@ const SuccessPage = () => (
         </p>
       </div>
     </Container>
-  </Layout>
+  </Main>
 )
 
 export default SuccessPage

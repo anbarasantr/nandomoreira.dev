@@ -1,8 +1,9 @@
 @import '~stylus/index.styl'
 
 .list
-  display grid
-  // align-items center
-  grid-template-columns 1fr 1fr 1fr
-  // grid-template-rows 8fr
-  gap 1.2rem 1.2rem
+  +above($tablet)
+    display grid
+    align-items center
+    grid-template-columns 1fr 1fr 1fr
+    grid-template-rows 8fr
+    gap 1.2rem 1.2rem

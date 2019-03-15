@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import kebabCase from 'lodash/kebabCase'
+import kebabCase from 'lodash.kebabcase'
 import moment from 'moment'
 import 'moment/locale/pt-br'
-import { Container } from 'Components/Common'
+import { Container } from 'Components/Layout'
 import classes from './postSingle.module.styl'
 
 let styles = {}
@@ -13,7 +13,7 @@ export const Header = ({ frontmatter }) => {
 
   if (image.publicURL) {
     styles = {
-      backgroundImage: `url(${image.publicURL})`,
+      backgroundImage: `url(${ image.publicURL })`
     }
   }
 
@@ -26,7 +26,7 @@ export const Header = ({ frontmatter }) => {
           <h4 className={classes.category}>
             Categoria:{' '}
             <strong>
-              <Link to={`/categoria/${kebabCase(category[0])}`}>
+              <Link to={`/categoria/${ kebabCase(category[0]) }`}>
                 {category[0]}
               </Link>
             </strong>

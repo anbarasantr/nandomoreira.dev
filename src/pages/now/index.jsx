@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { Layout, SEO, Container, PageHeader } from 'Components/Common'
+import { SEO, PageHeader } from 'Components/Common'
+import { Main, Container } from 'Components/Layout'
 
 const title = 'O que estou fazendo agora?'
 
 export default () => (
-  <Layout>
+  <Main>
     <SEO
       title={title}
       description="Uma página tirada da idéia de Derek Sivers em Nownownow.com, onde blogueiros e proprietários de sites do mundo compartilham o que eles estão fazendo."
@@ -27,7 +28,7 @@ export default () => (
         eles estão fazendo.
       </p>
     </Container>
-  </Layout>
+  </Main>
 )
 
 export const nowQuery = graphql`

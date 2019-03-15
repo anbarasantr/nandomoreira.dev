@@ -8,6 +8,6 @@ export const SVG = ({
   ...props
 }) => (
   <svg width={size} height={size} fill={fill} {...props}>
-    <use xlinkHref={`${svg}#${id}`} />
+    <use xlinkHref={`${ svg }#${ id }`} />
   </svg>
 )

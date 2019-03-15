@@ -3,12 +3,12 @@ import { Icon } from 'Components/Common'
 import classes from './scrolltotop.module.styl'
 
 export class ScrollToTop extends React.Component {
-  constructor() {
+  constructor () {
     super()
 
     this.state = {
       showButton: false,
-      intervalId: 0,
+      intervalId: 0
     }
   }
 
@@ -20,15 +20,15 @@ export class ScrollToTop extends React.Component {
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     window.addEventListener('scroll', this.listenScrollEvent)
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     window.removeEventListener('scroll', this.listenScrollEvent)
   }
 
-  scrollStep() {
+  scrollStep () {
     if (window.pageYOffset === 0) {
       clearInterval(this.state.intervalId)
     }
@@ -36,7 +36,7 @@ export class ScrollToTop extends React.Component {
     window.scroll(0, window.pageYOffset - this.props.scrollStepInPx)
   }
 
-  scrollToTop() {
+  scrollToTop () {
     let intervalId = setInterval(
       this.scrollStep.bind(this),
       this.props.delayInMs
@@ -44,7 +44,7 @@ export class ScrollToTop extends React.Component {
     this.setState({ intervalId: intervalId })
   }
 
-  render() {
+  render () {
     return (
       <button
         title="Ir para o topo"
@@ -56,8 +56,8 @@ export class ScrollToTop extends React.Component {
           ...{
             transform: `translate3d(0, ${
               this.state.showButton ? '0' : '60px'
-            }, 0)`,
-          },
+            }, 0)`
+          }
         }}
         onClick={() => {
           this.scrollToTop()

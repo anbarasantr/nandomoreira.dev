@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { List } from 'Components/Blog'
 
-export default function Template({ data, pageContext }) {
+export default function Template ({ data, pageContext }) {
   if (!data.postsThree) return null
   return <List data={data} pageContext={pageContext} />
 }
