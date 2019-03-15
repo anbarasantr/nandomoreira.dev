@@ -55,6 +55,7 @@ export const contactQuery = graphql`
     site {
       siteMetadata {
         social {
+          paypal
           github
           instagram
           twitter

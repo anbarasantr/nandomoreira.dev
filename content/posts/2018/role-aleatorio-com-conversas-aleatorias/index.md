@@ -16,6 +16,9 @@ image: ../../images/role-aleatorio-ronaldinho.jpeg
 ## Música
 
 Música para esse artigo é: **"Estou na mão" de TNT**, [ouça aqui](https://open.spotify.com/track/0j2pDZRqF3cW7E5jlP5Yhv?si=YXweBEICQbquROummLyb3A).
+
+https://open.spotify.com/track/0j2pDZRqF3cW7E5jlP5Yhv?si=YXweBEICQbquROummLyb3A
+
 <br/>Trecho:
 
 ```text
@@ -29,8 +32,6 @@ Eu só quero amar
 Eu só quero amar você
 Eu tô na mão
 ```
-
-![Role aleatorio - Ronaldinho Gaucho](../../images/role-aleatorio-ronaldinho.jpeg 'Role aleatorio - Ronaldinho Gaucho')
 
 ## Introdução aleatória
 

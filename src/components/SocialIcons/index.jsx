@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import module from './socialIcons.module.styl'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 
 const defaultProps = {
   icons: {},
@@ -20,7 +20,7 @@ const SocialIcons = ({ icons, ...props }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon id={`icon-${item}`} style={{ padding: '4px' }} />
+            <Icon id={item} style={{ padding: '4px' }} />
           </a>
         </li>
       )

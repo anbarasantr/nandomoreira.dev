@@ -19,6 +19,7 @@ export const postQuery = graphql`
           bio
         }
         social {
+          paypal
           github
           instagram
           twitter

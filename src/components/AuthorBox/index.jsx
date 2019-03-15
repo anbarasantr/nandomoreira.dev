@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import Image from '../Image'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import SocialIcons from '../SocialIcons'
 import module from './authorbox.module.styl'
 
@@ -29,7 +29,7 @@ const AuthorBox = ({ author, socialIcons }) => (
           {author.bio}{' '}
           <Link to="/sobre" className={module.AuthorBox__linkabout}>
             <span>leia mais </span>
-            <Icon id="icon-arrow-right" fill="#50c290" />
+            <Icon id="arrow-right" fill="#50c290" />
           </Link>
         </p>
         <SocialIcons icons={socialIcons} style={{ marginLeft: '-.625rem' }} />

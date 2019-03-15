@@ -2,13 +2,14 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 import WhatsAppUrl from 'whatsapp-url'
-import SEO from 'components/SEO'
-import Layout from 'components/Layout'
-import Container from 'components/Container'
-import SocialIcons from 'components/SocialIcons'
-import PageHeader from 'components/PageHeader'
-import InstagramFeed from 'components/InstagramFeed'
-import Image from 'components/Image'
+import SEO from 'Components/SEO'
+import Layout from 'Components/Layout'
+import Container from 'Components/Container'
+import SocialIcons from 'Components/SocialIcons'
+import PageHeader from 'Components/PageHeader'
+import InstagramFeed from 'Components/InstagramFeed'
+import Image from 'Components/Image'
+import Skills from 'Components/Skills'
 
 import module from './about.module.styl'
 import './about.styl'
@@ -58,6 +59,8 @@ export default ({ data }) => {
                   user: `${data.site.siteMetadata.author.instagram}`,
                 }}
               />
+
+              <Skills size="small" />
             </div>
           </div>
           <div className={module.right}>
@@ -438,6 +441,7 @@ export const aboutQuery = graphql`
           instagram
         }
         social {
+          paypal
           github
           instagram
           twitter

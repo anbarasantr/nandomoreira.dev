@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import module from './nav.module.styl'
 
 class Nav extends React.Component {
@@ -41,10 +41,10 @@ class Nav extends React.Component {
         <input type="checkbox" id="toggleNav" onChange={this.handleNavToggle} />
         <label htmlFor="toggleNav" type="button" className={module.button}>
           {!this.state.isOpen && (
-            <Icon id="icon-menu" className={module.iconMenu} />
+            <Icon id="menu" className={module.iconMenu} />
           )}
           {this.state.isOpen && (
-            <Icon id="icon-close" className={module.iconClose} />
+            <Icon id="close" className={module.iconClose} />
           )}
         </label>
 

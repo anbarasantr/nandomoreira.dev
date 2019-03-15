@@ -1,77 +1,21 @@
 const rupture = require('rupture')
-const {
-  join
-} = require('path')
-const {
-  author,
-  bugs,
-  description,
-  homepage,
-  keywords,
-  name,
-  repository,
-  version,
-} = require('./package.json')
+const path = require('path')
+const config = require('./data/config')
 
-const isProduction = process.env.NODE_ENV === 'production'
-const siteUrl = isProduction ? homepage : 'http://localhost:8000'
-const subTitle = `· Desenvolvedor front-end e WordPress em Curitiba/PR`
-const title = `${author.name} ${subTitle}`
+const {
+  siteMetadata,
+  favicon,
+  pluginFonts,
+  remarkImages,
+  remarkPrismjs,
+  pluginSitemap,
+  pluginAnalytics,
+  pluginManifest,
+  pluginGraphql,
+} = config
 
 module.exports = {
-  siteMetadata: {
-    isProduction,
-    name,
-    version,
-    title,
-    defaultTitle: title,
-    titleTemplate: `%s ${subTitle}`,
-    siteUrl,
-    description,
-    defaultDescription: description,
-    image: '/share.jpg',
-    defaultImage: '/share.jpg',
-    author,
-    disqusShortname: author.disqus,
-    twitterUsername: `@${author.twitter}`,
-    facebookAppID: '',
-    keywords,
-    repo: {
-      ...bugs,
-      ...repository,
-    },
-    social: {
-      github: `https://github.com/${author.github}`,
-      twitter: `https://twitter.com/${author.twitter}`,
-      codepen: `https://codepen.io/${author.codepen}`,
-      npm: `https://www.npmjs.com/${author.npm}`,
-      linkedin: `https://linkedin.com/in/${author.linkedin}`,
-      instagram: `https://instagram.com/${author.instagram}`,
-      dribbble: `https://dribbble.com/${author.dribbble}`,
-      behance: `https://www.behance.net/${author.behance}`,
-    },
-    navLinks: [{
-        name: 'Sobre mim',
-        path: '/sobre',
-      },
-      // {
-      //   name: 'O que eu faço',
-      //   path: '/servicos',
-      // },
-      {
-        name: 'Portfolio',
-        path: '/portfolio',
-      },
-      {
-        name: 'Blog',
-        path: '/blog',
-      },
-      {
-        name: 'Contato',
-        path: '/contato',
-      },
-    ],
-  },
+  siteMetadata,
   plugins: [{
       resolve: `gatsby-plugin-stylus`,
       options: {
@@ -82,38 +26,42 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: join(__dirname, `src`, `pages`),
+        path: path.join(__dirname, `src`, `pages`),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
-        path: join(__dirname, `content`),
+        path: path.join(__dirname, `content`),
       },
     },
     {
       resolve: `gatsby-plugin-sitemap`,
-      options: {
-        output: `/sitemap.xml`,
-        exclude: [`/tags`, `/tag/*`, `/categoria`, `/categoria/*`, `/404`, `/404.html`],
-      }
+      options: pluginSitemap,
     },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `${author.name}`,
-        short_name: `${name}`,
-        start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#40b883',
-        display: 'minimal-ui',
-        icon: 'static/icon.png',
-      },
+      options: pluginManifest,
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-source-graphql',
+      options: pluginGraphql,
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          Components: path.resolve(__dirname, 'src/components'),
+          Templates: path.resolve(__dirname, 'src/templates'),
+          Static: path.resolve(__dirname, 'static'),
+          Data: path.resolve(__dirname, 'data'),
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -132,22 +80,11 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-              linkImagesToOriginal: false,
-              sizeByPixelDensity: true,
-              showCaptions: true,
-            },
+            options: remarkImages,
           },
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: true,
-            },
+            options: remarkPrismjs,
           },
           {
             resolve: `@raae/gatsby-remark-oembed`,
@@ -169,42 +106,15 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [{
-            family: `Nunito`,
-            variants: [`200`, `400`, `800`]
-          },
-          {
-            family: `Open Sans`,
-            variants: [`300`, `400`, `500`, `800`]
-          },
-        ],
-      },
+      options: pluginFonts,
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: isProduction ? 'UA-125092358-1' : 'UA-000000000-1',
-        head: true
-      }
+      options: pluginAnalytics
     },
     {
       resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './static/icon.png',
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: true,
-          favicons: true,
-          firefox: true,
-          twitter: true,
-          yandex: true,
-          windows: true
-        }
-      }
+      options: favicon,
     },
   ],
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import module from './pagination.module.styl'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 
 export default ({ paginate }) => {
   const { basePath, isFirst, prevPage, numPages, isLast, nextPage } = paginate
@@ -14,7 +14,7 @@ export default ({ paginate }) => {
           rel="prev"
           className={`${module.link} ${module.linkPrev}`}
         >
-          <Icon id="icon-arrow-left" style={{ padding: '5px' }} />
+          <Icon id="arrow-left" style={{ padding: '5px' }} />
         </Link>
       )}
 
@@ -35,7 +35,7 @@ export default ({ paginate }) => {
           rel="next"
           className={`${module.link} ${module.linkNext}`}
         >
-          <Icon id="icon-arrow-right" style={{ padding: '5px' }} />
+          <Icon id="arrow-right" style={{ padding: '5px' }} />
         </Link>
       )}
     </div>

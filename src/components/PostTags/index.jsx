@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import kebabCase from 'lodash/kebabCase'
 import module from './postTags.module.styl'
 
@@ -8,7 +8,7 @@ const PostTags = ({ tags, showLinks = true, ...props }) => {
   return (
     <aside className={`PostTags ${module.list}`} {...props}>
       <span>
-        <Icon id="icon-tags" fill="#435b71" />
+        <Icon id="tags" fill="#25ced1" />
       </span>
       <nav itemProp="keywords">
         {tags.map((tag, index) => {

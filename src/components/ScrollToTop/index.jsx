@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import module from './scrolltotop.module.styl'
 
 class ScrollToTop extends React.Component {
@@ -64,10 +64,10 @@ class ScrollToTop extends React.Component {
         }}
       >
         <Icon
-          id="icon-chevron-square-up-f"
+          id="chevron-square-up-f"
           className={module.scrollToTop__arrow}
           size="40px"
-          fill="#435b71"
+          fill="#25ced1"
           style={{ padding: '0' }}
         />
       </button>

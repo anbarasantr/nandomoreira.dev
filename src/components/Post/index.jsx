@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import module from './post.module.styl'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import PostTags from '../PostTags'
 
 export default ({ post }) => {
@@ -40,8 +40,8 @@ export default ({ post }) => {
           <div className={module.footer}>
             <PostTags tags={tags} showLinks={false} />
             <Icon
-              id="icon-arrow-right"
-              fill="#435b71"
+              id="arrow-right"
+              fill="#25ced1"
               className={module.iconRight}
             />
           </div>

@@ -1,11 +1,12 @@
 import React from 'react'
-// import Icon from '../Icons'
+import Skill from '../Icons/Skills'
+import Icon from '../Icons/Icon'
 import module from './footer.module.styl'
 
 const Footer = () => (
   <footer className={module.Footer}>
     {/* <button role="button" type="button">
-      <Icon id="icon-moon" />
+      <Icon id="moon" />
     </button> */}
     <span>
       Desenvolvido em{' '}
@@ -13,28 +14,39 @@ const Footer = () => (
         Curitiba-PR, Brasil
       </address>{' '}
       com o{' '}
-      <span role="img" aria-label="coração" title="coração">
-        ❤
-      </span>{' '}
+      <Icon
+        id="heart"
+        size="20"
+        role="img"
+        aria-label="coração"
+        title="coração"
+      />{' '}
       por <strong>Fernando Moreira</strong>, usando{' '}
       <a
         href="https://www.gatsbyjs.org/"
         target="_blank"
         rel="noopener noreferrer"
+        title="Desenvolvido usando React com Gatsby"
       >
-        Gatsby
+        <Skill id="gatsby" size="18px" />
       </a>{' '}
       e hospedado no{' '}
-      <a href="https://netlify.com/" target="_blank" rel="noopener noreferrer">
-        Netlify
+      <a
+        href="https://netlify.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Hospedado no Netlify"
+      >
+        <Skill id="netlify" size="18px" />
       </a>
-      . Veja o{' '}
+      . Veja o código no{' '}
       <a
         href="https://github.com/nandomoreirame/nandomoreira.dev"
         target="_blank"
         rel="noopener noreferrer"
+        title="Veja o código no Github"
       >
-        código-fonte
+        <Skill id="github" size="18px" />
       </a>
       .
     </span>

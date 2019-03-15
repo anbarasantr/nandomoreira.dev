@@ -1,6 +1,6 @@
 import React from 'react'
 import whatsAppUrl from 'whatsapp-url'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import module from './whatsapp.module.styl'
 
 const WhatsApp = ({ phone, text }) => (
@@ -18,7 +18,7 @@ const WhatsApp = ({ phone, text }) => (
         <span>Olá! Seja bem-vindo. </span>
         Vamos bater um papo?
       </span>
-      <Icon className={module.icon} id="icon-whatsapp" />
+      <Icon className={module.icon} id="whatsapp" />
     </a>
   </span>
 )

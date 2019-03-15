@@ -8,6 +8,7 @@ import WhatsApp from '../WhatsApp'
 import module from './layout.module.styl'
 
 import './base.styl'
+import './data-tooltip.styl'
 import './highlight.styl'
 
 export default ({ children, ...props }) => (

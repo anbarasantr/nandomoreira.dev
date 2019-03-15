@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Image from '../Image'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import module from './project.module.styl'
 import './project.styl'
 
@@ -20,7 +20,7 @@ const Project = ({ project, mod }) => (
           <p className={module.description}>{project.description}</p>
           <div className={`Project__view ${module.view}`}>
             <span>Ver projeto </span>
-            <Icon id="icon-arrow-right" />
+            <Icon id="arrow-right" />
           </div>
         </div>
       </div>

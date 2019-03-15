@@ -9,7 +9,7 @@ import Image from '../Image'
 import Layout from '../Layout'
 import Container from '../Container'
 import PostProgress from '../PostProgress'
-import Icon from '../Icons'
+import Icon from '../Icons/Icon'
 import PostTags from '../PostTags'
 import SocialShare from '../SocialShare'
 import module from './projectSingle.module.styl'
@@ -59,7 +59,7 @@ const ProjectSingle = ({ data }) => {
               post.frontmatter.category[0] !== 'Download' && (
                 <span>
                   <Icon
-                    id="icon-close"
+                    id="close"
                     fill="#898989"
                     style={{
                       padding: '5px',
