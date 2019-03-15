@@ -16,6 +16,7 @@ const Footer = () => (
       com o{' '}
       <Icon
         id="heart"
+        fill="#f00"
         size="20"
         role="img"
         aria-label="coração"

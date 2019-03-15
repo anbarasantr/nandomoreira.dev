@@ -6,11 +6,12 @@ import Layout from 'components/Layout'
 import Container from 'components/Container'
 import PageHeader from 'components/PageHeader'
 import Skills from 'components/Skills'
+import Github from 'components/Github'
 
-const title = 'Projetos open-source'
-const description = 'Projetos open-source'
+const title = 'Open-source'
+const description = 'Últimos projetos open-source que eu trabalhei recentemente'
 
-const OpenSourceProjects = () => (
+const OpenSource = () => (
   <StaticQuery
     query={graphql`
       {
@@ -54,30 +55,9 @@ const OpenSourceProjects = () => (
     }) => (
       <Layout>
         <SEO title={title} description={description} pathname="/open-source" />
-        <PageHeader title={title}>
-          <p>{description}</p>
-        </PageHeader>
+        <PageHeader smallTitle={title} title={description} />
         <Container>
-          {edges.map(({ node }, i) => (
-            <a
-              key={i}
-              href={node.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card card--hover"
-              style={{ padding: '25px', margin: '60px 0' }}
-            >
-              <div>
-                <h4>{node.name}</h4>
-                <p>description: {node.description}</p>
-                <p>homepageUrl: {node.homepageUrl}</p>
-                <p>createdAt: {node.createdAt}</p>
-                <p>pushedAt: {node.pushedAt}</p>
-                <p>updatedAt: {node.updatedAt}</p>
-                <p>forks: {node.forkCount}</p>
-              </div>
-            </a>
-          ))}
+          <Github repositories={edges} />
           <Skills />
         </Container>
       </Layout>
@@ -85,4 +65,4 @@ const OpenSourceProjects = () => (
   />
 )
 
-export default OpenSourceProjects
+export default OpenSource

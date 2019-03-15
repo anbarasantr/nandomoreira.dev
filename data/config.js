@@ -46,6 +46,10 @@ const navLinks = [{
     path: '/portfolio',
   },
   {
+    name: 'Open-source',
+    path: '/open-source',
+  },
+  {
     name: 'Blog',
     path: '/blog',
   },
