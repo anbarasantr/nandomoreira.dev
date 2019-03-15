@@ -249,8 +249,12 @@ exports.onCreateWebpackConfig = ({
       modules: [
         resolve(__dirname),
         resolve(__dirname, 'src'),
+        resolve(__dirname, 'src', 'stylus'),
         'node_modules'
       ],
+      alias: {
+        stylus: resolve(__dirname, 'src', 'stylus'),
+      },
     },
   })
 }

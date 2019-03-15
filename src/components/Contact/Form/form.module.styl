@@ -1,0 +1,76 @@
+@import '~stylus/index.styl'
+
+.form
+  @extend .card
+  @extend .clearfix
+  padding 1.5625rem
+  margin 1.875rem auto
+  +above($tablet)
+    width 90%
+    margin 0 auto
+
+  fieldset
+    margin 1.5rem 0
+
+  legend
+    padding-bottom .625rem
+    margin-bottom 1.25rem
+    font-size 1.125rem
+    border-bottom .0625rem solid rgba(#000, .1)
+
+.label
+  cursor pointer
+  font-size 1rem
+  margin-bottom .625rem
+  opacity 0.6
+
+.label,
+.group,
+.input
+  display block
+  width 100%
+  appearance none
+
+.group
+  margin-bottom .9375rem
+
+// .button
+  // float right
+
+.input
+  padding 12px
+  border 1px solid rgba(#000, .25)
+  background-color #fff
+  border-radius .25rem
+  box-shadow inset 0 1px 1px rgba(#000, 0.08)
+  font-size 1rem
+  // padding-left 54px
+
+.select
+  background #fff url(./select-arrow.svg) no-repeat 97% 50%
+  cursor pointer
+
+.textarea
+  height 7.5rem
+
+.footer
+  padding-top .9375rem
+  margin-top .9375rem
+  border-top 1px solid rgba(#000, .1)
+  display flex
+  flex-direction column-reverse
+  flex-wrap wrap
+  +above($tablet)
+    justify-content space-between
+    align-items center
+    flex-direction row
+    flex-wrap no-wrap
+  small
+    opacity 0.6
+    display block
+    text-align center
+    margin-top .9375rem
+    +above($tablet)
+      display inline-block
+      text-align left
+      margin-top 0

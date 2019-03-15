@@ -1,12 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import SEO from 'components/SEO'
-import Layout from 'components/Layout'
-import Container from 'components/Container'
-import PageHeader from 'components/PageHeader'
-import ProjectList from 'components/ProjectList'
-import Pagination from 'components/Pagination'
+import {
+  SEO,
+  Layout,
+  Container,
+  PageHeader,
+  Pagination,
+} from 'Components/Common'
+
+import { ProjectList } from 'Components/Projects'
 
 const basePath = `/portfolio`
 

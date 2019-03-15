@@ -1,9 +1,6 @@
 import React from 'react'
 
-import SEO from 'components/SEO'
-import Layout from 'components/Layout'
-import Container from 'components/Container'
-import PageHeader from 'components/PageHeader'
+import { Layout, SEO, Container, PageHeader } from 'Components/Common'
 
 const title = 'FAQ'
 const description = 'FAQ'

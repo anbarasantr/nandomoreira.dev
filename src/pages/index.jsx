@@ -1,23 +1,21 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from 'components/SEO'
-import Hero from 'components/Hero'
-import 'components/Layout/base.styl'
+import { Home } from 'Components/Home'
 
-const Home = ({ data }) => (
-  <Fragment>
-    <SEO title="Olá, eu me chamo Fernando Moreira" />
-    <Hero
-      navLinks={data.site.siteMetadata.navLinks}
-      socialIcons={data.site.siteMetadata.social}
-    />
-  </Fragment>
+import 'Components/Common/Layout/base.styl'
+
+const Index = ({ data }) => (
+  <Home
+    title="Olá, eu me chamo Fernando Moreira"
+    navLinks={data.site.siteMetadata.navLinks}
+    social={data.site.siteMetadata.social}
+  />
 )
 
-export default Home
+export default Index
 
-export const homeQuery = graphql`
-  query HomeQuery {
+export const indexQuery = graphql`
+  query IndexQuery {
     site {
       siteMetadata {
         navLinks {

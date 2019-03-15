@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import BlogList from 'components/BlogList'
+import { List } from 'Components/Blog'
 
 export default ({ data, pageContext }) => (
-  <BlogList data={data} pageContext={pageContext} />
+  <List data={data} pageContext={pageContext} />
 )
 
 export const blogQuery = graphql`

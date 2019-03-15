@@ -1,11 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
-import SEO from 'components/SEO'
-import Layout from 'components/Layout'
-import Container from 'components/Container'
-import PageHeader from 'components/PageHeader'
+import { SEO, Layout, Container, PageHeader } from 'Components/Common'
 
 const Tags = ({ data, pageContext }) => {
   if (!data.postsTagsThree) return null

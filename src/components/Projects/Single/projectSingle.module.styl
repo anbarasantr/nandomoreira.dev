@@ -1,0 +1,42 @@
+@import '~stylus/index.styl'
+
+.projectSingle
+  padding 0
+  +above($tablet)
+    padding-top 6.25rem
+
+.header
+  padding 1.875rem 0
+  border-bottom 1px solid rgba(#000, .1)
+  margin-bottom 1.875rem
+  h1
+    margin 0
+
+.container
+  max-width 37.5rem
+  margin 0 auto
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
+
+.sectionTitle
+  font-size .75rem
+  font-weight 600
+  letter-spacing .125rem
+  color #7D7D80
+  text-transform uppercase
+  margin 0 0 .625rem 0
+  display inline-block
+
+p.sectionText
+  font-size 1rem
+  line-height 1.625rem
+  font-weight 400
+  color #19191A
+  margin 0 0 1.875rem
+
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1

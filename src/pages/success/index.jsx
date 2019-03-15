@@ -1,6 +1,5 @@
 import React from 'react'
-import Layout from 'components/Layout'
-import Container from 'components/Container'
+import { Layout, Container } from 'Components/Common'
 
 const styles = {
   padding: '120px 0 40px',

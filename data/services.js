@@ -1,4 +1,4 @@
-export default [{
+const services = [{
     title: 'Applicativos web',
     description: 'Precisa desenvolver um app web? Eu projeto e desenvolvo a solução completa para você.',
   },
@@ -39,3 +39,5 @@ export default [{
     description: 'Criação de Sites desde a concepção, planejamento, design, publicação e acompanhamento.',
   },
 ]
+
+module.exports = services

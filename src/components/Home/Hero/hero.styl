@@ -1,0 +1,29 @@
+@import '~stylus/index.styl'
+
+.hero
+  .nav
+    margin-bottom .9375rem
+
+  .nav__link
+    +above($tablet)
+      font-size 1.375rem
+
+  .nav__item
+    font-size 1.25rem
+    +above($tablet)
+      text-transform uppercase
+      animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1300ms both
+
+  .SocialIcons
+    margin-top 1.875rem
+    animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1700ms both
+    li:first-child
+      margin-left 0
+
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1

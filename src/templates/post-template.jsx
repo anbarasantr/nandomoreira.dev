@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PostSingle from 'components/PostSingle'
+import { Single } from 'Components/Blog'
 
 export default function Template({ data, pageContext }) {
   if (!data.markdownRemark) return null
-  return <PostSingle data={data} pageContext={pageContext} />
+  return <Single data={data} pageContext={pageContext} />
 }
 
 export const postQuery = graphql`

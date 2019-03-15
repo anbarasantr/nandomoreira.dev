@@ -9,8 +9,17 @@ const {
   version,
 } = require('../package.json')
 
+const services = require('./services')
+const skills = require('./skills')
+
 const isProduction = process.env.NODE_ENV === 'production'
 const siteUrl = isProduction ? homepage : 'http://localhost:8000'
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || 'foo-bar'
 
 const defaultImage = '/share.jpg'
 const subTitle = `· Desenvolvedor front-end e WordPress em Curitiba/PR`
@@ -79,6 +88,8 @@ const siteMetadata = {
   repo,
   social,
   navLinks,
+  services,
+  skills,
 }
 
 const pluginFonts = {
@@ -149,7 +160,7 @@ const pluginGraphql = {
   fieldName: 'github',
   url: 'https://api.github.com/graphql',
   headers: {
-    Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+    Authorization: `bearer ${GITHUB_TOKEN}`,
   },
   fetchOptions: {},
 }

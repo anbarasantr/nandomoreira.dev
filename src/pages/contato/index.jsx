@@ -1,13 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from 'components/Layout'
-import SEO from 'components/SEO'
-import Container from 'components/Container'
-import SocialIcons from 'components/SocialIcons'
-import PageHeader from 'components/PageHeader'
-import ContactForm from 'components/Form'
-import module from './contact.module.styl'
+import {
+  Layout,
+  Container,
+  SEO,
+  PageHeader,
+  SocialIcons,
+} from 'Components/Common'
+import { ContactForm } from 'Components/Contact'
+import classes from './contact.module.styl'
 
 const title = 'Contato'
 const description =
@@ -18,8 +20,8 @@ const Contact = ({ data }) => (
     <SEO title={title} description={description} pathname="/contato" />
     <PageHeader smallTitle="E aí, vamos conversar?" title={description} />
     <Container>
-      <div className={module.contact}>
-        <div className={module.left}>
+      <div className={classes.contact}>
+        <div className={classes.left}>
           <p>
             <span>Envie um email para: </span>
             <a className="Contact__email" href="mailto:hi@nandomoreira.dev">
@@ -40,8 +42,8 @@ const Contact = ({ data }) => (
             style={{ textAlign: 'center' }}
           />
         </div>
-        <div className={module.right}>
-          <ContactForm />
+        <div className={classes.right}>
+          <ContactForm services={data.site.siteMetadata.services} />
         </div>
       </div>
     </Container>
@@ -54,6 +56,10 @@ export const contactQuery = graphql`
   query ContactQuery {
     site {
       siteMetadata {
+        services {
+          title
+          description
+        }
         social {
           paypal
           github

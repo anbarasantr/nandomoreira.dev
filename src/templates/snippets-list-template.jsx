@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import BlogList from 'components/BlogList'
+import { List } from 'Components/Blog'
 
 export default function Template({ data, pageContext }) {
   if (!data.postsThree) return null
-  return <BlogList data={data} pageContext={pageContext} />
+  return <List data={data} pageContext={pageContext} />
 }
 
 export const snippetsListQuery = graphql`

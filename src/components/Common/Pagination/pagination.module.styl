@@ -1,0 +1,32 @@
+@import '~stylus/index.styl'
+
+.pagination
+  display flex
+  justify-content center
+  align-items center
+  padding-left 0
+  list-style none
+  margin 3.75rem 0
+  @extend .clearfix
+
+.link
+  width 2.5rem
+  height 2.5rem
+  line-height 2.5rem
+  border-radius 50%
+  box-shadow 0 0 .0625rem 0 rgba($primary-color, .1), 0 .25rem .875rem rgba($primary-color, .1)
+  margin 0 .3125rem
+  background-color transparent
+  border none
+  transition background-color .2s $timingFunction, box-shadow .2s $timingFunction
+  text-align center
+  color #555
+  padding 0
+  display flex
+  align-items center
+  justify-content center
+
+.link:hover,
+.linkCurrent
+  background-color #fff
+  box-shadow 0 0 0 .125rem $primary-color

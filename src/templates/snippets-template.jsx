@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-// import Link from 'gatsby-link'
-import Layout from 'components/Layout'
-import Container from 'components/Container'
+import { Layout, Container } from 'Components/Common'
 
 export default function Template({ data }) {
   if (!data.markdownRemark) return null

@@ -1,4 +1,4 @@
-export default [
+const skills = [
   'angular',
   'apache',
   'apple',
@@ -65,3 +65,5 @@ export default [
   'yeoman',
   'zend',
 ];
+
+module.exports = skills

@@ -1,20 +1,26 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import SEO from 'components/SEO'
-import Layout from 'components/Layout'
-import Container from 'components/Container'
-import PageHeader from 'components/PageHeader'
-import Skills from 'components/Skills'
-import Github from 'components/Github'
+import { SEO, Layout, Container, PageHeader, Icon } from 'Components/Common'
+import { Skills } from 'Components/About/Skills'
+import { GithubList } from 'Components/Github'
 
 const title = 'Open-source'
-const description = 'Últimos projetos open-source que eu trabalhei recentemente'
+const description =
+  'Esses são os projetos open-source que tenho trabalhado nos últimos meses'
 
 const OpenSource = () => (
   <StaticQuery
     query={graphql`
       {
+        site {
+          siteMetadata {
+            skills
+            social {
+              github
+            }
+          }
+        }
         github {
           repositoryOwner(login: "nandomoreirame") {
             repositories(
@@ -52,13 +58,26 @@ const OpenSource = () => (
           repositories: { edges },
         },
       },
+      site: {
+        siteMetadata: { skills, social },
+      },
     }) => (
       <Layout>
         <SEO title={title} description={description} pathname="/open-source" />
         <PageHeader smallTitle={title} title={description} />
         <Container>
-          <Github repositories={edges} />
-          <Skills />
+          <GithubList repositories={edges} />
+          <a
+            className="button buttonPrimary buttonFlex"
+            href={`${social.github}?tab=repositories`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ margin: '30px 0' }}
+          >
+            <Icon id="github" />
+            <span>Ver mais projetos</span>
+          </a>
+          <Skills skills={skills} />
         </Container>
       </Layout>
     )}
