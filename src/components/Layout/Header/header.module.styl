@@ -1,7 +1,6 @@
 @import '~stylus/index.styl'
 
-.header
-  @extend .card
+.card
   text-align left
   z-index 1000
   min-height 90px
@@ -26,56 +25,9 @@
     align-items center
     justify-content space-between
 
-.navRight,
-.navRight__button
+.navRight
   display flex
   align-items center
-  // justify-content center
-
-.navRight__button
-  padding 0 .625rem
-  line-height 2.5rem
-
-.darkSwitcher
-  background none transparent
-  border none
-  padding .3125rem .9375rem
-  margin 0 .3125rem 0 0
-  cursor pointer
-  +below($desktop-lg)
-    position fixed
-    top 25px
-    right 90px
-    z-index 1000
-  +below(330px)
-    top 95px
-    right 20px
-
-.donateLink
-  @extend .button
-  border 2px solid $primary-color
-  color $text-color
-  background-color transparent
-  +below($desktop-lg)
-    background-color $background-color
-  span, svg
-    display inline-block
-  svg
-    width 20px
-    height 20px
-    fill $primary-color
-  &:hover,
-  &:active,
-  &:focus
-    svg
-      fill $text-color
-  +above($desktop-lg)
-    position relative
-  +below($desktop-lg)
-    z-index 1000
-    position fixed
-    bottom 13px
-    right 13px
 
 @keyframes fadeIn
   0%

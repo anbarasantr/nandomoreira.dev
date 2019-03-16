@@ -12,13 +12,19 @@
     font-size 1.25rem
     +above($tablet)
       text-transform uppercase
-      animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1300ms both
+      animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1600ms both
 
   .socialIcons
     margin-top 1.875rem
-    animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1700ms both
+    animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2000ms both
     li:first-child
       margin-left 0
+
+  .dark-switcher
+    +above($desktop-lg)
+      position fixed
+      top 1.25rem
+      right 1.25rem
 
 @keyframes fadeInBottom
   0%

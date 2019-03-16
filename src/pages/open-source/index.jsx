@@ -26,7 +26,7 @@ const OpenSource = () => (
           repositoryOwner(login: "nandomoreirame") {
             repositories(
               first: 12
-              orderBy: { field: CREATED_AT, direction: DESC }
+              orderBy: { field: UPDATED_AT, direction: DESC }
             ) {
               edges {
                 node {

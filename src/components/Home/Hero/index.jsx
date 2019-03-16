@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { SocialIcons } from 'Components/Common'
+import { SocialIcons, DarkSwitcher } from 'Components/Common'
 import { Nav } from 'Components/Layout'
 import classes from './hero.module.styl'
 import './hero.styl'
@@ -24,14 +24,15 @@ export const Hero = ({ navLinks, socialIcons }) => (
       >
         Sou um <strong itemProp="jobTitle">desenvolvedor front-end</strong>.{' '}
         <a
-          href="http://agencia.nossacausa.com/"
+          href="https://onedev.studio/"
           target="_blank"
           rel="noopener noreferrer"
-        >Ajudo ONGs</a> e pequenas empresas a criar projetos web personalizados de alta
+        >Ajudo ONGs e pequenas empresas</a> a criar projetos web personalizados de alta
         qualidade. No meu tempo livre eu <Link to="/blog">escrevo em meu blog</Link> e contribuo com projetos <Link to="/open-source">open source</Link>.
       </p>
       <Nav navLinks={navLinks} />
       <SocialIcons icons={socialIcons} />
+      <DarkSwitcher />
     </div>
   </div>
 )

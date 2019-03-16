@@ -122,7 +122,7 @@ export class ContactForm extends React.Component {
             type="text"
             name="name"
             value={this.state.formData.name}
-            className={classes.input}
+            className={`form__input ${ classes.input }`}
             onChange={this.handleChangeField}
             required
           />
@@ -137,7 +137,7 @@ export class ContactForm extends React.Component {
             type="email"
             name="email"
             value={this.state.formData.email}
-            className={classes.input}
+            className={`form__input ${ classes.input }`}
             onChange={this.handleChangeField}
             required
           />
@@ -152,7 +152,7 @@ export class ContactForm extends React.Component {
             type="number"
             name="phone"
             value={this.state.formData.phone}
-            className={classes.input}
+            className={`form__input ${ classes.input }`}
             onChange={this.handleChangeField}
             required
           />
@@ -166,7 +166,7 @@ export class ContactForm extends React.Component {
             id="formService"
             name="service"
             value={this.state.formData.service}
-            className={`${ classes.input } ${ classes.select }`}
+            className={`form__input ${ classes.input } ${ classes.select }`}
             onChange={this.handleChangeField}
             required
           >
@@ -187,7 +187,7 @@ export class ContactForm extends React.Component {
             id="formBudget"
             name="budget"
             value={this.state.formData.budget}
-            className={`${ classes.input } ${ classes.select }`}
+            className={`form__input ${ classes.input } ${ classes.select }`}
             onChange={this.handleChangeField}
             required
           >
@@ -206,7 +206,7 @@ export class ContactForm extends React.Component {
           <textarea
             id="formMessage"
             value={this.state.formData.message}
-            className={`${ classes.input } ${ classes.textarea }`}
+            className={`form__input ${ classes.input } ${ classes.textarea }`}
             onChange={this.handleChangeField}
             name="message"
             required

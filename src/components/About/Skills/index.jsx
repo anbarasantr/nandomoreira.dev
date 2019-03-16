@@ -37,7 +37,7 @@ export const Skills = ({ skills, size = 'default' }) => {
       <div className={classes.list}>
         {shuffleSkills(skills).map((skill, i) => (
           <div className={classes.item} key={i} data-tooltip={skill}>
-            <div className={`card card--hover ${ classes.inner }`}>
+            <div className={`skill__item card card--hover ${ classes.inner }`}>
               <Skill id={skill} size={svgSize} />
             </div>
           </div>

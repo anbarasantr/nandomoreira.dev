@@ -25,30 +25,30 @@
   font-size 2.25rem
   line-height 1.875rem
   margin-bottom .9375rem
+  color lighten($secondary-color, 20%)
+  letter-spacing -0.0625rem
   +above($tablet)
     line-height 5rem
     font-size 6.25rem
     margin-bottom 2.5rem
-  a
-    font-weight 900
-    text-decoration none
-    color darken($text-color, 40%)
-    animation fadeIn 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
-    display block
-    &:hover,
-    &:focus,
-    &:active
-      box-shadow none
   span
     font-weight 200
     font-size inherit
     letter-spacing 0
     font-size 75%
     display block
-    animation fadeInTop 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 100ms both
+    animation fadeInTop 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 400ms both
+  strong
+    text-decoration none
+    color darken($secondary-color, 20%)
+    animation fadeIn 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 800ms both
+    &:hover,
+    &:focus,
+    &:active
+      box-shadow none
 
 .presentation
-  animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 900ms both
+  animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1200ms both
   font-size 1rem
   font-weight 200
   color rgba($text-color, .8)

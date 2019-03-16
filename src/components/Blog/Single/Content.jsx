@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './postSingle.module.styl'
 
 export const Content = ({ html, children }) => (
-  <div className={classes.content}>
+  <div className={`card ${ classes.content }`}>
     {html && (
       <article
         className={classes.content__body}

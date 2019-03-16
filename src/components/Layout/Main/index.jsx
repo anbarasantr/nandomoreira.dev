@@ -26,7 +26,7 @@ export const Main = ({ children, ...props }) => (
       }
     `}
     render={data => (
-      <BaseLayout>
+      <BaseLayout {...props}>
         <Header
           navLinks={data.site.siteMetadata.navLinks}
           donateLink={data.site.siteMetadata.social.paypal}

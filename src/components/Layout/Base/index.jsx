@@ -8,7 +8,7 @@ import './data-tooltip.styl'
 import './highlight.styl'
 import './theme.styl'
 
-export const BaseLayout = ({ children }) => (
+export const BaseLayout = ({ children, ...props }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -22,14 +22,14 @@ export const BaseLayout = ({ children }) => (
     render={data => (
       <ThemeContext.Consumer>
         {theme => (
-          <>
+          <div {...props}>
             <Helmet
               bodyAttributes={{
                 class: `theme-${ theme.dark ? 'dark' : 'light' }`,
               }}
             />
             {children}
-          </>
+          </div>
         )}
       </ThemeContext.Consumer>
     )}

@@ -97,10 +97,6 @@ const pluginFonts = {
     family: `Nunito`,
     variants: [`200`, `400`, `800`]
   },
-  {
-    family: `Open Sans`,
-    variants: [`300`, `400`, `500`, `800`]
-  }
   ]
 }
 

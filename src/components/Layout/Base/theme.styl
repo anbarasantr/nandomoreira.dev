@@ -5,8 +5,38 @@ body
     background-color $background-color
 
   &.theme-dark
-    background-color $background-dark-color
-    color #fff
+    &, .hero h1, .hero h1 strong
+      color #fff
+
+    p, .brand a
+      color darken(#fff, 5%)
+
+    svg
+      fill #fff
+
+    blockquote:after
+      color rgba(#fff, .1)
+
+    a
+      color lighten($link-color, 30%)
+      border-color lighten($link-color, 30%)
+      &:hover,
+      &:active,
+      &:focus
+        color lighten($link-color, 10%)
+        border-color lighten($link-color, 10%)
+        svg
+          fill lighten($link-color, 10%)
+      a:not([.pagination__link]),
+      a:not([role="button"]),
+      a.nav__link
+        &:hover,
+        &:active,
+        &:focus
+          box-shadow inset 0 -0.75rem 0 rgba(#fff, .2)
+
+    &, .hero
+      background-color $background-dark-color
 
     .card,
     .listTags__tag,
@@ -36,7 +66,6 @@ body
       +above($desktop-lg)
         background-color transparent
 
-    .hero,
     .pageHeader,
     .pagination__link,
     .button--secondary
@@ -64,24 +93,20 @@ body
     .card.form
       background-color lighten($background-dark-color, 10%)
 
-    a
-      color darken(#fff, 15%)
-      border-color darken(#fff, 15%)
-      &:hover,
-      &:active,
-      &:focus
-        color rgba(#fff, .8)
-      a:not([.pagination__link]),
-      a:not([role="button"]),
-      a.nav__link
-        &:hover,
-        &:active,
-        &:focus
-          border-color darken(#fff, 15%)
-          box-shadow inset 0 -0.75rem 0 rgba(#fff, .2)
+    .form__input
+      background rgba(#fff, .2)
+      color #fff
 
-    p
-      color darken(#fff, 5%)
+    .singleHeader
+      &:before
+        background-color lighten(#000, 5%)
 
-    svg
-      fill #fff !important
+    .skill__item.card
+      background-color darken(#fff, 15%)
+
+    [data-tooltip]:hover:before
+      background darken(#fff, 15%)
+      color $text-color
+    [data-tooltip]:hover:after
+      border-top-color darken(#fff, 15%)
+      color $text-color

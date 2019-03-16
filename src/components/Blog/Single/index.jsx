@@ -52,7 +52,7 @@ export const Single = ({ data, pageContext }) => {
 
         <AuthorBox
           author={Object.assign({}, author, { avatar })}
-          socialIcons={social}
+          donateLink={social.paypal}
         />
 
         <SocialShare

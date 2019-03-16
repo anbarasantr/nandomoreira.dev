@@ -20,7 +20,7 @@ export const Header = ({ frontmatter }) => {
   const dateFormated = moment(date).format('LL')
 
   return (
-    <header className={classes.header} style={styles}>
+    <header className={`singleHeader ${ classes.header }` } style={styles}>
       {title && (
         <Container className={classes.inner}>
           <h4 className={classes.category}>
