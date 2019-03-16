@@ -17,7 +17,7 @@ const Contact = ({ data }) => (
     <Container>
       <div className={classes.contact}>
         <div className={classes.left}>
-          <p class="card">
+          <p className="card">
             <span>Envie um email para: </span>
             <a className="Contact__email" href="mailto:hi@nandomoreira.dev">
               hi@nandomoreira.dev

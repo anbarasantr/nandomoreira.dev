@@ -12,7 +12,7 @@ export const Project = ({ project, mod }) => (
   >
     <Link to={project.path} className={classes.inner}>
       <div className={classes.content}>
-        <div class="card">
+        <div className="card">
           <header className={classes.header}>
             <h1>{project.title}</h1>
           </header>
