@@ -1,6 +1,7 @@
 import React from 'react'
 import { Alert } from 'Components/Common'
 import classes from './form.module.styl'
+import './form.styl'
 
 export class ContactForm extends React.Component {
   constructor () {

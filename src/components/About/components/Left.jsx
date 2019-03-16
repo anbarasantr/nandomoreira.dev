@@ -4,7 +4,7 @@ import { Feed } from 'Components/Instagram'
 import { Skills } from 'Components/About/Skills'
 
 export const Left = ({ data, classes }) => (
-  <div className={classes.left}>
+  <div className={`about__left ${ classes.left }`}>
     <div className={`card ${ classes.inner }`}>
       <Image
         node={data.file}

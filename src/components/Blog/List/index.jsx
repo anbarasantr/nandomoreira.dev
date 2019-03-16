@@ -46,8 +46,8 @@ export const List = ({ data, pageContext }) => {
       <PageHeader smallTitle={title} title={description} />
       <Container className={classes.BlogList}>
         <section className={classes.BlogList__section}>
-          {postsData.map((post, i) => (
-            <Post post={post.node.frontmatter} key={i} />
+          {postsData.map(({ node }, i) => (
+            <Post post={node.frontmatter} key={i} />
           ))}
 
           <Pagination paginate={paginate} />

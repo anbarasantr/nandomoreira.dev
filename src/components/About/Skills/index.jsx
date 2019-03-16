@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './skills.module.styl'
 import { Skill } from 'Components/Common'
+import { Container } from 'Components/Layout'
 
 const shuffleSkills = arr =>
   arr
@@ -11,7 +12,7 @@ const shuffleSkills = arr =>
 export const Skills = ({ skills, size = 'default' }) => {
   if (!skills) return null
 
-  let skillsClass = `${ classes.skills }`
+  let skillsClass = `skills ${ classes.skills }`
   let svgSize
 
   switch (size) {
@@ -34,10 +35,10 @@ export const Skills = ({ skills, size = 'default' }) => {
   return (
     <aside className={skillsClass}>
       <h4>Minhas habilidades</h4>
-      <div className={classes.list}>
+      <div className={`skills__list ${ classes.list }`}>
         {shuffleSkills(skills).map((skill, i) => (
-          <div className={classes.item} key={i} data-tooltip={skill}>
-            <div className={`skill__item card card--hover ${ classes.inner }`}>
+          <div className={`skill__item ${ classes.item }`} key={i} data-tooltip={skill}>
+            <div className={`skill__card card ${ classes.inner }`}>
               <Skill id={skill} size={svgSize} />
             </div>
           </div>

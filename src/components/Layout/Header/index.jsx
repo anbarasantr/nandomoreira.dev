@@ -6,7 +6,7 @@ import classes from './header.module.styl'
 export class Header extends Component {
   render () {
     return (
-      <header className={`header ${ classes.card }`}>
+      <header className={`header ${ classes.header }`}>
         <Container>
           <div className={classes.inner}>
             <Brand />

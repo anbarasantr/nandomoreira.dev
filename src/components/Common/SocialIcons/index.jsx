@@ -10,7 +10,10 @@ export const SocialIcons = ({ icons, ...props }) => {
         const link = icons[item]
         if (!link) return null
         return (
-          <li className={`socialIcons__item ${ classes.Social__item }`} key={i}>
+          <li
+            className={`socialIcons__item ${ classes.Social__item }`}
+            key={i}
+          >
             <a
               className={`socialIcons__link ${ classes.Social__link }`}
               href={link}

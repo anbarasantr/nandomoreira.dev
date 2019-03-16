@@ -1,10 +1,13 @@
 @import '~stylus/index.styl'
 
-.card
+.footer
+  background-color #fff
   border-top .0625rem solid rgba(#000, .05)
-  padding .9375rem
+  padding .9375rem .9375rem 5rem
   text-align center
   border-radius 0
+  +above($tablet)
+    padding-bottom .9375rem
   strong, address, a
     font-weight 800
     opacity 0.5

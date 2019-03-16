@@ -49,16 +49,16 @@ const navLinks = [{
 //   path: '/servicos',
 // },
 {
+  name: 'Blog',
+  path: '/blog'
+},
+{
   name: 'Portfolio',
   path: '/portfolio'
 },
 {
   name: 'Open-source',
   path: '/open-source'
-},
-{
-  name: 'Blog',
-  path: '/blog'
 },
 {
   name: 'Contato',

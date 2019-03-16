@@ -68,7 +68,7 @@
     svg
       fill rgba($secondary-color, .6)
 
-.buttonFlex
+.button--flex
   display flex
   align-items center
   justify-content center
@@ -79,10 +79,12 @@
   position relative
   border-radius .625rem
   border 0 solid rgba(#000, .125)
-  box-shadow 0 0 1.25rem rgba($secondary-color, .1)
+  // box-shadow 0 0 1.25rem rgba($secondary-color, .1)
+  box-shadow 0 0 1px 0 rgba(59,89,178,.08), 0 4px 14px rgba(59,89,178,.06)
   transition box-shadow .2s $timingFunction,
     transform .2s $timingFunction
   &:hover,
   &:active,
   &:focus
-    box-shadow none
+    // box-shadow none
+    box-shadow 0 0 0 4px $secondary-color

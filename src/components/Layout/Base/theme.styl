@@ -48,6 +48,10 @@ body
     .pagination a,
     .button
       box-shadow none
+      &:hover,
+      &:focus
+        box-shadow 0 0 0 4px #fff
+        color #fff
 
     .header,
     .whatsApp__message
@@ -105,7 +109,10 @@ body
       &:before
         background-color lighten(#000, 5%)
 
-    .skill__item.card
+    .skills
+      background-color lighten($background-dark-color, 10%)
+
+    .skill__card.card
       background-color darken(#fff, 15%)
 
     [data-tooltip]:hover:before

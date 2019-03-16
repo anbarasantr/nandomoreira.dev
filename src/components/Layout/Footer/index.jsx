@@ -3,7 +3,7 @@ import { Skill, Icon } from 'Components/Common'
 import classes from './footer.module.styl'
 
 export const Footer = () => (
-  <footer className={`footer ${ classes.card }`}>
+  <footer className={`footer ${ classes.footer }`}>
     <span>
       Desenvolvido em <address itemScope itemType="https://schema.org/PostalAddress">Curitiba-PR, Brasil</address> com o
       <Icon

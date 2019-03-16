@@ -69,17 +69,17 @@ const OpenSource = () => (
         <Container>
           <GithubList repositories={edges} />
           <a
-            className="button button--primary buttonFlex"
+            className="button button--primary button--flex"
             href={`${ social.github }?tab=repositories`}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ margin: '30px 0' }}
+            style={{ margin: '30px auto', maxWidth: '260px' }}
           >
-            <Icon id="github" />
+            <Icon id="github" style={{ padding: '4px' }} />
             <span>Ver mais projetos</span>
           </a>
-          <Skills skills={skills} />
         </Container>
+        <Skills skills={skills} />
       </Main>
     )}
   />
