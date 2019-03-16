@@ -1,53 +1,59 @@
 @import '~stylus/index.styl'
 
-.PageHeader
+.pageHeader
   padding 3.75rem 0
   margin-bottom 2.5rem
   width 100%
   background-color $primary-color
+  background-image linear-gradient(-270deg, $linear-from-color 0%, $linear-to-color 100%)
   +above($tablet)
     padding 0 0 3.75rem
     height 40vh
     display flex
     align-items center
-  &__smalltitle,
-  &__smalltitle a,
-  &__title,
-  &__title a,
-  &__description p
-    color #fff
-  &__smalltitle a,
-  &__title a
-    text-decoration underline
-  &__smalltitle
-    opacity 0.75
-    font-size 1rem
-    text-transform uppercase
-    font-weight 400
-    margin 0 0 .625rem
+
+.smalltitle,
+.smalltitle a,
+.title,
+.title a,
+.description p
+  color #fff
+
+.smalltitle a,
+.title a
+  text-decoration underline
+
+.smalltitle
+  opacity 0.75
+  font-size 1rem
+  text-transform uppercase
+  font-weight 400
+  margin 0 0 .625rem
+  line-height 1
+  animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 50ms both
+  +above($tablet)
+    font-size 1.25rem
+
+.title
+  font-size 1.75rem
+  margin 0
+  line-height 1.2
+  animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
+  +above($tablet)
+    font-size 2.875rem
     line-height 1
-    animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 50ms both
-    +above($tablet)
-      font-size 1.25rem
-  &__title
-    font-size 1.75rem
+
+.description
+  p
     margin 0
-    line-height 1.2
-    animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
+    font-size 1.125rem
     +above($tablet)
-      font-size 2.875rem
-      line-height 1
-  &__description
-    p
-      margin 0
-      font-size 1.125rem
-      +above($tablet)
-        font-size 1.5rem
-    h2
-      margin 2.5rem 0
-      font-size 2.375rem
-      a
-        text-decoration none
+      font-size 1.5rem
+  h2
+    margin 2.5rem 0
+    font-size 2.375rem
+    a
+      text-decoration none
 
 @keyframes fadeIn
   0%

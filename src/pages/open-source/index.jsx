@@ -9,7 +9,7 @@ import { GithubList } from 'Components/Github'
 
 const title = 'Open-source'
 const description =
-  'Esses são os projetos open-source que tenho trabalhado nos últimos meses'
+  'Aqui estão alguns projetos open-source trabalhei recentemente'
 
 const OpenSource = () => (
   <StaticQuery
@@ -84,7 +84,7 @@ const OpenSource = () => (
             <span>Ver mais projetos</span>
           </a>
         </Container>
-        <Skills skills={skills} size="small" />
+        <Skills skills={skills} />
         <Container isSmall>
           <AuthorBox
             author={author}

@@ -34,13 +34,14 @@ body
         border-color lighten($link-color, 10%)
         svg
           fill lighten($link-color, 10%)
-      a:not([.pagination__link]),
-      a:not([role="button"]),
-      a.nav__link
-        &:hover,
-        &:active,
-        &:focus
-          box-shadow inset 0 -0.75rem 0 rgba(#fff, .2)
+
+    .nav .nav__link
+      &:hover,
+      &:active,
+      &:focus,
+      &.nav__link--active
+        opacity 0.75
+        box-shadow inset 0 -0.75rem 0 rgba(#fff, .25)
 
     &, .hero
       background-color $background-dark-color
@@ -81,6 +82,8 @@ body
     .pagination__link,
     .button--secondary
       background-color darken($background-dark-color, 15%)
+    .pageHeader
+      background-image linear-gradient(-270deg, darken($background-dark-color, 25%) 0%, darken($background-dark-color, 15%) 100%)
 
     .pagination__link,
     .button--primary,
@@ -103,10 +106,13 @@ body
     .project .card,
     .card.form
       background-color lighten($background-dark-color, 10%)
+      &:hover
+        box-shadow none
 
     .form__input
       background rgba(#fff, .2)
       color #fff
+      border-color rgba(#fff, 0.1)
 
     .singleHeader
       &:before

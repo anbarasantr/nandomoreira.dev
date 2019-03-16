@@ -105,14 +105,13 @@
   position relative
   border-radius .625rem
   border 0 solid rgba(#000, .125)
-  // box-shadow 0 0 1.25rem rgba($secondary-color, .1)
-  box-shadow 0 0 1px 0 rgba(59,89,178,.08), 0 4px 14px rgba(59,89,178,.06)
+  box-shadow 0 0 1px 0 rgba(#000, .1),
+    0 4px 14px rgba(#000, .08)
   transition box-shadow .2s $timing-function,
     transform .2s $timing-function
   &:hover,
   &:active,
   &:focus
-    // box-shadow none
     box-shadow 0 0 0 4px $secondary-color
 
 a.button

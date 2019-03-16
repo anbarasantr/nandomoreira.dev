@@ -1,9 +1,10 @@
 import React from 'react'
+import kebabCase from 'lodash.kebabcase'
 import moment from 'moment'
 import 'moment/locale/pt-br'
-
 import { Icon } from 'Components/Common'
 import classes from './card.module.styl'
+import './card.styl'
 
 export const GithubCard = ({ repo }) => (
   <a
@@ -12,10 +13,18 @@ export const GithubCard = ({ repo }) => (
     target="_blank"
     rel="noopener noreferrer"
   >
-    <div className={`card ${ classes.card }`}>
-      <h4 className={classes.name}>{repo.name}</h4>
+    <article className={`card ${ classes.card }`}>
+      <header className={classes.header}>
+        <h4 className={classes.name}>
+          {repo.name}
+        </h4>
+        <span
+          className={`label-${ kebabCase(repo.primaryLanguage.name) } ${ classes.label }`}
+          style={{ backgroundColor: `${ repo.primaryLanguage.color }` }}
+        >{repo.primaryLanguage.name}</span>
+      </header>
       <p className={classes.description}>{repo.description}</p>
-      <div className={classes.footer}>
+      <footer className={classes.footer}>
         <ul>
           <li>
             <Icon id="fork" size="20" /> <span>{repo.forkCount}</span>
@@ -29,10 +38,7 @@ export const GithubCard = ({ repo }) => (
           <Icon id="calendar" size="20" />{' '}
           <span>{moment(repo.createdAt).format('MMM/YYYY')}</span>
         </p>
-      </div>
-      {/* <p>homepageUrl: {repo.homepageUrl}</p>
-      <p>pushedAt: {repo.pushedAt}</p>
-      <p>updatedAt: {repo.updatedAt}</p> */}
-    </div>
+      </footer>
+    </article>
   </a>
 )

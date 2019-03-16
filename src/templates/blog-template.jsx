@@ -21,7 +21,7 @@ export const blogQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 150)
+          excerpt(pruneLength: 200)
           frontmatter {
             layout
             path
@@ -30,6 +30,11 @@ export const blogQuery = graphql`
             description
             category
             tags
+          }
+          fields {
+            readingTime {
+              text
+            }
           }
         }
       }

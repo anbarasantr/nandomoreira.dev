@@ -3,22 +3,22 @@ import { Container } from 'Components/Layout'
 import classes from './pageheader.module.styl'
 
 export const PageHeader = ({ smallTitle, title, children }) => (
-  <header className={`pageHeader ${ classes.PageHeader }`}>
+  <header className={`pageHeader ${ classes.pageHeader }`}>
     <Container>
       {smallTitle && (
         <h4
-          className={classes.PageHeader__smalltitle}
+          className={classes.smalltitle}
           dangerouslySetInnerHTML={{ __html: smallTitle }}
         />
       )}
       {title && (
         <h1
-          className={classes.PageHeader__title}
+          className={classes.title}
           dangerouslySetInnerHTML={{ __html: title }}
         />
       )}
       {children && (
-        <div className={classes.PageHeader__description}>{children}</div>
+        <div className={classes.description}>{children}</div>
       )}
     </Container>
   </header>

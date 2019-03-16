@@ -61,6 +61,11 @@ export const postQuery = graphql`
           publicURL
         }
       }
+      fields {
+        readingTime {
+          text
+        }
+      }
     }
   }
 `
