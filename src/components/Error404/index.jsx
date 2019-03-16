@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Link from 'gatsby-link'
-import { SEO, Icon, SocialIcons } from 'Components/Common'
+import { SEO, Icon, SocialIcons, DarkSwitcher } from 'Components/Common'
+import { BaseLayout } from 'Components/Layout'
 
 import './error404.styl'
 import classes from './error404.module.styl'
@@ -10,7 +11,7 @@ const description =
   'Infelizmente a página que você está tentando acessar não foi localizada.'
 
 export const Error404 = ({ data }) => (
-  <Fragment>
+  <BaseLayout>
     <SEO title={title} description={description} pathname="/404.html" />
     <div className={`error404 ${ classes.error404 }`}>
       <div className={classes.inner}>
@@ -32,7 +33,8 @@ export const Error404 = ({ data }) => (
         </div>
 
         <SocialIcons icons={data.site.siteMetadata.social} />
+        <DarkSwitcher />
       </div>
     </div>
-  </Fragment>
+  </BaseLayout>
 )

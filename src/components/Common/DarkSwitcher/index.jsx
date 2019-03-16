@@ -11,9 +11,9 @@ export const DarkSwitcher = () => (
         className={`dark-switcher ${ classes.switcher }`}
         onClick={theme.toggleDark}>
         {theme.dark ? (
-          <Icon id="moon-f" />
+          <Icon id="sunny" />
         ) : (
-          <Icon id="moon" />
+          <Icon id="moon-f" />
         )}
       </button>
     )}
