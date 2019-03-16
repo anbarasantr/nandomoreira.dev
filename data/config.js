@@ -20,8 +20,6 @@ require('dotenv').config({
 })
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || 'foo-bar'
-
-const defaultImage = '/share.jpg'
 const subTitle = `· Desenvolvedor front-end e WordPress em Curitiba/PR`
 const title = `${ author.name } ${ subTitle }`
 
@@ -78,8 +76,6 @@ const siteMetadata = {
   siteUrl,
   description,
   defaultDescription: description,
-  image: defaultImage,
-  defaultImage,
   author,
   disqusShortname: author.disqus,
   twitterUsername: `@${ author.twitter }`,

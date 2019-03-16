@@ -2,6 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import defaultImage from './share.jpg'
+
 export const SEO = ({
   title = null,
   description = null,
@@ -18,7 +20,6 @@ export const SEO = ({
             titleTemplate
             defaultDescription: description
             siteUrl
-            defaultImage: image
             twitterUsername
             facebookAppID
             author {
@@ -35,7 +36,6 @@ export const SEO = ({
           titleTemplate,
           defaultDescription,
           siteUrl,
-          defaultImage,
           twitterUsername,
           facebookAppID,
           author
