@@ -36,11 +36,13 @@
 .content
   width 100%
   animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
-  > div
+  +above($tablet)
+    width calc(100% - 560px)
+  > a
     padding 1.875rem
+    width 100%
   +above($tablet)
     animation fadeInBottomContent 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
-    width calc(100% - 560px)
     display flex
     align-items center
     z-index 3
@@ -49,6 +51,20 @@
     right 0
   +below($tablet)
     border-radius 0
+
+.left
+  +above($tablet)
+    .inner
+      justify-content flex-start
+    .content
+      right 0
+
+.right
+  +above($tablet)
+    .inner
+      justify-content flex-end
+    .content
+      left 0
 
 .description
   color rgba($text-color, .75)
@@ -65,20 +81,6 @@
     position relative
     animation animateArrow 1s ease-in-out infinite
     transform translate3d(0, .125rem, 0)
-
-.left
-  +above($tablet)
-    .inner
-      justify-content flex-start
-    .content
-      right 0
-
-.right
-  +above($tablet)
-    .inner
-      justify-content flex-end
-    .content
-      left 0
 
 @keyframes animateArrow
   0%,

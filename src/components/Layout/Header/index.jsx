@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container, Brand, Nav } from 'Components/Layout'
 import { DarkSwitcher, DonateButton } from 'Components/Common'
 import classes from './header.module.styl'
+import './header.styl'
 
 export class Header extends Component {
   render () {

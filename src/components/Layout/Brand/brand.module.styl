@@ -10,12 +10,28 @@
     font-weight 500
     font-size inherit
     color $primary-color
+  &:before,
+  &:after
+    display inline-block
+    font-weight 500
+  &:before
+    content '{'
+    margin-right 5px
+    color $primary-color
+  &:after
+    content '}'
+    margin-left 5px
+  +below($mobile)
+    &:before,
+    &:after
+      display none
 
 .link
   font-weight 800
   text-decoration none
-  box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
+  box-shadow none
   &,
   &:hover,
   &:focus
+    box-shadow none
     color $secondary-color

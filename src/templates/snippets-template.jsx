@@ -7,7 +7,7 @@ export default function Template ({ data }) {
   const post = data.markdownRemark
   return (
     <Main>
-      <Container isSmall={true}>
+      <Container isSmall>
         <h1>{post.frontmatter.title}</h1>
         {post.html && (
           <div

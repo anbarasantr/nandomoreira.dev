@@ -220,7 +220,7 @@ exports.createPages = ({
         })
 
         contentPaginate(createPage, postsQuery, '/blog', 'blog')
-        contentPaginate(createPage, projectsQuery, '/portfolio', 'projects', 16)
+        contentPaginate(createPage, projectsQuery, '/portfolio', 'projects', 10)
         contentPaginate(createPage, snippetsQuery, '/snippets', 'snippets-list')
       })
     )

@@ -1,8 +1,13 @@
 @import '~stylus/index.styl'
 
 .error404
+  padding 6.25rem 0
   .dark-switcher
-    +above($desktop-lg)
-      position fixed
-      top 1.25rem
-      right 1.25rem
+    position fixed
+    top 1.5625rem
+    right .625rem
+  .button
+    +below($mobile-lg)
+      display block
+      width 100%
+      margin-bottom 10px

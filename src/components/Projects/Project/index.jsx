@@ -10,9 +10,9 @@ export const Project = ({ project, mod }) => (
       mod === 0 ? classes.left : classes.right
     }`}
   >
-    <Link to={project.path} className={classes.inner}>
+    <div className={classes.inner}>
       <div className={classes.content}>
-        <div className="card">
+        <Link to={project.path} className="card">
           <header className={classes.header}>
             <h1>{project.title}</h1>
           </header>
@@ -21,11 +21,11 @@ export const Project = ({ project, mod }) => (
             <span>Ver projeto </span>
             <Icon id="arrow-right" />
           </div>
-        </div>
+        </Link>
       </div>
-      <div className={classes.image}>
+      <Link to={project.path} className={classes.image}>
         <Image node={project.image} />
-      </div>
-    </Link>
+      </Link>
+    </div>
   </article>
 )

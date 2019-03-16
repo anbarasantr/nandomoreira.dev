@@ -10,7 +10,8 @@
   color $text-color
   justify-content center
   background-color transparent
-  +below($desktop-lg)
+  box-shadow none
+  +below($desktop)
     background-color $background-color
   span, svg
     display inline-block
@@ -23,10 +24,3 @@
   &:focus
     svg
       fill $text-color
-  +above($desktop-lg)
-    position relative
-  +below($desktop-lg)
-    z-index 1000
-    position fixed
-    bottom 13px
-    right 13px

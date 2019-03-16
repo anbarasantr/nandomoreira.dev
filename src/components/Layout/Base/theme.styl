@@ -1,8 +1,11 @@
 @import '~stylus/index.styl'
 
 body
-  &.theme-light
+  &, &.theme-light
     background-color $background-color
+    ::selection
+      background lighten($primary-color, 50%)
+      color $text-color
 
   &.theme-dark
     &, .hero h1, .hero h1 strong
@@ -71,7 +74,7 @@ body
       background-color darken($background-dark-color, 25%)
 
     .nav__list
-      +above($desktop-lg)
+      +above($desktop)
         background-color transparent
 
     .pageHeader,
@@ -118,6 +121,11 @@ body
     [data-tooltip]:hover:before
       background darken(#fff, 15%)
       color $text-color
+
     [data-tooltip]:hover:after
       border-top-color darken(#fff, 15%)
+      color $text-color
+
+    ::selection
+      background #fff
       color $text-color

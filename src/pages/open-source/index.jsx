@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { Main, Container } from 'Components/Layout'
 import { SEO, PageHeader, Icon } from 'Components/Common'
 import { Skills } from 'Components/About/Skills'
+import { AuthorBox } from 'Components/Blog'
 import { GithubList } from 'Components/Github'
 
 const title = 'Open-source'
@@ -19,6 +20,10 @@ const OpenSource = () => (
             skills
             social {
               github
+            }
+            author {
+              name
+              bio
             }
           }
         }
@@ -60,7 +65,7 @@ const OpenSource = () => (
         }
       },
       site: {
-        siteMetadata: { skills, social }
+        siteMetadata: { author, skills, social },
       }
     }) => (
       <Main>
@@ -69,7 +74,7 @@ const OpenSource = () => (
         <Container>
           <GithubList repositories={edges} />
           <a
-            className="button button--primary button--flex"
+            className="button button--primary button--flex button--outline"
             href={`${ social.github }?tab=repositories`}
             target="_blank"
             rel="noopener noreferrer"
@@ -79,7 +84,13 @@ const OpenSource = () => (
             <span>Ver mais projetos</span>
           </a>
         </Container>
-        <Skills skills={skills} />
+        <Skills skills={skills} size="small" />
+        <Container isSmall>
+          <AuthorBox
+            author={author}
+            donateLink={social.paypal}
+          />
+        </Container>
       </Main>
     )}
   />

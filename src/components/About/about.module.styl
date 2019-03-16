@@ -2,9 +2,13 @@
 
 .about
   width 100%
+  display flex
+  justify-content center
+  flex-wrap wrap
+  flex-direction column-reverse
   +above($tablet)
-    display flex
-    justify-content center
+    flex-direction row
+    flex-wrap nowrap
 
 .left,
 .right

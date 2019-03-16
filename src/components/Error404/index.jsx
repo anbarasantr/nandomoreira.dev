@@ -19,16 +19,16 @@ export const Error404 = ({ data }) => (
         <p>{description}</p>
 
         <div className={classes.buttons}>
-          <Link to="/" className={`button button--primary ${ classes.button }`}>
-            <Icon id="arrow-left" style={{ padding: '5px' }} />
-            <span> Página inicial </span>
+          <Link to="/" className={`button button--primary button--outline ${ classes.button }`}>
+            <Icon id="home" style={{ padding: '4px' }} />
+            <span>Página inicial</span>
           </Link>
           <Link
             to="/contato"
-            className={`button button--secondary ${ classes.button }`}
+            className={`button button--secondary button--outline ${ classes.button }`}
           >
-            <span> Entre em contato </span>
-            <Icon id="arrow-right" style={{ padding: '5px' }} />
+            <span>Entre em contato</span>
+            <Icon id="envelope-f" style={{ padding: '4px' }} />
           </Link>
         </div>
 

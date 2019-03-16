@@ -4,13 +4,11 @@
   padding 0
   input
     display none
-  +above($desktop-lg)
-    position relative
-  +below($desktop-lg)
+  +below($desktop)
     position absolute
     z-index 1000
   &.isOpen
-    +below($desktop-lg)
+    +below($desktop)
       .list
         display flex
       .item
@@ -29,15 +27,11 @@
           animation-delay 1200ms
 
 .list
-  transition all .05s $timingFunction
-  padding 5rem 0
+  transition all .05s $timing-function
   margin 0
-  +above($desktop-lg)
+  +above($desktop)
     padding 0
-    position relative
-    flex-direction column
-    flex-direction row
-  +below($desktop-lg)
+  +below($desktop)
     position fixed
     align-items center
     justify-content center
@@ -54,10 +48,10 @@
 
 .button
   display none
-  +below($desktop-lg)
+  +below($desktop)
     position fixed
     z-index 10000
-    top 1.375rem
+    top .9375rem
     right 1.25rem
     width auto
     border none
@@ -79,7 +73,7 @@
   display block
   width 100%
   margin 0
-  +above($desktop-lg)
+  +above($desktop)
     text-transform lowercase
     width auto
     display inline-block
@@ -97,7 +91,7 @@
   color #fff
   font-size 1.5rem
   letter-spacing .0625rem
-  +above($desktop-lg)
+  +above($desktop)
     color $link-color
     font-size 1rem
   &:hover,
@@ -107,7 +101,7 @@
     outline none
     color #fff
     box-shadow inset 0 -0.75rem 0 rgba(#fff, .15)
-    +above($desktop-lg)
+    +above($desktop)
       box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
       color $link-hover-color
 

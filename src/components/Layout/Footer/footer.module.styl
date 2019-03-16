@@ -10,18 +10,20 @@
     padding-bottom .9375rem
   strong, address, a
     font-weight 800
-    opacity 0.5
   address
     display inline
     font-style normal
   span
     font-size .75rem
-    opacity 0.75
     margin 0
+    padding 0 0 0 .1875rem
     +above($tablet)
       font-size .875rem
   a
     border none
-  img, svg
+    &:hover,
+    &:focus
+      box-shadow none
+  img, svg, span
     display inline-block
     vertical-align middle

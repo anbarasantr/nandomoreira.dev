@@ -26,13 +26,17 @@
   padding 15px
 
 .small
-  h4
-    font-size 1.25rem
   .inner
     padding 10px
+  h4
+    font-size 1.25rem
+    +above($tablet)
+      font-size 1.75rem
 
 .large
   h4
     font-size 2rem
+    +above($tablet)
+      font-size 2.375rem
   .inner
     padding 25px

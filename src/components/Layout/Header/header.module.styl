@@ -1,37 +1,34 @@
 @import '~stylus/index.styl'
 
+.header,
+.inner,
+.navRight
+  display flex
+  align-items center
+
 .header
-  text-align left
-  z-index 1000
-  min-height 90px
-  border-radius 0
-  border-top .25rem solid $primary-color
+  z-index 100
+  border-bottom .0625rem solid rgba(#000, .05)
   background-color #fff
-  animation fadeInTop 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 450ms both
-  border-radius 0
+  min-height 80px
   position fixed
   width 100%
   z-index 1000
   top 0
   left 0
   margin 0
-  +above($desktop)
-    min-height 80px
 
 .inner
-  padding 1.875rem 0
-  +above($desktop)
-    padding .9375rem 0 1.25rem
-    display flex
-    align-items center
-    justify-content space-between
+  justify-content space-between
+  padding 0
 
 .navRight
-  display flex
-  align-items center
-
-@keyframes fadeIn
-  0%
-    opacity 0
-  100%
-    opacity 1
+  +below($desktop)
+    padding-right 5rem
+  +below($mobile-lg)
+    padding-right 4.0625rem
+  +below($mobile-sm)
+    padding 0
+    position fixed
+    top 80px
+    right 10px

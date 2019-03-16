@@ -5,8 +5,9 @@ import { Header, Content, Comments, AuthorBox } from 'Components/Blog'
 import { Main, Container } from 'Components/Layout'
 
 import classes from './postSingle.module.styl'
+import './postSingle.styl'
 
-export const Single = ({ data, pageContext }) => {
+export const Single = ({ data }) => {
   const post = data.markdownRemark
   const avatar = data.file
   const {
@@ -38,7 +39,7 @@ export const Single = ({ data, pageContext }) => {
       <ScrollProgress />
       <Header frontmatter={post.frontmatter} />
       <Container className={classes.small}>
-        <meta itemProp="mainEntityOfPage" content={post.frontmatter.path} />
+        {/* <meta itemProp="mainEntityOfPage" content="/blog" /> */}
         <Content html={post.html}>
           <ListTags
             tags={post.frontmatter.tags}

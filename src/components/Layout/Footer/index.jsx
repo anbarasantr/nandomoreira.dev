@@ -6,14 +6,18 @@ export const Footer = () => (
   <footer className={`footer ${ classes.footer }`}>
     <span>
       Desenvolvido em <address itemScope itemType="https://schema.org/PostalAddress">Curitiba-PR, Brasil</address> com o
-      <Icon
-        id="heart"
-        fill="#f00"
-        size="20"
-        role="img"
-        aria-label="coração"
-        title="coração"
-      /> por <strong>Fernando Moreira</strong>, usando <a
+      <span
+        data-tooltip="Feito com o coração"
+      >
+        <Icon
+          id="heart"
+          fill="#f00"
+          size="20"
+          role="img"
+          aria-label="coração"
+          title="coração"
+        />
+      </span> por <strong>Fernando Moreira</strong>, usando <a
         href="https://www.gatsbyjs.org/"
         target="_blank"
         rel="noopener noreferrer"
