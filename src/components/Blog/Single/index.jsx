@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { SEO, SocialShare, ListTags, ScrollProgress } from 'Components/Common'
-import { Header, Content, Comments, AuthorBox } from 'Components/Blog'
-import { Main, Container } from 'Components/Layout'
+import { SEO, SocialShare, ListTags, ScrollProgress } from 'components/Common'
+import { Header, Content, Comments, AuthorBox } from 'components/Blog'
+import { Main, Container } from 'components/Layout'
 
 import classes from './postSingle.module.styl'
 import './postSingle.styl'

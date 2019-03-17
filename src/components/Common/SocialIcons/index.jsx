@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 import classes from './socialIcons.module.styl'
 
 export const SocialIcons = ({ icons, ...props }) => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Project } from 'Components/Projects'
+import { Project } from 'components/Projects'
 import classes from './projects.module.styl'
 
 export const ProjectList = ({ projects }) => (

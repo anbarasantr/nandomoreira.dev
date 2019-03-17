@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Icon, Image, DonateButton } from 'Components/Common'
+import { Icon, Image, DonateButton } from 'components/Common'
 import classes from './authorbox.module.styl'
 import './authorbox.styl'
 

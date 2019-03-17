@@ -1,6 +1,6 @@
 import React from 'react'
 import ThemeContext from 'context/ThemeContext'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 import classes from './switcher.module.styl'
 
 export const DarkSwitcher = () => (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 import classes from './scrolltotop.module.styl'
 
 export class ScrollToTop extends React.Component {

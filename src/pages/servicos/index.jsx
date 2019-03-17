@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { Main, Container } from 'Components/Layout'
-import { SEO, PageHeader, SocialIcons } from 'Components/Common'
+import { Main, Container } from 'components/Layout'
+import { SEO, PageHeader, SocialIcons } from 'components/Common'
 
 const title = 'Serviços'
 const description =

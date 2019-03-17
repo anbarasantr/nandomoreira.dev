@@ -1,11 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { Main, Container } from 'Components/Layout'
-import { SEO, PageHeader, Icon } from 'Components/Common'
-import { Skills } from 'Components/About/Skills'
-import { AuthorBox } from 'Components/Blog'
-import { GithubList } from 'Components/Github'
+import { Main, Container } from 'components/Layout'
+import { SEO, PageHeader, Icon } from 'components/Common'
+import { Skills } from 'components/About/Skills'
+import { AuthorBox } from 'components/Blog'
+import { GithubList } from 'components/Github'
 
 const title = 'Open-source'
 const description =

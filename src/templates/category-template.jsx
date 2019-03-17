@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { SEO, PageHeader } from 'Components/Common'
-import { Main, Container } from 'Components/Layout'
-import { Post } from 'Components/Blog'
+import { SEO, PageHeader } from 'components/Common'
+import { Main, Container } from 'components/Layout'
+import { Post } from 'components/Blog'
 
 const CategoryPage = ({ data, pageContext }) => {
   const { category } = pageContext

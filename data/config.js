@@ -119,9 +119,11 @@ const favicon = {
 
 const remarkImages = {
   maxWidth: 1200,
+  quality: 90,
+  withWebp: true,
   linkImagesToOriginal: false,
   sizeByPixelDensity: true,
-  showCaptions: true
+  showCaptions: true,
 }
 
 const remarkPrismjs = {
@@ -137,8 +139,6 @@ const pluginSitemap = {
   exclude: [
     `/tags`,
     `/tag/*`,
-    `/categoria`,
-    `/categoria/*`,
     `/404`,
     `/404.html`
   ]
@@ -164,6 +164,8 @@ const pluginGraphql = {
   fetchOptions: {}
 }
 
+const pluginCanonicalUrls = { siteUrl }
+
 module.exports = {
   siteMetadata,
   pluginFonts,
@@ -173,5 +175,6 @@ module.exports = {
   remarkPrismjs,
   pluginSitemap,
   pluginManifest,
-  pluginGraphql
+  pluginGraphql,
+  pluginCanonicalUrls
 }

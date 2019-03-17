@@ -4,8 +4,8 @@ import kebabCase from 'lodash.kebabcase'
 import moment from 'moment'
 import 'moment/locale/pt-br'
 
-import { SEO, Icon, Image, SocialShare, ListTags, ScrollProgress } from 'Components/Common'
-import { Main, Container } from 'Components/Layout'
+import { SEO, Icon, Image, SocialShare, ListTags, ScrollProgress } from 'components/Common'
+import { Main, Container } from 'components/Layout'
 
 import classes from './projectSingle.module.styl'
 import './projectSingle.styl'

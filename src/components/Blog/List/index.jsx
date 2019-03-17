@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { SEO, PageHeader, Pagination } from 'Components/Common'
-import { Main, Container } from 'Components/Layout'
-import { Post } from 'Components/Blog'
+import { SEO, PageHeader, Pagination } from 'components/Common'
+import { Main, Container } from 'components/Layout'
+import { Post } from 'components/Blog'
 import classes from './bloglist.module.styl'
 
 export const List = ({ data, pageContext }) => {

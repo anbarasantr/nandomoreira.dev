@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 import kebabCase from 'lodash.kebabcase'
 import classes from './postTags.module.styl'
 

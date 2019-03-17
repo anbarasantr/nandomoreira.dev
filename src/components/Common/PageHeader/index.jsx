@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'Components/Layout'
+import { Container } from 'components/Layout'
 import classes from './pageheader.module.styl'
 
 export const PageHeader = ({ smallTitle, title, children }) => (

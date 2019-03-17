@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Brand, Nav } from 'Components/Layout'
-import { DarkSwitcher, DonateButton } from 'Components/Common'
+import { Container, Brand, Nav } from 'components/Layout'
+import { DarkSwitcher, DonateButton } from 'components/Common'
 import classes from './header.module.styl'
 import './header.styl'
 

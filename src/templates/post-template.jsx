@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Single } from 'Components/Blog'
+import { Single } from 'components/Blog'
 
 export default function Template ({ data, pageContext }) {
   if (!data.markdownRemark) return null

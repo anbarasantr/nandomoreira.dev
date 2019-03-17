@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 import classes from './donate.module.styl'
 
 export const DonateButton = ({ link, text = 'Doe $5' }) => (

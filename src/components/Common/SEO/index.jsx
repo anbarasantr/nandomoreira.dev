@@ -93,7 +93,7 @@ export const SEO = ({
           <meta name="twitter:title" content={data.title} />
           <meta name="twitter:description" content={data.description} />
           <meta name="twitter:image" content={data.image} />
-          <link rel="canonical" href={data.url} />
+          {/* <link rel="canonical" href={data.url} /> */}
           <link rel="author" href={`${ siteUrl }/humans.txt`} />
           <link rel="index" href={`${ siteUrl }/`} />
           <html lang="pt-br" />

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Main, Container } from 'Components/Layout'
+import { Main, Container } from 'components/Layout'
 
 export default function Template ({ data }) {
   if (!data.markdownRemark) return null

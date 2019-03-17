@@ -2,7 +2,7 @@ import React from 'react'
 import kebabCase from 'lodash.kebabcase'
 import moment from 'moment'
 import 'moment/locale/pt-br'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 import classes from './card.module.styl'
 import './card.styl'
 

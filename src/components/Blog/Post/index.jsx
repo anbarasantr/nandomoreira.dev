@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import classes from './post.module.styl'
-import { Icon, ListTags } from 'Components/Common'
+import { Icon, ListTags } from 'components/Common'
 
 export const Post = ({ post }) => {
   const tags = post.tags || []

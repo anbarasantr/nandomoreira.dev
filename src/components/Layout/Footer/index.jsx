@@ -1,5 +1,5 @@
 import React from 'react'
-import { Skill, Icon } from 'Components/Common'
+import { Skill, Icon } from 'components/Common'
 import classes from './footer.module.styl'
 
 export const Footer = () => (

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import classes from './pagination.module.styl'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 
 export const Pagination = ({ paginate }) => {
   const { basePath, isFirst, prevPage, numPages, isLast, nextPage } = paginate

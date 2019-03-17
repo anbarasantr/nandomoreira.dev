@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Home } from 'Components/Home'
+import { Home } from 'components/Home'
 
 const Index = ({ data }) => (
   <Home

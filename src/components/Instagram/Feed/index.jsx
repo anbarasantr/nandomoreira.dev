@@ -1,5 +1,5 @@
 import React from 'react'
-import { List } from 'Components/Instagram'
+import { List } from 'components/Instagram'
 import './feed.styl'
 
 export const Feed = ({ options, show }) => (

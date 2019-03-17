@@ -1,7 +1,7 @@
 import React from 'react'
-import { SEO } from 'Components/Common'
-import { Hero } from 'Components/Home'
-import { BaseLayout } from 'Components/Layout'
+import { SEO } from 'components/Common'
+import { Hero } from 'components/Home'
+import { BaseLayout } from 'components/Layout'
 
 export const Home = ({ title, navLinks, social }) => (
   <BaseLayout>

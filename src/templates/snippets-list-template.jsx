@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { List } from 'Components/Blog'
+import { List } from 'components/Blog'
 
 export default function Template ({ data, pageContext }) {
   if (!data.postsThree) return null

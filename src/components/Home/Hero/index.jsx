@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { SocialIcons, DarkSwitcher } from 'Components/Common'
-import { Nav } from 'Components/Layout'
+import { SocialIcons, DarkSwitcher } from 'components/Common'
+import { Nav } from 'components/Layout'
 import classes from './hero.module.styl'
 import './hero.styl'
 

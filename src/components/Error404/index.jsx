@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { SEO, Icon, SocialIcons, DarkSwitcher } from 'Components/Common'
-import { BaseLayout } from 'Components/Layout'
+import { SEO, Icon, SocialIcons, DarkSwitcher } from 'components/Common'
+import { BaseLayout } from 'components/Layout'
 
 import './error404.styl'
 import classes from './error404.module.styl'

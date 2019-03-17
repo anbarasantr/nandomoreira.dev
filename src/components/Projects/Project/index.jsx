@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Icon, Image } from 'Components/Common'
+import { Icon, Image } from 'components/Common'
 import classes from './project.module.styl'
 import './project.styl'
 

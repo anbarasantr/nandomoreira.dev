@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { SEO, PageHeader } from 'Components/Common'
-import { Main, Container } from 'Components/Layout'
+import { SEO, PageHeader } from 'components/Common'
+import { Main, Container } from 'components/Layout'
 
 const title = 'O que estou fazendo agora?'
 

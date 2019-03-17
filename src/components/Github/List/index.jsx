@@ -1,5 +1,5 @@
 import React from 'react'
-import { GithubCard } from 'Components/Github'
+import { GithubCard } from 'components/Github'
 import classes from './list.module.styl'
 
 export const GithubList = ({ repositories }) => (

@@ -1,6 +1,6 @@
 import React from 'react'
 import whatsAppUrl from 'whatsapp-url'
-import { Icon } from 'Components/Common'
+import { Icon } from 'components/Common'
 import classes from './whatsapp.module.styl'
 
 export const WhatsApp = ({ phone, text }) => (

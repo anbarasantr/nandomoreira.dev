@@ -1,5 +1,5 @@
 import React from 'react'
-import { Alert } from 'Components/Common'
+import { Alert } from 'components/Common'
 import classes from './form.module.styl'
 import './form.styl'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { SEO, PageHeader } from 'Components/Common'
-import { Main, Container } from 'Components/Layout'
+import { SEO, PageHeader } from 'components/Common'
+import { Main, Container } from 'components/Layout'
 
 const title = 'FAQ'
 const description = 'FAQ'

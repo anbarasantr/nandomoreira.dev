@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import kebabCase from 'lodash.kebabcase'
 import moment from 'moment'
 import 'moment/locale/pt-br'
-import { Container } from 'Components/Layout'
+import { Container } from 'components/Layout'
 import classes from './postSingle.module.styl'
 
 let styles = {}

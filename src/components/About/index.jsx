@@ -1,6 +1,6 @@
 import React from 'react'
-import { SEO, PageHeader } from 'Components/Common'
-import { Main, Container } from 'Components/Layout'
+import { SEO, PageHeader } from 'components/Common'
+import { Main, Container } from 'components/Layout'
 import {
   Left,
   Right,
@@ -10,10 +10,10 @@ import {
   Today,
   ThisProject,
   More
-} from 'Components/About/components'
+} from 'components/About/components'
 
-import classes from 'Components/About/about.module.styl'
-import 'Components/About/about.styl'
+import classes from 'components/About/about.module.styl'
+import 'components/About/about.styl'
 
 const _date = new Date()
 const _year = _date.getFullYear()

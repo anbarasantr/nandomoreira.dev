@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import About from 'Components/About'
+import About from 'components/About'
 
 export default ({ data }) => <About data={data} />
 

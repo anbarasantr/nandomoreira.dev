@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { WhatsApp } from 'Components/Common'
-import { BaseLayout, Header, Footer } from 'Components/Layout'
+import { WhatsApp } from 'components/Common'
+import { BaseLayout, Header, Footer } from 'components/Layout'
 
 import classes from './main.module.styl'
 

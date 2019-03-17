@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import { Error404 } from 'Components/Error404'
+import { Error404 } from 'components/Error404'
 
 class PageNotFound extends Component {
   render () {

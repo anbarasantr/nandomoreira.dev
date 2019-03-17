@@ -1,7 +1,7 @@
 import React from 'react'
-import { SocialIcons, Image } from 'Components/Common'
-import { Feed } from 'Components/Instagram'
-import { Skills } from 'Components/About/Skills'
+import { SocialIcons, Image } from 'components/Common'
+import { Feed } from 'components/Instagram'
+import { Skills } from 'components/About/Skills'
 
 export const Left = ({ data, classes }) => (
   <div className={`about__left ${ classes.left }`}>

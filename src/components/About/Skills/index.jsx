@@ -1,7 +1,6 @@
 import React from 'react'
 import classes from './skills.module.styl'
-import { Skill } from 'Components/Common'
-import { Container } from 'Components/Layout'
+import { Skill } from 'components/Common'
 
 const shuffleSkills = arr =>
   arr

@@ -5378,12 +5378,12 @@ gatsby-link@^2.0.16:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-alias-imports@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-alias-imports/-/gatsby-plugin-alias-imports-1.0.5.tgz#44c0856d77acb74b58b89ec725dadd8f5d5b327d"
-  integrity sha512-q58JrSjuVNh4NApamqElR0zqwm55FOb9vFAVb2i2ftPRu0uYzWJkbOz2IN3vSw7a+5PmGzX7VL8XDFXlNHrMNA==
+gatsby-plugin-canonical-urls@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.0.12.tgz#289af08b32ad117b4c64900a0a901e14ad73a5d7"
+  integrity sha512-GF1vauBe/pz7yr1+IaBgyAsFEL8/Wd3tiye+qfmcvAHBWEMohXhutanQn5wKHgJ4STHzxKG6GvzasJ5Qs2ZZLQ==
   dependencies:
-    "@babel/runtime" "^7.2.0"
+    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-favicon@^3.1.5:
   version "3.1.5"

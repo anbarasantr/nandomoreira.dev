@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import { SEO, PageHeader, SocialIcons } from 'Components/Common'
-import { Main, Container } from 'Components/Layout'
-import { ContactForm } from 'Components/Contact'
+import { SEO, PageHeader, SocialIcons } from 'components/Common'
+import { Main, Container } from 'components/Layout'
+import { ContactForm } from 'components/Contact'
 import classes from './contact.module.styl'
 
 const title = 'Contato'
