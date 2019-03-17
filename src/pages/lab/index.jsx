@@ -7,11 +7,11 @@ import { Skills } from 'components/About/Skills'
 import { AuthorBox } from 'components/Blog'
 import { GithubList } from 'components/Github'
 
-const title = 'Open-source'
+const title = 'Lab'
 const description =
   'Aqui estão alguns projetos open-source trabalhei recentemente'
 
-const OpenSource = () => (
+const LabPage = () => (
   <StaticQuery
     query={graphql`
       {
@@ -69,7 +69,7 @@ const OpenSource = () => (
       }
     }) => (
       <Main>
-        <SEO title={title} description={description} pathname="/open-source" />
+        <SEO title={title} description={description} pathname="/lab" />
         <PageHeader smallTitle={title} title={description} />
         <Container>
           <GithubList repositories={edges} />
@@ -96,4 +96,4 @@ const OpenSource = () => (
   />
 )
 
-export default OpenSource
+export default LabPage

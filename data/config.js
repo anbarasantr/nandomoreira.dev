@@ -57,8 +57,8 @@ const navLinks = [{
   path: '/portfolio'
 },
 {
-  name: 'Open-source',
-  path: '/open-source'
+  name: 'Lab',
+  path: '/lab'
 },
 {
   name: 'Contato',

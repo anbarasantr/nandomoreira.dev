@@ -27,6 +27,7 @@ https://nandomoreiradev.netlify.com/*    https://nandomoreira.dev/:splat?ref=net
 /lab          /experimentos 301
 /lab/*        /experimentos 301
 /pen-*        /experimentos 301
+/open-source  /lab          301
 
 # ============================================================================================= #
 #                       Redirects pages to nandomoreirame.github.io
