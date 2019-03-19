@@ -1,5 +1,6 @@
 @import '~stylus/index.styl'
 
+abbr,
 [data-tooltip]
   position relative
 
@@ -29,3 +30,8 @@
       color #fff
       border 8px solid transparent
       border-top 8px solid $secondary-color
+
+abbr
+  &:hover
+    &:before
+      content attr(title)

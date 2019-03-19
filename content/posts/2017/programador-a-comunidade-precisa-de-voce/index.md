@@ -12,7 +12,7 @@ tags:
   - comunidade
 ---
 
-## </ Prólogo >
+## Prólogo
 
 Esse texto é para tentar responder algumas perguntas que me faço todos os dias, perguntas essas que você vai ler no decorrer desse texto.
 
@@ -20,7 +20,7 @@ Esse texto é para tentar responder algumas perguntas que me faço todos os dias
 
 ![Programador a comunidade precisa de você!](../../images/2017/03/programador-a-comunidade-precisa-de-voce.jpeg)
 
-## </ A procura >
+## A procura
 
 Estamos procurando um dev [front-end](https://github.com/lojaskd/frontend-challenge) aqui na empresa onde trabalho, decidimos procurar os desenvolvedores que tinham um perfil no [GitHub](https://github.com/) e de alguma forma contribuem com a comunidade. Começamos a divulgar e receber emails.
 
@@ -37,7 +37,7 @@ Ou pior ainda.
 
 ---
 
-## </ A importância de se ter um GitHub >
+## A importância de se ter um GitHub
 
 Pode ser que você não saiba o que é o **[GitHub](https://github.com/)**, caro desenvolvedor, ou não contribua com a comunidade por falta de tempo, ou não achar necessário, ou porque não quer mesmo no momento, eu entendo.
 
@@ -62,7 +62,7 @@ Esse meu conselho é para que você um dia entre em empresas como **Google**, **
 
 E vai por mim, quanto mais completo for seu perfil mais chances de ser recrutado para uma seleção.
 
-## </ Cadê os front-enders? >
+## Cadê os front-enders?
 
 Como eu disse, se mostre, tenha um perfil bom, para facilitar a avaliação de empresas e recrutadores técnicos.
 
@@ -78,7 +78,7 @@ Eu voto na opção 3.
 
 Nós somos profissionais que estamos conectados, tecnologia corre em nossas veias, [fazemos parte de 5% da população com habilidades em computação](https://www.nngroup.com/articles/computer-skill-levels/). Por que não ter um portfolio no GitHub?
 
-## </ Conclusão >
+## Conclusão
 
 Eu sempre me faço essas perguntas, todos os dias, desde do dia que me mudei para Curitiba e comecei a trabalhar com desenvolvimento web.
 
