@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const noscriptStyle = `
   .gatsby-noscript {
-    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     text-align: center;
     position: fixed;
@@ -16,6 +16,9 @@ const noscriptStyle = `
     background: #f00;
     color: #fff;
     z-index: 10000;
+  }
+  .header {
+    top: 55px !important;
   }
 `
 
