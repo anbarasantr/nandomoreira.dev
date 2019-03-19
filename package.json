@@ -54,7 +54,7 @@
     "build": "npm run clean && gatsby build",
     "eslint": "eslint \"./**/*.{js,jsx}\"",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "serve": "npm run clean && gatsby serve",
+    "serve": "npm run build && gatsby serve",
     "watch": "npm run dev",
     "start": "npm run dev",
     "clean": "rm -rf .cache/ public/",
