@@ -35,16 +35,14 @@ export const Post = ({ post }) => {
         <div className={classes.content} itemProp="description">
           <p>{post.description}</p>
         </div>
-        {post.layout !== 'snippets' && (
-          <div className={classes.footer}>
-            <ListTags tags={tags} showLinks={false} />
-            <Icon
-              id="arrow-right"
-              fill="#25ced1"
-              className={classes.iconRight}
-            />
-          </div>
-        )}
+        <div className={classes.footer}>
+          <ListTags tags={tags} showLinks={false} />
+          <Icon
+            id="arrow-right"
+            fill="#25ced1"
+            className={classes.iconRight}
+          />
+        </div>
       </Link>
     </article>
   )

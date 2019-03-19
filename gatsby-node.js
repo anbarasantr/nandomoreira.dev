@@ -170,21 +170,6 @@ exports.createPages = ({
               }
             }
           }
-          snippetsQuery: allMarkdownRemark(
-            filter: { frontmatter: { layout: { eq: "snippets" } } },
-          ) {
-            edges {
-              node {
-                excerpt(pruneLength: 250)
-                frontmatter {
-                  layout
-                  path
-                  title
-                  category
-                }
-              }
-            }
-          }
           allMarkdownRemark {
             edges {
               node {
@@ -207,7 +192,6 @@ exports.createPages = ({
         const {
           postsQuery,
           projectsQuery,
-          snippetsQuery,
           allMarkdownRemark
         } = result.data
 
@@ -221,7 +205,6 @@ exports.createPages = ({
 
         contentPaginate(createPage, postsQuery, '/blog', 'blog')
         contentPaginate(createPage, projectsQuery, '/portfolio', 'projects', 10)
-        contentPaginate(createPage, snippetsQuery, '/snippets', 'snippets-list')
       })
     )
   })
