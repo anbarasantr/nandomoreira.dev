@@ -40,7 +40,6 @@ const HTML = props => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <style>{noscriptStyle}</style>
         {headComponents}
       </head>
       <body {...bodyAttributes}>
@@ -50,7 +49,8 @@ const HTML = props => {
           id="gatsby-noscript"
           className="gatsby-noscript"
         >
-            Este site funciona melhor com o JavaScript ativado.
+          <style>{noscriptStyle}</style>
+          Este site funciona melhor com o JavaScript ativado.
         </noscript>
         <div
           key={`body`}
