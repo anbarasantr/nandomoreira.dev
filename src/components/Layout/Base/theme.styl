@@ -6,6 +6,11 @@ body
     ::selection
       background lighten($primary-color, 50%)
       color $text-color
+    .socialshare.card
+      &:focus,
+      &:active,
+      &:hover
+        box-shadow none
 
   &.theme-dark
     &, .hero h1, .hero h1 strong

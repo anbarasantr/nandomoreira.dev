@@ -51,14 +51,14 @@ export const Single = ({ data }) => {
           />
         </Content>
 
-        <AuthorBox
-          author={Object.assign({}, author, { avatar })}
-          donateLink={social.paypal}
-        />
-
         <SocialShare
           link={`${ siteUrl }${ post.frontmatter.path }`}
           message={post.frontmatter.title}
+        />
+
+        <AuthorBox
+          author={Object.assign({}, author, { avatar })}
+          donateLink={social.paypal}
         />
 
         {isProduction && (
