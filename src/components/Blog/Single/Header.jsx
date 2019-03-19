@@ -22,7 +22,7 @@ export const Header = ({ frontmatter }) => {
   return (
     <header className={`singleHeader ${ classes.header }` } style={styles}>
       {title && (
-        <Container className={classes.inner}>
+        <Container className={classes.inner} isSmall>
           <h4 className={classes.category}>
             Categoria:{' '}
             <strong>
