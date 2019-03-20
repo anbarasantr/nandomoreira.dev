@@ -7,13 +7,13 @@ import classes from './card.module.styl'
 import './card.styl'
 
 export const GithubCard = ({ repo }) => (
-  <a
-    className={classes.repo}
-    href={repo.url}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <article className={`card ${ classes.card }`}>
+  <article className={classes.repo}>
+    <a
+      href={repo.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`card ${ classes.card }`}
+    >
       <header className={classes.header}>
         <h4 className={classes.name}>
           {repo.name}
@@ -39,6 +39,6 @@ export const GithubCard = ({ repo }) => (
           <span>{moment(repo.createdAt).format('MMM/YYYY')}</span>
         </p>
       </footer>
-    </article>
-  </a>
+    </a>
+  </article>
 )

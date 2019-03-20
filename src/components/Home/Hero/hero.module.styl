@@ -4,14 +4,27 @@
   background-color $background-color
   width 100%
   position relative
-  padding 7.5rem 0 1.875rem
+  padding 0 0 1.875rem
   text-align center
   height 100vh
   display flex
   align-items center
   justify-content center
+  &:after
+    content ''
+    display block
+    width 100%
+    position absolute
+    height 100px
+    bottom 0
+    clip-path polygon(0 100%, 100% 100%, 100% 0)
+    animation fadeInBottom 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2600ms both
+    background-color $primary-color
+    background-image linear-gradient(-270deg, $linear-from-color 0%, $linear-to-color 100%)
   +above($tablet)
     text-align left
+    &:after
+      height 150px
 
 .inner
   padding .9375rem
@@ -71,6 +84,14 @@
 @keyframes fadeInTop
   0%
     transform translateY(-50px)
+    opacity 0
+  100%
+    transform translateY(0)
+    opacity 1
+
+@keyframes fadeInBottom
+  0%
+    transform translateY(50px)
     opacity 0
   100%
     transform translateY(0)

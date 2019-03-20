@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Icon } from 'components/Common'
 import kebabCase from 'lodash.kebabcase'
-import classes from './postTags.module.styl'
+import classes from './listTags.module.styl'
+import './listTags.styl'
 
 export const ListTags = ({ tags, showLinks = true, ...props }) => {
   return (

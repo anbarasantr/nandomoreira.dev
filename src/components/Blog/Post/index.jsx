@@ -37,11 +37,12 @@ export const Post = ({ post }) => {
         </div>
         <div className={classes.footer}>
           <ListTags tags={tags} showLinks={false} />
-          <Icon
-            id="arrow-right"
-            fill="#25ced1"
-            className={classes.iconRight}
-          />
+          <span className={classes.iconRight}>
+            <Icon
+              id="arrow-right"
+              fill="#25ced1"
+            />
+          </span>
         </div>
       </Link>
     </article>

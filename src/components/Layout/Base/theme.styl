@@ -6,11 +6,6 @@ body
     ::selection
       background lighten($primary-color, 50%)
       color $text-color
-    .socialshare.card
-      &:focus,
-      &:active,
-      &:hover
-        box-shadow none
 
   &.theme-dark
     &, .hero h1, .hero h1 strong
@@ -48,19 +43,21 @@ body
         opacity 0.75
         box-shadow inset 0 -0.75rem 0 rgba(#fff, .25)
 
-    &, .hero
+    &, .hero, .pageHeader:after
       background-color $background-dark-color
+
+    .hero:after
+      background-image none
+      background-color darken($background-dark-color, 25%)
 
     .card,
     .listTags__tag,
     .socialIcons__link,
     .pagination a,
-    .button
+    .button,
+    .project .card,
+    .card.form
       box-shadow none
-      &:hover,
-      &:focus
-        box-shadow 0 0 0 4px #fff
-        color #fff
 
     .header,
     .whatsApp__message
@@ -111,8 +108,6 @@ body
     .project .card,
     .card.form
       background-color lighten($background-dark-color, 10%)
-      &:hover
-        box-shadow none
 
     .form__input
       background rgba(#fff, .2)

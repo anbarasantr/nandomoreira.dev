@@ -19,7 +19,7 @@ export const AuthorBox = ({ author, donateLink }) => (
       <div className={classes.body}>
         <h3 className={classes.title}>{author.name}</h3>
         <p className={classes.text}>
-          {author.bio} <Link to="/sobre" className={classes.linkabout}>
+          {author.bio} <Link to="/sobre" className={`linkabout ${ classes.linkabout }`}>
             <span>leia mais sobre o author</span>
             <Icon id="arrow-right" fill="#50c290" />
           </Link>
