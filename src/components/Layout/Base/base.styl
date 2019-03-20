@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6
   color inherit
 
 h1, h2, h3, h4, h5, h6, strong, b
-  font-weight 800
+  font-weight 700
 
 h1, h2, h3, h4, h5, h6, p
   margin 1.875rem 0
@@ -86,12 +86,13 @@ a
   border-bottom $link-color
   transition .2s color $timing-function, .2s outline $timing-function, .2s box-shadow $timing-function
   text-decoration none
-  &:hover,
-  &:active,
-  &:focus
-    color $link-hover-color
-    border-color $link-hover-color
-    box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
+  &:not(.card):not(.button)
+    &:hover,
+    &:active,
+    &:focus
+      color $link-hover-color
+      border-color $link-hover-color
+      box-shadow inset 0 -0.75rem 0 rgba($link-hover-color, .15)
   &:active,
   &:focus
     outline 0

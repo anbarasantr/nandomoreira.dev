@@ -9,15 +9,18 @@ const {
   version
 } = require('../package.json')
 
+const dotenv = require('dotenv')
 const services = require('./services')
 const skills = require('./skills')
+const now = require('./now')
+const recommendations = require('./recommendations')
 
 const isProduction = process.env.NODE_ENV === 'production'
 const siteUrl = isProduction ? homepage : 'http://localhost:8000'
 
-require('dotenv').config({
-  path: `.env.${ process.env.NODE_ENV }`
-})
+if (!isProduction) {
+  dotenv.config({ path: `.env` })
+}
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || 'foo-bar'
 const subTitle = `· Desenvolvedor front-end e WordPress em Curitiba/PR`
@@ -41,30 +44,24 @@ const social = {
 }
 
 const navLinks = [{
-  name: 'Sobre mim',
+  name: 'Sobre',
   path: '/sobre'
-},
-// {
-//   name: 'O que eu faço',
-//   path: '/servicos',
-// },
-{
+}, {
+  name: 'Agora',
+  path: '/now'
+}, {
   name: 'Blog',
   path: '/blog'
-},
-{
+}, {
   name: 'Portfolio',
   path: '/portfolio'
-},
-{
+}, {
   name: 'Lab',
   path: '/lab'
-},
-{
+}, {
   name: 'Contato',
   path: '/contato'
-}
-]
+}]
 
 const siteMetadata = {
   isProduction,
@@ -79,21 +76,22 @@ const siteMetadata = {
   author,
   disqusShortname: author.disqus,
   twitterUsername: `@${ author.twitter }`,
-  facebookAppID: '',
+  facebookAppID: '585852118228520',
   keywords,
   repo,
   social,
   navLinks,
   services,
-  skills
+  skills,
+  now,
+  recommendations,
 }
 
 const pluginFonts = {
   fonts: [{
-    family: `Nunito`,
-    variants: [`200`, `400`, `800`]
-  },
-  ]
+    family: `Zilla Slab`,
+    variants: [`700`]
+  }]
 }
 
 const pluginAnalytics = {
