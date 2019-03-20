@@ -6,25 +6,39 @@
   font-size 1.75rem
   line-height 1
   color $secondary-color
+  font-family $font-family-base
+  position relative
   span
     font-weight 500
     font-size inherit
     color $primary-color
   &:before,
   &:after
+    position absolute
+    top 50%
+    transform translateY(-50%)
     display inline-block
     font-weight 500
+    transition all .2s $timing-function
   &:before
     content '{'
-    margin-right 5px
+    left -15px
     color $primary-color
   &:after
     content '}'
-    margin-left 5px
+    right -15px
   +below($mobile)
     &:before,
     &:after
       display none
+  &:hover,
+  &:focus
+    .link
+      box-shadow none
+    &:before
+      margin-left -5px
+    &:after
+      margin-right -5px
 
 .link
   font-weight 800
