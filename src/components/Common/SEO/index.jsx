@@ -91,8 +91,8 @@ export const SEO = ({
             />
           )}
           {article && article.tags &&
-            article.tags.map((tag, index) => {
-              return <meta property="article:tag" content={tag} />
+            article.tags.map((tag, i) => {
+              return <meta key={i} property="article:tag" content={tag} />
             })
           }
           {article.date && (
