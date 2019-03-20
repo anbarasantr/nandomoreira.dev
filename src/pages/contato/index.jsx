@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 
 import { SEO, PageHeader, SocialIcons } from 'components/Common'
 import { Main, Container } from 'components/Layout'
-import { ContactForm } from 'components/Contact'
+import ContactForm from 'components/Contact'
 import classes from './contact.module.styl'
 
 const title = 'Contato'
@@ -13,7 +13,13 @@ const description =
 const Contact = ({ data }) => (
   <Main>
     <SEO title={title} description={description} pathname="/contato" />
-    <PageHeader smallTitle="E aí, vamos conversar?" title={description} />
+    <PageHeader
+      smallTitle="Contato"
+      title="E aí, vamos conversar?"
+      style={{ textAlign: 'center' }}
+    >
+      <p>{description}</p>
+    </PageHeader>
     <Container>
       <div className={classes.contact}>
         <div className={classes.left}>

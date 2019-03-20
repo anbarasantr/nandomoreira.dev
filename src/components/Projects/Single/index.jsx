@@ -128,7 +128,9 @@ export const ProjectSingle = ({ data }) => {
             }}
           />
         </div>
+      </Container>
 
+      <Container style={{ marginBottom: '60px' }} isSmall>
         <SocialShare
           link={`${ siteUrl }${ post.frontmatter.path }`}
           message={post.frontmatter.title}

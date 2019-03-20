@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './alert.module.styl'
 
 export const Alert = ({ message, type = 'default' }) => {
-  let alertClass = `${ classes.alert }`
+  let alertClass = `alert ${ classes.alert }`
 
   switch (type) {
   case 'success':

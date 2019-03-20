@@ -7,8 +7,7 @@
   background-color $primary-color
   background-image linear-gradient(-270deg, $linear-from-color 0%, $linear-to-color 100%)
   +above($tablet)
-    padding 0 0 3.75rem
-    height 40vh
+    padding 6.25rem 0 7.5rem
     display flex
     align-items center
 
@@ -44,11 +43,16 @@
     line-height 1
 
 .description
+  animation fadeIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
+  opacity 0.8
+  a
+    color #fff
+    text-decoration underline
   p
-    margin 0
+    margin .9375rem 0 0
     font-size 1.125rem
     +above($tablet)
-      font-size 1.5rem
+      font-size 1.25rem
   h2
     margin 2.5rem 0
     font-size 2.375rem

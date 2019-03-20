@@ -2,9 +2,9 @@ import React from 'react'
 import { Container } from 'components/Layout'
 import classes from './pageheader.module.styl'
 
-export const PageHeader = ({ smallTitle, title, children }) => (
-  <header className={`pageHeader ${ classes.pageHeader }`}>
-    <Container>
+export const PageHeader = ({ smallTitle, title, isSmall = false, children, ...props }) => (
+  <header className={`pageHeader ${ classes.pageHeader }`} { ...props }>
+    <Container isSmall={isSmall}>
       {smallTitle && (
         <h4
           className={classes.smalltitle}
