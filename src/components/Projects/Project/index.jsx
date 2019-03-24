@@ -10,22 +10,23 @@ export const Project = ({ project, mod }) => (
       mod === 0 ? classes.left : classes.right
     }`}
   >
-    <div className={classes.inner}>
+    <Link to={project.path} className={`card ${ classes.inner }`}>
       <div className={classes.content}>
-        <Link to={project.path} className="card">
-          <header className={classes.header}>
-            <h1>{project.title}</h1>
-          </header>
-          <p className={classes.description}>{project.description}</p>
-          <div className={`Project__view ${ classes.view }`}>
-            <span>Ver projeto </span>
-            <Icon id="arrow-right" />
-          </div>
-        </Link>
+        <header className={classes.header}>
+          <small>{project.date}</small>
+          <h1>{project.title}</h1>
+        </header>
+        <p className={classes.description}>
+          {project.description}
+        </p>
+        <div className={`Project__view ${ classes.view }`}>
+          <span>Ver projeto </span>
+          <Icon id="arrow-right" />
+        </div>
       </div>
-      <Link to={project.path} className={classes.image}>
+      <div to={project.path} className={classes.image}>
         <Image node={project.image} />
-      </Link>
-    </div>
+      </div>
+    </Link>
   </article>
 )

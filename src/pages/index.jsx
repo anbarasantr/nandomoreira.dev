@@ -2,18 +2,27 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Home } from 'components/Home'
 
-const Index = ({ data }) => (
-  <Home
-    title="Olá, eu me chamo Fernando Moreira"
-    navLinks={data.site.siteMetadata.navLinks}
-    social={data.site.siteMetadata.social}
-  />
-)
+const Index = ({ data }) => {
+  const { social, navLinks } = data.site.siteMetadata
+  const { fixed } = data.file.childImageSharp
+  return <Home navLinks={navLinks} social={social} avatar={fixed} />
+}
 
 export default Index
 
 export const indexQuery = graphql`
   query IndexQuery {
+    file(relativePath: { eq: "sobre/avatar.jpg" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300, quality: 75) {
+          src
+          srcSet
+          base64
+          width
+          height
+        }
+      }
+    }
     site {
       siteMetadata {
         navLinks {

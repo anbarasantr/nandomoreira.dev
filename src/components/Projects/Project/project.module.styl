@@ -1,18 +1,34 @@
 @import '~stylus/index.styl'
 
 .project
-  padding-bottom 3.75rem
   margin-bottom 3.75rem
   position relative
+  display block
   width 100%
+  +above($tablet)
+    &.left
+      .inner
+        flex-direction row
+        .image
+          border-top-right-radius .625rem
+          border-bottom-right-radius .625rem
+    &.right
+      .inner
+        flex-direction row-reverse
+        .image
+          border-top-left-radius .625rem
+          border-bottom-left-radius .625rem
   p
     margin 0 0 .625rem
 
 .inner
   width 100%
   display flex
+  align-items center
+  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
+  justify-content center
   +below($tablet)
-    flex-direction column-reverse
+    flex-direction column
 
 .header
   padding 0
@@ -21,56 +37,32 @@
     font-size 1.75rem
     a
       text-decoration none
+    +above($tablet)
+      font-size 2rem
 
 .image
   display block
   width 100%
-  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
+  overflow hidden
   +above($tablet)
+    // width 75%
     display inline-block
-    width 43.75rem
+  +below($tablet)
+    border-radius 0 0 .625rem .625rem
 
 .content
   width 100%
-  animation fadeInBottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
+  padding 1.875rem
   +above($tablet)
-    width calc(100% - 560px)
     display block
-  > a
-    padding 1.875rem
-    width 100%
-    display block
-  +above($tablet)
-    animation fadeInBottomContent 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
-    display flex
-    align-items center
-    z-index 3
-    position absolute
-    top 50%
-    right 0
-  +below($tablet)
-    > a
-      border-radius 0
-      &, &:hover, &:focus
-        box-shadow none
-
-.left
-  +above($tablet)
-    .inner
-      justify-content flex-start
-    .content
-      right 0
-
-.right
-  +above($tablet)
-    .inner
-      justify-content flex-end
-    .content
-      left 0
+    width 75%
 
 .description
   color rgba($text-color, .75)
   font-size 1rem
+  +above($tablet)
+    line-height 1.4
+    font-size 1.125rem
 
 .view
   display flex

@@ -5,7 +5,7 @@ import { Nav } from 'components/Layout'
 import classes from './hero.module.styl'
 import './hero.styl'
 
-export const Hero = ({ navLinks, socialIcons }) => (
+export const Hero = ({ navLinks, socialIcons, avatar }) => (
   <div className={'hero ' + classes.hero}>
     <div
       className={classes.inner}
@@ -13,9 +13,15 @@ export const Hero = ({ navLinks, socialIcons }) => (
       itemType="http://schema.org/Person"
     >
       <h1 className={classes.title}>
-        <span>Olá, eu me chamo</span> <strong itemProp="name">Fernando Moreira</strong>.
-        <meta itemProp="jobTitle" content="Desenvolvedor front-end" />
+        <span>Olá, eu me chamo</span>
+        <strong itemProp="name">
+          <Link itemProp="url" to="/sobre">Fernando Moreira</Link>
+        </strong>.
+        <meta itemProp="jobTitle" content="desenvolvedor front-end" />
         <meta itemProp="worksFor" content="Onedev.studio" />
+        {avatar &&
+          <img src={avatar.src} itemProp="image" alt={`Foto de Fernando Moreira`} style={{ display: 'none' }} />
+        }
       </h1>
       <p
         className={classes.presentation}
@@ -24,7 +30,7 @@ export const Hero = ({ navLinks, socialIcons }) => (
       >
         Sou um <strong itemProp="jobTitle">desenvolvedor front-end</strong>.{' '}
         <a
-          href="https://onedev.studio/"
+          href="https://onedev.studio/?ref=nandomoreira.dev"
           target="_blank"
           rel="noopener noreferrer"
         >Ajudo ONGs e pequenas empresas</a> a criar projetos web personalizados de alta

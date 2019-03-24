@@ -20,7 +20,7 @@ export const projectQuery = graphql`
       frontmatter {
         path
         title
-        date
+        date(formatString: "MMM/YYYY", locale: "pt-BR")
         tags
         description
         category

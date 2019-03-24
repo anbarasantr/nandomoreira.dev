@@ -45,16 +45,17 @@
     font-size 6.25rem
     margin-bottom 2.5rem
   span
-    font-weight 200
+    font-weight 300
     font-size inherit
     letter-spacing 0
-    font-size 75%
+    font-size 65%
     display block
     animation fadeInTop 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 400ms both
   strong
     text-decoration none
-    color darken($secondary-color, 20%)
     animation fadeIn 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 800ms both
+    &, a
+      color darken($secondary-color, 20%)
     &:hover,
     &:focus,
     &:active
@@ -73,7 +74,7 @@
   span, a
     font-weight 500
   a
-    border-bottom .125rem solid $link-color
+    @extend .link--hover
 
 @keyframes fadeIn
   0%

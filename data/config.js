@@ -90,7 +90,7 @@ const siteMetadata = {
 const pluginFonts = {
   fonts: [{
     family: `Zilla Slab`,
-    variants: [`700`]
+    variants: [`300`, `700`]
   }]
 }
 

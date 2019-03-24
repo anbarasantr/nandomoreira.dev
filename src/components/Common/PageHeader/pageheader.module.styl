@@ -7,21 +7,31 @@
   background-color $primary-color
   background-image linear-gradient(-270deg, $linear-from-color 0%, $linear-to-color 100%)
   position relative
+  &:before,
   &:after
     content ''
     display block
     width 100%
     position absolute
-    height 30px
+    right 0
     bottom 0
-    clip-path polygon(0 100%, 100% 100%, 100% 0)
+    left 0
+  &:before
+    height 40px
+    animation clipIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 500ms both
+    background-color rgba($background-color, .4)
+  &:after
+    height 20px
+    animation clipIn 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 250ms both
     background-color $background-color
   +above($tablet)
     padding 6.25rem 0 9.375rem
     display flex
     align-items center
+    &:before
+      height 80px
     &:after
-      height 60px
+      height 40px
 
 .smalltitle,
 .smalltitle a,
@@ -77,3 +87,9 @@
     opacity 0
   100%
     opacity 1
+
+@keyframes clipIn
+  0%
+    clip-path polygon(0% 100%, 100% 100%, 100% 100%)
+  100%
+    clip-path polygon(0% 100%, 100% 100%, 100% 0%)
