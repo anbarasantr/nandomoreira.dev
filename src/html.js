@@ -22,8 +22,6 @@ const noscriptStyle = `
   }
 `
 
-const mailchimpScript = `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/f2095912777fe1bab6fae1135/eb2821cf50be2e86a1ad76691.js");`
-
 const HTML = props => {
   const {
     htmlAttributes,
@@ -60,11 +58,6 @@ const HTML = props => {
           dangerouslySetInnerHTML={{ __html: body }}
         />
         {postBodyComponents}
-        <script
-          key={`mcjs`}
-          id="mcjs"
-          dangerouslySetInnerHTML={{ __html: mailchimpScript }}
-        />
       </body>
     </html>
   )
