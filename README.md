@@ -2,7 +2,7 @@
 
 > 🏃 My superfast personal site running on Gatsby, React, and Node.js
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3c67e668-bd6a-433c-8abf-1725ed7504d3/deploy-status)](https://app.netlify.com/sites/nandomoreiradev/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c67e668-bd6a-433c-8abf-1725ed7504d3/deploy-status)](https://app.netlify.com/sites/nandomoreiradev/deploys) [![Maintainability](https://api.codeclimate.com/v1/badges/2495e8bab6832a2604f2/maintainability)](https://codeclimate.com/github/nandomoreirame/nandomoreira.dev/maintainability)
 
 ## Build Setup
 
