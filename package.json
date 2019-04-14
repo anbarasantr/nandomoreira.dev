@@ -52,6 +52,7 @@
     "dev": "npm run clean && gatsby develop",
     "dev:q": "NODE_ENV=development DEBUG=gatsby:query-watcher npm run dev",
     "build": "npm run clean && gatsby build",
+    "deploy": "npm run build && netlify deploy --prod",
     "eslint": "eslint \"./**/*.{js,jsx}\"",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "serve": "npm run build && gatsby serve",
