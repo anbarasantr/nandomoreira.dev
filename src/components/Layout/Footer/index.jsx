@@ -4,7 +4,7 @@ import classes from './footer.module.styl'
 
 export const Footer = () => (
   <footer className={`footer ${ classes.footer }`}>
-    <div className={`${ classes.base }`}>
+    <div className={`footer__base ${ classes.base }`}>
       <span>
         Desenvolvido em <address itemScope itemType="https://schema.org/PostalAddress">Curitiba-PR, Brasil</address> com o
         <span
