@@ -4,8 +4,6 @@ module.exports = {
       title: 'Assistindo',
       items: [
         `F.R.I.E.N.D.S (meu vício, me julgue)`,
-        `LOVE DEATH + ROBOTS`,
-        `Arrested Development`,
         `THIS IS US`,
       ],
     }, {
@@ -14,12 +12,10 @@ module.exports = {
         `Laravel`,
         `React`,
         `Gatsby`,
-        `Next`,
       ],
     }, {
       title: 'Habitos',
       items: [
-        `Ir na academia pelo menos 2x na semana`,
         `Enviar commits para o Github todos os dias`,
         `Tomar pelo menos ~3L d'água todo dia`,
       ],
@@ -32,7 +28,7 @@ module.exports = {
       title: 'Trabalhando',
       items: [
         `Produto feito em Laravel + Vue: revista.transformando.com.vc`,
-        `Front-end em React + Gatsby da bibliamovel.com.br`,
+        `Front-end em Vuejs com Nuxtjs da bibliamovel.com.br`,
         `Neste projeto: nandomoreira.dev`,
       ],
     },
